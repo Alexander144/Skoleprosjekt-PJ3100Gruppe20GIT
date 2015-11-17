@@ -26,3 +26,5 @@ Test
 Sara: Hej hej hejSara: Hej hej hej<<<<<<< HEAD
 Sara: Hej hej hej
 
+$$$wag
+
