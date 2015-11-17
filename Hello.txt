@@ -1,15 +1,11 @@
 Hei!!!!
 
-<<<<<<< HEAD
+
 
 Marthe: heiii
 
 Alexander: HEi alle sammen
 
-=======
-Alexander: HEi alle sammen
 
 test01 - Natalie
 
-Alexander: HEi alle sammen
->>>>>>> b6b0bd4d27951f47cb0ad915a547d6767a125098
