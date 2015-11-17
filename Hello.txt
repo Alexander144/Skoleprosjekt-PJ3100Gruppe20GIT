@@ -1,3 +1,7 @@
 Hei!!!!
 
+<<<<<<< HEAD
 goobypls
+=======
+Alexander: HEi alle sammen
+>>>>>>> 82441c917e218d29507530cb3a395a4102febd44
