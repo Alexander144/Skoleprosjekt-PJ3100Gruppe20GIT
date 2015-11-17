@@ -1,5 +1,11 @@
 Hei!!!!
 
+
+daniel: yo
+
+Alexander: HEi alle sammen
+
+
 Hei på deg
 
 Marthe is a cool guy and doesn't afraid of anything
@@ -13,4 +19,8 @@ Hei på deg.
 
 test01 - Natalie
 
+Sara: Hej hej hejSara: Hej hej hej<<<<<<< HEAD
 Sara: Hej hej hej
+=======
+
+>>>>>>> 4be9cb6a5429456d359903d859c083f2f001beee
