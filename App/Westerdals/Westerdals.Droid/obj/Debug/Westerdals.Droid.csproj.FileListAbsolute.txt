@@ -1,1 +1,29 @@
+<<<<<<< HEAD
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\Westerdals\Westerdals.Droid\obj\Debug\Westerdals.Droid.csprojResolveAssemblyReference.cache
+=======
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Westerdals.Droid.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Westerdals.Droid.pdb
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Westerdals.Droid.apk
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Westerdals.Droid-Signed.apk
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\FormsViewGroup.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Westerdals.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Xamarin.Forms.Core.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Westerdals.pdb
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Xamarin.Forms.Core.xml
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\Westerdals.Droid.csprojResolveAssemblyReference.cache
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\Westerdals.Droid.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\Westerdals.Droid.pdb
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\android\bin\Westerdals.Droid.apk
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\res\drawable\icon.png
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\res\drawable-hdpi\icon.png
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\R.cs.flag
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\uploadflags.txt
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Eto.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Eto.xml
+>>>>>>> 6620ecffe4ea1686fc546d1c61f33f233dbf78ea
