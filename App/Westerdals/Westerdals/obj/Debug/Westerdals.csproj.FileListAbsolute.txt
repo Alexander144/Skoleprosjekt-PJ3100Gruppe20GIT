@@ -1,0 +1,9 @@
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals\bin\Debug\Westerdals.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals\bin\Debug\Westerdals.pdb
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals\bin\Debug\Xamarin.Forms.Core.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals\bin\Debug\Xamarin.Forms.Core.xml
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals\obj\Debug\Westerdals.csprojResolveAssemblyReference.cache
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals\obj\Debug\Westerdals.dll
+D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals\obj\Debug\Westerdals.pdb
