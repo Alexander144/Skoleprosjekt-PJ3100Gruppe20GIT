@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\Westerdals\Westerdals.Droid\obj\Debug\Westerdals.Droid.csprojResolveAssemblyReference.cache
+=======
 D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Westerdals.Droid.dll
 D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Westerdals.Droid.pdb
 D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Westerdals.Droid.apk
@@ -23,3 +26,4 @@ D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\R.c
 D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\obj\Debug\uploadflags.txt
 D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Eto.dll
 D:\Programmering\PJ3100Gruppe20GIT\App\Westerdals\Westerdals.Droid\bin\Debug\Eto.xml
+>>>>>>> 6620ecffe4ea1686fc546d1c61f33f233dbf78ea
