@@ -1,0 +1,100 @@
+/*Login page*/
+.loginWindow{
+    float: left;
+    width: 50%;
+}
+
+#loginFeide{
+    height: 500px;
+    position: relative;
+    background-color: rgb(185, 185, 185);
+
+}
+
+#login{
+    height: 500px;
+    background-color: rgb(199, 199, 199);
+    position: relative;
+    
+}
+
+.textField{
+    position: relative;
+    float: right;
+    top: 5px;
+}
+
+.objectsInDiv{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+
+.buttonDesign{
+    width: 220px;
+    background-color: rgb(152, 152, 152);
+    font-size: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.buttonDesign:hover{
+    cursor: pointer;
+    background-color: rgb(120, 120, 120);
+    transition: all 2s;
+}
+/*end login page*/
+
+/*register page*/
+#registration{
+width: 270px;
+text-align: right;
+}
+li{
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#registrationPage{
+    position: absolute;
+    background-color: rgb(199, 199, 199);
+    width: 50%;
+    left: 25%;
+}
+
+.registerField{
+    position: relative;
+    float: right;
+    top: 5px;
+}
+
+#registrationBTN{
+    width: 130px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    background-color: rgb(152, 152, 152);
+}
+
+#registrationBTN:hover{
+    cursor: pointer;
+    background-color: rgb(120, 120, 120);
+    transition: all 2s;
+}
+
+
+
+/*end register page*/
+
+h1{
+    font-size: 35px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-left: 5px;
+}
+
+form{
+    font-size: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;   
+}
+
+p{
+    font-size: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
