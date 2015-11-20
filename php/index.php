@@ -14,7 +14,8 @@ if (login_check($mysqli) == true) {
 <html>
     <head>
         <title>Secure Login: Log In</title>
-        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script> 
     </head>
@@ -23,16 +24,30 @@ if (login_check($mysqli) == true) {
         if (isset($_GET['error'])) {
             echo '<p class="error">Error Logging In!</p>';
         }
-        ?> 
-        <form action="includes/process_login.php" method="post" name="login_form">                      
-            Email: <input type="text" name="email" />
-            Password: <input type="password" 
+        ?>
+        <div id="loginFeide" class="loginWindow">
+            <div class="objectsInDiv">
+            <h1>Ansatte og studenter <br> ved Westerdals</h1>
+            <input class="buttonDesign" type="button" value="Login med Feide"/>
+            </div>
+        </div>
+        
+        <div id="login" class="loginWindow">
+            <div class="objectsInDiv">
+                <h1>Bedrifter og kunder</h1>
+                <form action="includes/process_login.php" method="post" name="login_form">                      
+                    Email: <input class="textField" type="text" name="email" />
+                <br>
+                    Password: <input class="textField" type="password" 
                              name="password" 
                              id="password"/>
-            <input type="button" 
+                <br>    
+                <input class="buttonDesign" type="button" 
                    value="Login" 
                    onclick="formhash(this.form, this.form.password);" /> 
-        </form>
+                </form>
+            </div>
+        </div>
  
 <?php
         if (login_check($mysqli) == true) {
