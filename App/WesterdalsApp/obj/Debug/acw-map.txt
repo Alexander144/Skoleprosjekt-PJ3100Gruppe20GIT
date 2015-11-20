@@ -1,0 +1,4 @@
+WesterdalsApp.MainActivity, WesterdalsApp;md5899f4789ecb5d8ba4f4557b70a42656b.MainActivity
+WesterdalsApp.MainActivity, WesterdalsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5899f4789ecb5d8ba4f4557b70a42656b.MainActivity
+WesterdalsApp.MainActivity;md5899f4789ecb5d8ba4f4557b70a42656b.MainActivity
+westerdalsapp.MainActivity;md5899f4789ecb5d8ba4f4557b70a42656b.MainActivity
