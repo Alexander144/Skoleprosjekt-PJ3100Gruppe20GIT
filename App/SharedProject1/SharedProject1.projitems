@@ -10,5 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ConnectDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)sha512.cs" />
   </ItemGroup>
 </Project>
