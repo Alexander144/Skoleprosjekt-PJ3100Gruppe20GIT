@@ -13,3 +13,16 @@ D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\R.cs.flag
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\uploadflags.txt
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\WesterdalsApp.dll.mdb
 D:\Programmering\PJ3100\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll.mdb
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\bin\Debug\WesterdalsApp.pdb
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\bin\Debug\WesterdalsApp.WesterdalsApp.apk
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\bin\Debug\WesterdalsApp.WesterdalsApp-Signed.apk
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\WesterdalsApp.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\WesterdalsApp.dll
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\WesterdalsApp.pdb
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\android\bin\WesterdalsApp.WesterdalsApp.apk
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\res\layout\main.xml
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\res\values\strings.xml
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\res\drawable\icon.png
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\R.cs.flag
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\uploadflags.txt

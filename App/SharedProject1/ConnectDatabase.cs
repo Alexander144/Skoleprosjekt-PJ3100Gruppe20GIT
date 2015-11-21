@@ -13,16 +13,12 @@ namespace SharedProject1
 		
 		WebClient client = new WebClient();
 		private Button button;
-		private string GetHash;
+	    public string GetHash { get; set; }
 
-		public ConnectDatabase(string Email, string Password)
+	    public ConnectDatabase(string Email, string Password)
 		{
 			var hashPassword = new sha512(Password);
-			GetHash = hashPassword.GetHashData();
-		}
-		public string GetHashToMain()
-		{
-			return GetHash;
+			GetHash = hashPassword.hashData;
 		}
     }
 }

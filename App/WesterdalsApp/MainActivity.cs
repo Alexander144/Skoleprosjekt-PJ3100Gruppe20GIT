@@ -36,16 +36,20 @@ namespace WesterdalsApp
 				Login(sender, e);
 			};
 		}
+
 		public void Login(object sender, EventArgs e)
 		{
 			EditText Email = FindViewById<EditText>(Resource.Id.Email);
 			EditText Password = FindViewById<EditText>(Resource.Id.Password);
 			TextView tex1 = FindViewById<TextView>(Resource.Id.text1);
 			TextView tex2 = FindViewById<TextView>(Resource.Id.text2);
+
 			EmailSend = Email.Text;
 			PasswordSend = Password.Text;
 			ConnectDatabase data;
+
 			string HashText = null;
+
             if (EmailSend == "" || PasswordSend == "" || EmailSend.Length<5 || PasswordSend.Length<5)
 			{
 				AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -58,7 +62,7 @@ namespace WesterdalsApp
 			else
 			{
 				data = new ConnectDatabase(EmailSend, PasswordSend);
-				HashText = data.GetHashToMain();
+				HashText = data.GetHash;
 				tex1.Text = EmailSend;
 				tex2.Text = HashText;
 			}

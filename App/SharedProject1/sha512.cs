@@ -8,8 +8,8 @@ namespace SharedProject1
 {
    public class sha512
     {
+		public string hashData{ get; set; }
 
-		private string hashData;
 		public sha512(string password)
 		{
 			UnicodeEncoding UE = new UnicodeEncoding();
@@ -22,11 +22,6 @@ namespace SharedProject1
 				hexNumber += String.Format("{0:x2}", x);
 			}
 			hashData = hexNumber;
-		}
-		public string GetHashData()
-		{
-			return hashData;
-
 		}
 	}
 }
