@@ -3,8 +3,10 @@ body{
     font-family: "Georgia", serif;
 }
 
-.col-12{
-    width: 910px;
+/** start 978gs **/
+
+#container{
+    width: 1008px;
     margin: auto;
 }
 
@@ -13,88 +15,170 @@ body{
     margin-right: 15px;
 }
 
-.col-6{
+.col-12{
+    width: 978px;
+}
+
+.col-3{
+    width: 222px;
     margin-bottom: 30px;
-    padding-bottom: 5px;
-    background: rgb(220, 220, 220);
-    width: 425px;
     float: left;
 }
 
-#mainPageNavigation a{
-    display: block;
-    text-align: center;
-    padding: 20px 0px;
-    border-right: 1px solid rgb(190, 190, 190);
-}
+/*end 978gs */
 
-ul{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-
-li{
-    position: relative;
+.imgLogo{
+    height: 100%;
     float: left;
-    width: 200px;
 }
-
-a{
-    font-family: "Georgia", serif;
-}
-
-/*start main content*/
 
 #mainPageHeader{
-    height: 7em;
-    background-color: rgb(199, 199, 199);
+    height: 4em;
     margin-bottom: 30px;
+    margin-top: 10px;
 }
 
-.headerImg{
-    width: 7em;
-    display: block;
-    margin-right: auto;
-    float: left;
+/*start navigation*/
+
+.nav ul {
+  list-style: none;
+  background-color: rgb(253, 253, 248);
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
-#mainPageNavigation{
-    position: relative;
-    float: left;
-    height: auto;
-    left: auto;
-    margin-top: 30px;
+.nav li {
+  font-family: 'Georgia', serif;
+  font-size: 1em;
+  line-height: 50px;
+  height: 50px;
+  border-bottom: 1px solid #888;
+  margin-top: 1em;
+  display: inline-block;
+  width: 200px;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  display: block;
+}
+ 
+.nav a:hover {
+  background-color: #005f5f;
 }
 
-#banner{
-    position: relative;
-    width: 300px; 
+/* end navigation */
+
+/*start footer*/
+#mainPageFooterWrap{
+  height: 15em;
+  background-color: rgb(253, 253, 248);
+  clear: both;
 }
+
+.imgFooter{
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+/*end footer*/
+
+/*start main content index*/
 
 #mainContent{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-#mainPageFooterWrap{
-    height: 15em;
-    background-color: rgb(253, 253, 248);
-    clear: both;
-}
-
-.footerImg{
-    position: relative;
-    width: 10em;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    left: 10px;
+    float: left;
 }
 
-/* Index - page */
+/* start sorting content */
+
+.sort-container{
+    background-color: rgb(253, 253, 248);
+    
+}
+
+.sort-container ul{
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.sort-container li{
+  font-family: 'Georgia', serif;
+  text-align: left;
+  width: 130px;
+  border-bottom: none;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1em;
+  display: inline-block;
+}
+
+.sort-container a{
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  display: block;
+}
+
+.sort-container a:hover {
+  background-color: #005f5f;
+}
 
 
+.sort-container li li{
+    background-color: rgb(253, 253, 248);
+    font-size: 1em;
+}
+
+.sort-container > ul > li {
+    text-align: center;
+}
+
+.sort-container > ul > li > a{
+    padding-left: 0px;
+}
+
+  .sort-container li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+  }
+
+    .sort-container li ul li {
+    display: block;
+  }
+
+    .sort-container li:hover ul {
+    display: block;
+  }
+
+/* end sorting content */
+
+/*end main content index*/
+
+
+
+/*mediaqueries tablet + smartphone*/
+  @media screen and (max-width: 800px) {
+
+    #container{
+      width: auto;
+    }
+
+    .col{
+      width: auto;
+      height: auto;
+      float: none;
+      margin-bottom: 15px;
+    }
+
+
+  }
 
 
 
@@ -149,9 +233,9 @@ a{
 width: 270px;
 text-align: right;
 }
-li{
+/*li{
 font-family: 'Open Sans Condensed', sans-serif;
-}
+}*/
 
 #registrationPage{
     position: absolute;
@@ -183,7 +267,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 /*end register page*/
 
-h1{
+/*h1{
     font-size: 35px;
     font-family: 'Georgia', serif;
     margin-left: 5px;
@@ -197,4 +281,4 @@ form{
 p{
     font-size: 30px;
     font-family: 'Georgia', serif;
-}
+}*/

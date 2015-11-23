@@ -15,18 +15,16 @@ sec_session_start();
         <script type="text/JavaScript" src="js/forms.js"></script>
     </head>
     <body>
-		<header id="mainPageHeader" class="col col-12">
-			<img src="img/WACT_hovedlogo_sort_rgb.png" class="col headerImg">
 
-			<nav class="col" id="mainPageNavigation">
-				<ul>
-					<li><a href>Jobber</a></li>
-					<li><a href>Legg til stillinger</a></li>
-				</ul>
-			</nav>
-		</header>
-
-
-		<aside id="banner" class="col-12">
-			<img src="" alt="Banner Frontpage" class="col img-bannerFront">
-		      <!--end of top of the page/menu/header--></aside>
+  <div id="container">
+  
+  <header id="mainPageHeader" class="col">
+    <img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
+      <div class="nav">
+      <ul>
+        <li class="home"><a href="#">Jobber</a></li>
+        <li class="tutorials"><a href="#">Legg til en stilling</a></li>
+        <li class="login"><a href="#">Logg inn</a></li>
+      </ul>
+    </div>
+  </header>
