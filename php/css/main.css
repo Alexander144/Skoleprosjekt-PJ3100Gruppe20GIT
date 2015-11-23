@@ -1,4 +1,92 @@
+body{
+    background-color: rgb(253, 253, 248);
+    font-family: "Georgia", serif;
+}
+
+#container{
+    width: 910px;
+    margin: auto;
+}
+
+.col{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.col-6{
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    background: rgb(220, 220, 220);
+    width: 425px;
+    float: left;
+}
+
+#mainPageNavigation{
+    margin-bottom: 30px;
+    float: left;
+    height: auto;
+}
+
+#mainPageNavigation a{
+    display: block;
+    text-align: center;
+    padding: 20px 0px;
+    border-right: 1px solid rgb(190, 190, 190);
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+li{
+    position: relative;
+    float: left;
+    width: 120px;
+}
+
+a{
+    font-family: "Georgia", serif;
+}
+
+/*start main content*/
+
+#mainPageHeader{
+    width: auto;
+    height: 7em;
+    background-color: rgb(253, 253, 248);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.headerImg{
+    width: 7em;
+    display: block;
+    margin-right: auto;
+}
+
+#mainContent{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#mainPageFooterWrap{
+    height: 15em;
+    background-color: rgb(253, 253, 248);
+    clear: both;
+}
+
+.footerImg{
+    width: 10em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Index - page */
+
+
 
 
 
@@ -89,16 +177,16 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 h1{
     font-size: 35px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Georgia', serif;
     margin-left: 5px;
 }
 
 form{
     font-size: 20px;
-    font-family: 'Open Sans Condensed', sans-serif;   
+    font-family: 'Georgia', serif;   
 }
 
 p{
     font-size: 30px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Georgia', serif;
 }
