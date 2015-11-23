@@ -20,7 +20,6 @@ namespace SharedProject1
 		{
 			
 			byte[] saltBytes = null;
-            < script type = "text/javascript" > var JavascriptBlah = '<%=blah%>' </ script >
 				var hashPassword = new sha512(Password,saltBytes);
 			//GetHash = hashPassword.hashData;
 

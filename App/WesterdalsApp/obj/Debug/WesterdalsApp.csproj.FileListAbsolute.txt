@@ -8,7 +8,6 @@ D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\WesterdalsApp.pdb
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\android\bin\WesterdalsApp.WesterdalsApp.apk
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\res\layout\main.xml
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\res\values\strings.xml
-D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\res\drawable\icon.png
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\R.cs.flag
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\uploadflags.txt
 C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll
@@ -26,5 +25,6 @@ C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\R.cs.
 C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\uploadflags.txt
 C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\WesterdalsApp.dll.mdb
 C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll.mdb
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\res\drawable\icon.png
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\WesterdalsApp.dll.mdb
 D:\Programmering\PJ3100\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll.mdb
