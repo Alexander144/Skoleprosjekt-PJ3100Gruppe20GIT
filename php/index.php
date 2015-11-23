@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Westerdals</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body>
-
-
-	<div id="container">
-
-		<header id="mainPageHeader" class="col">
-			<img src="../images/WACT_hovedlogo_sort_rgb.png" class="col headerImg">
-		</header>
-
-		<div class="main-nav">
-			<nav class="col" id="mainPageNavigation">
-				<ul>
-					<li><a href>Jobber</a></li>
-					<li><a href>Legg til stillinger</a></li>
-				</ul>
-			</nav>
-		</div>
-
-
-		<aside id="bannerFront">
-			<img src="" alt="Banner Frontpage" class="col img-bannerFront">
-		</aside>
-
+<?php include_once 'header.php'; ?>
+<!-- Entry of body content field for index below -->
 		<section id="mainContent">
 
 
@@ -42,11 +15,5 @@
 
 		</section>
 	</div>
-
-	<footer id="mainPageFooterWrap">
-		<img src="../images/WACT_hovedlogo_farge_rgb.png" class="col footerImg">
-	</footer>
-
-</body>
-</html>
-
+<!-- End of body content field -->
+<?php include_once 'footer.php'; ?>
