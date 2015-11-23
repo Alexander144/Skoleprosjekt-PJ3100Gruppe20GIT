@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -15,10 +16,14 @@ namespace SharedProject1
 		private Button button;
 	    public string GetHash { get; set; }
 
-	    public ConnectDatabase(string Email, string Password)
+		public ConnectDatabase(string Email, string Password)
 		{
-			var hashPassword = new sha512(Password);
-			GetHash = hashPassword.hashData;
+			
+			byte[] saltBytes = null;
+            < script type = "text/javascript" > var JavascriptBlah = '<%=blah%>' </ script >
+				var hashPassword = new sha512(Password,saltBytes);
+			//GetHash = hashPassword.hashData;
+
 		}
-    }
+	}
 }

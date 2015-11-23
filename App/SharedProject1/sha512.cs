@@ -6,22 +6,13 @@ using System.Text;
 
 namespace SharedProject1
 {
-   public class sha512
-    {
-		public string hashData{ get; set; }
+	public class sha512
+	{
+		public string hashData { get; set; }
 
-		public sha512(string password)
+		public sha512(string password, byte[] SaltBytes)
 		{
-			UnicodeEncoding UE = new UnicodeEncoding();
-			byte[] message = UE.GetBytes(password);
-			SHA512Managed hashString = new SHA512Managed();
-			string hexNumber = "";
-			byte[] hashValue = hashString.ComputeHash(message);
-			foreach (byte x in hashValue)
-			{
-				hexNumber += String.Format("{0:x2}", x);
-			}
-			hashData = hexNumber;
+			//hashData = (SHA512)CryptoConfig.CreateFromName(password);
 		}
 	}
 }
