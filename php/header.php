@@ -15,20 +15,22 @@ sec_session_start();
         <script type="text/JavaScript" src="js/forms.js"></script>
     </head>
     <body>
-	<div id="container">
+	<span id="container">
 
 		<header id="mainPageHeader" class="col">
 			<img src="img/WACT_hovedlogo_sort_rgb.png" class="col headerImg">
-		</header>
 
-		<div class="main-nav">
+					<span class="main-nav">
 			<nav class="col" id="mainPageNavigation">
 				<ul>
 					<li><a href>Jobber</a></li>
 					<li><a href>Legg til stillinger</a></li>
 				</ul>
 			</nav>
-		</div>
+		</span>
+		
+		</header>
+		</span>
 
 
 		<aside id="bannerFront">

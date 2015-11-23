@@ -53,11 +53,12 @@ a{
 /*start main content*/
 
 #mainPageHeader{
-    width: auto;
+    width: 100%;
     height: 7em;
     background-color: rgb(253, 253, 248);
     margin-top: 30px;
     margin-bottom: 30px;
+    float: left;
 }
 
 .headerImg{
