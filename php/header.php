@@ -18,7 +18,7 @@ sec_session_start();
 	<div id="container">
 
 		<header id="mainPageHeader" class="col">
-			<img src="/img/WACT_hovedlogo_sort_rgb.png" class="col headerImg">
+			<img src="img/WACT_hovedlogo_sort_rgb.png" class="col headerImg">
 		</header>
 
 		<div class="main-nav">
