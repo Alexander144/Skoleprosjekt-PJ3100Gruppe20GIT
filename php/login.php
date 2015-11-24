@@ -15,14 +15,16 @@ if (login_check($mysqli) == true) {
             echo '<p class="error">Error Logging In!</p>';
         }
         ?>
-        <div id="loginFeide" class="loginWindow">
+
+
+        <div id="loginFeide" class="col col-6 login">
             <div class="objectsInDiv">
             <h1>Ansatte og studenter <br> ved Westerdals</h1>
             <input class="buttonDesign" type="button" value="Login med Feide"/>
             </div>
         </div>
         
-        <div id="login" class="loginWindow">
+        <div id="loginOther" class="col col-6 login">
             <div class="objectsInDiv">
                 <h1>Bedrifter og kunder</h1>
                 <form action="includes/process_login.php" method="post" name="login_form">                      
@@ -34,7 +36,10 @@ if (login_check($mysqli) == true) {
                 <br>    
                 <input class="buttonDesign" type="button" 
                    value="Login" 
-                   onclick="formhash(this.form, this.form.password);" /> 
+                   onclick="formhash(this.form, this.form.password);" />
+
+                   <input class="buttonDesign "type="button" onclick="location.href='register.php';" value="Registrering" />
+
                 </form>
             </div>
         </div>
@@ -46,7 +51,6 @@ if (login_check($mysqli) == true) {
             echo '<p>Do you want to change user? <a href="includes/logout.php">Log out</a>.</p>';
         } else {
                         echo '<p>Currently logged ' . $logged . '.</p>';
-                        echo "<p>If you don't have a login, please <a href='register.php'>register</a></p>";
                 }
 ?>
 <?php include_once 'footer.php'; ?>

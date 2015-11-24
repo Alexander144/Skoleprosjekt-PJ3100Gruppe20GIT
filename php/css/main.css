@@ -25,6 +25,11 @@ body{
     float: left;
 }
 
+.col-6{
+  width: 459px;
+  float: left;
+}
+
 /**** END 978 GS ****/
 
 /**** START HEADER ****/
@@ -198,34 +203,28 @@ body{
 
 
 
-/*Login page*/
-.loginWindow{
-    float: left;
-    width: 50%;
+/**** LOGIN PAGE ****/
+
+.login{
+  margin-top: 40px;
 }
 
 #loginFeide{
-    height: 500px;
-    position: relative;
-    background-color: rgb(185, 185, 185);
-
+    height: 300px;
+    border-right: 1px solid black;
 }
 
-#login{
-    height: 500px;
-    background-color: rgb(199, 199, 199);
-    position: relative;
+#loginOther{
+    height: 300px;
     
 }
 
 .textField{
-    position: relative;
     float: right;
     top: 5px;
 }
 
 .objectsInDiv{
-    position: absolute;
     top: 20%;
     left: 35%;
 }
@@ -233,8 +232,8 @@ body{
 .buttonDesign{
     width: 220px;
     background-color: rgb(152, 152, 152);
-    font-size: 30px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-family: 'Georgia', serif;
 }
 
 .buttonDesign:hover{
@@ -242,7 +241,7 @@ body{
     background-color: rgb(120, 120, 120);
     transition: all 2s;
 }
-/*end login page*/
+/**** end login page ****/
 
 /*register page*/
 #registration{
