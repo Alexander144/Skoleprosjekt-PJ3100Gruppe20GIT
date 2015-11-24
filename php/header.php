@@ -24,7 +24,7 @@ sec_session_start();
       <ul>
         <li class="home"><a href="#">Jobber</a></li>
         <li class="tutorials"><a href="#">Legg til en stilling</a></li>
-        <li class="login"><a href="#">Logg inn</a></li>
+        <li class="login"><a href="login.php">Logg inn</a></li>
       </ul>
     </div>
   </header>

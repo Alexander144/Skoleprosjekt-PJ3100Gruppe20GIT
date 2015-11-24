@@ -3,7 +3,7 @@ body{
     font-family: "Georgia", serif;
 }
 
-/** start 978gs **/
+/**** START 978 GS ****/
 
 #container{
     width: 1008px;
@@ -21,11 +21,13 @@ body{
 
 .col-3{
     width: 222px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     float: left;
 }
 
-/*end 978gs */
+/**** END 978 GS ****/
+
+/**** START HEADER ****/
 
 .imgLogo{
     height: 100%;
@@ -38,7 +40,7 @@ body{
     margin-top: 10px;
 }
 
-/*start navigation*/
+/** start navigation HEADER **/
 
 .nav ul {
   list-style: none;
@@ -69,32 +71,18 @@ body{
   background-color: #005f5f;
 }
 
-/* end navigation */
+/** end navigation HEADER **/
 
-/*start footer*/
-#mainPageFooterWrap{
-  height: 15em;
-  background-color: rgb(253, 253, 248);
-  clear: both;
-}
+/**** END HEADER ****/
 
-.imgFooter{
-  display: block;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto; 
-}
-
-/*end footer*/
-
-/*start main content index*/
+/**** START MAIN CONTENT INDEX ****/
 
 #mainContent{
     display: block;
     float: left;
 }
 
-/* start sorting content */
+/** start sorting content INDEX **/
 
 .sort-container{
     background-color: rgb(253, 253, 248);
@@ -157,10 +145,34 @@ body{
     display: block;
   }
 
-/* end sorting content */
+/** end sorting content INDEX **/
 
-/*end main content index*/
+/**** END MAIN CONTENT INDEX ****/
 
+/**** start footer ****/
+#mainPageFooterWrap{
+  height: 15em;
+  background-color: rgb(253, 253, 248);
+  clear: both;
+}
+
+.imgFooter{
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-bottom: 60px;
+}
+
+.footerBanner{
+  display: block;
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+
+/**** end footer ****/
 
 
 /*mediaqueries tablet + smartphone*/
@@ -175,6 +187,10 @@ body{
       height: auto;
       float: none;
       margin-bottom: 15px;
+    }
+
+    #mainPageFooterWrap{
+      width: auto;
     }
 
 

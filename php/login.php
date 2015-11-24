@@ -10,6 +10,7 @@ if (login_check($mysqli) == true) {
     $logged = 'out';
 }
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,6 +20,9 @@ if (login_check($mysqli) == true) {
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script> 
     </head>
+
+<!-- <?php include_once 'header.php'; ?> -->
+
     <body>
         <?php
         if (isset($_GET['error'])) {
@@ -59,5 +63,4 @@ if (login_check($mysqli) == true) {
                         echo "<p>If you don't have a login, please <a href='register.php'>register</a></p>";
                 }
 ?>
-    </body>
-</html>
+<?php include_once 'footer.php'; ?>
