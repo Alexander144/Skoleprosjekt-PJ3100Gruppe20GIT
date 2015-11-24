@@ -59,7 +59,7 @@ include_once 'includes/functions.php';
                                    this.form.confirmpwd);" />
             </div>
         </form>
-        <p>Return to the <a href="index.php">login page</a>.</p>
+        <p>Return to the <a href="login.php">login page</a>.</p>
         </div>
     </body>
 </html>
