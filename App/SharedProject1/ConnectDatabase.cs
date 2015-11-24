@@ -20,7 +20,7 @@ namespace SharedProject1
 		{
 			
 			byte[] saltBytes = null;
-			var hashPassword = new sha512(Password,saltBytes);
+				var hashPassword = new sha512(Password,saltBytes);
 			//GetHash = hashPassword.hashData;
 
 		}

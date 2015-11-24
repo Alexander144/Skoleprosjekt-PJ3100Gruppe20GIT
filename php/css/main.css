@@ -1,35 +1,230 @@
-/* Index - page */
+body{
+    background-color: rgb(253, 253, 248);
+    font-family: "Georgia", serif;
+}
 
+/**** START 978 GS ****/
 
+#container{
+    width: 1008px;
+    margin: auto;
+}
 
-/*Login page*/
-.loginWindow{
+.col{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.col-12{
+    width: 978px;
+}
+
+.col-3{
+    width: 222px;
+    margin-bottom: 60px;
     float: left;
-    width: 50%;
+}
+
+.col-6{
+  width: 459px;
+  float: left;
+}
+
+/**** END 978 GS ****/
+
+/**** START HEADER ****/
+
+.imgLogo{
+    height: 100%;
+    float: left;
+}
+
+#mainPageHeader{
+    height: 4em;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+/** start navigation HEADER **/
+
+.nav ul {
+  list-style: none;
+  background-color: rgb(253, 253, 248);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: 'Georgia', serif;
+  font-size: 1em;
+  line-height: 50px;
+  height: 50px;
+  border-bottom: 1px solid #888;
+  margin-top: 1em;
+  display: inline-block;
+  width: 200px;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  display: block;
+}
+ 
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+/** end navigation HEADER **/
+
+/**** END HEADER ****/
+
+/**** START MAIN CONTENT INDEX ****/
+
+#mainContent{
+    display: block;
+    float: left;
+}
+
+/** start sorting content INDEX **/
+
+.sort-container{
+    background-color: rgb(253, 253, 248);
+    
+}
+
+.sort-container ul{
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.sort-container li{
+  font-family: 'Georgia', serif;
+  text-align: left;
+  width: 130px;
+  border-bottom: none;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1em;
+  display: inline-block;
+}
+
+.sort-container a{
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  display: block;
+}
+
+.sort-container a:hover {
+  background-color: #005f5f;
+}
+
+
+.sort-container li li{
+    background-color: rgb(253, 253, 248);
+    font-size: 1em;
+}
+
+.sort-container > ul > li {
+    text-align: center;
+}
+
+.sort-container > ul > li > a{
+    padding-left: 0px;
+}
+
+  .sort-container li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+  }
+
+    .sort-container li ul li {
+    display: block;
+  }
+
+    .sort-container li:hover ul {
+    display: block;
+  }
+
+/** end sorting content INDEX **/
+
+/**** END MAIN CONTENT INDEX ****/
+
+/**** start footer ****/
+#mainPageFooterWrap{
+  height: 15em;
+  background-color: rgb(253, 253, 248);
+  clear: both;
+}
+
+.imgFooter{
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-bottom: 60px;
+}
+
+.footerBanner{
+  display: block;
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+
+/**** end footer ****/
+
+
+/*mediaqueries tablet + smartphone*/
+  @media screen and (max-width: 800px) {
+
+    #container{
+      width: auto;
+    }
+
+    .col{
+      width: auto;
+      height: auto;
+      float: none;
+      margin-bottom: 15px;
+    }
+
+    #mainPageFooterWrap{
+      width: auto;
+    }
+
+
+  }
+
+
+
+/**** LOGIN PAGE ****/
+
+.login{
+  margin-top: 40px;
 }
 
 #loginFeide{
-    height: 500px;
-    position: relative;
-    background-color: rgb(185, 185, 185);
-
+    height: 300px;
+    border-right: 1px solid black;
 }
 
-#login{
-    height: 500px;
-    background-color: rgb(199, 199, 199);
-    position: relative;
+#loginOther{
+    height: 300px;
     
 }
 
 .textField{
-    position: relative;
     float: right;
     top: 5px;
 }
 
 .objectsInDiv{
-    position: absolute;
     top: 20%;
     left: 35%;
 }
@@ -37,8 +232,8 @@
 .buttonDesign{
     width: 220px;
     background-color: rgb(152, 152, 152);
-    font-size: 30px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-family: 'Georgia', serif;
 }
 
 .buttonDesign:hover{
@@ -46,16 +241,16 @@
     background-color: rgb(120, 120, 120);
     transition: all 2s;
 }
-/*end login page*/
+/**** end login page ****/
 
 /*register page*/
 #registration{
 width: 270px;
 text-align: right;
 }
-li{
+/*li{
 font-family: 'Open Sans Condensed', sans-serif;
-}
+}*/
 
 #registrationPage{
     position: absolute;
@@ -87,18 +282,18 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 /*end register page*/
 
-h1{
+/*h1{
     font-size: 35px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Georgia', serif;
     margin-left: 5px;
 }
 
 form{
     font-size: 20px;
-    font-family: 'Open Sans Condensed', sans-serif;   
+    font-family: 'Georgia', serif;   
 }
 
 p{
     font-size: 30px;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
+    font-family: 'Georgia', serif;
+}*/

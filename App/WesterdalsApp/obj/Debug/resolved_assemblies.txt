@@ -1,7 +1,9 @@
-D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\assemblies\WesterdalsApp.dll
-D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\assemblies\Mono.Android.dll
-D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\assemblies\mscorlib.dll
-D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\assemblies\System.Core.dll
-D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\assemblies\System.dll
-D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\assemblies\System.Xml.dll
-D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\assemblies\System.Xml.Linq.dll
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\assemblies\WesterdalsApp.dll
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\assemblies\Mono.Android.dll
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\assemblies\mscorlib.dll
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\assemblies\System.Core.dll
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\assemblies\System.dll
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\assemblies\System.Xml.dll
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\assemblies\System.Xml.Linq.dll
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\assemblies\System.Runtime.Serialization.dll
+D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\assemblies\System.ServiceModel.Internals.dll
