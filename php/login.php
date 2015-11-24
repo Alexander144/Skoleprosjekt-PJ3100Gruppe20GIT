@@ -1,8 +1,8 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
- 
-sec_session_start();
+include_once 'header.php';
+
  
 if (login_check($mysqli) == true) {
     $logged = 'in';
@@ -10,20 +10,6 @@ if (login_check($mysqli) == true) {
     $logged = 'out';
 }
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Secure Login: Log In</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-        <script type="text/JavaScript" src="js/sha512.js"></script> 
-        <script type="text/JavaScript" src="js/forms.js"></script> 
-    </head>
-
-<!-- <?php include_once 'header.php'; ?> -->
-
-    <body>
         <?php
         if (isset($_GET['error'])) {
             echo '<p class="error">Error Logging In!</p>';

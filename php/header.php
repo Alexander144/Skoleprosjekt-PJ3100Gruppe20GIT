@@ -3,6 +3,11 @@ include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
  
 sec_session_start();
+if (login_check($mysqli) == true) {
+    $logged = 'in';
+} else {
+    $logged = 'out';
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +29,19 @@ sec_session_start();
       <ul>
         <li class="home"><a href="#">Jobber</a></li>
         <li class="tutorials"><a href="#">Legg til en stilling</a></li>
-        <li class="login"><a href="login.php">Logg inn</a></li>
+        <li class="login"><?php if (login_check($mysqli) == true) {
+            echo '<a href="includes/logout.php">Logout?</a>';  
+        } else {
+                    echo '<a href="login.php">Logg inn</a></li>';        
+                }
+            ?>
+<!-- *******************************************************
+Lim inn denne koden for velkomst beskjed i php'en;
+
+echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
+************************************************************-->
+          </li>
       </ul>
+          
     </div>
   </header>
