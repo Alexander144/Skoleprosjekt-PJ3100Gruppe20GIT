@@ -1,4 +1,4 @@
-Gå inn på phpmyadmin
+Gå inn på phpmyadmin.
 Trykk på SQL knappen som er nummer 2 til venstre.
 Lim inn de 3 spørringene under der (skille ved -----)
 
