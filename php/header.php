@@ -27,8 +27,8 @@ if (login_check($mysqli) == true) {
     <img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
       <div class="nav">
       <ul>
-        <li class="home"><a href="#">Jobber</a></li>
-        <li class="tutorials"><a href="#">Legg til en stilling</a></li>
+        <li class="jobs"><a href="#">Jobber</a></li>
+        <li class="addJob"><a href="#">Legg til en stilling</a></li>
         <li class="login"><?php if (login_check($mysqli) == true) {
             echo '<a href="includes/logout.php">Logout?</a>';  
         } else {

@@ -21,7 +21,7 @@ body{
 
 .col-3{
     width: 222px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     float: left;
 }
 
@@ -51,8 +51,6 @@ body{
   list-style: none;
   background-color: rgb(253, 253, 248);
   text-align: center;
-  padding: 0;
-  margin: 0;
 }
 
 .nav li {
@@ -60,11 +58,18 @@ body{
   font-size: 1em;
   line-height: 50px;
   height: 50px;
-  border-bottom: 1px solid #888;
   margin-top: 1em;
   display: inline-block;
   width: 200px;
+    margin-left: -2px;
+    margin-right: -2px;
 }
+
+.addJob{
+    border-right: 1px solid rgb(10, 10, 10);
+    border-left: 1px solid rgb(10, 10, 10);
+}
+
  
 .nav a {
   text-decoration: none;
@@ -91,7 +96,13 @@ body{
 
 .sort-container{
     background-color: rgb(253, 253, 248);
-    
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.sortMenu{
+    position: relative;
+    right: 295px;
 }
 
 .sort-container ul{
@@ -105,23 +116,49 @@ body{
   font-family: 'Georgia', serif;
   text-align: left;
   width: 130px;
-  border-bottom: none;
   height: 50px;
   line-height: 50px;
   font-size: 1em;
   display: inline-block;
+    margin-right: -2px;
+    margin-left: -2px;
 }
 
 .sort-container a{
-  text-decoration: none;
-  color: rgb(50, 50, 50);
-  display: block;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(50, 50, 50);
+    display: block;
 }
 
-.sort-container a:hover {
-  background-color: #005f5f;
+.sort-program{
+    border-right: 1px solid rgb(10, 10, 10);
+    border-left: 1px solid rgb(10, 10, 10);
 }
 
+.sort-container a:hover{
+    background-color: #005f5f;
+}
+
+.sort-container #teknologi:hover{
+    background-color: rgb(97, 175, 202);
+}
+
+.sort-container #ledelse:hover{
+  background-color: rgb(121, 85, 128);
+}
+
+.sort-container #kommunikasjon:hover{
+    background-color: rgb(255, 208, 102);
+}
+
+.sort-container #kunstfag:hover{
+    background-color: rgb(126, 197, 157);
+}
+
+.sort-container #filmTVSpill:hover{
+    background-color: rgb(255, 112, 97);
+}
 
 .sort-container li li{
     background-color: rgb(253, 253, 248);
@@ -149,6 +186,11 @@ body{
     .sort-container li:hover ul {
     display: block;
   }
+
+.projectBoxes{
+    background-color: rgb(150, 150, 150);
+    height: 170px;
+}
 
 /** end sorting content INDEX **/
 
@@ -277,6 +319,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     background-color: rgb(120, 120, 120);
     transition: all 2s;
 }
+
 
 
 
