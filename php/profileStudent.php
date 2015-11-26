@@ -37,7 +37,7 @@
 
     <article class="col col-3">
         <h1>Studentens navn</h1>
-        <img src="img/profilbildeStudent.jpg" alt="Profilbilde av studenten (Mr. Bean)">
+        <img src="images/profilbildeStudent.jpg" alt="Profilbilde av studenten (Mr. Bean)">
     </article>
 
     <article class="col col-3">
