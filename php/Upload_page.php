@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+
+    <style>
+        
+        .photo{
+            max-width: 221px;
+            max-height: 200px; 
+        
+        }
+    
+    
+    </style>
+    
+</head>    
+    
 <body>
 
 <form action="includes/upload.php" method="post" enctype="multipart/form-data">
