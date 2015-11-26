@@ -6,7 +6,7 @@
   <div class="sort-container col"> <!-- start sorting content-->
         <ul>
         
-        <li class="sort-workBy sortMenu"><a href="#">Arbeid av</a>
+            <li class="sort-workBy sortMenu"><a href="#">Arbeid av</a>
           <ul>
             <li><a href="#">Student</a></li>
             <li><a href="#">Alumni</a></li>

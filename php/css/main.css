@@ -319,11 +319,42 @@ font-family: 'Open Sans Condensed', sans-serif;
     background-color: rgb(120, 120, 120);
     transition: all 2s;
 }
-
-
-
-
 /*end register page*/
+
+/*student profile*/
+#profileBasicInfo{
+
+}
+
+#profilePic{
+    width: 200px;
+    float: left;
+}
+
+#linksForProfile{
+    list-style: none;
+}
+
+#profileText{
+    position: relative;
+    top: 30px;
+    height: 400px;
+    border: 1px solid rgb(10, 10, 10);
+    padding: 3px;
+    font-size: 10px;
+}
+
+#ProfileProjects{
+
+}
+
+#ProfilePopular{
+
+}
+
+
+/*end student profile*/
+
 
 /*h1{
     font-size: 35px;
