@@ -6,24 +6,24 @@
   <div class="sort-container"> <!-- start sorting content-->
         <ul>
         
-        <li class="sort-workBy"><a href="#">Arbeid av</a>
+        <li class="sort-workBy sortMenu"><a href="#">Arbeid av</a>
           <ul>
             <li><a href="#">Student</a></li>
             <li><a href="#">Alumni</a></li>
           </ul>
         </li>
 
-        <li class="sort-program"><a href="#">Avdeling</a>
+        <li class="sort-program sortMenu"><a href="#">Avdeling</a>
           <ul>
-            <li><a href="#">Teknologi/IT</a></li>
-            <li><a href="#">Ledelse</a></li>
-            <li><a href="#">Kommunikasjon</a></li>
-            <li><a href="#">Kunstfag</a></li>
-            <li><a href="#">Film, TV og Spill</a></li>
+            <li><a id="teknologi" href="#">Teknologi/IT</a></li>
+            <li><a id="ledelse" href="#">Ledelse</a></li>
+            <li><a id="kommunikasjon" href="#">Kommunikasjon</a></li>
+            <li><a id="kunstfag" href="#">Kunstfag</a></li>
+            <li><a id="filmTVSpill" href="#">Film, TV og Spill</a></li>
           </ul>
         </li>
 
-        <li class="sort-orderBy"><a href="#">Rekkefølge</a>
+        <li class="sort-orderBy sortMenu"><a href="#">Rekkefølge</a>
           <ul>
             <li><a href="#">Mest Populære</a></li>
             <li><a href="#">Nyeste</a></li>
@@ -37,7 +37,7 @@
 
     <article class="col col-3">
         <h1>Studentens navn</h1>
-        <img src="images/profilbildeStudent.jpg" alt="Profilbilde av studenten (Mr. Bean)">
+        <img src="img/profilbildeStudent.jpg" alt="Profilbilde av studenten (Mr. Bean)">
     </article>
 
     <article class="col col-3">
