@@ -15,6 +15,7 @@ if (login_check($mysqli) == true) {
         <title>Tung?</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script>
@@ -27,8 +28,8 @@ if (login_check($mysqli) == true) {
     <img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
       <div class="nav">
       <ul>
-        <li class="home"><a href="#">Jobber</a></li>
-        <li class="tutorials"><a href="#">Legg til en stilling</a></li>
+        <li class="jobs"><a href="#">Jobber</a></li>
+        <li class="addJob"><a href="#">Legg til en stilling</a></li>
         <li class="login"><?php if (login_check($mysqli) == true) {
             echo '<a href="includes/logout.php">Logout?</a>';  
         } else {

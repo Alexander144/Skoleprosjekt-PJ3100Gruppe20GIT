@@ -21,13 +21,13 @@ body{
 
 .col-3{
     width: 222px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     float: left;
 }
 
 .col-6{
-  width: 459px;
-  float: left;
+    width: 459px;
+    float: left;
 }
 
 /**** END 978 GS ****/
@@ -48,32 +48,37 @@ body{
 /** start navigation HEADER **/
 
 .nav ul {
-  list-style: none;
-  background-color: rgb(253, 253, 248);
-  text-align: center;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    background-color: rgb(253, 253, 248);
+    text-align: center;
 }
 
 .nav li {
-  font-family: 'Georgia', serif;
-  font-size: 1em;
-  line-height: 50px;
-  height: 50px;
-  border-bottom: 1px solid #888;
-  margin-top: 1em;
-  display: inline-block;
-  width: 200px;
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+    line-height: 50px;
+    height: 50px;
+    margin-top: 1em;
+    display: inline-block;
+    width: 200px;
+    margin-left: -2px;
+    margin-right: -2px;
 }
+
+.addJob{
+    border-right: 1px solid rgb(10, 10, 10);
+    border-left: 1px solid rgb(10, 10, 10);
+}
+
  
 .nav a {
-  text-decoration: none;
-  color: rgb(50, 50, 50);
-  display: block;
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    display: block;
 }
  
 .nav a:hover {
-  background-color: #005f5f;
+    background-color: #005f5f;
 }
 
 /** end navigation HEADER **/
@@ -91,37 +96,69 @@ body{
 
 .sort-container{
     background-color: rgb(253, 253, 248);
-    
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.sortMenu{
+    position: relative;
+    right: 295px;
 }
 
 .sort-container ul{
-  list-style: none;
-  text-align: center;
-  padding: 0px;
-  margin: 0px;
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
 }
 
 .sort-container li{
-  font-family: 'Georgia', serif;
-  text-align: left;
-  width: 130px;
-  border-bottom: none;
-  height: 50px;
-  line-height: 50px;
-  font-size: 1em;
-  display: inline-block;
+    font-family: 'Georgia', serif;
+    text-align: left;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1em;
+    display: inline-block;
+    margin-right: -2px;
+    margin-left: -2px;
 }
 
 .sort-container a{
-  text-decoration: none;
-  color: rgb(50, 50, 50);
-  display: block;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(50, 50, 50);
+    display: block;
 }
 
-.sort-container a:hover {
-  background-color: #005f5f;
+.sort-program{
+    border-right: 1px solid rgb(10, 10, 10);
+    border-left: 1px solid rgb(10, 10, 10);
 }
 
+.sort-container a:hover{
+    background-color: #005f5f;
+}
+
+.sort-container #teknologi:hover{
+    background-color: rgb(97, 175, 202);
+}
+
+.sort-container #ledelse:hover{
+    background-color: rgb(121, 85, 128);
+}
+
+.sort-container #kommunikasjon:hover{
+    background-color: rgb(255, 208, 102);
+}
+
+.sort-container #kunstfag:hover{
+    background-color: rgb(126, 197, 157);
+}
+
+.sort-container #filmTVSpill:hover{
+    background-color: rgb(255, 112, 97);
+}
 
 .sort-container li li{
     background-color: rgb(253, 253, 248);
@@ -136,19 +173,24 @@ body{
     padding-left: 0px;
 }
 
-  .sort-container li ul {
+.sort-container li ul {
     position: absolute;
     display: none;
     width: inherit;
-  }
+}
 
-    .sort-container li ul li {
+.sort-container li ul li {
     display: block;
-  }
+}
 
-    .sort-container li:hover ul {
+.sort-container li:hover ul {
     display: block;
-  }
+}
+
+.projectBoxes{
+    background-color: rgb(150, 150, 150);
+    height: 170px;
+}
 
 /** end sorting content INDEX **/
 
@@ -156,25 +198,26 @@ body{
 
 /**** start footer ****/
 #mainPageFooterWrap{
-  height: 15em;
-  background-color: rgb(253, 253, 248);
-  clear: both;
+    height: 15em;
+    background-color: rgb(253, 253, 248);
+    clear: both;
+    padding-top: 20px;
 }
 
 .imgFooter{
-  display: block;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto; 
-  margin-bottom: 60px;
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 60px;
 }
 
 .footerBanner{
-  display: block;
-  width: 950px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
+    display: block;
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
 }
 
 /**** end footer ****/
@@ -206,7 +249,7 @@ body{
 /**** LOGIN PAGE ****/
 
 .login{
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 #loginFeide{
@@ -245,8 +288,8 @@ body{
 
 /*register page*/
 #registration{
-width: 270px;
-text-align: right;
+    width: 270px;
+    text-align: right;
 }
 /*li{
 font-family: 'Open Sans Condensed', sans-serif;
@@ -277,10 +320,46 @@ font-family: 'Open Sans Condensed', sans-serif;
     background-color: rgb(120, 120, 120);
     transition: all 2s;
 }
-
-
-
 /*end register page*/
+
+/*student profile*/
+#profileBasicInfo{
+    padding-top: 20px;
+}
+
+#profilePic{
+    width: 200px;
+    float: left;
+}
+
+#linksForProfile{
+    list-style: none;
+
+}
+
+#profileText{
+    position: relative;
+    height: auto;
+    top: 50px;
+    border: 1px solid rgb(10, 10, 10);
+    padding: 15px;
+    font-size: 15px;
+}
+#AboutMe{
+    
+}
+
+#ProfileProjects{
+    padding-top: 20px;
+}
+
+#ProfilePopular{
+
+}
+
+
+/*end student profile*/
+
 
 /*h1{
     font-size: 35px;
