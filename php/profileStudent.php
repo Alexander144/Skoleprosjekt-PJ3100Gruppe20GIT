@@ -71,6 +71,10 @@ Faglig har han bakgrunn fra medievitenskap hovedfag ved Universitetet i Oslo og 
                 <h3>Projekt 2</h3>
                 <p></p>
             </article>
+            <article class="projectBoxes">
+                <h3>Projekt 3</h3>
+                <p></p>
+            </article>
             <br>
             <input id="ProfileBTN" class="buttonDesign" type="button" onclick="alert('Legg til Prosjekt')" value="Legg til prosjekt">
         </div>
