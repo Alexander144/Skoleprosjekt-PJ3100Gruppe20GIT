@@ -28,3 +28,17 @@ C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\bin\Debug\Weste
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\res\drawable\icon.png
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\WesterdalsApp.dll.mdb
 D:\Programmering\PJ3100\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll.mdb
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\bin\Debug\WesterdalsApp.pdb
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\bin\Debug\WesterdalsApp.WesterdalsApp.apk
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\bin\Debug\WesterdalsApp.WesterdalsApp-Signed.apk
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\WesterdalsApp.csprojResolveAssemblyReference.cache
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\WesterdalsApp.dll
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\WesterdalsApp.pdb
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\android\bin\WesterdalsApp.WesterdalsApp.apk
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\layout\main.xml
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\values\strings.xml
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\drawable\icon.png
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\R.cs.flag
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\uploadflags.txt
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\layout\layout1.xml

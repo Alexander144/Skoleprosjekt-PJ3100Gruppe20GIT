@@ -1,4 +1,12 @@
+WesterdalsApp.Activity1, WesterdalsApp;md5899f4789ecb5d8ba4f4557b70a42656b.Activity1
+WesterdalsApp.Activity1, WesterdalsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5899f4789ecb5d8ba4f4557b70a42656b.Activity1
+WesterdalsApp.Activity1;md5899f4789ecb5d8ba4f4557b70a42656b.Activity1
+westerdalsapp.Activity1;md5899f4789ecb5d8ba4f4557b70a42656b.Activity1
 WesterdalsApp.MainActivity, WesterdalsApp;md5899f4789ecb5d8ba4f4557b70a42656b.MainActivity
 WesterdalsApp.MainActivity, WesterdalsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5899f4789ecb5d8ba4f4557b70a42656b.MainActivity
 WesterdalsApp.MainActivity;md5899f4789ecb5d8ba4f4557b70a42656b.MainActivity
 westerdalsapp.MainActivity;md5899f4789ecb5d8ba4f4557b70a42656b.MainActivity
+WesterdalsApp.Assets.Activities.LoginActivity, WesterdalsApp;md50ee3108dff4ef833da2c318c9f40a1af.LoginActivity
+WesterdalsApp.Assets.Activities.LoginActivity, WesterdalsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50ee3108dff4ef833da2c318c9f40a1af.LoginActivity
+WesterdalsApp.Assets.Activities.LoginActivity;md50ee3108dff4ef833da2c318c9f40a1af.LoginActivity
+westerdalsapp.assets.activities.LoginActivity;md50ee3108dff4ef833da2c318c9f40a1af.LoginActivity

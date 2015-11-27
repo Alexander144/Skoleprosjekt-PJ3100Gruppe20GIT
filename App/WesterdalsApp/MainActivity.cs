@@ -61,10 +61,12 @@ namespace WesterdalsApp
 			}
 			else
 			{
-				data = new ConnectDatabase(EmailSend, PasswordSend);
+                StartActivity(typeof(Activity1));
+                data = new ConnectDatabase(EmailSend, PasswordSend);
 				HashText = data.GetHash;
 				tex1.Text = EmailSend;
 				tex2.Text = HashText;
+                
 			}
 		}
 	}
