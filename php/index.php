@@ -3,6 +3,8 @@
 
   <section id="mainContent"> <!-- start Main Content -->
 
+  <img src="img/exampleBanner.jpg" alt="Banner Index" class="col index-banner">
+
   <div class="sort-container col"> <!-- start sorting content-->
         <ul>
         
@@ -37,41 +39,49 @@
 
     <article class="col col-3 projectBoxes">
       <h3>Prosjekt 1</h3>
+      <img src="img/examplePic.jpg" alt="Project 1" class="project-img">
       <p></p>
     </article>
 
     <article class="col col-3 projectBoxes">
       <h3>Prosjekt 2</h3>
+      <img src="img/examplePic.jpg" alt="Project 2" class="project-img">
       <p></p>
     </article>
 
     <article class="col col-3 projectBoxes">
       <h3>Prosjekt 3</h3>
+      <img src="img/examplePic.jpg" alt="Project 3" class="project-img">
       <p></p>
     </article>
 
     <article class="col col-3 projectBoxes">
       <h3>Prosjekt 4</h3>
+      <img src="img/examplePic.jpg" alt="Project 4" class="project-img">
       <p></p>
     </article>
       
     <article class="col col-3 projectBoxes">
       <h3>Prosjekt 5</h3>
+      <img src="img/examplePic.jpg" alt="Project 5" class="project-img">
       <p></p>
     </article>
       
     <article class="col col-3 projectBoxes">
       <h3>Prosjekt 6</h3>
+      <img src="img/examplePic.jpg" alt="Project 6" class="project-img">
       <p></p>
     </article>
       
     <article class="col col-3 projectBoxes">
       <h3>Prosjekt 7</h3>
+      <img src="img/examplePic.jpg" alt="Project 7" class="project-img">
       <p></p>
     </article>
       
     <article class="col col-3 projectBoxes">
       <h3>Prosjekt 8</h3>
+      <img src="img/examplePic.jpg" alt="Project 8" class="project-img">
       <p></p>
     </article>
 

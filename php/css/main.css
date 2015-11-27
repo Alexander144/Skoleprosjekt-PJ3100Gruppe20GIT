@@ -92,12 +92,21 @@ body{
     float: left;
 }
 
+.index-banner{
+  margin-bottom: 10px;
+}
+
+.project-img{
+  width: 100%;
+}
+
 /** start sorting content INDEX **/
 
 .sort-container{
     background-color: rgb(253, 253, 248);
     margin-bottom: 30px;
     border-bottom: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 0, 0);
 }
 
 .sortMenu{
@@ -120,8 +129,8 @@ body{
   line-height: 50px;
   font-size: 1em;
   display: inline-block;
-    margin-right: -2px;
-    margin-left: -2px;
+  margin-right: -2px;
+  margin-left: -2px;
 }
 
 .sort-container a{
@@ -187,10 +196,10 @@ body{
     display: block;
   }
 
-.projectBoxes{
+/*.projectBoxes{
     background-color: rgb(150, 150, 150);
     height: 170px;
-}
+}*/
 
 /** end sorting content INDEX **/
 
