@@ -21,6 +21,7 @@ namespace WesterdalsApp
 
             // Create your application here
             SetContentView(Resource.Layout.layout1);
+            //Testkommentar
         }
     }
 }
