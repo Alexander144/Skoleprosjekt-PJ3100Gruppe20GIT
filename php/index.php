@@ -1,4 +1,5 @@
-<?php include_once 'header.php'; ?>
+<?php include_once 'header.php'; 
+include_once 'includes/Index.inc.php';?>
 <!-- Entry of body content field for index below -->
 
   <section id="mainContent"> <!-- start Main Content -->
