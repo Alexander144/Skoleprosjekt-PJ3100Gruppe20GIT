@@ -43,7 +43,7 @@ include_once 'includes/functions.php';
             Username: <input class="registerField" type='text' 
                 name='username' 
                 id='username' /><br>
-            Email: <input class="registerField" type='text' name='email' id='email' /><br>
+            Email: <input class="registerField" type="text" name="email" id="email" /><br>
             Password: <input class="registerField" type="password"
                              name="password" 
                              id="password"/><br>

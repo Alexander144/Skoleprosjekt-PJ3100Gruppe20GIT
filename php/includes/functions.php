@@ -65,7 +65,6 @@ function login($email, $password, $mysqli) {
                     $_SESSION['username'] = $username;
                     $_SESSION['login_string'] = hash('sha512', 
                               $password . $user_browser);
-                    $_SESSION['email'] = $email;
                     // Login successful.
                     return true;
                 } else {
@@ -118,12 +117,12 @@ function login_check($mysqli) {
         $user_id = $_SESSION['user_id'];
         $login_string = $_SESSION['login_string'];
         $username = $_SESSION['username'];
-        $email = $_SESSION['email'];
+ 
         // Get the user-agent string of the user.
         $user_browser = $_SERVER['HTTP_USER_AGENT'];
  
         if ($stmt = $mysqli->prepare("SELECT password 
-                                      FROM user 
+                                      FROM user
                                       WHERE id = ? LIMIT 1")) {
             // Bind "$user_id" to parameter. 
             $stmt->bind_param('i', $user_id);
@@ -185,21 +184,4 @@ function esc_url($url) {
     } else {
         return $url;
     }
-}
-function profile($picture,$infotext,$grades,$cv)
-{
-    echo"hey";
-    if( isset($_GET['UpdateBTN']) )
-    {
-
-    //be sure to validate and clean your variables
-        //$val1 = htmlentities($_GET['picture']);
-        //$val2 = htmlentities($_GET['infotext']);
-        //$val3 = htmlentities($_GET['grades']);
-        //$val4 = htmlentities($_GET['cv']);
-
-        //if($val1!=null||$val2!=null||$val3!=null||$val4!=null){
-        //}
-         
-    }  
 }

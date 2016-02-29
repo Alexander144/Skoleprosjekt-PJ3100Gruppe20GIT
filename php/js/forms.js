@@ -14,6 +14,7 @@ function formhash(form, password) {
     // Finally submit the form. 
     form.submit();
 }
+ 
 function regformhash(form, uid, email, password, conf) {
      // Check each field has a value
     if (uid.value == ''         || 
@@ -73,16 +74,6 @@ function regformhash(form, uid, email, password, conf) {
     conf.value = "";
  
     // Finally submit the form. 
-    form.submit();
-    return true;
-}
-function ProfileUpdateForms(form, picture, infotext, grades, cv) {
-
-    form.submit();
-    return true;
-}
-function AddProjectForms(form, name, subject, infotext, picture, link, date) {
-
     form.submit();
     return true;
 }
