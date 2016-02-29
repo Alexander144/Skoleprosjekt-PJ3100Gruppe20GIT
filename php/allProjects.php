@@ -35,42 +35,42 @@
 
   <!-- start projects -->
 
-    <article class="col col-3 projectBoxes" <?php $projectBox1; ?>>
+    <article class="col col-3 projectBoxes" <?php echo $projectBox1; ?>>
       <h3>Prosjekt 1</h3>
       <p></p>
     </article>
 
-    <article class="col col-3 projectBoxes" <?php $projectBox2; ?>>
+    <article class="col col-3 projectBoxes" <?php echo $projectBox2; ?>>
       <h3>Prosjekt 2</h3>
       <p></p>
     </article>
 
-    <article class="col col-3 projectBoxes" <?php $projectBox3; ?>>
+    <article class="col col-3 projectBoxes" <?php echo $projectBox3; ?>>
       <h3>Prosjekt 3</h3>
       <p></p>
     </article>
 
-    <article class="col col-3 projectBoxes" <?php $projectBox4; ?>>
+    <article class="col col-3 projectBoxes" <?php echo $projectBox4; ?>>
       <h3>Prosjekt 4</h3>
       <p></p>
     </article>
       
-    <article class="col col-3 projectBoxes" <?php $projectBox5; ?>>
+    <article class="col col-3 projectBoxes" <?php echo $projectBox5; ?>>
       <h3>Prosjekt 5</h3>
       <p></p>
     </article>
       
-    <article class="col col-3 projectBoxes" <?php $projectBox6; ?>>
+    <article class="col col-3 projectBoxes" <?php echo $projectBox6; ?>>
       <h3>Prosjekt 6</h3>
       <p></p>
     </article>
       
-    <article class="col col-3 projectBoxes" <?php $projectBox7; ?>>
+    <article class="col col-3 projectBoxes" <?php echo $projectBox7; ?>>
       <h3>Prosjekt 7</h3>
       <p></p>
     </article>
       
-    <article class="col col-3 projectBoxes" <?php $projectBox8; ?>>
+    <article class="col col-3 projectBoxes" <?php echo $projectBox8; ?>>
       <h3>Prosjekt 8</h3>
       <p></p>
     </article>

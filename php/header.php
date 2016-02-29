@@ -42,6 +42,7 @@ Lim inn denne koden for velkomst beskjed i php'en;
 echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
 ************************************************************-->
           </li>
+          <li><a href="profileStudent.php">Profil</a></li>
       </ul>
           
     </div>
