@@ -54,7 +54,7 @@
 
         </div>
 
-        <div id="ProfilePopular" class="col-3">
+        <div class="col-3">
 
       </div>
 
