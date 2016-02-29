@@ -35,7 +35,7 @@
 
   <!-- start projects -->
 
-    <div id="profileBasicInfo" class="col col-3">
+    <div class="col col-3">
         <h1>Søk student</h1>
         Søk på navn: <input type="text" name="Name"size="35px"><br><br>
         Søk på program: <input type="text" name="program" size="35px"><br><br>
