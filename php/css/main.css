@@ -281,6 +281,8 @@ body{
     background-color: rgb(152, 152, 152);
     font-size: 20px;
     font-family: 'Georgia', serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .buttonDesign:hover{
