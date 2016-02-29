@@ -37,10 +37,10 @@
 
     <div class="col col-3">
         <h1>Søk student</h1>
-        Søk på navn: <input type="text" name="Name"size="35px"><br><br>
-        Søk på program: <input type="text" name="program" size="35px"><br><br>
-        Søk på slut år: <input type="text" name="year" size="35px"><br><br>
-        Søk på ?????: <input type="text" name="" size="35px"><br><br>
+        <div> Søk på navn: <input type="text" name="Name"size="35px"><br><br></div>
+        <div> Søk på program: <input type="text" name="program" size="35px"><br><br></div>
+        <div> Søk på slut år: <input type="text" name="year" size="35px"><br><br></div>
+        <div> Søk på ?????: <input type="text" name="" size="35px"><br><br></div>
          <br>
         <input class="buttonDesign" type="button" onclick="alert('Search & Find!')" value="Søk">
         </div>
