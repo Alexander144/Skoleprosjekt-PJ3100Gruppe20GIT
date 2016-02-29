@@ -33,26 +33,51 @@
 
   </div> <!-- end sorting content -->
 
-      <div id="projects"><!-- start projects -->
-        <?php $projectBox1; ?>
-      </div><!--end projects-->
+  <!-- start projects -->
 
-</section> <!-- end Main Content -->
+    <article class="col col-3 projectBoxes" <?php echo $projectBox1; ?>>
+      <h3>Prosjekt 1</h3>
+      <p></p>
+    </article>
 
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <article class="col col-3 projectBoxes" <?php echo $projectBox2; ?>>
+      <h3>Prosjekt 2</h3>
+      <p></p>
+    </article>
 
-<script>
-    //Get all projects:
-    var allProjects = 6; //Get value here
-    
-    for(var i = 0; i < allProjects; i++){
-        var $newProject = $("<div>")
-            .addClass("col col-3 projectBoxes")
-        
-        $("#projects").append($newProject);
-    }
-    
-</script><!--end script-->
+    <article class="col col-3 projectBoxes" <?php echo $projectBox3; ?>>
+      <h3>Prosjekt 3</h3>
+      <p></p>
+    </article>
+
+    <article class="col col-3 projectBoxes" <?php echo $projectBox4; ?>>
+      <h3>Prosjekt 4</h3>
+      <p></p>
+    </article>
+      
+    <article class="col col-3 projectBoxes" <?php echo $projectBox5; ?>>
+      <h3>Prosjekt 5</h3>
+      <p></p>
+    </article>
+      
+    <article class="col col-3 projectBoxes" <?php echo $projectBox6; ?>>
+      <h3>Prosjekt 6</h3>
+      <p></p>
+    </article>
+      
+    <article class="col col-3 projectBoxes" <?php echo $projectBox7; ?>>
+      <h3>Prosjekt 7</h3>
+      <p></p>
+    </article>
+      
+    <article class="col col-3 projectBoxes" <?php echo $projectBox8; ?>>
+      <h3>Prosjekt 8</h3>
+      <p></p>
+    </article>
+
+  <!-- end projects -->
+
+  </section> <!-- end Main Content -->
+	</div> <!-- end container -->
 <!-- End of body content field -->
-
 <?php include_once 'footer.php'; ?>

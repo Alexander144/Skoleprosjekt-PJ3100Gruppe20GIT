@@ -28,6 +28,7 @@ sec_session_start();
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']); 
             $email = htmlentities($_SESSION['email']);
+            include_once 'includes/AddProject.inc.php';
             ?>
             <p>Name: <input class="updatefield" type="text"
                              name="name" 
@@ -67,6 +68,6 @@ sec_session_start();
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
             </p>
-        <?php include_once 'includes/AddProject.inc.php'; endif; ?>
+        <?php endif; ?>
     </body>
 </html>

@@ -8,6 +8,7 @@ $error_msg = "";
 
 if (isset($_POST['infotext'])) {
 	    $infotext = filter_input(INPUT_POST, 'infotext', FILTER_SANITIZE_STRING);
+        die;
 
 if (empty($error_msg)) {
        

@@ -3,10 +3,6 @@ body{
     font-family: "Georgia", serif;
 }
 
-.clearfix{
-	clear: both;
-}
-
 /**** START 978 GS ****/
 
 #container{
@@ -281,8 +277,6 @@ body{
     background-color: rgb(152, 152, 152);
     font-size: 20px;
     font-family: 'Georgia', serif;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .buttonDesign:hover{
@@ -364,73 +358,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
 
-/*** END STUDENT PROFILE ***/
-
-/*** START CREATE PROJECT ***/
-
-#mainCreateProject{
-    line-height: 0;
-    margin-top: 50px;
-}
-
-#mainCreateProject p{
-    font-size: 20px;
-}
-
-.upload{
-    float: left;
-    margin-right: 15px;
-}
-
-#nameFileCreateProject{
-    line-height: 0;
-    vertical-align: top;
-}
-
-.publishBtn{
-    background-color: lightblue;
-    border-radius: 10px;
-    height: 40px;
-    width: 100px;
-    margin-right: 15px;
-}
-
-#publish{
-    margin-top: 15px;
-}
-
-
-#uploadCPBtn{
-    background-color: lightblue;
-    border-radius: 10px;
-    height: 40px;
-    width: 100px;
-}
-
-#nameProjectCPTxt{
-    height: 30px;
-    width: 500px;
-}
-
-#descProjCPTxt{
-    width: 500px;
-    height: 300px;
-}
-
-/*** END CREATE PROJECT ***/
-
-/*** START EDIT PROFILE ***/
-
-#editAboutMe{
-    height: 400px;
-    width: 220px;
-}
-
-/*** END EDIT PROFILE ***/
-
-/*** START SEE ALL PROJECTS ***/
-
-/*** END SEE ALL PROJECTS ***/
+/*end student profile*/
 
 
 /*h1{
