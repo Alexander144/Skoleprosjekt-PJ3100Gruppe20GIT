@@ -30,6 +30,6 @@ if (empty($error_msg)) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
-        header('Location: ./editProfile.php');
+        header('Location: /editProfile.php');
 }
 }?>
