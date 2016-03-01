@@ -86,3 +86,10 @@ function AddProjectForms(form, name, subject, infotext, picture, link, date) {
     form.submit();
     return true;
 }
+function SearchOnProfile(form,textfield) {
+    Session["textfield"] = textfield;
+    window.location = './searchStudResalt.php';
+
+    return true;
+
+}

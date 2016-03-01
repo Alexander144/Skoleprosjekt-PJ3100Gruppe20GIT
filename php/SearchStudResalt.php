@@ -1,5 +1,5 @@
-<?php include_once 'header.php';
-      include_once 'includes/editProfile.inc.php';
+<?php include 'header.php';    
+      
  ?>
         <?php if (login_check($mysqli) == true) : ?>
 		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
@@ -11,9 +11,9 @@
                 <h3>Søk resultat</h3>
             <?php
 
-            $username = htmlentities($_SESSION['username']);
-            $user_id = htmlentities($_SESSION['user_id']);
-            $email = htmlentities($_SESSION['email']);
+            $username = $profileUsername;
+            $email = $profileEmail;
+            include_once 'includes/searchStudResalt.inc.php';
 
              ?>
                 <div id="" class="col col-ProfileStudent">

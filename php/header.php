@@ -1,6 +1,7 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
+include_once 'includes/searchStudResalt.inc.php';
  
 sec_session_start();
 if (login_check($mysqli) == true) {
@@ -42,8 +43,12 @@ Lim inn denne koden for velkomst beskjed i php'en;
 echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
 ************************************************************-->
           </li>
+          <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
+                method="post"
+                name="updateProfile_form">
           <li><input id="textfield" name="textfield" type="text" placeholder="Søk" />
-          <input type="button" onclick="alert('Search & Find!')" value="Søk">
+          <input type="button" id="UpdateBTN" onclick="return SearchOnProfile(this.form,this.form.textfield);" value="Søk"/>
+        </form>
           </li>
       </ul>
           
