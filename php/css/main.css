@@ -70,9 +70,8 @@ body{
     margin-right: -2px;
 }
 
-.addJob{
+.li-border{
     border-right: 1px solid rgb(10, 10, 10);
-    border-left: 1px solid rgb(10, 10, 10);
 }
 
  
@@ -100,9 +99,10 @@ body{
 /** start sorting content INDEX **/
 
 .sort-container{
-    background-color: rgb(253, 253, 248);
+    background-color: rgb(200, 200, 200);
     margin-bottom: 30px;
     border-bottom: 1px solid rgb(0, 0, 0);
+    margin-top: 10px;
 }
 
 .sortMenu{

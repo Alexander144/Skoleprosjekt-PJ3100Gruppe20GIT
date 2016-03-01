@@ -1,52 +1,24 @@
-<?php include 'header.php'; 
-include_once 'includes/Index.inc.php';?>
+
+<?php include_once 'header.php'; 
+    include_once 'includes/Index.inc.php';
+    include_once 'menu.php';
+?>
 <!-- Entry of body content field for index below -->
 
-  <section id="mainContent"> <!-- start Main Content -->
+<section id="mainContent"> <!-- start Main Content -->
 
-  <div class="sort-container col"> <!-- start sorting content-->
-        <ul>
-        
-            <li class="sort-workBy sortMenu"><a href="#">Arbeid av</a>
-          <ul>
-            <li><a href="#">Student</a></li>
-            <li><a href="#">Alumni</a></li>
-          </ul>
-        </li>
+<!-- start projects -->
+    <div id="projects">
+        <?php $projectBox1; ?>
+    </div><!-- end projects -->
 
-        <li class="sort-program sortMenu"><a href="#">Avdeling</a>
-          <ul>
-            <li><a id="teknologi" href="#">Teknologi/IT</a></li>
-            <li><a id="ledelse" href="#">Ledelse</a></li>
-            <li><a id="kommunikasjon" href="#">Kommunikasjon</a></li>
-            <li><a id="kunstfag" href="#">Kunstfag</a></li>
-            <li><a id="filmTVSpill" href="#">Film, TV og Spill</a></li>
-          </ul>
-        </li>
+</section> <!-- end Main Content -->
 
-        <li class="sort-orderBy sortMenu"><a href="#">Rekkefølge</a>
-          <ul>
-            <li><a href="#">Mest Populære</a></li>
-            <li><a href="#">Nyeste</a></li>
-          </ul>
-        </li>
-      </ul>
 
-  </div> <!-- end sorting content -->
-
-  <!-- start projects -->
-      <div id="projects">
-            <?php $projectBox1; ?>
-      </div>
-
-  <!-- end projects -->
-
-  </section> <!-- end Main Content -->
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-             
 <script>
     //Get all projects:
-    var allProjects = 6; //Get value here
+    var allProjects = 12; //Get value here
 
     for(var i = 0; i < allProjects; i++){
         var $newProject = $("<div>")
@@ -54,9 +26,25 @@ include_once 'includes/Index.inc.php';?>
                      
             $("#projects").append($newProject);
         }
-
 </script><!--end script-->
 <!-- End of body content field -->
 
-<!-- End of body content field -->
 <?php include_once 'footer.php'; ?>
+        <!-- Knapp funkjsonen-->
+    <input id="UpdateBTN" type="button"
+           value="Update"
+           onclick="return ProfileUpdateForms(
+                    this.form,
+                    this.form.picture,
+                    this.form.profileEditAboutMe,
+                    this.form.grades,
+                    this.form.cv);" />
+    </form>
+    <p>Return to <a href="index.php">login page</a></p>
+    <?php else : ?>
+    <p>
+        <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+    </p>
+    <?php endif; ?>
+    </body>
+</html>
