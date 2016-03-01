@@ -332,7 +332,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 .studentCol{
     border-right: solid black 1px;
     border-left: solid black 1px;
-        padding-left: 10px;
+    padding-left: 10px;
     padding-right: 10px;
     height: 500px;
 }

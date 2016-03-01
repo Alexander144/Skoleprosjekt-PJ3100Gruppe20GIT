@@ -7,6 +7,86 @@
                 name="updateProfile_form">
 
 
+            <div id="updateProfile">
+                <h3>Søk resultat</h3>
+            <?php
+
+            $username = htmlentities($_SESSION['username']);
+            $user_id = htmlentities($_SESSION['user_id']);
+            $email = htmlentities($_SESSION['email']);
+
+             ?>
+                <div id="" class="col col-ProfileStudent">
+
+                    <h3><?php echo $username;?></h3>
+                    <p>Bilde av studenten</p>
+                    <img src="">
+                    <p>Email: <?php echo $email ?> </p>
+
+                    <div id="" class="col col-ProfileStudent">
+                    <h3><?php echo $username; ?>'s nyeste projekter</h3>
+                    <article class="projectBoxes">
+                        <h3>Projekt 1</h3>
+                        <p></p>
+                        </article>
+                    </div>
+                </div>
+             </div>
+
+
+     <!--         <div id="updateProfile">
+            <?php
+
+            $username = htmlentities($_SESSION['username']);
+            $user_id = htmlentities($_SESSION['user_id']);
+            $email = htmlentities($_SESSION['email']);
+
+             ?>
+                <div id="" class="col col-ProfileStudent">
+
+                    <h3><?php echo $username;?></h3>
+                    <p>Bilde av studenten</p>
+                    <img src="">
+                    <p>Email: <?php echo $email ?> </p>
+
+                    <div id="" class="col col-ProfileStudent">
+                    <h3><?php echo $username; ?>'s nyeste projekter</h3>
+                    <article class="projectBoxes">
+                        <h3>Projekt 1</h3>
+                        <p></p>
+                        </article>
+                    </div>
+                </div>
+             </div>
+
+           <div id="updateProfile">
+
+
+            <?php
+
+            $username = htmlentities($_SESSION['username']);
+            $user_id = htmlentities($_SESSION['user_id']);
+            $email = htmlentities($_SESSION['email']);
+
+             ?>
+                <div id="" class="col col-ProfileStudent">
+                    <h3><?php echo $username;?></h3>
+                    <p>Bilde av studenten</p>
+                    <img src="">
+                    <p>Email: <?php echo $email ?> </p>
+                </div>
+
+                <div id="" class="col col-ProfileStudent">
+                    <h3><?php echo $username; ?>'s nyeste projekter</h3>
+                    <article class="projectBoxes">
+                    <h3>Projekt 1</h3>
+                    <p></p>
+                    </article>
+
+                </div>
+
+            </div>         -->
+
 
 
 
