@@ -63,9 +63,11 @@ function login($email, $password, $mysqli) {
                                                                 "", 
                                                                 $username);
                     $_SESSION['username'] = $username;
+
                     $_SESSION['login_string'] = hash('sha512', 
                               $password . $user_browser);
                     $_SESSION['email'] = $email;
+                    $_SESSION['USA'] = $email;
                     // Login successful.
                     return true;
                 } else {
@@ -192,7 +194,8 @@ function profile($picture,$infotext,$grades,$cv)
     if( isset($_GET['UpdateBTN']) )
     {
 
-    //be sure to validate and clean your variables
+    //be sure to validate and clean your variables
+
         //$val1 = htmlentities($_GET['picture']);
         //$val2 = htmlentities($_GET['infotext']);
         //$val3 = htmlentities($_GET['grades']);

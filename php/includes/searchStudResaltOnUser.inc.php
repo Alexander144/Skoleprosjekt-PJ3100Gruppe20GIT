@@ -1,35 +1,33 @@
 
 
 <?php
-sec_session_start();
+
 
 $error_msg = "";
 
+$profileUsername = "";
+$profileEmail = "";
 $searchOnUser = "";
-
-if (isset($_POST['searchOnUser'])) { 
-  $searchOnUser = filter_input(INPUT_POST, 'searchOnUser', FILTER_SANITIZE_STRING);
-  
+if (isset($_SESSION['searchOnUser'])) { 
+  $searchOnUser = $_SESSION['searchOnUser'];
+  var_dump($searchOnUser); die;
+}
 if (empty($error_msg)&&!($searchOnUser == "")) {
        if($result = $mysqli->query("SELECT Username,Email FROM user")){
         if($count = $result->num_rows){
             while ($row = $result->fetch_object()) {
                 
                 if($searchOnUser == $row->Username){
-                   $_SESSION["profileUsername"] = $row->Username;
-                   $_SESSION["profileEmail"] = $row->Email;
-                   
-                   $result->free();
-                   header('Location: ./searchStudResalt.php');
+                   $profileUsername = $row->Username;
+                   $profileEmail = $row->Email;
+                   //header('Location: ./searchStudResalt.php');
                }
             }
+            $result->free();
         }
-        
     }
         // Insert the new user into the database 
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
      
-    }
-    echo "User do not exist";
 
 }?>

@@ -4,7 +4,7 @@
     include_once 'menu.php';
 ?>
 <!-- Entry of body content field for index below -->
-
+<?php if (login_check($mysqli) == true) : ?>
 <section id="mainContent"> <!-- start Main Content -->
 
 <!-- start projects -->
@@ -43,7 +43,7 @@
     <p>Return to <a href="index.php">login page</a></p>
     <?php else : ?>
     <p>
-        <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+        <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
     </p>
     <?php endif; ?>
     </body>

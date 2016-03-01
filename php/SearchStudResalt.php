@@ -1,4 +1,6 @@
-<?php include 'header.php';    
+<?php include_once 'header.php';  
+ 
+
       
  ?>
         <?php if (login_check($mysqli) == true) : ?>
@@ -11,20 +13,19 @@
                 <h3>Søk resultat</h3>
             <?php
 
-            $username = $profileUsername;
-            $email = $profileEmail;
-            include_once 'includes/searchStudResalt.inc.php';
-
+                $profileUsername = $_SESSION['profileUsername'];
+                $profileEmail =$_SESSION["profileEmail"];
+           //var_dump($profileUsername); die;
              ?>
                 <div id="" class="col col-ProfileStudent">
 
-                    <h3><?php echo $username;?></h3>
+                    <h3><?php echo $profileUsername; ?></h3>
                     <p>Bilde av studenten</p>
                     <img src="">
-                    <p>Email: <?php echo $email ?> </p>
+                    <p>Email: <?php echo $profileEmail; ?> </p>
 
                     <div id="" class="col col-ProfileStudent">
-                    <h3><?php echo $username; ?>'s nyeste projekter</h3>
+                    <h3><?php echo $profileUsername; ?>'s nyeste projekter</h3>
                     <article class="projectBoxes">
                         <h3>Projekt 1</h3>
                         <p></p>
