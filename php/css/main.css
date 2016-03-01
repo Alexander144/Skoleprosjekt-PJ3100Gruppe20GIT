@@ -360,6 +360,93 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 /*end student profile*/
 
+/*** START CREATE PROJECT ***/
+
+#createProjectContainer {
+    width: 530px;
+}
+
+#mainCreateProject {
+    line-height: 0;
+    margin-top: 50px;
+    white-space: nowrap;
+}
+
+#mainCreateProject p {
+    font-size: 20px;
+}
+
+.upload {
+    float: left;
+    margin-right: 15px;
+}
+
+#linkCreateProjectFile{
+    float: right;
+}
+
+#nameFileCreateProject {
+    vertical-align: top;
+    float: left;
+}
+
+.publishBtn{
+    background-color: lightblue;
+    border-radius: 10px;
+    height: 100px;
+    width: 200px;
+
+}
+
+#publishCPBtn{
+    float: left;
+    margin-right: 15px;
+}
+
+#previewCPBtn{
+    float: right;
+    height: 100px;
+    width: 150px;
+    margin-top: -15px
+}
+
+#publish {
+    margin-top: 15px;
+}
+
+#uploadCPBtn {
+    background-color: lightblue;
+    border-radius: 10px;
+    height: 100px;
+    width: 200px;
+}
+
+#nameProjectCPTxt {
+    height: 30px;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 45px;
+    float: right;
+    position: absolute;
+}
+
+#descProjCPTxt {
+    width: 500px;
+    height: 150px;
+}
+
+.col-69{
+    float: left;
+}
+
+.col-96{
+    float: right;
+    margin-top: 15px;
+    width: 200px;
+}
+
+
+/*** END CREATE PROJECT ***/
 
 /*h1{
     font-size: 35px;
