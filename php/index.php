@@ -17,7 +17,7 @@
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script>
     //Get all projects:
-    var allProjects = 6; //Get value here
+    var allProjects = 12; //Get value here
 
     for(var i = 0; i < allProjects; i++){
         var $newProject = $("<div>")
