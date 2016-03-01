@@ -41,7 +41,10 @@ Lim inn denne koden for velkomst beskjed i php'en;
 
 echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
 ************************************************************-->
-          </li>
+        </li>
+        <li><input id="textfield" name="textfield" type="text" placeholder="Søk" />
+        <input type="button" onclick="alert('Search & Find!')" value="Søk">
+        </li>
       </ul>
           
     </div>
