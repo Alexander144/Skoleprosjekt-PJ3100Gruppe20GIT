@@ -2,6 +2,10 @@
     include_once 'includes/Index.inc.php';
     include_once 'menu.php';
 ?>
+<?php if (login_check($mysqli) == true) : ?>
+<form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
+      method="post"
+      name="updateProfile_form">
 <!-- Entry of body content field for index below -->
 
 <section id="mainContent"> <!-- start Main Content -->
@@ -29,3 +33,21 @@
 <!-- End of body content field -->
 
 <?php include_once 'footer.php'; ?>
+        <!-- Knapp funkjsonen-->
+    <input id="UpdateBTN" type="button"
+           value="Update"
+           onclick="return ProfileUpdateForms(
+                    this.form,
+                    this.form.picture,
+                    this.form.profileEditAboutMe,
+                    this.form.grades,
+                    this.form.cv);" />
+    </form>
+    <p>Return to <a href="index.php">login page</a></p>
+    <?php else : ?>
+    <p>
+        <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+    </p>
+    <?php endif; ?>
+    </body>
+</html>
