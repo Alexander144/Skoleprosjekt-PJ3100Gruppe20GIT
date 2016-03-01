@@ -1,10 +1,15 @@
-<?php include_once 'header.php'; 
-include_once 'includes/Index.inc.php';?>
-<!-- Entry of body content field for index below -->
+<?php include_once 'header.php';
+      /*include_once 'includes/editProfile.inc.php';*/
+ ?>
+<?php if (login_check($mysqli) == true) : ?>
+<form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
+      method="post" 
+      name="updateProfile_form">
+             
+    <!-- Entry of body content field for index below -->
+    <section id="mainContent"> <!-- start Main Content -->
 
-  <section id="mainContent"> <!-- start Main Content -->
-
-  <div class="sort-container col"> <!-- start sorting content-->
+    <div class="sort-container col"> <!-- start sorting content-->
         <ul>
         
             <li class="sort-workBy sortMenu"><a href="#">Arbeid av</a>
@@ -35,50 +40,46 @@ include_once 'includes/Index.inc.php';?>
   </div> <!-- end sorting content -->
 
   <!-- start projects -->
-
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 1</h3>
-      <p></p>
-    </article>
-
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 2</h3>
-      <p></p>
-    </article>
-
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 3</h3>
-      <p></p>
-    </article>
-
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 4</h3>
-      <p></p>
-    </article>
       
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 5</h3>
-      <p></p>
-    </article>
-      
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 6</h3>
-      <p></p>
-    </article>
-      
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 7</h3>
-      <p></p>
-    </article>
-      
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 8</h3>
-      <p></p>
-    </article>
+      <div id="projects">
+          <?php $projectBox1; ?>
+      </div>
 
   <!-- end projects -->
 
   </section> <!-- end Main Content -->
-	</div> <!-- end container -->
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    //Get all projects:
+        var allProjects = 6; //Get value here
+        
+        for(var i = 0; i < allProjects; i++){
+            var $newProject = $("<div>")
+                .addClass("col col-3 projectBoxes")
+                     $("#projects").append($newProject);
+                 }
+
+    </script><!--end script-->
+
 <!-- End of body content field -->
 <?php include_once 'footer.php'; ?>
+
+<!-- Knapp funkjsonen-->
+<input id="UpdateBTN" type="button" 
+       value="Update" 
+       onclick="return ProfileUpdateForms(
+                this.form,
+                this.form.picture,
+                this.form.profileEditAboutMe,
+                this.form.grades,
+                this.form.cv);" />
+</form>
+<p>Return to <a href="index.php">login page</a></p>
+<?php else : ?>
+<p>
+    <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+</p>
+<?php endif; ?>
+    </body>
+</html>
