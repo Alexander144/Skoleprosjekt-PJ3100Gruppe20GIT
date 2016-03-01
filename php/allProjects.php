@@ -9,15 +9,17 @@
       name="updateProfile_form">
 <!-- Entry of body content field for index below -->
 
-    <!-- start projects -->
-    <div id="projects">
-        <?php $projectBox1; ?>
+    <section id="mainContent"> <!-- start Main Content -->
+        <!-- start projects -->
+        <div id="projects">
+            <?php $projectBox1; ?>
 
-    </div><!--end projects-->
+        </div><!--end projects-->
+    </section><!--end Main Content-->
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
-    //Get all projects:
+        //Get all projects:
         var allProjects = 3; //Get value here
 
             for(var i = 0; i < allProjects; i++){
