@@ -1,13 +1,12 @@
-<?php include_once 'header.php'; 
-include_once 'includes/Index.inc.php';?>
+<?php include_once 'header.php'; ?>
 <!-- Entry of body content field for index below -->
 
   <section id="mainContent"> <!-- start Main Content -->
-
-  <div class="sort-container col"> <!-- start sorting content-->
+<!-- start sorting content
+  <div class="sort-container col">
         <ul>
-        
-            <li class="sort-workBy sortMenu"><a href="#">Arbeid av</a>
+
+        <li class="sort-workBy sortMenu"><a href="#">Arbeid av</a>
           <ul>
             <li><a href="#">Student</a></li>
             <li><a href="#">Alumni</a></li>
@@ -36,45 +35,28 @@ include_once 'includes/Index.inc.php';?>
 
   <!-- start projects -->
 
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 1</h3>
-      <p></p>
-    </article>
+    <div class="col col-3">
+        <h1>Søk student</h1>
+        <div> Søk på navn: <input type="text" name="Name"size="35px"><br><br></div>
+        <div> Søk på program: <input type="text" name="program" size="35px"><br><br></div>
+        <div> Søk på slut år: <input type="text" name="year" size="35px"><br><br></div>
+        <div> Søk på ?????: <input type="text" name="" size="35px"><br><br></div>
+         <br>
+        <input class="buttonDesign" type="button" onclick="alert('Search & Find!')" value="Søk">
+        </div>
 
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 2</h3>
-      <p></p>
-    </article>
+        <div class="col col-3">
 
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 3</h3>
-      <p></p>
-    </article>
 
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 4</h3>
-      <p></p>
-    </article>
-      
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 5</h3>
-      <p></p>
-    </article>
-      
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 6</h3>
-      <p></p>
-    </article>
-      
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 7</h3>
-      <p></p>
-    </article>
-      
-    <article class="col col-3 projectBoxes">
-      <h3>Prosjekt 8</h3>
-      <p></p>
-    </article>
+        </div>
+
+        <div class="col col-3">
+
+        </div>
+
+        <div class="col-3">
+
+      </div>
 
   <!-- end projects -->
 
