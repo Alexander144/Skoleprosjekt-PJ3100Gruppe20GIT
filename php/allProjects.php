@@ -1,4 +1,4 @@
-<?php include_once 'header.php';
+ <?php include_once 'header.php';
       include_once 'includes/allProjects.inc.php';
  ?>
         <?php if (login_check($mysqli) == true) : ?>
