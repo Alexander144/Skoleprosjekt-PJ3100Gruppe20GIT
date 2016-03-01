@@ -6,7 +6,7 @@
                 method="post" 
                 name="updateProfile_form">
              
-             <!--start page-->
+             <!-- Entry of body content field for index below -->
              
              <section id="mainContent"> <!-- start Main Content -->
                  <div class="sort-container col"> <!-- start sorting content-->
@@ -62,8 +62,6 @@
              <!-- End of body content field -->
 
              <?php include_once 'footer.php'; ?>
-             
-             <!--end page-->
              
 
              <!-- Knapp funkjsonen-->
