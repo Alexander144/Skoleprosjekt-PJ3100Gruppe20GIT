@@ -70,9 +70,8 @@ body{
     margin-right: -2px;
 }
 
-.addJob{
+.li-border{
     border-right: 1px solid rgb(10, 10, 10);
-    border-left: 1px solid rgb(10, 10, 10);
 }
 
  
