@@ -100,9 +100,10 @@ body{
 /** start sorting content INDEX **/
 
 .sort-container{
-    background-color: rgb(253, 253, 248);
+    background-color: rgb(200, 200, 200);
     margin-bottom: 30px;
     border-bottom: 1px solid rgb(0, 0, 0);
+    margin-top: 10px;
 }
 
 .sortMenu{
