@@ -15,6 +15,11 @@ body{
     margin-right: 15px;
 }
 
+.col-ProfileStudent{
+    width: 295px;
+    float: left;
+}
+
 .col-12{
     width: 978px;
 }
@@ -323,6 +328,14 @@ font-family: 'Open Sans Condensed', sans-serif;
 /*end register page*/
 
 /*student profile*/
+
+.studentCol{
+    border-right: solid black 1px;
+    border-left: solid black 1px;
+        padding-left: 10px;
+    padding-right: 10px;
+    height: 500px;
+}
 #profileBasicInfo{
     padding-top: 20px;
 }

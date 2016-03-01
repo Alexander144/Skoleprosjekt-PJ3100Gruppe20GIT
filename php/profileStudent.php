@@ -1,91 +1,59 @@
-<?php include_once 'header.php'; ?>
-<!-- Entry of body content field for index below -->
+<?php include_once 'header.php';
+      include_once 'includes/editProfile.inc.php';
+ ?>
+        <?php if (login_check($mysqli) == true) : ?>
+		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
+                method="post" 
+                name="updateProfile_form">
+             
+            <div id="updateProfile">
+            <?php
 
-  <section id="mainContent"> <!-- start Main Content -->
+            $username = htmlentities($_SESSION['username']);
+            $user_id = htmlentities($_SESSION['user_id']);
+            $email = htmlentities($_SESSION['email']);
+             
+             ?>
+        <div id="" class="col col-ProfileStudent">
+                
+        <h3><?php echo $username;?></h3>
+        <p>Bilde av studenten</p>
+            <img src="">
+        <p>Email: <?php echo $email ?> </p>
+            
+            <a href="#"><p>Karakterkort</p></a>
 
-  <div class="sort-container col"> <!-- start sorting content-->
-        <ul>
+            <a href="#"><p>CV<p></a>
         
-        <li class="sort-workBy sortMenu"><a href="#">Arbeid av</a>
-          <ul>
-            <li><a href="#">Student</a></li>
-            <li><a href="#">Alumni</a></li>
-          </ul>
-        </li>
-
-        <li class="sort-program sortMenu"><a href="#">Avdeling</a>
-          <ul>
-            <li><a id="teknologi" href="#">Teknologi/IT</a></li>
-            <li><a id="ledelse" href="#">Ledelse</a></li>
-            <li><a id="kommunikasjon" href="#">Kommunikasjon</a></li>
-            <li><a id="kunstfag" href="#">Kunstfag</a></li>
-            <li><a id="filmTVSpill" href="#">Film, TV og Spill</a></li>
-          </ul>
-        </li>
-
-        <li class="sort-orderBy sortMenu"><a href="#">Rekkefølge</a>
-          <ul>
-            <li><a href="#">Mest Populære</a></li>
-            <li><a href="#">Nyeste</a></li>
-          </ul>
-        </li>
-      </ul>
-
-  </div> <!-- end sorting content -->
-
-  <!-- start projects -->
-
-    <div id="profileBasicInfo" class="col col-3">
-        <h1>Studentens navn</h1>
-        <img id="profilePic" src="img/profilbildeStudent.jpg" alt="Profilbilde av studenten (Mr. Bean)">
-        <div>
-            <h1>Andre sider jeg er med på:</h1>
-            <ul id="linksForProfile">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Twitter</a></li>
-            </ul>
         </div>
-        <br>
-        <input id="ProfileBTN" class="buttonDesign" type="button" onclick="alert('Rediger profil')" value="Rediger Profil">
-        </div>
-        
-        <div id ="profileText" class="col col-3">
-            <h3 id="AboutMe">Info om meg:</h3>
-            <p>Med 17 års fartstid i bransjen har Are vært borti de fleste problemstillinger rundt web og interaktive medier. Han har hatt en finger med i en rekke av landets mest profilerte nettsteder og intranett.
-Are Gjertin Urkegjerde Halland
-Han har vært en sentral skikkelse i fagmiljøet, og grunnla blant annet det faglige nettverket UXnet. Han er også hjernen bak Netlife Research sin egen “kjernemodell".
-
-Are brenner for å skape gode brukeropplevelser som bygger bro mellom brukerbehov, strategi, innhold og design. Han har spisskompetanse på blant annet konsept, strategi, navigasjon, søk og innhold.
-
-Faglig har han bakgrunn fra medievitenskap hovedfag ved Universitetet i Oslo og informasjonsutdanninga ved Høgskulen i Volda, og har jobbet i Netlife Research siden 2006. Før dette jobbet han som nettjournalist i Norges første internett-portal Origo fra 1995-97 og fra 1998-2006 som informasjonsarkitekt i Neo Interaktiv, Icon Medialab og WM-data UX.</p>
-        </div>
-
-        <div id="ProfileProjects" class="col col-3">
-            <h1>Mine Projekter:</h1>
+                
+        <div id="aboutStudent" class="col col-ProfileStudent studentCol">
+            <h3 id="aboutStudentH3">Om <?php echo $username; ?></h3>
+            <p id="aboutStudentP"><?php echo $username; ?></p>
+                    
+                
+                </div>
+                
+            <div id="" class="col col-ProfileStudent">
+            <h3><?php echo $username; ?>'s nyeste projekter</h3>
             <article class="projectBoxes">
                 <h3>Projekt 1</h3>
                 <p></p>
             </article>
-            <article class="projectBoxes">
-                <h3>Projekt 2</h3>
-                <p></p>
-            </article>
-            <article class="projectBoxes">
-                <h3>Projekt 3</h3>
-                <p></p>
-            </article>
-            <br>
-            <input id="ProfileBTN" class="buttonDesign" type="button" onclick="alert('Legg til Prosjekt')" value="Legg til prosjekt">
+                
         </div>
-      
-        <div id="ProfilePopular" class="col-3">
-      
-      </div>
 
-  <!-- end projects -->
+            </div>
 
-  </section> <!-- end Main Content -->
-	</div> <!-- end container -->
-<!-- End of body content field -->
+        </form>
+
+            <!--<p id="returnLogin" class="col col-3">Return to <a href="index.php">login page</a></p>-->
+        <?php else : ?>
+            <p>
+                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+            </p>
+        <?php endif; ?>
+
 <?php include_once 'footer.php'; ?>
+    <!--</body>
+</html> -->

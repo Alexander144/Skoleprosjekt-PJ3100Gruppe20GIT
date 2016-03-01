@@ -14,15 +14,52 @@
             $email = htmlentities($_SESSION['email']);
              
              ?>
-        <div id="profileBasicInfo" class="col col-3">
+        <div id="profileBasicInfo" class="col">
                 
-        <h3>Velkommen <?php echo $username;?> !</h3>
-        <p>Bilde av studenten <input class="updatefield" type="file"
-                            name="picture" 
-                            id="picture"/></p>
-        <p>Email: <?php echo $email ?> </p>
+        <h3>Her kan <?php echo $username;?> redigere profilen sin</h3>
             
-        <input id="UpdateBTN" type="button" 
+            <div id="updatePhoto">
+                <p>Last opp bilde av deg selv</p>
+                <input class="updatefield" type="file"
+                            name="picture" 
+                            id="picture"/>
+            </div>
+            
+            <div id="updatePassword">
+                <p>Oppdater passord</p>
+                <input id="updatePasswordTxt" type="text" />
+            </div>
+            
+            <div id="updateEmail">
+                <p>Oppdater mailen din</p>
+                <input id="updateEmailTxt" type="text" />
+            </div>
+        
+        </div>
+                
+                <div id="" class="col">
+                    <h3 id="aboutMe">Informasjon om deg</h3>
+                    <textarea cols="80" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
+                    
+                <div id="updateGrades">
+                    <p id="updateGradesP">Last opp karakterkortet ditt</p>
+                    <input class = "updatefield" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                    
+                </div>
+
+                    <div id="updateCV">
+                        <p id="updateCVP">Last opp CV</p>
+                        <input class = "updatefield" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                    </div>
+                    
+                
+                </div>
+
+            </div>
+
+        </form>
+
+        <input id="UpdateBTN" class="col" type="button" 
                 value="Oppdater profilen din" 
                 onclick="return ProfileUpdateForms(
                                 this.form,
@@ -30,36 +67,8 @@
                                 this.form.profileEditAboutMe,
                                 this.form.grades,
                                 this.form.cv);" />  
-        
-        </div>
-                
-                <div id="profileText" class="col col-3">
-                    <h3 id="aboutMe">Om studenten</h3>
-                    <textarea cols="50" rows="10" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
-                    
-                <p>Grades: <input class = "updatefield" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" /></p>
 
-
-                <p>CV: <input class = "updatefield" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" /><p>
-                    
-                
-                </div>
-                
-            <div id="ProfileProjects" class="col col-3">
-            <h3>Mine Projekter:</h3>
-            <article class="projectBoxes">
-                <h3>Projekt 1</h3>
-                <p></p>
-            </article>
-
-            <input id="ProfileBTN" class="buttonDesign" type="button" onclick="alert('Legg til Prosjekt')" value="Legg til prosjekt">
-        </div>
-
-            </div>
-
-        </form>
-
-            <p id="returnLogin" class="col col-3">Return to <a href="index.php">login page</a></p>
+            <p id="returnLogin" class="col">Return to <a href="index.php">login page</a></p>
         <?php else : ?>
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
