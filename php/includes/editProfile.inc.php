@@ -1,8 +1,7 @@
 
 
 <?php
-include_once 'db_connect.php';
-include_once 'psl-config.php';
+
 $studentName = htmlentities($_SESSION['username']);
 $user_id = htmlentities($_SESSION['user_id']); 
 $profileEditAboutMe;
@@ -16,7 +15,7 @@ $error_msg = "";
             $result->free();
         }
     }
-
+var_dump($count); die;
 if (isset($_POST['profileEditAboutMe'])) {
 	    $profileEditAboutMe =  filter_input(INPUT_POST, "profileEditAboutMe", FILTER_DEFAULT);
 if (empty($error_msg)) {

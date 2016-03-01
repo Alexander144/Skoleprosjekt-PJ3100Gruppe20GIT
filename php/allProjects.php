@@ -1,5 +1,5 @@
 <?php include_once 'header.php';
-      /*include_once 'includes/editProfile.inc.php';*/
+      include_once 'includes/allProjects.inc.php';
  ?>
         <?php if (login_check($mysqli) == true) : ?>
 		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
@@ -49,7 +49,7 @@
              
              <script>
              //Get all projects:
-                 var allProjects = 6; //Get value here
+                 var allProjects = <?php echo $count ?>; //Get value here
 
                  for(var i = 0; i < allProjects; i++){
                      var $newProject = $("<div>")

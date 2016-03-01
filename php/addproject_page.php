@@ -28,7 +28,7 @@ sec_session_start();
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']); 
             $email = htmlentities($_SESSION['email']);
-            include_once 'includes/AddProject.inc.php';
+            include_once 'includes/addProject.inc.php';
             ?>
             <p>Name: <input class="updatefield" type="text"
                              name="name" 
