@@ -94,3 +94,10 @@ function SearchOnProfile(form,searchOnUser) {
     //window.location = './searchStudResalt.php';
 
 }
+function SearchOnProject(form,searchOnUser) {
+    
+    form.submit();
+
+    //window.location = './searchStudResalt.php';
+
+}

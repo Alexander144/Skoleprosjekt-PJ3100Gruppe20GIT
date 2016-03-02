@@ -5,11 +5,13 @@
 
 $error_msg = "";
 $count;
+$i = 0;
 if($result = $mysqli->query("SELECT * FROM project")){
         if($count = $result->num_rows){
             
             while ($row = $result->fetch_object()) {
-                   $profileEditAboutMe = $row->ProjectID;
+                   $Name[$i] = $row->Name;
+                   $i = $i+1;
             }
             $result->free();
         }

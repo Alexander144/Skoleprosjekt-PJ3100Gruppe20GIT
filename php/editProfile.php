@@ -2,9 +2,6 @@
       include_once 'includes/editProfile.inc.php';
  ?>
         <?php if (login_check($mysqli) == true) : ?>
-		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
-                method="post" 
-                name="updateProfile_form">
              
             <div id="updateProfile">
             <?php
@@ -20,9 +17,28 @@
             
             <div id="updatePhoto">
                 <p>Last opp bilde av deg selv</p>
+                <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="updatefield" type="file"
                             name="picture" 
                             id="picture"/>
+                            
+                            <input type = "submit" name = "upload" value = "Upload File"/>
+							</form>
+							<?php 
+                     			if(isset($_POST['upload'])){
+                            	$uploadImage= $_FILES['picture']['name'];
+        						$uploadImageTmp = $_FILES['picture']['tmp_name'];
+
+        						move_uploaded_file($uploadImageTmp, "images/$uploadImage");
+        						
+        						echo "<img src='images/$uploadImage'/>";
+        						}
+        						        					
+                            ?> 
+                          
+         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
+                method="post" 
+                name="updateProfile_form">   
             </div>
             
             <div id="updatePassword">
@@ -57,7 +73,7 @@
 
             </div>
 
-        <input id="UpdateBTN" class="col" type="button" 
+        <input id="UpdateBTN" class="col" type="button" name = "upload"
                 value="Oppdater profilen din" 
                 onclick="return ProfileUpdateForms(
                                 this.form,
@@ -65,9 +81,9 @@
                                 this.form.profileEditAboutMe,
                                 this.form.updateEmailTxt,
                                 this.form.grades,
-                                this.form.cv);" />  
-        </form>
+                                this.form.cv);" /> 
 
+     </form> 
             <p id="returnLogin" class="col">Return to <a href="index.php">login page</a></p>
         <?php else : ?>
             <p>

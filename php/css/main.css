@@ -143,7 +143,7 @@ body {
     font-size: 1em;
     display: inline-block;
     margin-right: -2px;
-    margin-left: -2px;
+    margin-left: -3px;
 }
 
 .sort-container a {
@@ -168,6 +168,7 @@ body {
 
 .sort-container #ledelse:hover {
     background-color: rgb(121, 85, 128);
+    color: rgb(200, 200, 200); /*Finne ein passande farge for alle underlenker?*/
 }
 
 .sort-container #kommunikasjon:hover {
@@ -198,11 +199,13 @@ body {
 .sort-container li ul {
     position: absolute;
     display: none;
-    width: inherit;
+    width: 128px;
+    left: 5px;
 }
 
 .sort-container li ul li {
     display: block;
+    width: inherit;
 }
 
 .sort-container li:hover ul {
@@ -232,7 +235,7 @@ body {
 
 .imgFooter {
     display: block;
-    width: 200px;
+    width: 150px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
@@ -244,6 +247,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 
