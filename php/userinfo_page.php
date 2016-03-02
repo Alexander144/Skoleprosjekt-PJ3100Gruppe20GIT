@@ -2,7 +2,6 @@
 
 
 <?php include_once 'header.php';
-      include_once 'includes/editProfile.inc.php';
  ?>
         <?php if (login_check($mysqli) == true) : ?>
 		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 

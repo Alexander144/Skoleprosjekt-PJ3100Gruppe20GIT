@@ -77,7 +77,7 @@ function regformhash(form, uid, email, password, conf) {
     form.submit();
     return true;
 }
-function ProfileUpdateForms(form,picture, profileEditAboutMe, grades, cv) {
+function ProfileUpdateForms(form,picture, profileEditAboutMe,updateEmailTxt, grades, cv) {
 
     form.submit();
     return true;

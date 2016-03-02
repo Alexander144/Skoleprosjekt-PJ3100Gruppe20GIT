@@ -32,7 +32,7 @@
             
             <div id="updateEmail">
                 <p>Oppdater mailen din</p>
-                <input id="updateEmailTxt" type="text" />
+                <input id="updateEmailTxt" name = "updateEmailTxt" type="text" />
             </div>
         
         </div>
@@ -63,6 +63,7 @@
                                 this.form,
                                 this.form.picture,
                                 this.form.profileEditAboutMe,
+                                this.form.updateEmailTxt,
                                 this.form.grades,
                                 this.form.cv);" />  
         </form>
