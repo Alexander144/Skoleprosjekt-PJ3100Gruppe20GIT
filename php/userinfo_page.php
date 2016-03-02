@@ -45,12 +45,12 @@
                 
         <div id="" class="col col-ProfileStudent">
             <h3>Mine Projekter:</h3>
-            <div id="projects">
-            <?php $projectBox1; ?>
 
+            <div id="projects">
+                <?php $projectBox1; ?>
             </div><!--end projects-->
 
-            <input id="ProfileBTN" class="buttonDesign" type="button" onclick="alert('Legg til Prosjekt')" value="Legg til et prosjekt">
+            <input id="ProfileBTN" class="buttonDesign col" type="button" onclick="alert('Legg til Prosjekt')" value="Legg til et prosjekt">
         </div>
 
         </form>
