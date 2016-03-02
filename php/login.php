@@ -27,19 +27,18 @@ if (login_check($mysqli) == true) {
         <div id="loginOther" class="col col-6 login">
             <div class="objectsInDiv">
                 <h1>Bedrifter og kunder</h1>
-                <form action="includes/process_login.php" method="post" name="login_form">                      
-                    Email: <input class="textField" type="text" name="email" />
-                <br>
-                    Password: <input class="textField" type="password" 
-                             name="password" 
-                             id="password"/>
-                <br>    
-                <input class="buttonDesign" type="button" 
-                   value="Login" 
-                   onclick="formhash(this.form, this.form.password);" />
+                <form action="includes/process_login.php" method="post" name="login_form">
 
-                   <input class="buttonDesign "type="button" onclick="location.href='register.php';" value="Registrering" />
+                    Email: <input id="email" class="textField" type="text" name="email"/>
+                        <br><br>
+                    Password: <input id="password" class="textField" type="password" name="password"/>
+                        <br><br>
+                    <input id="loginBtn" class="buttonDesign" type="button"
+                           value="Login"
+                           onclick="formhash(this.form, this.form.password);" />
 
+                    <input id="registerBtn" class="buttonDesign "type="button"
+                          onclick="location.href='register.php';" value="Registrering" />
                 </form>
             </div>
         </div>
