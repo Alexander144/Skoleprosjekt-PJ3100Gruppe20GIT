@@ -389,12 +389,15 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #createProjectContainer {
     width: 530px;
+    height: 900px;
+    left: 40px;
+    background-color: grey;
+    position: relative;
 }
 
 #mainCreateProject {
     line-height: 0;
     margin-top: 50px;
-    white-space: nowrap;
 }
 
 #mainCreateProject p {
@@ -402,17 +405,16 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .upload {
-    float: left;
     margin-right: 15px;
 }
 
 #linkCreateProjectFile{
     float: right;
+    margin-top: 30px;
 }
 
 #nameFileCreateProject {
-    vertical-align: top;
-    float: left;
+    
 }
 
 .publishBtn{
@@ -432,8 +434,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     float: right;
     height: 100px;
     width: 150px;
-    margin-top: -15px
-}
+    }
 
 #publish {
     margin-top: 15px;
@@ -444,15 +445,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     border-radius: 10px;
     height: 100px;
     width: 200px;
-}
-
-#nameProjectCPTxt {
-    height: 30px;
-    width: 300px;
-    margin-top: 10px;
-    margin-left: 45px;
-    float: right;
-    position: absolute;
+    margin 15px;
 }
 
 #descProjCPTxt {
@@ -460,15 +453,48 @@ font-family: 'Open Sans Condensed', sans-serif;
     height: 150px;
 }
 
-.col-69{
+#descProjCP{
+    float: left;
+    position: relative;
+}
+
+#nameProjectCPTxt {
+    height: 20px;
+    margin-top: 5px;
+    position: relative;
+}
+
+#addTeacher{
     float: left;
 }
 
-.col-96{
-    float: right;
-    margin-top: 15px;
-    width: 200px;
+#studyTopic{
+    float: left;
+    width: 530px;;
 }
+
+#addTeacher{
+    float: left;
+    width: 530px;;
+}
+
+.col-floatleft{
+    float:left;
+    margin-left: 15px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.col-floatright{
+    float:right;
+    margin-right: 15px;
+    margin-top: 7px;
+    position: relative;
+}
+
+
+
+
 
 
 

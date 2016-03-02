@@ -17,6 +17,7 @@ $error_msg = "";
     }
 if (isset($_POST['profileEditAboutMe'])) {
 	    $profileEditAboutMe =  filter_input(INPUT_POST, "profileEditAboutMe", FILTER_DEFAULT);
+        
 if (empty($error_msg)) {
        
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
@@ -28,6 +29,6 @@ if (empty($error_msg)) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
-        header('Location: /editProfile.php');
+        header('Location: ./editProfile.php');
 }
 }?>
