@@ -57,8 +57,6 @@
 
             </div>
 
-        </form>
-
         <input id="UpdateBTN" class="col" type="button" 
                 value="Oppdater profilen din" 
                 onclick="return ProfileUpdateForms(
@@ -67,6 +65,7 @@
                                 this.form.profileEditAboutMe,
                                 this.form.grades,
                                 this.form.cv);" />  
+        </form>
 
             <p id="returnLogin" class="col">Return to <a href="index.php">login page</a></p>
         <?php else : ?>
