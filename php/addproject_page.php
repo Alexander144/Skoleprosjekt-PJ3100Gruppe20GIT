@@ -1,18 +1,7 @@
 <?php
-include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
- 
-sec_session_start();
+include_once 'header.php'; 
+
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Secure Login: Protected Page</title>
-        <link rel="stylesheet" href="css/main.css" />
-        <script type="text/JavaScript" src="js/forms.js"></script>
-    </head>
-    <body>
         <?php if (login_check($mysqli) == true) : ?>
             <p>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</p>
             <p>
@@ -28,7 +17,7 @@ sec_session_start();
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']); 
             $email = htmlentities($_SESSION['email']);
-            include_once 'includes/addProject.inc.php';
+            include_once 'includes/AddProject.inc.php';
             ?>
             <p>Name: <input class="updatefield" type="text"
                              name="name" 
@@ -36,9 +25,9 @@ sec_session_start();
             <p>Subject: <input class="updatefield" type="text"
                              name="subject" 
                              id="subject"/><br></p>
-	        <p>Infotext: <input class="updatefield" type="text"
-                             name="infotextproject" 
-                             id="infotextproject"/><br><br></p>
+	        <p>Infotext: <textarea cols="80" rows="20" name="infotextproject"
+             id="infotextproject"></textarea>
+             
             <p>AddPeople: <input class="updatefield" type="text"
                              name="AddPeople" 
                              id="AddPeople"/><br><br></p>
@@ -48,7 +37,6 @@ sec_session_start();
 
             <p>Link: <input class = "updatefield" name="link" type="text" id="infotext" /><br><p>
 
-            <p>Date: <input class = "updatefield" name="date" type="date" id="date" /><br><p>
 
 
             <input id="UpdateBTN" type="button" 
@@ -69,5 +57,5 @@ sec_session_start();
                 <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
             </p>
         <?php endif; ?>
-    </body>
-</html>
+
+<?php include_once 'footer.php'; ?>

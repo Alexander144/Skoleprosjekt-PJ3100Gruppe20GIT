@@ -1,15 +1,12 @@
 
 
 <?php
-include_once 'db_connect.php';
-include_once 'psl-config.php';
-
 $error_msg = "";
 $ProjectID;
 if (isset($_POST['subject'])||isset($_POST['name'])||isset($_POST['infotextproject'])) {
 	    $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-        $infotextproject = filter_input(INPUT_POST, 'infotextproject', FILTER_SANITIZE_STRING);
+        $infotextproject = filter_input(INPUT_POST, 'infotextproject', FILTER_DEFAULT);
         $AddPeople = filter_input(INPUT_POST, 'AddPeople', FILTER_SANITIZE_STRING);
 
         $AddUserID = "";
@@ -66,7 +63,7 @@ if (empty($error_msg)) {
              //   header('Location: ../error.php?err=Registration failure: INSERT');
             //}
         //}
-        header('Location: /userinfo_page.php');
+        header('Location: ./index.php');
 }
 
 }?>

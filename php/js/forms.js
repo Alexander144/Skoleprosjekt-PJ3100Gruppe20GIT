@@ -82,7 +82,7 @@ function ProfileUpdateForms(form,picture, profileEditAboutMe,updateEmailTxt, gra
     form.submit();
     return true;
 }
-function AddProjectForms(form, name, subject, infotext, picture, link, date) {
+function AddProjectForms(form, uploadFile,nameProject, descProjCPTxt, addStudentCP, studyTopicCPTxt) {
 
     form.submit();
     return true;

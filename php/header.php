@@ -3,7 +3,6 @@ include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/searchStudResalt.inc.php';
 
-
  
 //sec_session_start();
 if (login_check($mysqli) == true) {
@@ -67,3 +66,4 @@ echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
           
     </div>
   </header>
+  <?php include_once 'menu.php'; ?>

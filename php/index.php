@@ -1,7 +1,6 @@
 
 <?php include_once 'header.php'; 
-    include_once 'includes/Index.inc.php';
-    include_once 'menu.php';
+  
 ?>
 <!-- Entry of body content field for index below -->
 <?php if (login_check($mysqli) == true) : ?>
