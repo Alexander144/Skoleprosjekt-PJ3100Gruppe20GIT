@@ -20,6 +20,18 @@ body{
     float: left;
 }
 
+.col-projectOne{
+    width: 612px;
+    float: left;
+
+}
+
+.col-projectTwo{
+    width: 295px;
+    float: left;
+
+}
+
 .col-12{
     width: 978px;
 }
@@ -379,7 +391,6 @@ font-family: 'Open Sans Condensed', sans-serif;
     width: 530px;
     height: 900px;
     left: 40px;
-    background-color: grey;
     position: relative;
 }
 
@@ -393,7 +404,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .upload {
-    margin-right: 15px;
+    margin: 15px;
 }
 
 #linkCreateProjectFile{
@@ -415,17 +426,18 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #publishCPBtn{
     float: left;
-    margin-right: 15px;
+    margin-left: 15px;
 }
 
 #previewCPBtn{
     float: right;
     height: 100px;
     width: 150px;
+    margin-right: 15px;
     }
 
 #publish {
-    margin-top: 15px;
+    margin-top: 50px;
 }
 
 #uploadCPBtn {
@@ -456,15 +468,15 @@ font-family: 'Open Sans Condensed', sans-serif;
     float: left;
 }
 
-#studyTopic{
+
+.test321{
     float: left;
-    width: 530px;;
+    width: 530px;
+    margin-top: 30px;
 }
 
-#addTeacher{
-    float: left;
-    width: 530px;;
-}
+
+
 
 .col-floatleft{
     float:left;
@@ -485,7 +497,13 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 
 
+/*** PROJECT PAGE ***/
 
+#projectTwo{
+    border-left: solid black 1px;
+    padding-left: 10px;
+    height: 300px;
+}
 
 /*** END CREATE PROJECT ***/
 
