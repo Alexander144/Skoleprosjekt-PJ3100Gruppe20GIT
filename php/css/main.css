@@ -386,9 +386,15 @@ font-family: 'Open Sans Condensed', sans-serif;
 #ProfilePopular{
 
 }
-
-
 /*end student profile*/
+
+/***START EDIT PROFILE***/
+#UpdateBTN{
+    margin-top: 40px;
+    height: 40px;
+}
+/***END EDIT PROFILE***/
+
 
 /*** START CREATE PROJECT ***/
 
