@@ -20,6 +20,18 @@ body{
     float: left;
 }
 
+.col-projectOne{
+    width: 612px;
+    float: left;
+
+}
+
+.col-projectTwo{
+    width: 295px;
+    float: left;
+
+}
+
 .col-12{
     width: 978px;
 }

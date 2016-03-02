@@ -6,7 +6,7 @@
                 method="post" 
                 name="updateProfile_form">
              
-            <div id="updateProfile">
+            <div id="projectPage">
             <?php
 
             $username = htmlentities($_SESSION['username']);
@@ -14,29 +14,24 @@
             $email = htmlentities($_SESSION['email']);
              
              ?>
-        <div id="projectPage" class="col col-Page">
+        <div id="projectOne" class="col col-projectOne">
                 
+        
         <h3>Tittel på prosjekt</h3> <?php // echo $projectName ?>
             
             <div id="photoProject">
                 <img src="#" > <?php // echo $projectPhoto ?>
             </div>
             
-            <div id="updatePassword">
-                <p>Oppdater passord</p>
-                <input id="updatePasswordTxt" type="text" />
-            </div>
-            
-            <div id="updateEmail">
-                <p>Oppdater mailen din</p>
-                <input id="updateEmailTxt" type="text" />
+            <div id="commentField">
+                <p>Kommentarfelt</p>
+                <div id="commentDiv"></div>
             </div>
         
         </div>
                 
-                <div id="" class="col">
-                    <h3 id="aboutMe">Informasjon om deg</h3>
-                    <textarea cols="80" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
+            <div id="projectTwo" class="col col-projectTwo">
+                <h3 id="aboutMe">Informasjon om deg</h3>
                     
                 <div id="updateGrades">
                     <p id="updateGradesP">Last opp karakterkortet ditt</p>
