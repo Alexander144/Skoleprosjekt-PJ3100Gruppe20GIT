@@ -1,6 +1,6 @@
 body{
     background-color: rgb(253, 253, 248);
-    font-family: "Georgia", serif;
+    font-family: "nimbus-sans", sans-serif;
 }
 
 /**** START 978 GS ****/
@@ -71,7 +71,6 @@ body{
 }
 
 .nav li {
-    font-family: 'Georgia', serif;
     font-size: 1em;
     line-height: 50px;
     height: 50px;
@@ -130,7 +129,6 @@ body{
 }
 
 .sort-container li{
-    font-family: 'Georgia', serif;
     text-align: left;
     width: 130px;
     height: 50px;

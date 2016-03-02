@@ -22,6 +22,8 @@ if (login_check($mysqli) == true) {
         <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script>
+        <script src="https://use.typekit.net/zjw7zcq.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
     </head>
     <body>
 
