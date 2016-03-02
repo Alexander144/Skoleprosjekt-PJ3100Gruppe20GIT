@@ -65,6 +65,8 @@ body{
 /** start navigation HEADER **/
 
 .nav ul {
+    font-style: normal;
+    font-weight: 500;
     list-style: none;
     background-color: rgb(253, 253, 248);
     text-align: center;
