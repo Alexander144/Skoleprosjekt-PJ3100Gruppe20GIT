@@ -12,7 +12,7 @@
                     <!-- CP = SHORT FOR CREATE PROJECT -->
 
                     <!-- start upload project -->
-                    <div id="uploadCreateProject" class="">
+                    <div id="uploadCreateProject" class="test321">
                         <!-- upload file -->
                         <input id="uploadCPBtn" class="upload" type="button" value="Last opp fil" name="Upload Btn">
 
@@ -26,7 +26,7 @@
                     </div>
 
 
-                    <div id="nameFileCreateProject" class="">
+                    <div id="nameFileCreateProject" class="test321">
                         <p id="nameProjectCP" class="col-floatleft">Navn på prosjekt:</p>
                         <input id="nameProjectCPTxt" class="col-floatright" type="text" name="Name Project">
                     </div>
@@ -41,7 +41,7 @@
 
                     <div class="clearfix"></div>
 
-                    <div id="addStudents" class="">
+                    <div id="addStudents" class="test321">
                         <p id="addStudentCP" class="col-floatleft">Legg til andre studenter:</p>
                         <input id="addStudentCPTxt" class="col-floatright" type="text" name="Add Students">
                     </div>
@@ -50,7 +50,7 @@
                     <div class="clearfix"></div>
 
 
-                    <div id="addTeacher" class="">
+                    <div id="addTeacher" class="test321">
                         <p id="addTeacherCP" class="col-floatleft">Legg til lærer:</p>
                         <input id="addTeacherCPTxt" class="col-floatright" type="text" name="Add Teacher">
                     </div>
@@ -58,14 +58,14 @@
 
 
 
-                    <div id="studyTopic" class="">
+                    <div id="studyTopic" class="test321">
                         <p id="studyTopicCP" class="col-floatleft">Emne:</p>
                         <input id="studyTopicCPTxt" class="col-floatright" type="text" name="Choose Study Topic">
                     </div>
                         <!-- <?php echo $chooseTopic; ?>-->
 
 
-                    <div id="publish" class="col-floatleft">
+                    <div id="publish" class="test321">
                         <!-- publish file -->
                         <input id="publishCPBtn" class="publishBtn" type="button" value="Publiser" name="Publish Button" <!-- preview file -->
                         <input id="previewCPBtn" class="publishBtn" type="button" value="Forhåndsvisning" name="Preview Button">
