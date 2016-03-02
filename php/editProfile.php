@@ -27,9 +27,11 @@
 							<?php 
                      			if(isset($_POST['upload'])){
                             	$uploadImage= $_FILES['picture']['name'];
-        						$uploadImageTmp = $_FILES['picture']['tmpName'];
+        						$uploadImageTmp = $_FILES['picture']['tmp_name'];
 
-        						echo $uploadImage;
+        						move_uploaded_file($uploadImageTmp, "images/$uploadImage");
+        						
+        						echo "<img src='images/$uploadImage'/>";
         						}
         						        					
                             ?> 

@@ -27,10 +27,12 @@ if (login_check($mysqli) == true) {
     <body>
 
   <div id="container">
-    
+      <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
+                method="post"
+                name="updateProfile_form">
             <input type="text" name="searchOnUser" id="searchOnUser" placeholder="Søk" />
           <input type="button" id="UpdateBTN" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk etter bruker"/>
-         
+         </form>
   <header id="mainPageHeader" class="col">
     <img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
       <div class="nav">
@@ -56,7 +58,7 @@ Lim inn denne koden for velkomst beskjed i php'en;
 
 echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
 ************************************************************-->
-        
+        </form>
           </li>
       </ul>
           
