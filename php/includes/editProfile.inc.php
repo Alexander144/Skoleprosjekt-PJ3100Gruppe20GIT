@@ -12,6 +12,11 @@ $error_msg = "";
             
             while ($row = $result->fetch_object()) {
                    $profileEditAboutMe = $row->AboutUser;
+                   $profileAboutUser = $profileEditAboutMe;
+                  
+                    $profileImage = $row->Picture;
+                   
+                   
             }
             $result->free();
         }
@@ -20,6 +25,8 @@ $error_msg = "";
 if (isset($_POST['profileEditAboutMe'])||isset($_POST['updateEmailTxt'])) {
 	    $profileEditAboutMe =  filter_input(INPUT_POST, "profileEditAboutMe", FILTER_DEFAULT);
         $updateEmailTxt =  filter_input(INPUT_POST, "updateEmailTxt", FILTER_DEFAULT);
+       //var_dump($_SESSION['uploadImage']); die;
+
          if($updateEmailTxt == ""){
             $updateEmailTxt = $_SESSION['email'];
          }
@@ -27,8 +34,8 @@ if (empty($error_msg)) {
        
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
         //Legger til project sitt emne og administrator
-        if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET AboutUser = (?), Email = (?) WHERE UserID = '$user_id'")) {
-            $insert_stmt->bind_param('ss', $profileEditAboutMe, $updateEmailTxt); 
+        if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET AboutUser = (?), Email = (?), Picture = (?) WHERE UserID = '$user_id'")) {
+            $insert_stmt->bind_param('sss', $profileEditAboutMe, $updateEmailTxt, $_POST['picture']); 
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');

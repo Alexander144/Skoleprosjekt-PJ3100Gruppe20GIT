@@ -2,6 +2,7 @@
 
 
 <?php include_once 'header.php';
+include_once 'includes/editProfile.inc.php';
  ?>
         <?php if (login_check($mysqli) == true) : ?>
 		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
@@ -14,7 +15,6 @@
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
-            $profileAboutUser = $_SESSION["profileAboutUser"];
              
              ?>
                 
@@ -22,6 +22,8 @@
                 
         <h3>Velkommen <?php echo $username;?>!</h3>
         <p>Bilde av studenten</p>
+        <?php echo $profileImage; ?>
+      
             <img src="">
         <p>Email: <?php echo $email ?> </p>
             
