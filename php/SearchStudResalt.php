@@ -14,6 +14,7 @@
 
                 $profileUsername = $_SESSION['profileUsername'];
                 $profileEmail =$_SESSION["profileEmail"];
+                $profileAboutUser = $_SESSION["profileAboutUser"];
            //var_dump($profileUsername); die;
              ?>
                 <div id="" class="col col-ProfileStudent">
@@ -30,7 +31,7 @@
                 
                 <div id="aboutStudent" class="col col-ProfileStudent studentCol">
                     <h3 id="aboutStudentH3">Om <?php echo $profileUsername; ?></h3>
-                    <p id="aboutStudentP"><?php echo $profileUsername; ?></p>
+                    <p id="aboutStudentP"><?php echo $profileAboutUser; ?></p>
                     
                 
                 </div>
