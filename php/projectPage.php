@@ -31,18 +31,25 @@
         </div>
                 
             <div id="projectTwo" class="col col-projectTwo">
-                <h3 id="aboutMe">Informasjon om deg</h3>
                     
-                <div id="updateGrades">
-                    <p id="updateGradesP">Last opp karakterkortet ditt</p>
-                    <input class = "updatefield" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                    
+                <div id="emneProject">
+                    <p id="emneProjectP">Emne:</p><?php //echo $emne ?>
                 </div>
 
-                    <div id="updateCV">
-                        <p id="updateCVP">Last opp CV</p>
-                        <input class = "updatefield" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                    <div id="studentsProject">
+                        <p id="studentsProjectP">Studenter:</p>
+                        <p id="getStudentsProject"></p><?php //echo $projectStudents?>
                     </div>
+                
+                <div id="tutorProject">
+                    <p id="tutorProjectP">Veileder/lærer:</p>
+                    <p id="getTutorProject"></p><?php //echo $projectTutor ?>
+                </div>
+                
+                <div id="projectDesc">
+                    <p id="projectDescP">Beskrivelse av prosjekt</p>
+                    <p id="getProjectDesc"></p> <?php //echo $projectDesc ?>
+                </div>
                     
                 
                 </div>
@@ -51,14 +58,6 @@
 
         </form>
 
-        <input id="UpdateBTN" class="col" type="button" 
-                value="Oppdater profilen din" 
-                onclick="return ProfileUpdateForms(
-                                this.form,
-                                this.form.picture,
-                                this.form.profileEditAboutMe,
-                                this.form.grades,
-                                this.form.cv);" />  
 
             <p id="returnLogin" class="col">Return to <a href="index.php">login page</a></p>
         <?php else : ?>

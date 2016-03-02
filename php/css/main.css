@@ -497,7 +497,13 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 
 
+/*** PROJECT PAGE ***/
 
+#projectTwo{
+    border-left: solid black 1px;
+    padding-left: 10px;
+    height: 300px;
+}
 
 /*** END CREATE PROJECT ***/
 
