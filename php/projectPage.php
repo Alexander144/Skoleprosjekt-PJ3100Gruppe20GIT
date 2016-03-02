@@ -1,5 +1,5 @@
 <?php include_once 'header.php';
-      include_once 'includes/editProfile.inc.php';
+      include_once 'includes/editProfile.inc.php'; /* projectPage.inc.php */
  ?>
         <?php if (login_check($mysqli) == true) : ?>
 		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
@@ -14,15 +14,12 @@
             $email = htmlentities($_SESSION['email']);
              
              ?>
-        <div id="profileBasicInfo" class="col">
+        <div id="projectPage" class="col col-Page">
                 
-        <h3>Her kan <?php echo $username;?> redigere profilen sin</h3>
+        <h3>Tittel på prosjekt</h3> <?php // echo $projectName ?>
             
-            <div id="updatePhoto">
-                <p>Last opp bilde av deg selv</p>
-                <input class="updatefield" type="file"
-                            name="picture" 
-                            id="picture"/>
+            <div id="photoProject">
+                <img src="#" > <?php // echo $projectPhoto ?>
             </div>
             
             <div id="updatePassword">

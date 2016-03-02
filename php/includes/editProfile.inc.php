@@ -15,7 +15,6 @@ $error_msg = "";
             $result->free();
         }
     }
-var_dump($count); die;
 if (isset($_POST['profileEditAboutMe'])) {
 	    $profileEditAboutMe =  filter_input(INPUT_POST, "profileEditAboutMe", FILTER_DEFAULT);
 if (empty($error_msg)) {

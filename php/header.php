@@ -1,8 +1,11 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
+include_once 'includes/searchStudResalt.inc.php';
+
+
  
-sec_session_start();
+//sec_session_start();
 if (login_check($mysqli) == true) {
     $logged = 'in';
 } else {
@@ -23,14 +26,29 @@ if (login_check($mysqli) == true) {
     <body>
 
   <div id="container">
-  
+    
+          <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
+                method="post"
+                name="updateProfile_form">
+
+            <input type="text" name="searchOnUser" id="searchOnUser" placeholder="Søk" />
+          <input type="button" id="UpdateBTN" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk"/>
+          </form>
   <header id="mainPageHeader" class="col">
     <img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
       <div class="nav">
       <ul>
-        <li class="jobs"><a href="#">Jobber</a></li>
-        <li class="addJob"><a href="#">Legg til en stilling</a></li>
-        <li class="login"><?php if (login_check($mysqli) == true) {
+        <li id="jobs" class="li-border"><a href="#">Jobber</a></li>
+        <li id="addJob" class="li-border"><a href="#">Legg til en stilling</a></li>
+        <li id="profileLink" class="li-border"><?php if (login_check($mysqli) == true) { echo '<a href="userinfo_page.php">Profil</a>';
+            
+        } else{
+            echo 'Profil';
+            }
+              ?>
+        </li>
+        <li id="loginLogout" class="">
+        <?php if (login_check($mysqli) == true) {
             echo '<a href="includes/logout.php">Logout?</a>';  
         } else {
                     echo '<a href="login.php">Logg inn</a></li>';        
@@ -41,9 +59,7 @@ Lim inn denne koden for velkomst beskjed i php'en;
 
 echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
 ************************************************************-->
-          </li>
-          <li><input id="textfield" name="textfield" type="text" placeholder="Søk" />
-          <input type="button" onclick="alert('Search & Find!')" value="Søk">
+        </form>
           </li>
       </ul>
           

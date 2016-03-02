@@ -1,3 +1,4 @@
+
 function formhash(form, password) {
     // Create a new element input, this will be our hashed password field. 
     var p = document.createElement("input");
@@ -85,4 +86,11 @@ function AddProjectForms(form, name, subject, infotext, picture, link, date) {
 
     form.submit();
     return true;
+}
+function SearchOnProfile(form,searchOnUser) {
+    
+    form.submit();
+
+    //window.location = './searchStudResalt.php';
+
 }
