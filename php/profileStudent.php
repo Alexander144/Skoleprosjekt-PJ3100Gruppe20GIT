@@ -12,6 +12,7 @@
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
+            $profileAboutUser = $_SESSION["profileAboutUser"];
              
              ?>
         <div id="" class="col col-ProfileStudent">
@@ -29,7 +30,7 @@
                 
         <div id="aboutStudent" class="col col-ProfileStudent studentCol">
             <h3 id="aboutStudentH3">Om <?php echo $username; ?></h3>
-            <p id="aboutStudentP"><?php echo $username; ?></p>
+            <p id="aboutStudentP"><?php echo $profileAboutUser; ?></p>
                     
                 
                 </div>

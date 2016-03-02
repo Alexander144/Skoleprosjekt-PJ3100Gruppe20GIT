@@ -14,6 +14,7 @@
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
+            $profileAboutUser = $_SESSION["profileAboutUser"];
              
              ?>
                 
@@ -36,7 +37,7 @@
                 
         <div id="aboutStudent" class="col col-ProfileStudent studentCol">
             <h3 id="aboutStudentH3">Om <?php echo $username; ?></h3>
-            <p id="aboutStudentP"><?php echo $username; ?></p>     
+            <p id="aboutStudentP"><?php echo $profileAboutUser; ?></p>     
         </div>
                                         
                 
@@ -48,8 +49,8 @@
             <div id="projects">
                 <?php $projectBox1; ?>
             </div><!--end projects-->
-
-            <input id="ProfileBTN" class="buttonDesign col" type="button" onclick="alert('Legg til Prosjekt')" value="Legg til et prosjekt">
+            
+            <a href="createProject2.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt"></a>
         </div>
 
         </form>
