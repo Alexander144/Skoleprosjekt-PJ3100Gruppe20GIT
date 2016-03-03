@@ -410,10 +410,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #UpdateBTN {
     margin-top: 40px;
-    background-color: lightblue;
-    border-radius: 10px;
-    height: 100px;
-    width: 200px;
+
 }
 
 
@@ -538,6 +535,10 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 .addprojectcontainer #UpdateBTN {
     margin: 15px;
+    background-color: lightblue;
+    border-radius: 10px;
+    height: 100px;
+    width: 200px;
 }
 
 
