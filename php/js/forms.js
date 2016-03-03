@@ -1,3 +1,4 @@
+
 function formhash(form, password) {
     // Create a new element input, this will be our hashed password field. 
     var p = document.createElement("input");
@@ -14,7 +15,6 @@ function formhash(form, password) {
     // Finally submit the form. 
     form.submit();
 }
- 
 function regformhash(form, uid, email, password, conf) {
      // Check each field has a value
     if (uid.value == ''         || 
@@ -76,4 +76,28 @@ function regformhash(form, uid, email, password, conf) {
     // Finally submit the form. 
     form.submit();
     return true;
+}
+function ProfileUpdateForms(form,picture, profileEditAboutMe,updateEmailTxt, grades, cv) {
+
+    form.submit();
+    return true;
+}
+function AddProjectForms(form, uploadFile,nameProject, descProjCPTxt, addStudentCP, studyTopicCPTxt) {
+
+    form.submit();
+    return true;
+}
+function SearchOnProfile(form,searchOnUser) {
+    
+    form.submit();
+
+    //window.location = './searchStudResalt.php';
+
+}
+function SearchOnProject(form,searchOnUser) {
+    
+    form.submit();
+
+    //window.location = './searchStudResalt.php';
+
 }
