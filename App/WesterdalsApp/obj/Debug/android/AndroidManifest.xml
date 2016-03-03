@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="WesterdalsApp.WesterdalsApp" android:versionCode="1" android:versionName="1.0">
   <uses-sdk android:minSdkVersion="16" />
   <application android:label="WesterdalsApp" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:label="Activity1" android:name="md5899f4789ecb5d8ba4f4557b70a42656b.Activity1" />
+    <activity android:label="Browse" android:name="md5899f4789ecb5d8ba4f4557b70a42656b.BrowseActivity" />
+    <activity android:label="My Projects" android:name="md5899f4789ecb5d8ba4f4557b70a42656b.MyProjActivity" />
+    <activity android:label="My Profile" android:name="md5899f4789ecb5d8ba4f4557b70a42656b.MyProfActivity" />
+    <activity android:label="Messages" android:name="md5899f4789ecb5d8ba4f4557b70a42656b.MessagesActivity" />
+    <activity android:label="StartPage" android:name="md5899f4789ecb5d8ba4f4557b70a42656b.StartPageActivity" />
     <activity android:icon="@drawable/icon" android:label="WesterdalsApp" android:name="md5899f4789ecb5d8ba4f4557b70a42656b.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
