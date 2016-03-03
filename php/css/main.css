@@ -97,6 +97,7 @@ body {
 
 .nav a:hover {
     background-color: #005f5f;
+    color: rgb(200, 200, 200);
 }
 
 
@@ -160,6 +161,10 @@ body {
 
 .sort-container a:hover {
     background-color: #005f5f;
+}
+
+.sort-workBy a:hover, #avd:hover, .sort-orderBy a:hover {
+    color: rgb(200, 200, 200); /*Change color on text in menu*/
 }
 
 .sort-container #teknologi:hover {
