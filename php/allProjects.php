@@ -29,6 +29,8 @@
         //Get all projects:
         var allProjects = <?php echo $count;?>; //Get value here
         var $projectName = <?php echo json_encode($Name); ?>;
+        var $projectSubject = <?php echo json_encode($Subject); ?>;
+        var $projectAbout = <?php echo json_encode($AboutProject); ?>;
         var $newProject = $("<div>");
         
            for(var i = 0; i < allProjects; i++){
@@ -38,7 +40,9 @@
                 
                      
                 $("#projects").append($newProject);
-               $newProject.html($projectName);
+               $newProject.html($projectName[i]+"<br>"+$projectSubject[i]+"<br>"+ $projectAbout[i]);
+               
+               
                
                 
             }

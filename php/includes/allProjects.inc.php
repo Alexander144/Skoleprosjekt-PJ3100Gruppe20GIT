@@ -11,6 +11,8 @@ if($result = $mysqli->query("SELECT * FROM project")){
             
             while ($row = $result->fetch_object()) {
                    $Name[$i] = $row->Name;
+                    $Subject[$i] = $row->Subject;
+                    $AboutProject[$i] = $row->AboutProject;
                    $i = $i+1;
             }
             $result->free();
