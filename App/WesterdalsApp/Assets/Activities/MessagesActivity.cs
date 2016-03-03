@@ -12,16 +12,15 @@ using Android.Widget;
 
 namespace WesterdalsApp
 {
-    [Activity(Label = "Activity1")]
-    public class Activity1 : Activity
+    [Activity(Label = "Messages")]
+    public class MessagesActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             // Create your application here
-            SetContentView(Resource.Layout.layout1);
-            //Testkommentar
+            SetContentView(Resource.Layout.messages);
         }
     }
 }

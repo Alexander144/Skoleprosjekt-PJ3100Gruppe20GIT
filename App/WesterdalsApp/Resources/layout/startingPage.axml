@@ -16,7 +16,7 @@
         android:id="@+id/linearLayout2">
         <Button
             android:text="Messages"
-            android:id="@+id/button1"
+            android:id="@+id/MessageButton"
             android:layout_width="380.9dp"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -34,16 +34,16 @@
             android:text="My Projects"
             android:layout_width="192dp"
             android:layout_height="200dp"
-            android:id="@+id/button2" />
+            android:id="@+id/myProjectsbtn" />
         <Button
             android:text="My Profile"
             android:layout_width="192dp"
             android:layout_height="200dp"
-            android:id="@+id/button4" />
+            android:id="@+id/myProfilebtn" />
     </LinearLayout>
     <Button
         android:text="Browse"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:id="@+id/button3" />
+        android:id="@+id/browsebtn" />
 </LinearLayout>
