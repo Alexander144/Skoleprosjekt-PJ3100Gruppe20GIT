@@ -31,7 +31,7 @@
         var $projectName = <?php echo json_encode($Name); ?>;
         var $newProject = $("<div>");
         
-           for(var i = 0; i < allProjects; i++){
+          /* for(var i = 0; i < allProjects; i++){
                 
                 var $newProject = $("<div>")
                     .addClass("col col-3 projectBoxes")
@@ -39,7 +39,14 @@
                      
                 $("#projects").append($newProject);
                 
-            }
+            }*/
+        
+        for (var $i = 0; $i < $projectName.length; $i++) {
+            
+            var div = document.getElementById("projects")
+                div.innerHTML = div.innerHTML + $projectName.indexOf($projectName[$i]) + " " + $projectName[$i] + "  ";
+                div.style.backgroundColor = "blue";
+        }
         
           /* $.each($projectName, function( index, value ) {
             
@@ -58,13 +65,6 @@
                 }
                 $newName.html($projectName);
             });*/
-        
-        for ( var $i = 0; $i < $projectName.length; $i++) {
-            var div = document.getElementById("projects")
-            div.innerHTML = div.innerHTML + 
-            $projectName.indexOf($projectName[$i]) + " " +
-            $projectName[$i] + "  ";
-        }
         
         
         
