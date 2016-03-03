@@ -97,7 +97,7 @@ body {
 
 .nav a:hover {
     background-color: #005f5f;
-    color: rgb(200, 200, 200);
+    color: rgb(250, 250, 250);
 }
 
 
@@ -164,7 +164,7 @@ body {
 }
 
 .sort-workBy a:hover, #avd:hover, .sort-orderBy a:hover {
-    color: rgb(200, 200, 200); /*Change color on text in menu*/
+    color: rgb(250, 250, 250); /*Change color on text in menu*/
 }
 
 .sort-container #teknologi:hover {
@@ -173,7 +173,7 @@ body {
 
 .sort-container #ledelse:hover {
     background-color: rgb(121, 85, 128);
-    color: rgb(200, 200, 200); /*Finne ein passande farge for alle underlenker?*/
+    color: rgb(250, 250, 250); /*Finne ein passande farge for alle underlenker?*/
 }
 
 .sort-container #kommunikasjon:hover {
