@@ -39,7 +39,7 @@
                      
                 $("#projects").append($newProject);
                 
-            }*/
+            }
         
         for (var $i = 0; $i < $projectName.length; $i++) {
             
@@ -47,14 +47,14 @@
                 div.innerHTML = div.innerHTML + $projectName.indexOf($projectName[$i]) + " " + $projectName[$i] + "  ";
                 div.style.backgroundColor = "blue";
         }
-        
-          /* $.each($projectName, function( index, value ) {
+        */
+          $.each($projectName, function( index, value ) {
             
                 var $newName = $("#nameProj");
                 
-                for (var i = 0; i < $projectName; i ++){
+                for (var i = 0; i < $allProjects; i ++){
                     
-                    var $newP = $("<p>")
+                    $newProject
                         .addClass("projectNameP")
                         .css({
                         "font-size": "2em",
@@ -63,9 +63,97 @@
                     
                     $newName.append($newP);
                 }
+              
                 $newName.html($projectName);
-            });*/
+            });
         
+        // LARS KODE //
+/*        
+        
+    function addDivs() {
+    var number = document.getElementById("newDiv").value;
+    var container = document.getElementById("container");
+
+    while (container.hasChildNodes()) {
+        container.removeChild(container.lastChild);
+    }
+
+    for (i = 0; i < number; i++) {
+        var input = document.createElement("div");
+        container.appendChild(input);
+    }
+    
+}
+
+//---setting all css on a button click
+$(document).ready(function () {
+
+    $("button").click(function () {
+        
+        $("div").each(function(i, elem){
+            $(elem).append($("<span>"+(i+1)+"</span>"));
+        });
+        
+        $("span").css(
+            {
+                "text-align": "center",
+                "margin": "40px",
+                "color": "yellow",
+                "font-weight": "bold",
+            }
+        );
+
+        //css for untouched divs
+        $("div").css({
+            "background-color": "aqua",
+            "height": "100px",
+            "width": "100px",
+            "float": "left",
+            "margin": "20px",
+            "opacity": "0.5",
+        });
+
+        //opacity change on hover
+        $("div").hover(function () {
+            $(this).css({
+                "opacity": "1"
+            });
+
+        }, function () {
+            $(this).css({
+                "opacity": "0.5"
+            });
+        });
+
+        // changing color on next, this and previous div
+        $("div").click(function () {
+
+            $(this).css({
+                "background-color": "pink",
+            });
+            $(this).next().css({
+                "background-color": "pink",
+            });
+            $(this).prev().css({
+                "background-color": "pink",
+            });
+        });
+
+        //on doubleclick changes all divs colour except the doubleclicked
+        $("div").dblclick(function () {
+
+            $(this).siblings().css({
+                "background-color": "pink",
+            });
+
+            $(this).css({
+                "background-color": "aqua",
+            });
+
+        });
+    });
+});
+        */
         
         
 

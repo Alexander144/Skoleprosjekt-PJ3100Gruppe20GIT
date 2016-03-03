@@ -38,10 +38,13 @@
                 
                      
                 $("#projects").append($newProject);
+               $newProject.html($projectName);
+               
                 
             }
+        /* EN ANNEN VERSJON SOM IKKE HELT FUNKER NÅ
         
-          /* $.each($projectName, function( index, value ) {
+         $.each($projectName, function( index, value ) {
             
                 var $newName = $("#nameProj");
                 
@@ -57,18 +60,9 @@
                     $newName.append($newP);
                 }
                 $newName.html($projectName);
-            });*/
+            });
         
-        for ( var $i = 0; $i < $projectName.length; $i++) {
-            var div = document.getElementById("projects")
-            div.innerHTML = div.innerHTML + 
-            $projectName.indexOf($projectName[$i]) + " " +
-            $projectName[$i] + "  ";
-        }
-        
-        
-        
-
+*/
     </script><!--end script-->
     <!-- End of body content field -->
     
