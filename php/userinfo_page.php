@@ -2,7 +2,7 @@
 
 
 <?php include_once 'header.php';
-include_once 'includes/editProfile.inc.php';
+
  ?>
         <?php if (login_check($mysqli) == true) : ?>
 		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
@@ -15,14 +15,14 @@ include_once 'includes/editProfile.inc.php';
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
-             
+             include_once 'includes/editProfile.inc.php';
              ?>
                 
         <div id="" class="col col-ProfileStudent">
                 
         <h3>Velkommen <?php echo $username;?>!</h3>
         <p>Bilde av studenten</p>
-        
+
         <img src='./<?php echo $profileImage; ?>'/> 
         
         

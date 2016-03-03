@@ -2,8 +2,7 @@
 
 <?php
 
-$studentName = htmlentities($_SESSION['username']);
-$user_id = htmlentities($_SESSION['user_id']); 
+
 
 $profileEditAboutMe;
 $error_msg = "";
