@@ -526,6 +526,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 .addprojectcontainer {
     width: 450px;
+    margin-left:"";
 }
 
 .addprojectcontainer p {
