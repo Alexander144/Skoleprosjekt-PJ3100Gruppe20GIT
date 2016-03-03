@@ -50,7 +50,7 @@ include_once 'header.php';
                         </p>
 
 
-                                <input id="UpdateBTN" type="button" value="Add" onclick="return AddProjectForms(
+                                <input id="UpdateBTN" type="button" value="Add project" onclick="return AddProjectForms(
                                     this.form,
                                    this.form.name,
                                    this.form.subject,

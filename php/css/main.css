@@ -535,10 +535,13 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 .addprojectcontainer #UpdateBTN {
     margin: 15px;
-    background-color: lightblue;
-    border-radius: 10px;
-    height: 100px;
+    border-radius: 5px;
+    height: 75px;
     width: 200px;
+    background-color: rgb(150, 150, 150);
+    font-family: "Georgia",serif;
+    font-size: 17px;
+    float: right;
 }
 
 
