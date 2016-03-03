@@ -189,7 +189,8 @@ body {
 }
 
 .sort-container li li {
-    background-color: rgb(253, 253, 248);
+    /*background-color: rgb(253, 253, 248);*/
+    background-color: rgb(230, 230, 230);
     font-size: 1em;
 }
 
