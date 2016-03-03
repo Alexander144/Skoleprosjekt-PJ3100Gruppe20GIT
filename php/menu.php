@@ -2,8 +2,8 @@
     <ul>
         <li class="sort-workBy sortMenu"><a href="#" <?php $sortProject; ?>>Arbeid av</a>
             <ul>
-                <li><a href="#" <?php $sortProjectStudent; ?>>Student</a></li>
-                <li><a href="#" <?php $sortProjectAlumni; ?>>Alumni</a></li>
+                <li><a href="allProjects.php" <?php $sortProjectStudent; ?>>Student</a></li>
+                <li><a href="allProjects.php" <?php $sortProjectAlumni; ?>>Alumni</a></li>
             </ul>
         </li>
 

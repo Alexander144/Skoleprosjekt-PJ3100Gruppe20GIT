@@ -33,7 +33,7 @@ if (login_check($mysqli) == true) {
             <input type="text" name="searchOnUser" id="searchOnUser" placeholder="Søk" />
           <input type="button" id="UpdateBTN" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk etter bruker"/>
          </form>
-  <header id="mainPageHeader" class="col">
+    <header id="mainPageHeader" class="col">
       <a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>
       <div class="nav">
       <ul>
