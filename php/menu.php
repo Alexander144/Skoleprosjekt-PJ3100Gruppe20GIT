@@ -7,7 +7,7 @@
             </ul>
         </li>
 
-        <li class="sort-program sortMenu" <?php $sortProgram; ?>><a href="#">Avdeling</a>
+        <li class="sort-program sortMenu" <?php $sortProgram; ?>><a id="avd" href="#">Avdeling</a>
             <ul>
                 <li><a id="teknologi" href="#" <?php $sortProgramTeknologi; ?>>Teknologi/IT</a></li>
                 <li><a id="ledelse" href="#" <?php $sortProgramLedelse; ?>>Ledelse</a></li>
