@@ -52,7 +52,7 @@ include_once 'includes/editProfile.inc.php';
                 <?php $projectBox1; ?>
             </div><!--end projects-->
             
-            <a href="createProject2.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt"></a>
+            <a href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt"></a>
         </div>
 
         </form>
