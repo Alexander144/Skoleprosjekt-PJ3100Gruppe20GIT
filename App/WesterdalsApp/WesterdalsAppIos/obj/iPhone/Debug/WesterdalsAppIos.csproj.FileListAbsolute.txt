@@ -1,0 +1,6 @@
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\WesterdalsAppIos\bin\iPhone\Debug\WesterdalsAppIos.exe
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\WesterdalsAppIos\bin\iPhone\Debug\WesterdalsAppIos.pdb
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\WesterdalsAppIos\obj\iPhone\Debug\optimized\
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\WesterdalsAppIos\obj\iPhone\Debug\WesterdalsAppIos.csprojResolveAssemblyReference.cache
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\WesterdalsAppIos\obj\iPhone\Debug\WesterdalsAppIos.exe
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\WesterdalsAppIos\obj\iPhone\Debug\WesterdalsAppIos.pdb
