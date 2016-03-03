@@ -28,9 +28,9 @@
     <script>
         //Get all projects:
         var allProjects = <?php echo $count;?>; //Get value here
-        var $projectName = <?php echo json_encode($Name); ?>;
-        var $projectSubject = <?php echo json_encode($Subject); ?>;
-        var $projectAbout = <?php echo json_encode($AboutProject); ?>;
+        var projectName = <?php echo json_encode($Name); ?>;
+        var projectSubject = <?php echo json_encode($Subject); ?>;
+        var projectAbout = <?php echo json_encode($AboutProject); ?>;
         var $newProject = $("<div>");
         
         for(var i = 0; i < allProjects; i++){
@@ -41,14 +41,27 @@
                 $("#projects").append($newProject);
             
                $newProject
-                   .html($projectName[i]+"<br>"+$projectSubject[i]+"<br>"+ $projectAbout[i]);
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>");
             
-                $newProject
-                   .css({
+            $newProject
+                .css({
+                    "text-align": "center"
+                });
+
+            $("h1")
+                .css({
                     "text-align": "center", 
                     "font-size": "1.3em",
-                    
-                   });   
+                    "font-weight": "700",
+                   }); 
+            $("p")
+                .css({
+                    "text-align": "center", 
+                    "font-size": "0.8em",
+                    "font-style": "italic",
+                    "display": "inline"
+                   }); 
+            
         }
         
         
