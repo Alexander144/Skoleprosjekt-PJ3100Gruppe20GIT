@@ -53,6 +53,8 @@
                     "text-align": "center", 
                     "font-size": "1.3em",
                     "font-weight": "700",
+                    "display": "inline",
+                    "top": "100px",
                    }); 
             $("p")
                 .css({
