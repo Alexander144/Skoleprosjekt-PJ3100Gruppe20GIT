@@ -33,19 +33,28 @@
         var $projectAbout = <?php echo json_encode($AboutProject); ?>;
         var $newProject = $("<div>");
         
-           for(var i = 0; i < allProjects; i++){
+        for(var i = 0; i < allProjects; i++){
                 
                 var $newProject = $("<div>")
                     .addClass("col col-3 projectBoxes")
-                
                      
                 $("#projects").append($newProject);
-               $newProject.html($projectName[i]+"<br>"+$projectSubject[i]+"<br>"+ $projectAbout[i]);
-               
-               
-               
-                
-            }
+            
+               $newProject
+                   .html($projectName[i]+"<br>"+$projectSubject[i]+"<br>"+ $projectAbout[i]);
+            
+                $newProject
+                   .css({
+                    "text-align": "center", 
+                    "font-size": "1.3em",
+                    
+                   });   
+        }
+        
+        
+        
+        
+        
         /* EN ANNEN VERSJON SOM IKKE HELT FUNKER NÅ
         
          $.each($projectName, function( index, value ) {
