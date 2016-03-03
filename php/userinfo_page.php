@@ -55,7 +55,7 @@
                 <?php $projectBox1; ?>
             </div><!--end projects-->
             
-            <a href="createProject2.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt"></a>
+            <a href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt"></a>
         </div>
 
         </form>
@@ -76,7 +76,7 @@
             <!--<p id="returnLogin" class="col col-3">Return to <a href="index.php">login page</a></p>-->
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
             </p>
         <?php endif; ?>
 
