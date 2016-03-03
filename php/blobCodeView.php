@@ -7,20 +7,20 @@
 #                                                                               #
 #-------------------------------------------------------------------------------#
     include_once 'includes/db_connect.php';
+    include_once 'includes/editProfile.inc.php';
 	if (!$mysqli)
 		die("Can't connect to MySQL: ".mysqli_connect_error());
 
-
-	$id=8; #Id på bilde som blir hentet ut.  
-	$stmt = $mysqli->prepare("SELECT image FROM images WHERE id=?"); 
-	$stmt->bind_param("i", $id);
-
-	$stmt->execute();
-	$stmt->store_result();
-
-	$stmt->bind_result($image);
-	$stmt->fetch();
+		$result = $mysqli->query("SELECT * FROM userprofile WHERE UserID = '$user_id'");
+        $result->num_rows;
+            
+            while ($row = $result->fetch_object()) {
+                                     
+                    $profileImage = $row->Picture;
+                   
+            }
+            $result->free();
 
 	header("Content-Type: image/jpg");#Bilde vil bli lagt ut som JPG med denne koden
-    echo $image; ?>
+    echo $profileImage; ?>
 ?>

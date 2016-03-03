@@ -1,66 +1,68 @@
-body{
+body {
     background-color: rgb(253, 253, 248);
     font-family: "nimbus-sans", sans-serif;
 }
 
+
 /**** START 978 GS ****/
 
-#container{
+#container {
     width: 1008px;
     margin: auto;
 }
 
-.col{
+.col {
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.col-ProfileStudent{
+.col-ProfileStudent {
     width: 295px;
     float: left;
 }
 
-.col-projectOne{
+.col-projectOne {
     width: 612px;
     float: left;
-
 }
 
-.col-projectTwo{
+.col-projectTwo {
     width: 295px;
     float: left;
-
 }
 
-.col-12{
+.col-12 {
     width: 978px;
 }
 
-.col-3{
+.col-3 {
     width: 222px;
     margin-bottom: 30px;
     float: left;
 }
 
-.col-6{
+.col-6 {
     width: 459px;
     float: left;
 }
 
+
 /**** END 978 GS ****/
+
 
 /**** START HEADER ****/
 
-.imgLogo{
+.imgLogo {
     height: 100%;
     float: left;
 }
 
-#mainPageHeader{
+#mainPageHeader {
     height: 4em;
     margin-bottom: 30px;
     margin-top: 10px;
 }
+
 
 /** start navigation HEADER **/
 
@@ -83,54 +85,58 @@ body{
     margin-right: -2px;
 }
 
-.li-border{
+.li-border {
     border-right: 1px solid rgb(10, 10, 10);
 }
 
- 
 .nav a {
     text-decoration: none;
     color: rgb(50, 50, 50);
     display: block;
 }
- 
+
 .nav a:hover {
     background-color: #005f5f;
+    color: rgb(250, 250, 250);
 }
+
 
 /** end navigation HEADER **/
 
+
 /**** END HEADER ****/
+
 
 /**** START MAIN CONTENT INDEX ****/
 
-#mainContent{
+#mainContent {
     display: block;
     float: left;
 }
 
+
 /** start sorting content INDEX **/
 
-.sort-container{
+.sort-container {
     background-color: rgb(200, 200, 200);
     margin-bottom: 30px;
     border-bottom: 1px solid rgb(0, 0, 0);
     margin-top: 10px;
 }
 
-.sortMenu{
+.sortMenu {
     position: relative;
     right: 295px;
 }
 
-.sort-container ul{
+.sort-container ul {
     list-style: none;
     text-align: center;
     padding: 0px;
     margin: 0px;
 }
 
-.sort-container li{
+.sort-container li {
     text-align: left;
     width: 130px;
     height: 50px;
@@ -141,45 +147,50 @@ body{
     margin-left: -3px;
 }
 
-.sort-container a{
+.sort-container a {
     text-decoration: none;
     text-align: center;
     color: rgb(50, 50, 50);
     display: block;
 }
 
-.sort-program{
+.sort-program {
     border-right: 1px solid rgb(10, 10, 10);
     border-left: 1px solid rgb(10, 10, 10);
 }
 
-.sort-container a:hover{
+.sort-container a:hover {
     background-color: #005f5f;
 }
 
-.sort-container #teknologi:hover{
+.sort-workBy a:hover, #avd:hover, .sort-orderBy a:hover {
+    color: rgb(250, 250, 250); /*Change color on text in menu*/
+}
+
+.sort-container #teknologi:hover {
     background-color: rgb(97, 175, 202);
 }
 
-.sort-container #ledelse:hover{
+.sort-container #ledelse:hover {
     background-color: rgb(121, 85, 128);
-    color: rgb(200, 200, 200); /*Finne ein passande farge for alle underlenker?*/
+    color: rgb(250, 250, 250); /*Finne ein passande farge for alle underlenker?*/
 }
 
-.sort-container #kommunikasjon:hover{
+.sort-container #kommunikasjon:hover {
     background-color: rgb(255, 208, 102);
 }
 
-.sort-container #kunstfag:hover{
+.sort-container #kunstfag:hover {
     background-color: rgb(126, 197, 157);
 }
 
-.sort-container #filmTVSpill:hover{
+.sort-container #filmTVSpill:hover {
     background-color: rgb(255, 112, 97);
 }
 
-.sort-container li li{
-    background-color: rgb(253, 253, 248);
+.sort-container li li {
+    /*background-color: rgb(253, 253, 248);*/
+    background-color: rgb(230, 230, 230);
     font-size: 1em;
 }
 
@@ -187,7 +198,7 @@ body{
     text-align: center;
 }
 
-.sort-container > ul > li > a{
+.sort-container > ul > li > a {
     padding-left: 0px;
 }
 
@@ -207,32 +218,36 @@ body{
     display: block;
 }
 
-.projectBoxes{
+.projectBoxes {
     background-color: rgb(150, 150, 150);
     height: 170px;
 }
 
+
 /** end sorting content INDEX **/
+
 
 /**** END MAIN CONTENT INDEX ****/
 
+
 /**** start footer ****/
-#mainPageFooterWrap{
+
+#mainPageFooterWrap {
     height: 15em;
     background-color: rgb(253, 253, 248);
     clear: both;
     padding-top: 20px;
 }
 
-.imgFooter{
+.imgFooter {
     display: block;
     width: 150px;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     margin-bottom: 60px;
 }
 
-.footerBanner{
+.footerBanner {
     display: block;
     width: 950px;
     margin-left: auto;
@@ -241,59 +256,54 @@ body{
     margin-top: 60px;
 }
 
+
 /**** end footer ****/
 
 
 /*mediaqueries tablet + smartphone*/
-  @media screen and (max-width: 800px) {
 
-    #container{
-      width: auto;
+@media screen and (max-width: 800px) {
+    #container {
+        width: auto;
     }
-
-    .col{
-      width: auto;
-      height: auto;
-      float: none;
-      margin-bottom: 15px;
+    .col {
+        width: auto;
+        height: auto;
+        float: none;
+        margin-bottom: 15px;
     }
-
-    #mainPageFooterWrap{
-      width: auto;
+    #mainPageFooterWrap {
+        width: auto;
     }
-
-
-  }
-
+}
 
 
 /**** LOGIN PAGE ****/
 
-.login{
+.login {
     margin-top: 40px;
 }
 
-#loginFeide{
+#loginFeide {
     height: 300px;
     border-right: 1px solid black;
 }
 
-#loginOther{
+#loginOther {
     height: 300px;
-    
 }
 
-.textField{
+.textField {
     float: right;
     top: 5px;
 }
 
-.objectsInDiv{
+.objectsInDiv {
     top: 20%;
     left: 35%;
 }
 
-.buttonDesign{
+.buttonDesign {
     width: 220px;
     height: 60px;
     background-color: rgb(152, 152, 152);
@@ -301,77 +311,87 @@ body{
     font-family: 'Georgia', serif;
 }
 
-.buttonDesign:hover{
+.buttonDesign:hover {
     cursor: pointer;
     background-color: rgb(120, 120, 120);
     transition: all 2s;
 }
 
-#loginBtn, #registerBtn{
+#loginBtn,
+#registerBtn {
     margin-left: 5px;
 }
+
+
 /**** end login page ****/
 
+
 /*register page*/
-#registration{
+
+#registration {
     width: 270px;
     text-align: right;
 }
+
+
 /*li{
 font-family: 'Open Sans Condensed', sans-serif;
 }*/
 
-#registrationPage{
+#registrationPage {
     position: absolute;
     background-color: rgb(199, 199, 199);
     width: 50%;
     left: 25%;
 }
 
-.registerField{
+.registerField {
     position: relative;
     float: right;
     top: 5px;
 }
 
-#registrationBTN{
+#registrationBTN {
     width: 130px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
     background-color: rgb(152, 152, 152);
 }
 
-#registrationBTN:hover{
+#registrationBTN:hover {
     cursor: pointer;
     background-color: rgb(120, 120, 120);
     transition: all 2s;
 }
+
+
 /*end register page*/
+
 
 /*student profile*/
 
-.studentCol{
+.studentCol {
     border-right: solid black 1px;
     border-left: solid black 1px;
     padding-left: 10px;
     padding-right: 10px;
     height: 500px;
 }
-#profileBasicInfo{
+
+#profileBasicInfo {
     padding-top: 20px;
 }
 
-#profilePic{
+#profilePic {
     width: 200px;
     float: left;
 }
 
-#linksForProfile{
+#linksForProfile {
     list-style: none;
-
 }
 
-#profileText{
+#profileText {
     position: relative;
     height: auto;
     top: 50px;
@@ -379,24 +399,27 @@ font-family: 'Open Sans Condensed', sans-serif;
     padding: 15px;
     font-size: 15px;
 }
-#AboutMe{
-    
-}
 
-#ProfileProjects{
+#AboutMe {}
+
+#ProfileProjects {
     padding-top: 20px;
 }
 
-#ProfilePopular{
+#ProfilePopular {}
 
-}
+
 /*end student profile*/
 
+
 /***START EDIT PROFILE***/
-#UpdateBTN{
+
+#UpdateBTN {
     margin-top: 40px;
-    height: 40px;
+
 }
+
+
 /***END EDIT PROFILE***/
 
 
@@ -422,34 +445,31 @@ font-family: 'Open Sans Condensed', sans-serif;
     margin: 15px;
 }
 
-#linkCreateProjectFile{
+#linkCreateProjectFile {
     float: right;
     margin-top: 30px;
 }
 
-#nameFileCreateProject {
-    
-}
+#nameFileCreateProject {}
 
-.publishBtn{
+.publishBtn {
     background-color: lightblue;
     border-radius: 10px;
     height: 100px;
     width: 200px;
-
 }
 
-#publishCPBtn{
+#publishCPBtn {
     float: left;
     margin-left: 15px;
 }
 
-#previewCPBtn{
+#previewCPBtn {
     float: right;
     height: 100px;
     width: 150px;
     margin-right: 15px;
-    }
+}
 
 #publish {
     margin-top: 50px;
@@ -468,7 +488,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     height: 150px;
 }
 
-#descProjCP{
+#descProjCP {
     float: left;
     position: relative;
 }
@@ -479,50 +499,67 @@ font-family: 'Open Sans Condensed', sans-serif;
     position: relative;
 }
 
-#addTeacher{
+#addTeacher {
     float: left;
 }
 
-
-.test321{
+.test321 {
     float: left;
     width: 530px;
     margin-top: 30px;
 }
 
-
-
-
-.col-floatleft{
-    float:left;
+.col-floatleft {
+    float: left;
     margin-left: 15px;
     margin-top: 15px;
     position: relative;
 }
 
-.col-floatright{
-    float:right;
+.col-floatright {
+    float: right;
     margin-right: 15px;
     margin-top: 7px;
     position: relative;
 }
 
 
+/** ADD PROJECT **/
 
+.updatefield {
+    float: right;
+}
 
+.addprojectcontainer {
+    width: 450px;
+    margin-left:"";
+}
+
+.addprojectcontainer p {
+    margin: 15px;
+    margin-top: 30px;
+}
+
+.addprojectcontainer #UpdateBTN {
+    margin: 15px;
+    border-radius: 5px;
+    height: 75px;
+    width: 200px;
+    background-color: rgb(150, 150, 150);
+    font-family: "Georgia",serif;
+    font-size: 17px;
+    float: right;
+}
 
 
 /*** PROJECT PAGE ***/
 
-#projectTwo{
+#projectTwo {
     border-left: solid black 1px;
     padding-left: 10px;
     height: 300px;
 }
 
-/*** END CREATE PROJECT ***/
-
-/*ALL PROJECTS*/
 
 
 /*h1{

@@ -2,12 +2,12 @@
     <ul>
         <li class="sort-workBy sortMenu"><a href="#" <?php $sortProject; ?>>Arbeid av</a>
             <ul>
-                <li><a href="#" <?php $sortProjectStudent; ?>>Student</a></li>
-                <li><a href="#" <?php $sortProjectAlumni; ?>>Alumni</a></li>
+                <li><a href="allProjects.php" <?php $sortProjectStudent; ?>>Student</a></li>
+                <li><a href="allProjects.php" <?php $sortProjectAlumni; ?>>Alumni</a></li>
             </ul>
         </li>
 
-        <li class="sort-program sortMenu" <?php $sortProgram; ?>><a href="#">Avdeling</a>
+        <li class="sort-program sortMenu" <?php $sortProgram; ?>><a id="avd" href="#">Avdeling</a>
             <ul>
                 <li><a id="teknologi" href="#" <?php $sortProgramTeknologi; ?>>Teknologi/IT</a></li>
                 <li><a id="ledelse" href="#" <?php $sortProgramLedelse; ?>>Ledelse</a></li>

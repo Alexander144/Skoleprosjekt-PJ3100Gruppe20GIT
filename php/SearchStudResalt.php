@@ -15,12 +15,16 @@
                 $profileUsername = $_SESSION['profileUsername'];
                 $profileEmail =$_SESSION["profileEmail"];
                 $profileAboutUser = $_SESSION["profileAboutUser"];
+                $profileImage = $_SESSION["profileOnUser"];
+                //var_dump($profileImage); die;
            //var_dump($profileUsername); die;
              ?>
                 <div id="" class="col col-ProfileStudent">
 
                     <h3><?php echo $profileUsername; ?></h3>
                     <p>Bilde av studenten</p>
+
+                    <img src='./<?php echo $profileImage; ?>'/>  
                     <img src="">
                     <p>Email: <?php echo $profileEmail; ?> </p>
                     <a href="#"><p>Karakterkort</p></a>
@@ -47,10 +51,10 @@
              </div>
        
         </form>
-            <p>Return to <a href="index.php">login page</a></p>
+            <p>Return to <a href="login.php">login page</a></p>
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
             </p>
         <?php endif; ?>
         <?php include_once 'footer.php' ?>

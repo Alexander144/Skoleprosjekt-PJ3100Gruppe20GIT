@@ -2,7 +2,7 @@
 
 
 <?php include_once 'header.php';
-include_once 'includes/editProfile.inc.php';
+
  ?>
         <?php if (login_check($mysqli) == true) : ?>
 		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
@@ -15,14 +15,17 @@ include_once 'includes/editProfile.inc.php';
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
-             
+             include_once 'includes/editProfile.inc.php';
              ?>
                 
         <div id="" class="col col-ProfileStudent">
                 
         <h3>Velkommen <?php echo $username;?>!</h3>
         <p>Bilde av studenten</p>
-        <?php echo $profileImage; ?>
+
+        <img src='./<?php echo $profileImage; ?>'/> 
+        
+        
       
             <img src="">
         <p>Email: <?php echo $email ?> </p>
@@ -52,7 +55,7 @@ include_once 'includes/editProfile.inc.php';
                 <?php $projectBox1; ?>
             </div><!--end projects-->
             
-            <a href="createProject2.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt"></a>
+            <a href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt"></a>
         </div>
 
         </form>
@@ -73,7 +76,7 @@ include_once 'includes/editProfile.inc.php';
             <!--<p id="returnLogin" class="col col-3">Return to <a href="index.php">login page</a></p>-->
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
             </p>
         <?php endif; ?>
 

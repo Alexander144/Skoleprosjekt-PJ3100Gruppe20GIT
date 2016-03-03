@@ -1,12 +1,10 @@
 <?php include_once 'header.php';
-    include_once 'includes/AddProject.inc.php';
+      /*include_once 'includes/editProfile.inc.php';*/
  ?>
-        <?php if (login_check($mysqli) == true) : ?>
-     <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
-                method="post" 
-                name="updateProfile_form">
+    <?php if (login_check($mysqli) == true) : ?>
+        <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
 
-                <div id="createProjectContainer">
+            <div id="createProjectContainer">
 
                 <section id="mainCreateProject">
                     <!-- start Main Content -->
@@ -16,7 +14,7 @@
                     <!-- start upload project -->
                     <div id="uploadCreateProject" class="test321">
                         <!-- upload file -->
-                        <input id="uploadFile" class="upload" type="button" value="Last opp fil" name="Upload Btn">
+                        <input id="uploadCPBtn" class="upload" type="button" value="Last opp fil" name="Upload Btn">
 
                         <!--<?php echo $uploadFile; ?>-->
 
@@ -30,7 +28,7 @@
 
                     <div id="nameFileCreateProject" class="test321">
                         <p id="nameProjectCP" class="col-floatleft">Navn på prosjekt:</p>
-                        <input id="nameProject" class="col-floatright" type="text" name="nameProject">
+                        <input id="nameProjectCPTxt" class="col-floatright" type="text" name="Name Project">
                     </div>
                     <!--<?php echo $projectName; ?>-->
 
@@ -88,23 +86,20 @@
 
 
             <!-- Knapp funkjsonen-->
-            <input id="UpdateBTN" type="button" value="Add Project" onclick="return AddProjectForms(
+            <input id="UpdateBTN" type="button" value="Update" onclick="return ProfileUpdateForms(
                                     this.form,
-                                    this.form.uploadFile,
-                                   this.form.nameProject,
-                                   this.form.descProjCPTxt,
-                                   this.form.addStudentCP,
-                                   this.form.studyTopicCPTxt);" />
+                                   this.form.picture,
+                                   this.form.profileEditAboutMe,
+                                   this.form.grades,
+                                   this.form.cv);" />
 
         </form>
-
-            <p id="returnLogin" class="col">Return to <a href="login.php">login page</a></p>
+        <p>Return to <a href="index.php">login page</a></p>
         <?php else : ?>
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
             </p>
-        <?php endif; ?>
+            <?php endif; ?>
+                </body>
 
-<?php include_once 'footer.php'; ?>
-    <!--</body>
-</html>
+                </html>
