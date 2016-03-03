@@ -21,15 +21,6 @@ include_once 'header.php';
             include_once 'includes/AddProject.inc.php';
             ?>
 
-                    <p>Picture:
-                        <input class="updatefield" name="picture" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                        <br>
-                    </p>
-
-                    <p>Link:
-                        <input class="updatefield" name="link" type="text" id="infotext" />
-                        <br>
-                        <p>
 
                             <p>Name:
                                 <input class="updatefield" type="text" name="name" id="name" />
