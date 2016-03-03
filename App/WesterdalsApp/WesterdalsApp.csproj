@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
@@ -58,12 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Activities\BrowseActivity.cs" />
     <Compile Include="Assets\Activities\MyProjActivity.cs" />
     <Compile Include="Assets\Activities\MyProfActivity.cs" />
     <Compile Include="Assets\Activities\MessagesActivity.cs" />
     <Compile Include="Assets\Activities\StartPageActivity.cs" />
     <Compile Include="Assets\Activities\MainActivity.cs" />
+=======
+    <Compile Include="Assets\Activities\Activity1.cs" />
+    <Compile Include="MainActivity.cs" />
+>>>>>>> f6ebdc98e639999fc3283fced44c5a84118f972d
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -23,8 +23,6 @@ C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\res\v
 C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\res\drawable\icon.png
 C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\R.cs.flag
 C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\uploadflags.txt
-C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\WesterdalsApp.dll.mdb
-C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll.mdb
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\res\drawable\icon.png
 D:\Programmering\PJ3100\App\WesterdalsApp\obj\Debug\WesterdalsApp.dll.mdb
 D:\Programmering\PJ3100\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll.mdb
@@ -40,9 +38,14 @@ D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\values\
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\drawable\icon.png
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\R.cs.flag
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\uploadflags.txt
+<<<<<<< HEAD
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\layout\startingpage.xml
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\layout\login.xml
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\layout\messages.xml
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\layout\myprofile.xml
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\layout\browse.xml
 D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\layout\myprojects.xml
+=======
+D:\Utvikling\Projects\Git\PJ3100Gruppe20\App\WesterdalsApp\obj\Debug\res\layout\layout1.xml
+C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\res\layout\layout1.xml
+>>>>>>> f6ebdc98e639999fc3283fced44c5a84118f972d
