@@ -15,12 +15,16 @@
                 $profileUsername = $_SESSION['profileUsername'];
                 $profileEmail =$_SESSION["profileEmail"];
                 $profileAboutUser = $_SESSION["profileAboutUser"];
+                $profileImage = $_SESSION["profileOnUser"];
+                //var_dump($profileImage); die;
            //var_dump($profileUsername); die;
              ?>
                 <div id="" class="col col-ProfileStudent">
 
                     <h3><?php echo $profileUsername; ?></h3>
                     <p>Bilde av studenten</p>
+
+                    <img src='./<?php echo $profileImage; ?>'/>  
                     <img src="">
                     <p>Email: <?php echo $profileEmail; ?> </p>
                     <a href="#"><p>Karakterkort</p></a>

@@ -17,6 +17,12 @@
             
             <div id="updatePhoto">
                 <p>Last opp bilde av deg selv</p>
+                
+                <?php    
+                    //var_dump($profileImage); die;
+                    //header("Content-Type: image/jpg");
+                    //echo $profileImage; 
+                    ?>
                 <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="updatefield" type="file"
                             name="picture" 
@@ -28,10 +34,14 @@
                      			if(isset($_POST['upload'])){
                             	$uploadImage= $_FILES['picture']['name'];
         						$uploadImageTmp = $_FILES['picture']['tmp_name'];
-
-        						move_uploaded_file($uploadImageTmp, "images/$uploadImage");
+                                 
+                                if ( ! is_dir("images/$user_id/")) {
+                                 mkdir("images/$user_id/");
+                                }
+        						move_uploaded_file($uploadImageTmp, $_SESSION['uploadImage'] ="images/$user_id/$uploadImage");
         						
-        						echo "<img src='images/$uploadImage'/>";
+        						echo "<img src='images/$user_id/$uploadImage'/>";
+                                
         						}
         						        					
                             ?> 

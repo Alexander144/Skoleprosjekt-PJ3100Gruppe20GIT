@@ -22,7 +22,10 @@ include_once 'includes/editProfile.inc.php';
                 
         <h3>Velkommen <?php echo $username;?>!</h3>
         <p>Bilde av studenten</p>
-        <?php echo $profileImage; ?>
+        
+        <img src='./<?php echo $profileImage; ?>'/> 
+        
+        
       
             <img src="">
         <p>Email: <?php echo $email ?> </p>
