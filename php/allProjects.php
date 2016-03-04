@@ -41,7 +41,7 @@
                 $("#projects").append($newProject);
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>");
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>");
             
             $newProject
                 .css({
@@ -57,6 +57,7 @@
                     "top": "100px",
                     "border-bottom": "1px solid black"
                    }); 
+            
             $("p")
                 .css({
                     "text-align": "center", 
