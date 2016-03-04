@@ -31,17 +31,28 @@
         var projectName = <?php echo json_encode($Name); ?>;
         var projectSubject = <?php echo json_encode($Subject); ?>;
         var projectAbout = <?php echo json_encode($AboutProject); ?>;
+        var projectID = <?php echo json_encode($ProjectID); ?>;
         var $newProject = $("<div>");
+        var ID;
         
         for(var i = 0; i < allProjects; i++){
-                
+            
+                var ID = projectID[i];
+           
+           window.location.href = "allProjects.php?ID=" + ID;
+            
                 var $newProject = $("<div>")
                     .addClass("col col-3 projectBoxes")
                      
                 $("#projects").append($newProject);
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>");
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>" + "<?php $ID = $_GET['ID']; ?>");
+                
+                 
+            
+                //$newProject.append($ID);
+          
             
             $newProject
                 .css({
@@ -65,11 +76,13 @@
                     "font-style": "italic",
                     "display": "inline"
                    }); 
-            
+       
         }
         
         
-        
+          $("#projects").click(function(){
+                alert('<?php echo ($ID); ?>');
+            });
         
         
         /* EN ANNEN VERSJON SOM IKKE HELT FUNKER NÅ
