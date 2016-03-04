@@ -55,6 +55,7 @@
                     "font-weight": "700",
                     "display": "inline",
                     "top": "100px",
+                    "border-bottom": "1px solid black"
                    }); 
             $("p")
                 .css({
