@@ -101,3 +101,10 @@ function SearchOnProject(form,searchOnUser) {
     //window.location = './searchStudResalt.php';
 
 }
+function SearchOnProject(form,projectID) {
+    
+    form.submit();
+
+    //window.location = './searchStudResalt.php';
+
+}

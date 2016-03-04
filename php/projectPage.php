@@ -1,5 +1,5 @@
 <?php include_once 'header.php';
-      include_once 'includes/editProfile.inc.php'; /* projectPage.inc.php */
+      include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
  ?>
         <?php if (login_check($mysqli) == true) : ?>
 		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
@@ -17,10 +17,10 @@
         <div id="projectOne" class="col col-projectOne">
                 
         
-        <h3>Tittel på prosjekt</h3> <?php // echo $projectName ?>
+        <h3>Tittel på prosjekt</h3> <?php echo $Name ?>
             
             <div id="photoProject">
-                <img src="#" > <?php // echo $projectPhoto ?>
+                <img src="#" > <?php// echo $projectPhoto ?>
             </div>
             
             <div id="commentField">
@@ -33,7 +33,7 @@
             <div id="projectTwo" class="col col-projectTwo">
                     
                 <div id="emneProject">
-                    <p id="emneProjectP">Emne:</p><?php //echo $emne ?>
+                    <p id="emneProjectP">Emne:</p><?php echo $Subject ?>
                 </div>
 
                     <div id="studentsProject">
@@ -48,7 +48,7 @@
                 
                 <div id="projectDesc">
                     <p id="projectDescP">Beskrivelse av prosjekt</p>
-                    <p id="getProjectDesc"></p> <?php //echo $projectDesc ?>
+                    <p id="getProjectDesc"></p> <?php echo $AboutProject ?>
                 </div>
                     
                 

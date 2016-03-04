@@ -102,10 +102,7 @@
            value="Update"
            onclick="return SearchOnProject(
                     this.form,
-                    this.form.picture,
-                    this.form.profileEditAboutMe,
-                    this.form.grades,
-                    this.form.cv);" />
+                    this.form.;" />
     </form>
     <p>Return to <a href="login.php">login page</a></p>
     <?php else : ?>

@@ -5,16 +5,16 @@
 
 $error_msg = "";
 $count;
-$i = 0;
+
 if($result = $mysqli->query("SELECT * FROM project")){
         if($count = $result->num_rows){
             
             while ($row = $result->fetch_object()) {
-                    $ProjectID[$i] = $row->ProjectID;
-                   $Name[$i] = $row->Name;
-                    $Subject[$i] = $row->Subject;
-                    $AboutProject[$i] = $row->AboutProject;
-                   $i = $i+1;
+                if($row->ProjectID == 7){
+                   $Name = $row->Name;
+                    $Subject = $row->Subject;
+                    $AboutProject = $row->AboutProject;
+               }
             }
             $result->free();
         }
