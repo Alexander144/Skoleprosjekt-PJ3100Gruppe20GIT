@@ -76,8 +76,18 @@
 
     }
     
-    #mainPageHeader h2{
+    #title{
+        float: none;
+    }
+    
+    #title h2{
+        font-size: 5em;
+        line-height: 0;
+    }
+    
+    #mainPageHeader a{
         text-align: center;
+        display: block;
         width: auto;
         margin-left: 0;
         margin-right: 0;
@@ -197,5 +207,19 @@
         width: auto;
         height: 300px;
         margin-bottom: 20px;
+    }
+    
+    /** LOGIN **/
+    
+    #loginFeide h1{
+        font-size: 2em;
+    }
+    
+    #loginBtn{
+        width: 120px;
+    }
+    
+    #registerBtn{
+        width: 120px;
     }
 }

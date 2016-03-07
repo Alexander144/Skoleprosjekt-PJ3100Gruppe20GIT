@@ -19,7 +19,7 @@ if (login_check($mysqli) == true) {
 
         <div id="loginFeide" class="col col-6 login">
             <div class="objectsInDiv">
-            <h1>Ansatte og studenter <br> ved Westerdals</h1>
+            <h1>Ansatte og studenter ved Westerdals</h1>
             <input class="buttonDesign" type="button" value="Login med Feide"/>
             </div>
         </div>
