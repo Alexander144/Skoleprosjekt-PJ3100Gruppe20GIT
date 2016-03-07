@@ -10,7 +10,7 @@ if($result = $mysqli->query("SELECT * FROM project")){
         if($count = $result->num_rows){
             
             while ($row = $result->fetch_object()) {
-                if($row->ProjectID == 7){
+                if($row->ProjectID == $ID){
                    $Name = $row->Name;
                     $Subject = $row->Subject;
                     $AboutProject = $row->AboutProject;

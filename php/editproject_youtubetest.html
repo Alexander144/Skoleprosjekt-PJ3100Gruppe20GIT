@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for you</title>
+
+    <style>
+        #youtubeContainer{
+            background-color: rgb(80,400,20);
+        }
+        #youTubeVideo {
+            display: block;
+            width: 720;
+            margin: auto;
+            background-color: rgb(20,60,80);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="yt_api"></div>
+
+    <div id="youtubeContainer">
+        <header>
+            <h1>Youtube container</h1>
+        </header>
+        <div id="youTubeVideo"></div>
+    </div>
+    
+    <script src="js/jquery.js"></script>    
+    <script>        
+        //videospilleren
+        var player;
+        
+        //start innhenting/klargjøring av YoutTube Iframe API
+        var yt_api_script = document.createElement("script");
+        yt_api_script.src = "https://www.youtube.com/iframe_api";        
+        $("#yt_api").html(yt_api_script);        
+        yt_api_script.onload = onYouTubeIframeAPIReady;
+        //-- end innhenting av YouTube API
+        
+        //start konfigurering av videospiller       
+        //https://developers.google.com/youtube/iframe_api_reference
+        //https://developers.google.com/youtube/player_parameters?playerVersion=HTML5
+        var onYouTubeIframeAPIReady = function(){
+            
+            var videokonfigurasjon = {
+                width: 960,
+                height: 720,
+                videoId: "ezqvF2TzjSc",
+                events: {
+                    onReady: setVideoEvents
+                },
+                playerVars: {
+                    controls: 0
+                }                
+            }; //--- end videokonfigurasjon
+            
+            player = new YT.Player("youTubeVideo", videokonfigurasjon);
+            
+        }; //--- end onYouTubeIframeAPIReady
+        
+        var setVideoEvents = function(){
+            $("#playVideoBtn").on("click", function() {
+                player.playVideo();    
+            });
+
+        }; //--- end setVideoEvents
+        
+    </script>
+
+</body>
+
+</html>

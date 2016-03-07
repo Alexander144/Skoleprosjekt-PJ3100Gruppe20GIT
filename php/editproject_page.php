@@ -25,7 +25,7 @@ include_once 'header.php';
                             <br>
                         </p>
                 
-                        <p>Link:
+                        <p>Link: (youtube/..)
                             <input class="updatefield" name="link" type="text" id="infotext" />
                             <br>
                             <p>

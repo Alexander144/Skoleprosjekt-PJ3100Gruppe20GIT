@@ -30,9 +30,9 @@
             <img src="">
         <p>Email: <?php echo $email ?> </p>
             
-            <a href="#"><p>Karakterkort</p></a>
+            <a href="#" class="linkerStyle"><p>Karakterkort</p></a>
 
-            <a href="#"><p>CV<p></a>
+            <a href="#" class="linkerStyle"><p>CV<p></a>
             
             <a href="editProfile.php"><input id="UpdateBTN" type="button" 
             value="Oppdater profilen din"/>  </a>
@@ -76,7 +76,7 @@
             <!--<p id="returnLogin" class="col col-3">Return to <a href="index.php">login page</a></p>-->
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
+                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
             </p>
         <?php endif; ?>
 

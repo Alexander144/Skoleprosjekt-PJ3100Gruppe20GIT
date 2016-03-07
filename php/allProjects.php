@@ -27,54 +27,51 @@
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
      function SendData(){
+
  					 $.ajax({
 						url: 'allProjects.php',
-						data: $(this).data("ID"),
+						data: 'ID='+$(this).data("ID"),
 						method: 'GET',
+                        autoload:true,
 						success: function (data) {
+                            $('#content').html(data);
+                            console.log(data);
+
 						 // er er resultatet fra sql-spørringen
 						}
 						});
         }
-        //Get all projects:
+         //Get all projects:
         var allProjects = <?php echo $count;?>; //Get value here
         var projectName = <?php echo json_encode($Name); ?>;
         var projectSubject = <?php echo json_encode($Subject); ?>;
         var projectAbout = <?php echo json_encode($AboutProject); ?>;
         var projectID = <?php echo json_encode($ProjectID); ?>;
-        var FirstProjectID = <?php echo json_encode($FirstProjectID); ?>;
-        var LastProjectID = <?php echo json_encode($LastProjectID); ?>;
         var $newProject = $("<div>");
         var ID;
-
+        
         for(var i = 0; i < allProjects; i++){
             
                 var ID = projectID[i];
+        
             
-                
-              //ID = projectID[i];
-             
-			
-			
                 var $newProject = $("<div>")
-                    .addClass("col col-3 projectBoxes");
-                    
+                    .addClass("col col-3 projectBoxes")
+                     
                 $("#projects").append($newProject);
-
-            	
+            
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>");
-           		
-
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i]);
+                
+                 
             
                 //$newProject.append($ID);
-          		
+          
             
             $newProject
                 .css({
                     "text-align": "center"
                 });
-
             $("h1")
                 .css({
                     "text-align": "center", 
@@ -83,22 +80,25 @@
                     "display": "inline",
                     "top": "100px",
                     "border-bottom": "1px solid black"
-                   });
+                   }); 
+            
             $("p")
                 .css({
                     "text-align": "center", 
                     "font-size": "0.8em",
                     "font-style": "italic",
                     "display": "inline"
-                   });
-                 $newProject.click(SendData);
-                	$newProject.data("ID", projectID[i]);
-              i++;
+                   }); 
 
-
-        }
-
+                $newProject.click(SendData);
+                    $newProject.data("ID", projectID[i]);
        
+        };
+        
+                 
+             
+
+
 
         
         
@@ -132,7 +132,9 @@
                     this.form,
                     this.form.;" />
     </form>
-    <p>Return to <a href="login.php">login page</a></p>
+
+    <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
+
     <?php else : ?>
     <p>
         <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
