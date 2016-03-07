@@ -1,0 +1,153 @@
+@media screen and (max-width: 800px){
+    
+    /** FELLES **/
+    
+	#container{
+		width: auto;
+        margin: 0;
+	}
+
+	.col{
+		width: auto;
+		height: auto;
+		float: none;
+        margin: 0;
+	}
+    
+    /** HEADER **/
+    
+    #mobileNav{
+        display: block;
+    }
+    
+    #mobileNav ul{
+        margin: 0;
+        padding: 0;
+    }
+        
+    #mobileNav li{
+        width: 120px;
+        position: relative;
+    }
+        
+    #mobileNav ul ul{
+        position: absolute;
+        left: 100%;
+        top: 0px;
+        display: none;
+    }
+        
+    
+    #mobileNav a{
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        padding: 20px 0px;         
+    }
+        
+    .nav{
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+    }
+    
+    .nav ul{
+        padding: 0;
+    }
+    
+    .nav li{
+        width: 100%;
+    }
+    
+    .nav a:hover{
+        background-color: rgb(253, 253, 248);
+        color: rgb(000, 000, 000);
+    }
+    
+    .li-border{
+        border: 1px solid black;
+        display: inline-block;
+    }
+    
+    .imgLogo{
+        width: auto;
+        float: none;
+    }
+    
+    #headerLogo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #headerLogo img{
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    
+    #mainPageHeader{
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+    /** FOOTER **/
+    
+    #footer{
+        width: auto;
+        height: auto;
+    }
+    
+    .imgMobile{
+        width: 100%;
+    }
+    
+    /** INDEX **/
+    
+    /**  NAVIGERINGSMENY  **/
+    
+    .sort-container li{
+        width: 100px;
+        border: none;
+        font-size: 0.8em;
+        right: 0;
+    }
+    
+    #sortingMenu{
+        top: 200%;
+    }
+    
+    #sortingMenu{
+        display: none;
+    }
+    
+    .sort-container ul{
+        background-color: none;
+    }
+    
+    .sort-container{
+        background-color: none;
+        top: 100%;
+    }
+    
+    .sort-container a{
+        background-color: none;
+    }
+    
+    .projectBoxes{
+        float: none;
+    }
+    
+    .sortMenu{
+        position: none;
+    }
+    
+    /** USERINFO_PAGE **/
+    
+    
+
+}

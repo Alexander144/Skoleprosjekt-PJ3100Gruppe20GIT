@@ -1,4 +1,4 @@
-<div class="sort-container col"> <!-- start sorting content-->
+<div id="sortingMenu" class="sort-container col"> <!-- start sorting content-->
     <ul>
         <li class="sort-workBy sortMenu"><a href="#" <?php $sortProject; ?>>Arbeid av</a>
             <ul>

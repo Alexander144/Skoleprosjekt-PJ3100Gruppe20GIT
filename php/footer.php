@@ -1,7 +1,7 @@
 <div id="mainPageFooterWrap">
     <footer>
-    	<img src="img/footerBanner.jpg" class="footerBanner">
-    	<img src="img/WACT_hovedlogo_sort_rgb.png" class="imgFooter">
+    	<img id="linesFooter" class="imgMobile footerBanner" src="img/footerBanner.jpg">
+    	<img id="logoFooter" class="imgFooter" src="img/WACT_hovedlogo_sort_rgb.png">
     </footer> <!--end mainPageFooterWrap-->
 
             <!--Everything above will be the bottom of the webpage -->

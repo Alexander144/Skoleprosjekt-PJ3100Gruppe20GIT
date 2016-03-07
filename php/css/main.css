@@ -111,6 +111,11 @@ body {
     color: rgb(250, 250, 250);
 }
 
+
+#mobileNav{
+    display: none;
+}
+
 /** end navigation HEADER **/
 
 
@@ -177,11 +182,13 @@ body {
 }
 
 .sort-container a:hover {
-    background-color: #005f5f;
+    /*background-color: #005f5f;*/
+    text-decoration: underline;
+
 }
 
 .sort-workBy a:hover, #avd:hover, .sort-orderBy a:hover {
-    color: rgb(250, 250, 250); /*Change color on text in menu*/
+   /* color: rgb(250, 250, 250); Change color on text in menu*/
 }
 
 .sort-container #teknologi:hover {
@@ -275,25 +282,6 @@ body {
 
 
 /**** end footer ****/
-
-
-/*mediaqueries tablet + smartphone*/
-
-@media screen and (max-width: 800px) {
-    #container {
-        width: auto;
-    }
-    .col {
-        width: auto;
-        height: auto;
-        float: none;
-        margin-bottom: 15px;
-    }
-    #mainPageFooterWrap {
-        width: auto;
-    }
-}
-
 
 /**** LOGIN PAGE ****/
 
