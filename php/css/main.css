@@ -51,10 +51,19 @@ body {
 
 
 /**** START HEADER ****/
+#title{
+    float: left;
+    height: auto;
+    font-size: 16px;
+    text-decoration: line-through;
+    color: rgb(80, 80, 80);
+    text-shadow: 1px 1px;
+}
 
 .imgLogo {
     height: 100%;
-    float: left;
+    float: right;
+    margin-left: 10px;
 }
 
 #mainPageHeader {
@@ -72,15 +81,16 @@ body {
     list-style: none;
     background-color: rgb(253, 253, 248);
     text-align: center;
+    float: left;
 }
 
 .nav li {
     font-size: 1.3em;
     line-height: 50px;
     height: 50px;
-    margin-top: 1em;
+   /* margin-top: 1em;*/
     display: inline-block;
-    width: 200px;
+    width: 170px;
     margin-left: -2px;
     margin-right: -2px;
 }
@@ -100,10 +110,10 @@ body {
     color: rgb(250, 250, 250);
 }
 
+
 #mobileNav{
     display: none;
 }
-
 
 /** end navigation HEADER **/
 
@@ -122,7 +132,7 @@ body {
 /** start sorting content INDEX **/
 
 .sort-container {
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(253, 253, 248);
     margin-bottom: 30px;
     border-bottom: 1px solid rgb(0, 0, 0);
     margin-top: 10px;
@@ -130,7 +140,14 @@ body {
 
 .sortMenu {
     position: relative;
-    right: 295px;
+    right: 178px;
+}
+
+#searchField{
+    position: relative;
+    float: right;
+    top: -25px;
+    right: 10px;
 }
 
 .sort-container ul {
@@ -291,14 +308,14 @@ body {
 .buttonDesign {
     width: 220px;
     height: 60px;
-    background-color: rgb(152, 152, 152);
+    background-color: rgb(253, 253, 248);
     font-size: 20px;
     font-family: 'Georgia', serif;
 }
 
 .buttonDesign:hover {
     cursor: pointer;
-    background-color: rgb(120, 120, 120);
+    color: rgb(120, 120, 120);
     transition: all 2s;
 }
 
@@ -401,9 +418,21 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #UpdateBTN {
     margin-top: 40px;
+    background-color: rgb(253, 253, 248);
 
 }
 
+.linkerStyle:hover{
+    cursor: pointer;
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+    transition: all 2s;
+}
+
+.linkerStyle:visited{
+    color: rgb(120, 120, 120);
+
+}
 
 /***END EDIT PROFILE***/
 
@@ -530,12 +559,17 @@ font-family: 'Open Sans Condensed', sans-serif;
     border-radius: 5px;
     height: 75px;
     width: 200px;
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(253, 253, 248);
     font-family: "Georgia",serif;
     font-size: 17px;
     float: right;
 }
 
+#UpdateBTN:hover {
+    cursor: pointer;
+    color: rgb(120, 120, 120);
+    transition: all 2s;
+}
 
 /*** PROJECT PAGE ***/
 

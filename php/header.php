@@ -28,8 +28,9 @@ if (login_check($mysqli) == true) {
     <body>
 
   <div id="container">
-      
+<!--
       <div id="searchHead" class="col">
+
       <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
                 method="post"
                 name="updateProfile_form">
@@ -37,13 +38,21 @@ if (login_check($mysqli) == true) {
           
           <input type="button" id="UpdateBTN" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk etter bruker"/>
          </form>
+
           
         </div>
+      
+    
       
     <header id="mainPageHeader" class="col">
       <a id="headerLogo" href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>
         
       <div id="navWeb" class="nav">
+        -->
+    <header id="mainPageHeader" class="col">
+      <a id="title" href="index.php"><h1>TUNG?</h1></a>
+      <!--<a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
+      <div class="nav">
       <ul>
         <li id="jobs" class="li-border"><a href="#">Jobber</a></li>
         <li id="addJob" class="li-border"><a href="#">Legg til en stilling</a></li>
@@ -68,9 +77,9 @@ echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
 ************************************************************-->  
         </form>
           </li>
-      </ul>
-          
+      </ul>  
     </div>
+    <a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
   </header>
 
 
