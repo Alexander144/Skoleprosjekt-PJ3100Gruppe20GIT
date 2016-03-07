@@ -24,64 +24,61 @@
                     //echo $profileImage; 
                     ?>
                 <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                <input class="updatefield" type="file"
-                            name="picture" 
-                            id="picture"/>
+                <input class="updatefield" type="file" name="picture" id="picture"/>
                             
                             <input type = "submit" name = "upload" value = "Upload File"/>
 							</form>
 							<?php 
                      			if(isset($_POST['upload'])){
-                            	$uploadImage= $_FILES['picture']['name'];
-        						$uploadImageTmp = $_FILES['picture']['tmp_name'];
+                                    $uploadImage= $_FILES['picture']['name'];
+                                    $uploadImageTmp = $_FILES['picture']['tmp_name'];
                                  
                                 if ( ! is_dir("images/$user_id/")) {
-                                 mkdir("images/$user_id/");
+                                    mkdir("images/$user_id/");
                                 }
-        						move_uploaded_file($uploadImageTmp, $_SESSION['uploadImage'] ="images/$user_id/$uploadImage");
+                                    move_uploaded_file($uploadImageTmp, $_SESSION['uploadImage'] ="images/$user_id/$uploadImage");
         						
-        						echo "<img src='images/$user_id/$uploadImage'/>";
-                                
+                                    echo "<img src='images/$user_id/$uploadImage'/>";
         						}
-        						        					
                             ?> 
                           
          <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
                 method="post" 
                 name="updateProfile_form">   
-            </div>
+            </div><!--end updatePhoto-->
             
             <div id="updatePassword">
                 <p>Oppdater passord</p>
                 <input id="updatePasswordTxt" type="text" />
-            </div>
+            </div><!--end updatePassword-->
             
             <div id="updateEmail">
                 <p>Oppdater mailen din</p>
                 <input id="updateEmailTxt" name = "updateEmailTxt" type="text" />
-            </div>
+            </div><!--end updateEmail-->
         
-        </div>
+        </div><!--end profileBasicInfo-->
                 
                 <div id="" class="col">
                     <h3 id="aboutMe">Informasjon om deg</h3>
                     <textarea cols="80" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
                     
-                <div id="updateGrades">
-                    <p id="updateGradesP">Last opp karakterkortet ditt</p>
-                    <input class = "updatefield" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                    
-                </div>
+                    <div id="updateGrades">
+                        <p id="updateGradesP">Last opp karakterkortet ditt</p>
+                        <input class = "updatefield" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                    </div><!--end updateGrades-->
 
+
+                    <!--Start updateCV-->
                     <div id="updateCV">
                         <p id="updateCVP">Last opp CV</p>
                         <input class = "updatefield" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                    </div>
+                    </div><!--end updateCV-->
                     
                 
-                </div>
+                </div><!--end .. -->
 
-            </div>
+            </div><!--end updateProfile-->
 
         <input id="UpdateBTN" class="col" type="button" name = "upload"
                 value="Oppdater profilen din" 
