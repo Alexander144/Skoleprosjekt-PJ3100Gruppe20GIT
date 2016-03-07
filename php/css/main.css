@@ -61,8 +61,11 @@ body {
     text-shadow: 1px 1px;
 }
 
-.imgLogo {
-    height: 100%;
+#blackWLogo{
+    height: 70px;
+}
+
+.imgLogo{
     float: right;
     margin-left: 10px;
 }
