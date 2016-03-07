@@ -28,7 +28,6 @@ include_once 'header.php';
                         <p>Link: (youtube/..)
                             <input class="updatefield" name="link" type="text" id="infotext" />
                             <br>
-                            <p>
                 
                     <p>Name:
                         <input class="updatefield" type="text" name="name" id="name" />

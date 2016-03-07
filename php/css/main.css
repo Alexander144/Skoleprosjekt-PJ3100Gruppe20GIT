@@ -54,7 +54,8 @@ body {
 #title{
     float: left;
     height: auto;
-    font-size: 16px;
+    width: 100px;
+    font-size: 20px;
     text-decoration: line-through;
     color: rgb(80, 80, 80);
     text-shadow: 1px 1px;
@@ -244,6 +245,7 @@ body {
 .projectBoxes {
     background-color: rgb(150, 150, 150);
     height: 170px;
+    box-shadow: 0 4px 4px 0 rgb(80, 80, 80);
 }
 
 
