@@ -49,7 +49,7 @@ include_once 'header.php';
                         </p>
 
 
-                                <input class="buttonDesign" type="button" value="Legg til prosjekt" onclick="return AddProjectForms(
+                                <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="return AddProjectForms(
                                     this.form,
                                    this.form.name,
                                    this.form.subject,
@@ -68,7 +68,7 @@ include_once 'header.php';
 
             <input class="smallUploadBtn" type="file" name="file" id="file"/>
 
-            <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp en fil"/>
+            <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
             <?php 
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];

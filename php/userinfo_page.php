@@ -37,7 +37,7 @@
 
             <a href="#" class="linkerStyle"><p>CV<p></a>
             
-            <a href="editProfile.php"><input id="UpdateBTN" type="button" 
+            <a href="editProfile.php"><input class="smallUploadBtn" type="button"
             value="Oppdater profilen din"/>  </a>
         
         </div>

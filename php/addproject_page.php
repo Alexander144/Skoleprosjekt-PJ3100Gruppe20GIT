@@ -42,7 +42,7 @@ include_once 'header.php';
                                 </p>
 
 
-                                <input id="UpdateBTN" type="button" value="Add project" onclick="return AddProjectForms(
+                                <input class="buttonDesign" type="button" value="Add project" onclick="return AddProjectForms(
                                     this.form,
                                    this.form.name,
                                    this.form.subject,
@@ -52,11 +52,11 @@ include_once 'header.php';
                                    this.form.date);" />
 
             </form>
-            <p>Return to <a href="login.php">login page</a></p>
+            <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
     </div>
     <?php else : ?>
         <p>
-            <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+            <span class="error">You are not authorized to access this page.</span> Please <a href="index.php" class="linkerStyle">login</a>.
         </p>
         <?php endif; ?>
 
