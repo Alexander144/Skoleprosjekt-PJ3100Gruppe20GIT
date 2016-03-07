@@ -6,7 +6,7 @@ include_once 'header.php';
         <p>Welcome
             <?php echo htmlentities($_SESSION['username']); ?>!</p>
         <p>
-            Edit project!
+            Edit project
         </p>
         <!-- Dette er brukerens profil-->
 
@@ -50,7 +50,7 @@ include_once 'header.php';
                         </p>
 
 
-                                <input id="UpdateBTN" type="button" value="Add" onclick="return AddProjectForms(
+                                <input class="buttonDesign" type="button" value="Legg til prosjekt" onclick="return AddProjectForms(
                                     this.form,
                                    this.form.name,
                                    this.form.subject,
@@ -66,9 +66,10 @@ include_once 'header.php';
         <!-- Dette er de 2 knappene som ligger på toppen av siden for og laste opp filer
             Det under trenger Stilsetting og fiksing av variabler. Rett og slett en ferdigstilling-->
         <form action = "editProject.php" method="post" enctype="multipart/form-data">
-            <input class="updatefield" type="file" name="file" id="file"/>
 
-            <input type = "submit" name = "uploadFile" class="" value = "uploadFile"/>
+            <input class="smallUploadBtn" type="file" name="file" id="file"/>
+
+            <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp en fil"/>
             <?php 
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
@@ -86,10 +87,10 @@ include_once 'header.php';
         </form>
             
         <!--Upload File Done--> 
-        <p>Return to <a href="index.php">login page</a></p>
+        <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
+                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>
             </p>
             <?php endif; ?>
 
