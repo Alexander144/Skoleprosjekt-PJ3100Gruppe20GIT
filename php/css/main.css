@@ -312,20 +312,6 @@ body {
     left: 35%;
 }
 
-.buttonDesign {
-    width: 220px;
-    height: 60px;
-    background-color: rgb(253, 253, 248);
-    font-size: 20px;
-    font-family: 'Georgia', serif;
-}
-
-.buttonDesign:hover {
-    cursor: pointer;
-    color: rgb(120, 120, 120);
-    transition: all 2s;
-}
-
 #loginBtn,
 #registerBtn {
     margin-left: 5px;
@@ -426,18 +412,6 @@ font-family: 'Open Sans Condensed', sans-serif;
 #UpdateBTN {
     margin-top: 40px;
     background-color: rgb(253, 253, 248);
-
-}
-
-.linkerStyle:hover{
-    cursor: pointer;
-    color: rgb(120, 120, 120);
-    text-decoration: none;
-    transition: all 2s;
-}
-
-.linkerStyle:visited{
-    color: rgb(120, 120, 120);
 
 }
 
@@ -571,7 +545,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     font-size: 17px;
     float: right;
 }
-
+/*  IKKE BRUK UpdateBTN!!! bruk .buttonDesign */
 #UpdateBTN:hover {
     cursor: pointer;
     color: rgb(120, 120, 120);
@@ -603,3 +577,41 @@ p{
     font-size: 30px;
     font-family: 'Georgia', serif;
 }*/
+
+/*** stilsettning for knapper og linker som brukes på flere steder **/
+
+.buttonDesign {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(253, 253, 248);
+    font-size: 17px;
+    font-family: 'Georgia', serif;
+}
+
+.buttonDesign:hover {
+    cursor: pointer;
+    color: rgb(120, 120, 120);
+    transition: all 2s;
+}
+
+.linkerStyle:hover{
+    cursor: pointer;
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+    transition: all 2s;
+}
+
+.linkerStyle:visited{
+    color: rgb(120, 120, 120);
+}
+
+.smallUploadBtn{
+    background-color: rgb(253, 253, 248);
+    margin-top: 8px;
+    position: relative;
+}
+
+.smallUploadBtn input.upload{
+     background-color: blue;
+}
+
