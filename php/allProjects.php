@@ -34,20 +34,19 @@
         var projectID = <?php echo json_encode($ProjectID); ?>;
         var $newProject = $("<div>");
         var ID;
-        
+
         for(var i = 0; i < allProjects; i++){
             
                 var ID = projectID[i];
-           
-           window.location.href = "allProjects.php?ID=" + ID;
+               
+          
             
                 var $newProject = $("<div>")
                     .addClass("col col-3 projectBoxes")
                      
                 $("#projects").append($newProject);
-            
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>" + "<?php $ID = $_GET['ID']; ?>");
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>" + "<?php $ID = ?> <?php ; ?>");
                 
                  
             
