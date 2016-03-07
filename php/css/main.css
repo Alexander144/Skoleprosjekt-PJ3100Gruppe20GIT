@@ -245,6 +245,7 @@ body {
 .projectBoxes {
     background-color: rgb(150, 150, 150);
     height: 170px;
+    box-shadow: 0 4px 4px 0 rgb(80, 80, 80);
 }
 
 
