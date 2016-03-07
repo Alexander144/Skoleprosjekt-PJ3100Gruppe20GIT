@@ -36,7 +36,7 @@ if (login_check($mysqli) == true) {
          </form>
         -->
     <header id="mainPageHeader" class="col">
-      <a id="title" href="index.php"><h1>TUNG?</h1></a>
+      <a id="title" href="index.php"><h2>TUNG?</h2></a>
       <!--<a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
       <div class="nav">
       <ul>
