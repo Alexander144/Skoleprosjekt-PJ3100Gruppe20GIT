@@ -100,7 +100,6 @@ body {
     color: rgb(250, 250, 250);
 }
 
-
 /** end navigation HEADER **/
 
 
@@ -126,7 +125,14 @@ body {
 
 .sortMenu {
     position: relative;
-    right: 295px;
+    right: 178px;
+}
+
+#searchField{
+    position: relative;
+    float: right;
+    top: -25px;
+    right: 10px;
 }
 
 .sort-container ul {
