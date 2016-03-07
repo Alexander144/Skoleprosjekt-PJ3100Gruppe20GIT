@@ -17,6 +17,7 @@ if (login_check($mysqli) == true) {
         <title>Tung?</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/mobil.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <script type="text/JavaScript" src="js/sha512.js"></script> 
@@ -27,16 +28,30 @@ if (login_check($mysqli) == true) {
     <body>
 
   <div id="container">
-      <!--
+<!--
+      <div id="searchHead" class="col">
+
       <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
                 method="post"
                 name="updateProfile_form">
             <input type="text" name="searchOnUser" id="searchOnUser" placeholder="Søk" />
+          
           <input type="button" id="UpdateBTN" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk etter bruker"/>
          </form>
-      -->
+
+          
+        </div>
+      
+    
+      
     <header id="mainPageHeader" class="col">
-      <a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>
+      <a id="headerLogo" href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>
+        
+      <div id="navWeb" class="nav">
+        -->
+    <header id="mainPageHeader" class="col">
+      <a id="title" href="index.php"><h2>TUNG?</h2></a>
+      <!--<a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
       <div class="nav">
       <ul>
         <li id="jobs" class="li-border"><a href="#">Jobber</a></li>
@@ -48,7 +63,7 @@ if (login_check($mysqli) == true) {
             }
               ?>
         </li>
-        <li id="loginLogout" class="">
+        <li id="loginLogout" class="li-border">
         <?php if (login_check($mysqli) == true) {
             echo '<a href="includes/logout.php">Logout?</a>';  
         } else {
@@ -59,11 +74,13 @@ if (login_check($mysqli) == true) {
 Lim inn denne koden for velkomst beskjed i php'en;
 
 echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
-************************************************************-->
+************************************************************-->  
         </form>
           </li>
-      </ul>
-          
+      </ul>  
     </div>
+    <a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
   </header>
+
+
   <?php include_once 'menu.php'; ?>
