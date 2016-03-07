@@ -34,9 +34,10 @@ if (login_check($mysqli) == true) {
             <input type="text" name="searchOnUser" id="searchOnUser" placeholder="Søk" />
           <input type="button" id="UpdateBTN" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk etter bruker"/>
          </form>
-      -->
+        -->
     <header id="mainPageHeader" class="col">
-      <a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>
+      <a id="title" href="index.php"><h1>TUNG?</h1></a>
+      <!--<a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
       <div class="nav">
       <ul>
         <li id="jobs" class="li-border"><a href="#">Jobber</a></li>
@@ -62,8 +63,8 @@ echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
 ************************************************************-->
         </form>
           </li>
-      </ul>
-          
+      </ul>  
     </div>
+    <a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
   </header>
   <?php include_once 'menu.php'; ?>

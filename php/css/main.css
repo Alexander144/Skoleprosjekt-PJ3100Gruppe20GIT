@@ -51,10 +51,19 @@ body {
 
 
 /**** START HEADER ****/
+#title{
+    float: left;
+    height: auto;
+    font-size: 16px;
+    text-decoration: line-through;
+    color: rgb(80, 80, 80);
+    text-shadow: 1px 1px;
+}
 
 .imgLogo {
     height: 100%;
-    float: left;
+    float: right;
+    margin-left: 10px;
 }
 
 #mainPageHeader {
@@ -72,15 +81,16 @@ body {
     list-style: none;
     background-color: rgb(253, 253, 248);
     text-align: center;
+    float: left;
 }
 
 .nav li {
     font-size: 1.3em;
     line-height: 50px;
     height: 50px;
-    margin-top: 1em;
+   /* margin-top: 1em;*/
     display: inline-block;
-    width: 200px;
+    width: 170px;
     margin-left: -2px;
     margin-right: -2px;
 }
