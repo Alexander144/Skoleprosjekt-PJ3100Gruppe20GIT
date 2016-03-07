@@ -132,7 +132,7 @@
                     this.form,
                     this.form.;" />
     </form>
-    <p>Return to <a href="login.php">login page</a></p>
+    <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
     <?php else : ?>
     <p>
         <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
