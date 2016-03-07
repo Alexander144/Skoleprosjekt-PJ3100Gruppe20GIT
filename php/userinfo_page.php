@@ -18,7 +18,10 @@
              include_once 'includes/editProfile.inc.php';
              ?>
                 
-        <div id="" class="col col-ProfileStudent">
+                
+        <div id="studentProfil" class="col col-ProfileStudent">
+            
+             <div class="clearfix"></div>
                 
         <h3>Velkommen <?php echo $username;?>!</h3>
         <p>Bilde av studenten</p>

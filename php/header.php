@@ -49,7 +49,7 @@ if (login_check($mysqli) == true) {
         
       <div id="navWeb" class="nav">
         -->
-    <header id="mainPageHeader" class="col">
+    <header id="mainPageHeader" class="col nav">
       <a id="title" href="index.php"><h2>TUNG?</h2></a>
       <!--<a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
       <div class="nav">
