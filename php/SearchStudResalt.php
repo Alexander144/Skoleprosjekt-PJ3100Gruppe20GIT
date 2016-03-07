@@ -7,9 +7,11 @@
                 name="updateProfile_form">
 
 
-            <div id="searchProfile">
+            <div id="searchProfile" class="col">
                 
-                <h3>Søk resultat</h3>
+                <div class="clearfix"></div>
+                
+                <h3 id="soesResultat" class="col">Søk resultat</h3>
             <?php
 
                 $profileUsername = $_SESSION['profileUsername'];
