@@ -105,6 +105,12 @@
     
     /** INDEX **/
     
+    #mainContent{
+        width: 100%;
+        background-color: black;
+        height: auto;
+    }
+    
     /**  NAVIGERINGSMENY  **/
     
     .sort-container li{
@@ -136,7 +142,6 @@
     }
     
     .projectBoxes{
-        float: none;
     }
     
     .sortMenu{
@@ -166,5 +171,31 @@
     
     #studentProfil{
         width: auto;
+    }
+    
+    /** ALL PROJECTS **/
+    
+    div #projects{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    #projects{
+        display: block;
+        width: auto;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        box-shadow: none;
+        background-color: rgb(253, 253, 248);
+    }
+    
+    #projects .projectBoxes{
+        margin-left: 0;
+        margin-right: 0;
+        box-shadow: none;
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
     }
 }
