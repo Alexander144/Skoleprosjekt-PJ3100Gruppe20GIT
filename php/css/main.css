@@ -306,14 +306,14 @@ body {
 .buttonDesign {
     width: 220px;
     height: 60px;
-    background-color: rgb(152, 152, 152);
+    background-color: rgb(253, 253, 248);
     font-size: 20px;
     font-family: 'Georgia', serif;
 }
 
 .buttonDesign:hover {
     cursor: pointer;
-    background-color: rgb(120, 120, 120);
+    color: rgb(120, 120, 120);
     transition: all 2s;
 }
 
@@ -416,9 +416,27 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #UpdateBTN {
     margin-top: 40px;
+    background-color: rgb(253, 253, 248);
 
 }
 
+#UpdateBTN:hover {
+    cursor: pointer;
+    color: rgb(120, 120, 120);
+    transition: all 2s;
+}
+
+.linkerStyle:hover{
+    cursor: pointer;
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+    transition: all 2s;
+}
+
+.linkerStyle:visited{
+    color: rgb(120, 120, 120);
+
+}
 
 /***END EDIT PROFILE***/
 
