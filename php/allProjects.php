@@ -29,12 +29,11 @@
      function SendData(){
 
  					 $.ajax({
-						url: 'allProjects.php',
+						url: 'projectPage.php',
 						data: 'ID='+$(this).data("ID"),
 						method: 'GET',
-                        autoload:true,
 						success: function (data) {
-                            $('#content').html(data);
+                             window.location.href = this.url;
                             console.log(data);
 
 						 // er er resultatet fra sql-spørringen
@@ -126,6 +125,7 @@
     </script><!--end script-->
     <!-- End of body content field -->
     <!-- Knapp funkjsonen-->
+     <div id ="content"></div>
     <input id="UpdateBTN" type="button"
            value="Update"
            onclick="return SearchOnProject(
