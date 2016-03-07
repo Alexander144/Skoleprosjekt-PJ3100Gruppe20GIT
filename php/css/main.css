@@ -166,11 +166,13 @@ body {
 }
 
 .sort-container a:hover {
-    background-color: #005f5f;
+    /*background-color: #005f5f;*/
+    text-decoration: underline;
+
 }
 
 .sort-workBy a:hover, #avd:hover, .sort-orderBy a:hover {
-    color: rgb(250, 250, 250); /*Change color on text in menu*/
+   /* color: rgb(250, 250, 250); Change color on text in menu*/
 }
 
 .sort-container #teknologi:hover {
