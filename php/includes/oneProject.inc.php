@@ -3,7 +3,7 @@
 <?php
 
 
-$error_msg = "";
+$error_msg = ""; 
 $count;
 
 if($result = $mysqli->query("SELECT * FROM project")){

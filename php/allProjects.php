@@ -26,32 +26,49 @@
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
+     function SendData(){
+ 					 $.ajax({
+						url: 'allProjects.php',
+						data: $(this).data("ID"),
+						method: 'GET',
+						success: function (data) {
+						 // er er resultatet fra sql-spørringen
+						}
+						});
+        }
         //Get all projects:
         var allProjects = <?php echo $count;?>; //Get value here
         var projectName = <?php echo json_encode($Name); ?>;
         var projectSubject = <?php echo json_encode($Subject); ?>;
         var projectAbout = <?php echo json_encode($AboutProject); ?>;
         var projectID = <?php echo json_encode($ProjectID); ?>;
+        var FirstProjectID = <?php echo json_encode($FirstProjectID); ?>;
+        var LastProjectID = <?php echo json_encode($LastProjectID); ?>;
         var $newProject = $("<div>");
         var ID;
 
         for(var i = 0; i < allProjects; i++){
             
                 var ID = projectID[i];
-               
-          
             
-                var $newProject = $("<div>")
-                    .addClass("col col-3 projectBoxes")
-                     
-                $("#projects").append($newProject);
-               $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>" + "<?php $ID = ?> <?php ; ?>");
                 
-                 
+              //ID = projectID[i];
+             
+			
+			
+                var $newProject = $("<div>")
+                    .addClass("col col-3 projectBoxes");
+                    
+                $("#projects").append($newProject);
+
+            	
+               $newProject
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] + "</p>");
+           		
+
             
                 //$newProject.append($ID);
-          
+          		
             
             $newProject
                 .css({
@@ -66,22 +83,23 @@
                     "display": "inline",
                     "top": "100px",
                     "border-bottom": "1px solid black"
-                   }); 
-            
+                   });
             $("p")
                 .css({
                     "text-align": "center", 
                     "font-size": "0.8em",
                     "font-style": "italic",
                     "display": "inline"
-                   }); 
-       
+                   });
+                 $newProject.click(SendData);
+                	$newProject.data("ID", projectID[i]);
+              i++;
+
+
         }
-        
-        
-          $("#projects").click(function(){
-                alert('<?php echo ($ID); ?>');
-            });
+
+       
+
         
         
         /* EN ANNEN VERSJON SOM IKKE HELT FUNKER NÅ
@@ -107,8 +125,6 @@
 */
     </script><!--end script-->
     <!-- End of body content field -->
-    
-             
     <!-- Knapp funkjsonen-->
     <input id="UpdateBTN" type="button"
            value="Update"

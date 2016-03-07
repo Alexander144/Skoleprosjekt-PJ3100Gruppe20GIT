@@ -8,7 +8,8 @@
              
             <div id="projectPage">
             <?php
-
+            $LOL = $_GET['LOL'];
+var_dump($LOL); die;
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
