@@ -1,4 +1,5 @@
 <?php include_once 'header.php';
+      $ID = $_GET['ID'];
       include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
  ?>
         <?php if (login_check($mysqli) == true) : ?>
@@ -8,8 +9,7 @@
              
             <div id="projectPage">
             <?php
-            $LOL = $_GET['LOL'];
-var_dump($LOL); die;
+            echo $ID; die;
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);

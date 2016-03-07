@@ -60,6 +60,32 @@ include_once 'header.php';
                                    this.form.date);" />
             </div>
         </form>
+
+        
+        <!-- upload file -->
+        <!-- Dette er de 2 knappene som ligger på toppen av siden for og laste opp filer
+            Det under trenger Stilsetting og fiksing av variabler. Rett og slett en ferdigstilling-->
+        <form action = "editProject.php" method="post" enctype="multipart/form-data">
+            <input class="updatefield" type="file" name="file" id="file"/>
+
+            <input type = "submit" name = "uploadFile" class="" value = "uploadFile"/>
+            <?php 
+                if(isset($_POST['uploadFile'])){
+                $uploadFile= $_FILES['file']['name'];
+                $uploadFileTmp = $_FILES['file']['tmp_name'];
+
+                if ( ! is_dir("project/$user_id/")) {
+                 mkdir("project/$user_id/");
+                }
+                move_uploaded_file($uploadFileTmp, $_SESSION['uploadImage'] ="project/$user_id/$uploadFile");
+
+                }
+
+            ?> 
+        
+        </form>
+            
+        <!--Upload File Done--> 
         <p>Return to <a href="index.php">login page</a></p>
         <?php else : ?>
             <p>
