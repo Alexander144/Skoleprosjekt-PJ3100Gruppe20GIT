@@ -76,8 +76,11 @@
 
     }
     
-    #title h3{
+    #mainPageHeader h2{
         text-align: center;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     #mainPageHeader img{
@@ -102,6 +105,12 @@
     
     /** INDEX **/
     
+    #mainContent{
+        width: 100%;
+        background-color: black;
+        height: auto;
+    }
+    
     /**  NAVIGERINGSMENY  **/
     
     .sort-container li{
@@ -112,11 +121,11 @@
     }
     
     #sortingMenu{
-        top: 200%;
+        top: 250%;
     }
     
     #sortingMenu{
-        display: none;
+        height: 100%;
     }
     
     .sort-container ul{
@@ -133,7 +142,6 @@
     }
     
     .projectBoxes{
-        float: none;
     }
     
     .sortMenu{
@@ -158,10 +166,36 @@
     }
     
     #soekResultat{
-        width: 300px;
+        width: auto;
     }
     
     #studentProfil{
         width: auto;
+    }
+    
+    /** ALL PROJECTS **/
+    
+    div #projects{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    #projects{
+        display: block;
+        width: auto;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        box-shadow: none;
+        background-color: rgb(253, 253, 248);
+    }
+    
+    #projects .projectBoxes{
+        margin-left: 0;
+        margin-right: 0;
+        box-shadow: none;
+        width: auto;
+        height: 300px;
+        margin-bottom: 20px;
     }
 }

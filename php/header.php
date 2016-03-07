@@ -79,7 +79,7 @@ echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
           </li>
       </ul>  
     </div>
-    <a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
+    <a href="index.php"><img id="blackWLogo" src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
   </header>
         
         <div class="clearfix"></div>
