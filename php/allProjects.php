@@ -126,7 +126,7 @@
     <!-- End of body content field -->
     <!-- Knapp funkjsonen-->
      <div id ="content"></div>
-    <input id="UpdateBTN" type="button"
+    <input class="smallUploadBtn" type="button"
            value="Update"
            onclick="return SearchOnProject(
                     this.form,
@@ -137,7 +137,7 @@
 
     <?php else : ?>
     <p>
-        <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+        <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
     </p>
     <?php endif; ?>
     <?php include_once 'footer.php'; ?>
