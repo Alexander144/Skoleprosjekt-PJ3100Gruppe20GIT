@@ -15,6 +15,7 @@
             margin: 40px;
             float: left;
             cursor: pointer;
+            box-shadow: 0 6px 6px 0 gray;
         }
         
         img{
@@ -25,9 +26,30 @@
         h1{
             position: relative;
             text-align: center;
-            top: -220px;
+            top: -240px;
             color: white;
+            font-size: 16px;
         }
+        
+        .eier{
+            position: relative;
+            text-align: center;
+            top: -240px;
+            color: white;
+            font-size: 11px;
+        }
+        
+        .description{
+            position: relative;
+            top: -171px;
+            text-align: left;
+            opacity: 0;
+            color: white;
+            background-color: orange;
+            height: 100px;
+            width: 250px;
+        }
+        
         
     </style>
 </head>
@@ -35,42 +57,57 @@
 <body>
     
     <div id="boks1" class="bokser">
-        <img id="bilde1" src="pineapple.jpg">
+        <img id="bilde1" class="bilder" src="pineapple.jpg">
         <h1>TITTEL</h1>
+        <h2 class="eier">Av Navn Navnesen</h2>
+        <div class="textfelt"><p id="desc1" class="description">Sed tempor de cupidatat. Nescius nisi sint te eram. Do veniam possumus ut incididunt eu quorum. Ab ullamco ab admodum, sed ex quorum ipsum multos. Summis 
+        </p>
+        </div>
     </div>
     <div id="boks2" class="bokser"></div>
     <div id="boks3" class="bokser"></div>
     
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="jquery-2.1.4.min.js"></script>
     <script>
         $(document).ready(function() {
             var $prosjektbokser = $('.bokser');
-            var $prosjektbilde = $('#bilde1');
+            var $prosjektbilde = $('.bilder');
+            var $prosjekt1 = $('#boks1');
+            var $prosjekt2 = $('#boks2');
+            var $prosjekt3 = $('#boks3');
+            var $bilde1 = $('#bilde1');
+            var $bilde2 = $('#bilde2');
+            var $bilde3 = $('#bilde3');
+            var $beskrivelse1 = $('#desc1');
             
-            $prosjektbokser.css(
-                {
-                    'border': '2px solid black'
-                }
-            );
-            
-            $('#boks1').mouseenter(function() {
-                $prosjektbilde.css(
+            $prosjekt1.mouseover(function() {
+                
+                $beskrivelse1.css(
                     {
-                        '-webkit-filter': 'brightness(70%) blur(2px)',
-                        '': '',
-                        '': '',
+                        'opacity': '0.7'
+                    }
+                );
+                
+                $bilde1.css(
+                    {
+                        '-webkit-filter': 'brightness(70%) blur(2px)'
                     }
                 );
             });
-            $('#boks1').mouseleave(function() {
-                $(this).css(
+            $prosjekt1.mouseleave(function() {
+                
+                $beskrivelse1.css(
                     {
-                        'cursor': 'pointer',
-                        '-webkit-filter': 'blur(0px)',
-                        '': '',
-                        '': '',
+                        'opacity': '0'
                     }
-                )
+                );
+                
+                
+                $bilde1.css(
+                    {
+                        '-webkit-filter': 'brightness(70%) blur(0px)'
+                    }
+                );
             });
         
         });
