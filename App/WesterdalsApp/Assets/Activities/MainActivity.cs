@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using SharedProject1;
+using System.Net;
 
 namespace WesterdalsApp
 {
@@ -39,6 +40,8 @@ namespace WesterdalsApp
 
         public void Login(object sender, EventArgs e)
         {
+            
+
             EditText Email = FindViewById<EditText>(Resource.Id.Email);
             EditText Password = FindViewById<EditText>(Resource.Id.Password);
             TextView tex1 = FindViewById<TextView>(Resource.Id.text1);
