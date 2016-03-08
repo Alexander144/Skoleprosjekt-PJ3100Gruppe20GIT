@@ -1,5 +1,6 @@
 <?php include_once 'header.php';
       $ID = (int)$_GET['ID'];
+      $username = htmlentities($_SESSION['username']);
       include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
  ?>
         <?php if (login_check($mysqli) == true) : ?>
@@ -10,7 +11,7 @@
             <div id="projectPage">
             <?php
             
-            $username = htmlentities($_SESSION['username']);
+            
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
              
@@ -64,7 +65,12 @@
             </div>
 
         </form>
-
+        <?php if($OwnProject) : ?>
+        <?php $_SESSION["OwnProjectID"] = $ProjectID;
+            $OwnProject = false;
+        ?>
+        <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
+            <?php endif; ?>
 
             <p id="returnLogin" class="col">Return to <a href="login.php" class="linkerStyle">login page</a></p>
         <?php else : ?>
