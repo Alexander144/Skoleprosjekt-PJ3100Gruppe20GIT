@@ -4,11 +4,8 @@ include_once 'header.php';
 ?>
     <div id="" class="addprojectcontainer">
         <?php if (login_check($mysqli) == true) : ?>
-            <p>Welcome
+            <p>Velkommen
                 <?php echo htmlentities($_SESSION['username']); ?>!</p>
-            <p>
-                Add project!
-            </p>
             <!-- Dette er brukerens profil-->
 
             <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
@@ -21,8 +18,49 @@ include_once 'header.php';
             include_once 'includes/AddProject.inc.php';
             ?>
 
+            <div id="createProjectContainer">
+            
+                <div id="mainCreateProject">
+                    <div id="nameFileCreateProject">
+                        
+                        <p id="nameProjectCP" class="col-floatleft">Navn på prosjekt:</p>
+                        <input class="updatefield col-floatleft" type="text" name="name" id="name" />
+                    </div>
+                    
+                    <div id="description" class="test321">
+                        
+                        <p id="descProjCP" class="col-floatleft">Beskrivelse</p>
+                        <textarea id="infotextproject" name="infotextproject" class="test321" rows="20" cols="80" style="width: 415px; height: 136px; margin-top: 15px;; margin-bot: 15px;"></textarea>
+                        
+                    </div>
+                    
+                    <div id="studyTopic" class="test321">
+                        <p id="studyTopicCP" class="col-floatleft">Emne:</p>
+                        <input class="updatefield col-floatleft" type="text" name="subject" id="subject" />
+                    </div>
+                    
+                    <div id="addStudents" class="test321">
+                        <p id="addStudentCP" class="col-floatleft">Legg til andre studenter:</p>
+                        <input class="updatefield col-floatleft" type="text" name="AddPeople" id="AddPeople" />
+                    </div>
+                    
+                    <div id="publish" class="test321">
+                    <input class="buttonDesign" class="publishBtn" type="button" value="Add project" onclick="return AddProjectForms(
+                                    this.form,
+                                   this.form.name,
+                                   this.form.subject,
+                                   this.form.infotext,
+                                   this.form.picture,
+                                   this.form.link,
+                                   this.form.date);" />
+                    </div>
 
-                            <p>Name:
+            </form>
+                </div>
+                
+            </div>
+<!--
+                           <p>Name:
                                 <input class="updatefield" type="text" name="name" id="name" />
                                 <br>
                             </p>
@@ -51,7 +89,7 @@ include_once 'header.php';
                                    this.form.link,
                                    this.form.date);" />
 
-            </form>
+            </form> -->
             <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
     </div>
     <?php else : ?>

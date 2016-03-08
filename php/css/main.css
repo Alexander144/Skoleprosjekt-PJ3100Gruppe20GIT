@@ -454,7 +454,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     width: 200px;
 }
 
-#publishCPBtn {
+#buttonDesign {
     float: left;
     margin-left: 15px;
 }
@@ -478,7 +478,8 @@ font-family: 'Open Sans Condensed', sans-serif;
     margin 15px;
 }
 
-#descProjCPTxt {
+#infotextproject {
+    margin-left: 15px;
     width: 500px;
     height: 150px;
 }

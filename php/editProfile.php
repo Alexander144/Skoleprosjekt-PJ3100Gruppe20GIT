@@ -63,7 +63,7 @@
                 
                 <div id="" class="col">
                     <h3 id="aboutMe">Informasjon om deg</h3>
-                    <textarea cols="80" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
+                    <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
                     
                     <div id="updateGrades">
                         <p id="updateGradesP">Last opp karakterkortet ditt</p>
