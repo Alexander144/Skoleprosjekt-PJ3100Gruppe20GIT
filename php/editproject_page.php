@@ -1,6 +1,6 @@
 <?php
 include_once 'header.php'; 
-$ProjectID = 1;
+$ProjectID = $_SESSION["OwnProjectID"];
 ?>
     <?php if (login_check($mysqli) == true) : ?>
         <p>Welcome
