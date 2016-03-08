@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosjektbokser</title>
+    <style>
+        body{
+            font: "arial", sans-serif;
+        }
+        
+        .bokser{
+            height: 250px;
+            width: 250px;
+            margin: 40px;
+            float: left;
+            cursor: pointer;
+        }
+        
+        img{
+            height: 100%;
+            -webkit-filter: brightness(70%) blur(0px);
+        }
+        
+        h1{
+            position: relative;
+            text-align: center;
+            top: -220px;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div id="boks1" class="bokser">
+        <img id="bilde1" src="pineapple.jpg">
+        <h1>TITTEL</h1>
+    </div>
+    <div id="boks2" class="bokser"></div>
+    <div id="boks3" class="bokser"></div>
+    
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var $prosjektbokser = $('.bokser');
+            var $prosjektbilde = $('#bilde1');
+            
+            $prosjektbokser.css(
+                {
+                    'border': '2px solid black'
+                }
+            );
+            
+            $('#boks1').mouseenter(function() {
+                $prosjektbilde.css(
+                    {
+                        '-webkit-filter': 'brightness(70%) blur(2px)',
+                        '': '',
+                        '': '',
+                    }
+                );
+            });
+            $('#boks1').mouseleave(function() {
+                $(this).css(
+                    {
+                        'cursor': 'pointer',
+                        '-webkit-filter': 'blur(0px)',
+                        '': '',
+                        '': '',
+                    }
+                )
+            });
+        
+        });
+    </script>
+</body>
+</html>
