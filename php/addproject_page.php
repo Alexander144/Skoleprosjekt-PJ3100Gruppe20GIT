@@ -45,7 +45,7 @@ include_once 'header.php';
                     </div>
                     
                     <div id="publish" class="test321">
-                    <input class="buttonDesign test321 publishBtn" type="button" value="Add project" onclick="return AddProjectForms(
+                    <input class="buttonDesign test321" type="button" value="Add project" onclick="return AddProjectForms(
                                     this.form,
                                    this.form.name,
                                    this.form.subject,

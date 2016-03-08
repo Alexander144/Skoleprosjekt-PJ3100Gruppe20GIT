@@ -31,8 +31,7 @@
         <div id="aboutStudent" class="col col-ProfileStudent studentCol">
             <h3 id="aboutStudentH3">Om <?php echo $username; ?></h3>
             <p id="aboutStudentP"><?php echo $profileAboutUser; ?></p>
-                    
-                
+
                 </div>
                 
             <div id="" class="col col-ProfileStudent">
@@ -42,7 +41,7 @@
                 <p></p>
             </article>
                 
-        </div>
+            </div>
 
             </div>
 

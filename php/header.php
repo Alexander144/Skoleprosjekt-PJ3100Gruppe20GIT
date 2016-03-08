@@ -82,7 +82,7 @@ echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
     <a href="index.php"><img id="blackWLogo" src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
   </header>
         
-        <div class="clearfix"></div>
+    <div class="clearfix"></div>
 
 
   <?php include_once 'menu.php'; ?>
