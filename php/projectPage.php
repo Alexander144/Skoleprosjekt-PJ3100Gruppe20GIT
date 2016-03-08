@@ -10,7 +10,9 @@
              
             <div id="projectPage">
             <?php
-            var_dump($VideoInProject[1]);die;
+            for($i=0; $i<count($VideoInProject); $i++){
+                echo $VideoInProject[$i];
+            }
             
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
