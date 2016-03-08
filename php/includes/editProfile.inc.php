@@ -10,11 +10,12 @@ $error_msg = "";
         if($result->num_rows){
             
             while ($row = $result->fetch_object()) {
-                   $profileEditAboutMe = $row->AboutUser;
-                   $profileAboutUser = $profileEditAboutMe;
+                $profileEditAboutMe = $row->AboutUser;
+                $profileAboutUser = $profileEditAboutMe;
                   
-                    $profileImage = $row->PictureName;
-                    $cvName = $row->CV;
+                $profileImage = $row->PictureName;
+                $gradesName = $row->grades;
+                $cvName = $row->CV;
                    
             }
             $result->free();
@@ -49,7 +50,16 @@ if (empty($error_msg)) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
+            //Grades
+            if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET grades = (?) WHERE UserID = '$user_id'")) {
+            $insert_stmt->bind_param('s',  $_SESSION['uploadGrades']);
 
+
+            if (! $insert_stmt->execute()) {
+                header('Location: ../error.php?err=Registration failure: INSERT');
+            }
+        }
+            //CV
             if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET CV = (?) WHERE UserID = '$user_id'")) {
             $insert_stmt->bind_param('s',  $_SESSION['uploadCV']);
 

@@ -3,7 +3,7 @@
  ?>
         <?php if (login_check($mysqli) == true) : ?>
              
-            <div id="updateProfile">
+        <div id="updateProfile">
 
             <?php
                 $username = htmlentities($_SESSION['username']);
@@ -15,6 +15,7 @@
                 
         <h3>Her kan <?php echo $username;?> redigere profilen sin</h3>
             
+            <!--Start updatePhoto-->
             <div id="updatePhoto">
                 <p>Last opp bilde av deg selv</p>
                 
@@ -58,55 +59,73 @@
         
         </div><!--end profileBasicInfo-->
                 
-                <div id="" class="col">
-                    <h3 id="aboutMe">Informasjon om deg</h3>
-                    <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
+            <div id="" class="col">
+                <h3 id="aboutMe">Informasjon om deg</h3>
+                <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
+
+                <!--updateGrades-->
+                <div id="updateGrades">
+                    <p id="updateGradesP">Last opp karakterkortet ditt</p>
                     
-                    <div id="updateGrades">
-                        <p id="updateGradesP">Last opp karakterkortet ditt</p>
+                    <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                         <input class = "updatefield" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                    </div><!--end updateGrades-->
+
+                        <input type = "submit" name = "uploadGrades" value = "Upload File"/>
+                    </form>
+
+                    <?php
+                        if(isset($_POST['uploadGrades'])){
+                            $uploadGrades= $_FILES['grades']['name'];
+                            $uploadGradesTmp = $_FILES['grades']['tmp_name'];
+
+                        if ( ! is_dir("grades_students/$user_id/")) {
+                            mkdir("grades_students/$user_id/");
+                        }
+                            move_uploaded_file($uploadGradesTmp, $_SESSION['uploadGrades'] ="grades_students/$user_id/$uploadGrades");
+
+                            echo "<img src='grades_students/$user_id/$uploadGrades'/>";
+                        }
+                    ?>
+                </div><!--end updateGrades-->
 
 
-                    <!--Start updateCV-->
-                    <div id="updateCV">
-                        <p id="updateCVP">Last opp CV</p>
+                <!--Start updateCV-->
+                <div id="updateCV">
+                    <p id="updateCVP">Last opp CV</p>
 
-                        <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                            <input id="cv" class = "updatefield" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                    <form action = "editProfile.php" method="post" enctype="multipart/form-data">
+                        <input id="cv" class = "updatefield" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
 
-                            <input type = "submit" name = "uploadCV" value = "Upload File"/>
-                        </form>
+                        <input type = "submit" name = "uploadCV" value = "Upload File"/>
+                    </form>
 
-                        <?php
-                            if(isset($_POST['uploadCV'])){
-                                $uploadCV= $_FILES['cv']['name'];
-                                $uploadCVTmp = $_FILES['cv']['tmp_name'];
+                    <?php
+                        if(isset($_POST['uploadCV'])){
+                            $uploadCV= $_FILES['cv']['name'];
+                            $uploadCVTmp = $_FILES['cv']['tmp_name'];
 
-                            if ( ! is_dir("cv_students/$user_id/")) {
-                                mkdir("cv_students/$user_id/");
-                            }
-                                move_uploaded_file($uploadCVTmp, $_SESSION['uploadCV'] ="cv_students/$user_id/$uploadCV");
+                        if ( ! is_dir("cv_students/$user_id/")) {
+                            mkdir("cv_students/$user_id/");
+                        }
+                            move_uploaded_file($uploadCVTmp, $_SESSION['uploadCV'] ="cv_students/$user_id/$uploadCV");
 
-                                echo "<img src='cv_students/$user_id/$uploadCV'/>";
-                            }
-                        ?>
-                    </div><!--end updateCV-->
-                    
-                
-                </div><!--end .. -->
+                            echo "<img src='cv_students/$user_id/$uploadCV'/>";
+                        }
+                    ?>
+                </div><!--end updateCV-->
 
-            </div><!--end updateProfile-->
+            </div><!--end .. -->
 
-    <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
-        <input id="UpdateBTN" class="col" type="button" name = "upload"
-                value="Oppdater profilen din" 
-                onclick="return ProfileUpdateForms(
-                                this.form,
-                                this.form.profileEditAboutMe,
-                                this.form.updateEmailTxt,
-                                this.form.grades);" />
-    </form>
+        </div><!--end updateProfile-->
+
+        <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
+            <input id="UpdateBTN" class="col" type="button" name = "upload"
+                    value="Oppdater profilen din"
+                    onclick="return ProfileUpdateForms(
+                                    this.form,
+                                    this.form.profileEditAboutMe,
+                                    this.form.updateEmailTxt);" />
+        </form>
 
             <p id="returnLogin" class="col">Return to <a href="login.php">login page</a></p>
         <?php else : ?>

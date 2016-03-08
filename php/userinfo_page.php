@@ -11,11 +11,10 @@
              
             <div id="updateProfile">
             <?php
-
-            $username = htmlentities($_SESSION['username']);
-            $user_id = htmlentities($_SESSION['user_id']);
-            $email = htmlentities($_SESSION['email']);
-             include_once 'includes/editProfile.inc.php';
+                $username = htmlentities($_SESSION['username']);
+                $user_id = htmlentities($_SESSION['user_id']);
+                $email = htmlentities($_SESSION['email']);
+                    include_once 'includes/editProfile.inc.php';
              ?>
                 
                 
@@ -31,13 +30,13 @@
 
             <p>Email: <?php echo $email ?> </p><!--Email-->
             
-            <a href="#" class="linkerStyle"><p>Karakterkort</p></a><!--Grades-->
+            <a href="./<?php echo $gradesName; ?>" class="linkerStyle"><p>Karakterkort</p></a><!--Grades-->
 
             <a href="./<?php echo $cvName; ?>" class="linkerStyle"><p>CV<p></a><!--CV-->
 
             <a href="editProfile.php"><input class="smallUploadBtn" type="button" value="Oppdater profilen din"/></a><!--Update Btn-->
         
-        </div>
+        </div><!--end studentProfil-->
 
         <div id="aboutStudent" class="col col-ProfileStudent studentCol">
             <h3 id="aboutStudentH3">Om <?php echo $username; ?></h3>
