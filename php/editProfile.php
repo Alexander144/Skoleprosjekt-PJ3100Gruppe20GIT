@@ -4,12 +4,12 @@
         <?php if (login_check($mysqli) == true) : ?>
              
             <div id="updateProfile">
-            <?php
 
-            $username = htmlentities($_SESSION['username']);
-            $user_id = htmlentities($_SESSION['user_id']);
-            $email = htmlentities($_SESSION['email']);
-               include_once 'includes/editProfile.inc.php';
+            <?php
+                $username = htmlentities($_SESSION['username']);
+                $user_id = htmlentities($_SESSION['user_id']);
+                $email = htmlentities($_SESSION['email']);
+                   include_once 'includes/editProfile.inc.php';
              ?>
         <div id="profileBasicInfo" class="col">
                 
@@ -71,8 +71,9 @@
                     <!--Start updateCV-->
                     <div id="updateCV">
                         <p id="updateCVP">Last opp CV</p>
+
                         <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                            <input class = "updatefield" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                            <input id="cv" class = "updatefield" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
 
                             <input type = "submit" name = "uploadCV" value = "Upload File"/>
                         </form>

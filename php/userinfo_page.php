@@ -35,7 +35,7 @@
             
             <a href="#" class="linkerStyle"><p>Karakterkort</p></a>
 
-            <a href="<?php echo $cvName; ?>" class="linkerStyle"><p>CV<p></a> <!--Korleis hente CV her?-->
+            <a href="./<?php echo $cvName; ?>" class="linkerStyle"><p>CV<p></a> <!--Korleis hente CV her?-->
             
             <a href="editProfile.php"><input class="smallUploadBtn" type="button"
             value="Oppdater profilen din"/>  </a>
