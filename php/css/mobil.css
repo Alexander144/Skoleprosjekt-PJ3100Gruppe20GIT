@@ -158,6 +158,7 @@
         position: none;
     }
     
+    
     /** STUDENT PROFILE **/
     
     .studentCol{
@@ -181,6 +182,7 @@
     
     #studentProfil{
         width: auto;
+        height: 100%;
     }
     
     /** ALL PROJECTS **/
