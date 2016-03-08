@@ -110,8 +110,12 @@ body {
 }
 
 .nav a:hover {
-    background-color: #005f5f;
-    color: rgb(250, 250, 250);
+    /*background-color: #005f5f;
+    color: rgb(250, 250, 250);*/
+    border-bottom: 4px solid black;
+    cursor: pointer;
+    color: rgb(120, 120, 120);
+
 }
 
 
@@ -185,8 +189,9 @@ body {
 }
 
 .sort-container a:hover {
-    /*background-color: #005f5f;*/
-    text-decoration: underline;
+    /*background-color: #005f5f;
+    text-decoration: underline;*/
+    border-bottom: 4px solid rgb(10, 10, 10);
 
 }
 
