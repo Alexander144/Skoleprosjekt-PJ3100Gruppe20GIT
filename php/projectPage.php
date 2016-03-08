@@ -30,12 +30,9 @@
                             <div id="yt_api"></div>
 
                             <div id="youtubeContainer">
-                                <header>
-                                    <h1>snoop container</h1>
-                                    <p>Mauris in pretium felis, sit amet tempor nulla. Proin elementum metus velit, placerat vehicula leo rutrum ac. Donec vel mi ornare, posuere ligula nec, suscipit augue. Curabitur sagittis, mauris eget tincidunt sodales, est orci aliquam metus, et porta urna mi vitae ante.</p>
-                                </header>
+
                                 <div id="youTubeVideo"></div>
-                                <div id="projectPicture" style="height:360px; width:640px; background-color:rgb(20,20,20);"></div>
+                               <!-- <div id="projectPicture" style="height:360px; width:640px; background-color:rgb(20,20,20);"></div>-->
                             </div>
 
                             <script src="js/jquery.js"></script>
