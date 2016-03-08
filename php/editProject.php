@@ -1,5 +1,6 @@
 <?php include_once 'header.php';
-      /*include_once 'includes/editProfile.inc.php';*/
+    $ProjectID = 1;
+      include_once 'includes/editProject.inc.php';
  ?>
     <?php if (login_check($mysqli) == true) : ?>
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
@@ -30,13 +31,17 @@
                         <p id="nameProjectCP" class="col-floatleft">Navn på prosjekt:</p>
                         <input id="nameProjectCPTxt" class="col-floatright" type="text" name="Name Project">
                     </div>
-                    <!--<?php echo $projectName; ?>-->
-
+                    <?php echo $projectName; ?>
+                  <div id="studyTopic" class="test321">
+                        <p id="studyTopicCP" class="col-floatleft">Emne:</p>
+                        <input id="studyTopicCPTxt" class="col-floatright" type="text" name="Choose Study Topic">
+                    </div>
+                        <?php echo $projectSubject; ?>
 
                     <div id="description" class="col-floatleft">
                         <p id="descProjCP" class="">Beskrivelse:</p>
                         <textarea id="descProjCPTxt"></textarea>
-                        <!--<?php echo $projectDescr; ?>-->
+                        <?php echo $projectEditInfotext; ?>
                     </div>
 
                     <div class="clearfix"></div>

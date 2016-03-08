@@ -108,3 +108,10 @@ function SearchOnProject(form,projectID) {
     //window.location = './searchStudResalt.php';
 
 }
+function ChangeProjectForms(form,projectID) {
+    
+    form.submit();
+
+    //window.location = './searchStudResalt.php';
+
+}

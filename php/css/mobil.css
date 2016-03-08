@@ -185,6 +185,10 @@
         height: 100%;
     }
     
+    #profileEditAboutMe{
+        width: auto;
+    }
+    
     /** ALL PROJECTS **/
     
     div #projects{
@@ -209,6 +213,25 @@
         width: auto;
         height: 300px;
         margin-bottom: 20px;
+    }
+    
+    /** ADD PROJECT **/
+    
+    #createProjectContainer{
+        width: auto;
+        left: 0;
+    }
+    
+    #mainCreateProject{
+        width: auto;
+        margin: 0;
+    }
+    
+    #infotextproject{
+    }
+    
+    .test321{
+        width: auto;
     }
     
     /** LOGIN **/
