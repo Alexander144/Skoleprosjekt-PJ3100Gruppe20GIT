@@ -60,13 +60,42 @@
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>
     //Get all projects:
-        var allProjects = 2; //Get value here
+    function SendData(){
 
-        for(var i = 0; i < allProjects; i++){
+                     $.ajax({
+                        url: 'projectPage.php',
+                        data: 'ID='+$(this).data("ID"),
+                        method: 'GET',
+                        success: function (data) {
+                             window.location.href = this.url;
+                            console.log(data);
+
+                         // er er resultatet fra sql-spørringen
+                        }
+                        });
+        }
+
+        var YourProjectID = <?php echo json_encode($YourProjectID); ?>;
+        var YourProjectCount = <?php echo json_encode(count($YourProjectName)); ?>; //Get value here
+        var YourProjectName = <?php echo json_encode($YourProjectName ); ?>;
+        var YourProjectSubject = <?php echo json_encode($YourProjectSubject); ?>;
+        var YourProjectAbout = <?php echo json_encode($YourProjectAboutProject); ?>;
+        
+
+        for(var i = 0; i < YourProjectCount; i++){
+
+            
+
             var $newProject = $("<div>")
                 .addClass("col col-3 projectBoxes")
 
             $("#projects").append($newProject);
+
+               $newProject
+                   .html("<h1>" + YourProjectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + YourProjectSubject[i] + "</p>" + "<br>" + "<p>" + YourProjectAbout[i]);
+
+                   $newProject.click(SendData);
+                    $newProject.data("ID", YourProjectID[i]);
         }
 
     </script><!--end script-->

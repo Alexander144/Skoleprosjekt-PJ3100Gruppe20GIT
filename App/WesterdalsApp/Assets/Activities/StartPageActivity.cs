@@ -23,7 +23,7 @@ namespace WesterdalsApp
             SetContentView(Resource.Layout.startingPage);
             
             // Deklarerer knappene som funksjoner
-            Button messagesbtn = FindViewById<Button>(Resource.Id.messagebtn);
+            Button messagesbtn = FindViewById<Button>(Resource.Id.MessageButton);
             Button myProfbtn = FindViewById<Button>(Resource.Id.myProfilebtn);
             Button myProjbtn = FindViewById<Button>(Resource.Id.myProjectsbtn);
             Button browsebtn = FindViewById<Button>(Resource.Id.browsebtn);

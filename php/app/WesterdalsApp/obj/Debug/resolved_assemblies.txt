@@ -1,7 +1,9 @@
-C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\assemblies\WesterdalsApp.dll
-C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\assemblies\Mono.Android.dll
-C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\assemblies\mscorlib.dll
-C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\assemblies\System.Core.dll
-C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\assemblies\System.dll
-C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\assemblies\System.Xml.dll
-C:\Users\Alexander\Documents\PJ3100Gruppe20GIT\App\WesterdalsApp\obj\Debug\assemblies\System.Xml.Linq.dll
+C:\wamp\www\php\app\WesterdalsApp\obj\Debug\assemblies\WesterdalsApp.dll
+C:\wamp\www\php\app\WesterdalsApp\obj\Debug\assemblies\Mono.Android.dll
+C:\wamp\www\php\app\WesterdalsApp\obj\Debug\assemblies\mscorlib.dll
+C:\wamp\www\php\app\WesterdalsApp\obj\Debug\assemblies\System.Core.dll
+C:\wamp\www\php\app\WesterdalsApp\obj\Debug\assemblies\System.dll
+C:\wamp\www\php\app\WesterdalsApp\obj\Debug\assemblies\System.Xml.dll
+C:\wamp\www\php\app\WesterdalsApp\obj\Debug\assemblies\System.Xml.Linq.dll
+C:\wamp\www\php\app\WesterdalsApp\obj\Debug\assemblies\System.Runtime.Serialization.dll
+C:\wamp\www\php\app\WesterdalsApp\obj\Debug\assemblies\System.ServiceModel.Internals.dll

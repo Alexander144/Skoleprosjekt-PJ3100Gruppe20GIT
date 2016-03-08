@@ -47,11 +47,9 @@
         var projectAbout = <?php echo json_encode($AboutProject); ?>;
         var projectID = <?php echo json_encode($ProjectID); ?>;
         var $newProject = $("<div>");
-        var ID;
         
         for(var i = 0; i < allProjects; i++){
             
-                var ID = projectID[i];
         
             
                 var $newProject = $("<div>")

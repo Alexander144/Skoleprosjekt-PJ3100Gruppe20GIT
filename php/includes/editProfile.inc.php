@@ -3,8 +3,11 @@
 <?php
 
 
-
-$profileEditAboutMe;
+$YourProjectID = array();
+$YourProjectName = array();
+$profileEditAboutMe = array();
+$YourProjectSubject = array();
+$YourProjectAboutProject = array();
 $error_msg = "";
  if($result = $mysqli->query("SELECT * FROM userprofile WHERE UserID = '$user_id'")){
         if($result->num_rows){
@@ -21,7 +24,20 @@ $error_msg = "";
             $result->free();
         }
     }
-
+if($result2 = $mysqli->query("SELECT * FROM project left join userinproject on project.ProjectID = userinproject.ProjectID")){
+        if($count2 = $result2->num_rows){
+            
+            while ($row2 = $result2->fetch_object()) {
+                if($row2->UserID == $user_id){
+                    $YourProjectID[] = $row2->ProjectID;
+                   $YourProjectName[] = $row2->Name;
+                    $YourProjectSubject[] = $row2->Subject;
+                    $YourProjectAboutProject[] = $row2->AboutProject;
+                   }
+            }
+            $result2->free();
+        }
+    }
 if (isset($_POST['profileEditAboutMe'])||isset($_POST['updateEmailTxt'])) {
 	    $profileEditAboutMe =  filter_input(INPUT_POST, "profileEditAboutMe", FILTER_DEFAULT);
         $updateEmailTxt =  filter_input(INPUT_POST, "updateEmailTxt", FILTER_DEFAULT);

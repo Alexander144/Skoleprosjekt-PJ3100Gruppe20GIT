@@ -20,7 +20,7 @@ namespace SharedProject1
 		{
 
             WebClient client = new WebClient();
-            Uri uri = new Uri("http://192.168.221.1/php/includes/process_login_android.php");
+            Uri uri = new Uri("http://10.21.25.167/php/includes/process_login_android.php");
             Uri localUri = new Uri("http://localhost/php/android_api.php");
             NameValueCollection parameters = new NameValueCollection();
 
