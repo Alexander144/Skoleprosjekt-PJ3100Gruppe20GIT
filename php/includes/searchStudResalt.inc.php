@@ -11,7 +11,7 @@ if (isset($_POST['searchOnUser'])) {
   $searchOnUser = filter_input(INPUT_POST, 'searchOnUser', FILTER_SANITIZE_STRING);
   
 if (empty($error_msg)&&!($searchOnUser == "")) {
-       if($result = $mysqli->query("SELECT Username,Email,PictureName, AboutUser, CV FROM user left join userprofile on user.ID = userprofile.UserID")){
+       if($result = $mysqli->query("SELECT ID,Username,Email,PictureName, AboutUser, CV FROM user left join userprofile on user.ID = userprofile.UserID")){
         if($count = $result->num_rows){
             while ($row = $result->fetch_object()) {
                 
@@ -20,6 +20,7 @@ if (empty($error_msg)&&!($searchOnUser == "")) {
                    $_SESSION["profileEmail"] = $row->Email;
                    $_SESSION["profileAboutUser"] = $row->AboutUser;
                   $_SESSION["profileOnUser"] = $row->PictureName;
+                   $_SESSION["profileOnID"] = $row->ID;
                    
 
                    $result->free();

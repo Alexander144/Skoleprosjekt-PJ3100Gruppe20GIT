@@ -11,13 +11,15 @@
                 
                 <div class="clearfix"></div>
                 
-                <h3 id="soesResultat" class="col">Søk resultat</h3>
+                <h3 id="soesResultat" class="col">Søk resultat</h3></div>
             <?php
 
                 $profileUsername = $_SESSION['profileUsername'];
                 $profileEmail =$_SESSION["profileEmail"];
                 $profileAboutUser = $_SESSION["profileAboutUser"];
                 $profileImage = $_SESSION["profileOnUser"];
+                $profileID = $_SESSION["profileOnID"];
+                include_once 'includes/searchStudResaltProject.inc.php';
                 //var_dump($profileImage); die;
            //var_dump($profileUsername); die;
              ?>
@@ -43,16 +45,52 @@
                 </div>
                 
 
-                    <div id="" class="col col-ProfileStudent">
-                    <h3><?php echo $profileUsername; ?>'s nyeste projekter</h3>
-                    <article class="projectBoxes">
-                        <h3>Projekt 1</h3>
-                        <p></p>
-                        </article>
-                    </div>
-             </div>
-       
-        </form>
+                    <h3><?php echo $profileUsername; 
+                    
+                    ?>'s nyeste projekter</h3>
+                    </form>
+       <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>
+    //Get all projects:
+    function SendData(){
+
+                     $.ajax({
+                        url: 'projectPage.php',
+                        data: 'ID='+$(this).data("ID"),
+                        method: 'GET',
+                        success: function (data) {
+                             window.location.href = this.url;
+                            console.log(data);
+
+                         // er er resultatet fra sql-spørringen
+                        }
+                        });
+        }
+
+        var YourProjectID = <?php echo json_encode($YourProjectID); ?>;
+        var YourProjectCount = <?php echo json_encode(count($YourProjectName)); ?>; //Get value here
+        var YourProjectName = <?php echo json_encode($YourProjectName ); ?>;
+        var YourProjectSubject = <?php echo json_encode($YourProjectSubject); ?>;
+        var YourProjectAbout = <?php echo json_encode($YourProjectAboutProject); ?>;
+        
+
+        for(var i = 0; i < YourProjectCount; i++){
+
+         
+
+            var $newProject = $("<div>")
+                .addClass("col col-3 projectBoxes");
+
+            $("#projects").append($newProject);
+
+               $newProject
+                   .html("<h1>" + YourProjectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + YourProjectSubject[i] + "</p>" + "<br>" + "<p>" + YourProjectAbout[i]);
+
+                   $newProject.click(SendData);
+                    $newProject.data("ID", YourProjectID[i]);
+        }
+
+    </script><!--end script-->
+        
             <p>Return to <a href="login.php">login page</a></p>
         <?php else : ?>
             <p>
