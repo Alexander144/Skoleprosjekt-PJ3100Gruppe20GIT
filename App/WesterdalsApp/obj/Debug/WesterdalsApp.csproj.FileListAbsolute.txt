@@ -64,5 +64,3 @@ C:\wamp\www\App\WesterdalsApp\obj\Debug\res\values\strings.xml
 C:\wamp\www\App\WesterdalsApp\obj\Debug\res\drawable\icon.png
 C:\wamp\www\App\WesterdalsApp\obj\Debug\R.cs.flag
 C:\wamp\www\App\WesterdalsApp\obj\Debug\uploadflags.txt
-C:\wamp\www\App\WesterdalsApp\obj\Debug\WesterdalsApp.dll.mdb
-C:\wamp\www\App\WesterdalsApp\bin\Debug\WesterdalsApp.dll.mdb

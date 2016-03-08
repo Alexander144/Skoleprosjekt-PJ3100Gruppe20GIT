@@ -5,5 +5,3 @@ C:\wamp\www\App\WesterdalsApp\obj\Debug\assemblies\System.Core.dll
 C:\wamp\www\App\WesterdalsApp\obj\Debug\assemblies\System.dll
 C:\wamp\www\App\WesterdalsApp\obj\Debug\assemblies\System.Xml.dll
 C:\wamp\www\App\WesterdalsApp\obj\Debug\assemblies\System.Xml.Linq.dll
-C:\wamp\www\App\WesterdalsApp\obj\Debug\assemblies\System.Runtime.Serialization.dll
-C:\wamp\www\App\WesterdalsApp\obj\Debug\assemblies\System.ServiceModel.Internals.dll
