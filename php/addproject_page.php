@@ -29,7 +29,7 @@ include_once 'header.php';
                     
                     <div id="description" class="test321">
                         
-                        <p id="descProjCP" class="col-floatleft">Beskrivelse</p>
+                        <p id="descProjCP" class="col-floatleft">Beskrivelse av prosjekt</p>
                         <textarea id="infotextproject" name="infotextproject" class="test321"></textarea> <!--  rows="20" cols="90" -->
                         
                     </div>
