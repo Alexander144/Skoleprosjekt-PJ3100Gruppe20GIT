@@ -68,7 +68,7 @@
                     <p id="updateGradesP">Last opp karakterkortet ditt</p>
                     
                     <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                        <input class = "updatefield" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                        <input id="grades" class = "updatefield" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
 
                         <input type = "submit" name = "uploadGrades" value = "Upload File"/>
                     </form>

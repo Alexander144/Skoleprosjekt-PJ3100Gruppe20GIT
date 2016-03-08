@@ -28,11 +28,11 @@
             <img src='./<?php echo $profileImage; ?>'/><!--Profile picture-->
 
 
-            <p>Email: <?php echo $email ?> </p><!--Email-->
+            <p>Email: <?php echo $email; ?> </p><!--Email-->
             
-            <a href="./<?php echo $gradesName; ?>" class="linkerStyle"><p>Karakterkort</p></a><!--Grades-->
+            <a href="./<?php echo $gradesFile; ?>" class="linkerStyle"><p>Karakterkort</p></a><!--Grades-->
 
-            <a href="./<?php echo $cvName; ?>" class="linkerStyle"><p>CV<p></a><!--CV-->
+            <a href="./<?php echo $cvFile; ?>" class="linkerStyle"><p>CV<p></a><!--CV-->
 
             <a href="editProfile.php"><input class="smallUploadBtn" type="button" value="Oppdater profilen din"/></a><!--Update Btn-->
         
