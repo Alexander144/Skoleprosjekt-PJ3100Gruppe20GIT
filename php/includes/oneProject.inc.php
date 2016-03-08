@@ -5,7 +5,7 @@
 $peopleInProject = array();
 $error_msg = ""; 
 $count;
-
+$OwnProject = false;
 if($result = $mysqli->query("SELECT ProjectID,Name, Subject, AboutProject FROM project")){
         if($count = $result->num_rows){
             
@@ -31,8 +31,12 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
             while ($row2 = $result2->fetch_object()) {
                 if($row2->ProjectID == $ProjectID){
                 $peopleInProject[] = $row2->Username;
+                if($row2->Username == $username){
+                $OwnProject = true;
+               }
                     
                }
+
 
             }
             $result2->free();
