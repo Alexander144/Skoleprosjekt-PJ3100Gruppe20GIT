@@ -103,13 +103,13 @@ body {
     border-right: 1px solid rgb(10, 10, 10);
 }
 
-.nav a {
+.nav a{
     text-decoration: none;
     color: rgb(50, 50, 50);
     display: block;
 }
 
-.nav a:hover {
+.navHoverEffect:hover {
     /*background-color: #005f5f;
     color: rgb(250, 250, 250);*/
     border-bottom: 4px solid black;
@@ -254,6 +254,11 @@ body {
     background-color: rgb(150, 150, 150);
     height: 170px;
     box-shadow: 0 4px 4px 0 rgb(80, 80, 80);
+
+}
+
+#projects:hover{
+    cursor: pointer;
 }
 
 

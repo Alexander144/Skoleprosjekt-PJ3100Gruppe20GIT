@@ -16,12 +16,12 @@
                                     var videokonfigurasjon = {
                                         width: 640,
                                         height: 360,
-                                        videoId: "Eb6cGHK4_yc",
+                                        videoId: "6Ajhzlq42f0",
                                         events: {
                                             onReady: setVideoEvents
                                         },
                                         playerVars: {
-                                            //                            controls: 0
+                                            //controls: 0
                                         }
                                     }; //--- end videokonfigurasjon
 

@@ -1,6 +1,6 @@
 <?php include_once 'header.php';
       $ID = (int)$_GET['ID'];
-      include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
+      include_once 'includes/projectPage.inc.php'; /* projectPage.inc.php */
  ?>
     <?php if (login_check($mysqli) == true) : ?>
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
@@ -26,10 +26,10 @@
                             <div id="yt_api"></div>
 
                             <div id="youtubeContainer">
-                                <header>
+                        
                                     <h1>snoop container</h1>
                                     <p>Mauris in pretium felis, sit amet tempor nulla. Proin elementum metus velit, placerat vehicula leo rutrum ac. Donec vel mi ornare, posuere ligula nec, suscipit augue. Curabitur sagittis, mauris eget tincidunt sodales, est orci aliquam metus, et porta urna mi vitae ante.</p>
-                                </header>
+                    
                                 <div id="youTubeVideo"></div>
                                 <div id="projectPicture" style="height:360px; width:640px; background-color:rgb(20,20,20);"></div>
                             </div>
@@ -54,12 +54,12 @@
                                     var videokonfigurasjon = {
                                         width: 640,
                                         height: 360,
-                                        videoId: "OSCiMbMVDLI",
+                                        videoId: "PCYdf4g7jBY",
                                         events: {
                                             onReady: setVideoEvents
                                         },
                                         playerVars: {
-                                            //                            controls: 0
+                                                                       controls: 0
                                         }
                                     }; //--- end videokonfigurasjon
 

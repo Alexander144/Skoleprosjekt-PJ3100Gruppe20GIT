@@ -11,38 +11,33 @@
              
             <div id="updateProfile">
             <?php
-
-            $username = htmlentities($_SESSION['username']);
-            $user_id = htmlentities($_SESSION['user_id']);
-            $email = htmlentities($_SESSION['email']);
-             include_once 'includes/editProfile.inc.php';
+                $username = htmlentities($_SESSION['username']);
+                $user_id = htmlentities($_SESSION['user_id']);
+                $email = htmlentities($_SESSION['email']);
+                    include_once 'includes/editProfile.inc.php';
              ?>
                 
                 
         <div id="studentProfil" class="col col-ProfileStudent">
             
-             <div class="clearfix"></div>
+            <div class="clearfix"></div>
                 
-        <h3>Velkommen <?php echo $username;?>!</h3>
-        <p>Bilde av studenten</p>
+            <h3>Velkommen <?php echo $username;?>!</h3><!--Welcome-->
+            <p>Bilde av studenten</p>
 
-        <img src='./<?php echo $profileImage; ?>'/> 
-        
-        
-      
-            <img src="">
-        <p>Email: <?php echo $email ?> </p>
-            
-            <a href="#" class="linkerStyle"><p>Karakterkort</p></a>
+            <img src='./<?php echo $profileImage; ?>'/><!--Profile picture-->
 
-            <a href="cv_students/$user_id/$uploadCV" class="linkerStyle"><p>CV<p></a> <!--Korleis hente CV her?-->
+
+            <p>Email: <?php echo $email ?> </p><!--Email-->
             
-            <a href="editProfile.php"><input class="smallUploadBtn" type="button"
-            value="Oppdater profilen din"/>  </a>
+            <a href="./<?php echo $gradesName; ?>" class="linkerStyle"><p>Karakterkort</p></a><!--Grades-->
+
+            <a href="./<?php echo $cvName; ?>" class="linkerStyle"><p>CV<p></a><!--CV-->
+
+            <a href="editProfile.php"><input class="smallUploadBtn" type="button" value="Oppdater profilen din"/></a><!--Update Btn-->
         
-        </div>
-                
-                
+        </div><!--end studentProfil-->
+
         <div id="aboutStudent" class="col col-ProfileStudent studentCol">
             <h3 id="aboutStudentH3">Om <?php echo $username; ?></h3>
             <p id="aboutStudentP"><?php echo $profileAboutUser; ?></p>     
