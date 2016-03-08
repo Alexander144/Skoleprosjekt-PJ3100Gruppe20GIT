@@ -30,7 +30,7 @@ include_once 'header.php';
                     <div id="description" class="test321">
                         
                         <p id="descProjCP" class="col-floatleft">Beskrivelse</p>
-                        <textarea id="infotextproject" name="infotextproject" class="test321" rows="20" cols="80" style="width: 415px; height: 136px; margin-top: 15px;; margin-bot: 15px;"></textarea>
+                        <textarea id="infotextproject" name="infotextproject" class="test321"></textarea> <!--  rows="20" cols="90" -->
                         
                     </div>
                     
@@ -45,7 +45,7 @@ include_once 'header.php';
                     </div>
                     
                     <div id="publish" class="test321">
-                    <input class="buttonDesign" class="publishBtn" type="button" value="Add project" onclick="return AddProjectForms(
+                    <input class="buttonDesign test321 publishBtn" type="button" value="Add project" onclick="return AddProjectForms(
                                     this.form,
                                    this.form.name,
                                    this.form.subject,

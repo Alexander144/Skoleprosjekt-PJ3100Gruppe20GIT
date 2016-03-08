@@ -217,9 +217,17 @@
     
     /** ADD PROJECT **/
     
+    #createProjectContainer{
+        width: auto;
+        left: 0;
+    }
+    
     #mainCreateProject{
         width: auto;
         margin: 0;
+    }
+    
+    #infotextproject{
     }
     
     .test321{

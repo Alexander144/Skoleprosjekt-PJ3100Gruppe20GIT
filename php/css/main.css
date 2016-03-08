@@ -427,13 +427,15 @@ font-family: 'Open Sans Condensed', sans-serif;
     position: relative;
 }
 
+
 #mainCreateProject {
     line-height: 0;
     margin-top: 50px;
 }
 
 #mainCreateProject p {
-    font-size: 20px;
+    font-size: 1em;
+    font-weight: 700;
 }
 
 .upload {
@@ -480,8 +482,10 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #infotextproject {
     margin-left: 15px;
-    width: 500px;
-    height: 150px;
+    width: 510px;
+    height: 136px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #descProjCP {
@@ -501,8 +505,8 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 .test321 {
     float: left;
-    width: 530px;
-    margin-top: 30px;
+    width: 100%; /*530px;*/
+    margin-top: 10px;
 }
 
 .col-floatleft {
