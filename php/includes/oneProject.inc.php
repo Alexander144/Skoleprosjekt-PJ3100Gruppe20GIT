@@ -5,6 +5,7 @@
 $peopleInProject = array();
 $error_msg = ""; 
 $count;
+$VideoInProject =  array();
 $OwnProject = false;
 if($result = $mysqli->query("SELECT ProjectID,Name, Subject, AboutProject FROM project")){
         if($count = $result->num_rows){
@@ -44,6 +45,21 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
         }
         
     }
+    if($result3 = $mysqli->query("SELECT ProjectID,YoutubeLink FROM videolink")){
+        if($count3 = $result3->num_rows){
+            
+            while ($row3 = $result3->fetch_object()) {
+                if($row3->ProjectID == $ProjectID){
+               $VideoInProject[] = $row3->YoutubeLink;
+                    
+               }
+
+            }
+            $result3->free();
+        
+        }
+
+    } 
 
 if (isset($_POST['infotext'])) {
 	    $infotext = filter_input(INPUT_POST, 'infotext', FILTER_SANITIZE_STRING);

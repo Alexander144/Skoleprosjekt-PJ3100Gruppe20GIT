@@ -1,6 +1,6 @@
 <?php include_once 'header.php';
       $ID = (int)$_GET['ID'];
-      include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
+   /*    include_once 'includes/oneProject.inc.php'; projectPage.inc.php */
  ?>
     <?php if (login_check($mysqli) == true) : ?>
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">

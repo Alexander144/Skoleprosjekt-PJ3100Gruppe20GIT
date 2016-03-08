@@ -43,9 +43,6 @@
                         echo "<img src='images/$user_id/$uploadImage'/>";
                     }
                 ?>
-                <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
-
-                </form>
 
             </div><!--end updatePhoto-->
             
@@ -93,9 +90,6 @@
                                 echo "<img src='cv_students/$user_id/$uploadCV'/>";
                             }
                         ?>
-                        <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
-
-                        </form>
                     </div><!--end updateCV-->
                     
                 
@@ -103,15 +97,15 @@
 
             </div><!--end updateProfile-->
 
+    <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
         <input id="UpdateBTN" class="col" type="button" name = "upload"
                 value="Oppdater profilen din" 
                 onclick="return ProfileUpdateForms(
                                 this.form,
-                                this.form.picture,
                                 this.form.profileEditAboutMe,
                                 this.form.updateEmailTxt,
-                                this.form.grades,
-                                this.form.cv);" /> 
+                                this.form.grades);" />
+    </form>
 
             <p id="returnLogin" class="col">Return to <a href="login.php">login page</a></p>
         <?php else : ?>

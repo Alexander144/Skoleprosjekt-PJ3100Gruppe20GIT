@@ -14,6 +14,7 @@ $error_msg = "";
                    $profileAboutUser = $profileEditAboutMe;
                   
                     $profileImage = $row->PictureName;
+                    $cvName = $row->CV;
                    
             }
             $result->free();
@@ -43,10 +44,16 @@ if (empty($error_msg)) {
             if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET PictureName = (?) WHERE UserID = '$user_id'")) {
             $insert_stmt->bind_param('s', $_SESSION['uploadImage']); 
 
-            /*$fp = fopen("h18.jpg", "r");
-            while(!feof($fp)){
-                $insert_stmt->send_long_data(0, fread($fp,8192));
-            }*/
+
+            if (! $insert_stmt->execute()) {
+                header('Location: ../error.php?err=Registration failure: INSERT');
+            }
+        }
+
+            if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET CV = (?) WHERE UserID = '$user_id'")) {
+            $insert_stmt->bind_param('s',  $_SESSION['uploadCV']);
+
+
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
