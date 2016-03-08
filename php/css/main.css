@@ -150,7 +150,7 @@ body {
 #searchField{
     position: relative;
     float: right;
-    top: -25px;
+    top: 10px;
     right: 10px;
 }
 
