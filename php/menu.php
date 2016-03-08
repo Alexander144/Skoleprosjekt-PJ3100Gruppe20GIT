@@ -25,13 +25,13 @@
         </li>
         
         <div id="searchField">
-    <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
+            <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
                 method="post"
                 name="updateProfile_form">
             <input type="text" name="searchOnUser" id="searchOnUser" placeholder="Søk" />
-          <input type="button" id="UpdateBTN" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk etter bruker"/>
-         </form>
-    </div>
+            <input type="button" class="smallUploadBtn" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk etter bruker"/>
+            </form>
+        </div>
     </ul>
     
 </div>

@@ -18,7 +18,10 @@
              include_once 'includes/editProfile.inc.php';
              ?>
                 
-        <div id="" class="col col-ProfileStudent">
+                
+        <div id="studentProfil" class="col col-ProfileStudent">
+            
+             <div class="clearfix"></div>
                 
         <h3>Velkommen <?php echo $username;?>!</h3>
         <p>Bilde av studenten</p>
@@ -32,9 +35,9 @@
             
             <a href="#" class="linkerStyle"><p>Karakterkort</p></a>
 
-            <a href="#" class="linkerStyle"><p>CV<p></a>
+            <a href="cv_students/$user_id/$uploadCV" class="linkerStyle"><p>CV<p></a> <!--Korleis hente CV her?-->
             
-            <a href="editProfile.php"><input id="UpdateBTN" type="button" 
+            <a href="editProfile.php"><input class="smallUploadBtn" type="button"
             value="Oppdater profilen din"/>  </a>
         
         </div>

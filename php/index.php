@@ -30,7 +30,7 @@
 
 <?php include_once 'footer.php'; ?>
         <!-- Knapp funkjsonen-->
-    <input id="UpdateBTN" type="button"
+    <input class="smallUploadBtn" type="button"
            value="Update"
            onclick="return ProfileUpdateForms(
                     this.form,
@@ -39,10 +39,10 @@
                     this.form.grades,
                     this.form.cv);" />
     </form>
-    <p>Return to <a href="login.php">login page</a></p>
+    <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
     <?php else : ?>
     <p>
-        <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
+        <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
     </p>
     <?php endif; ?>
     </body>

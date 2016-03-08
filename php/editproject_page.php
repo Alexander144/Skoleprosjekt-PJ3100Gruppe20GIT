@@ -1,12 +1,12 @@
 <?php
 include_once 'header.php'; 
-
+$ProjectID = 1;
 ?>
     <?php if (login_check($mysqli) == true) : ?>
         <p>Welcome
             <?php echo htmlentities($_SESSION['username']); ?>!</p>
         <p>
-            Edit project!
+            Edit project
         </p>
         <!-- Dette er brukerens profil-->
 
@@ -17,30 +17,31 @@ include_once 'header.php';
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']); 
             $email = htmlentities($_SESSION['email']);
-            include_once 'includes/AddProject.inc.php';
+            include_once 'includes/editProject.inc.php';
             ?>
                 
                         <p>Picture:
-                            <input class="updatefield" name="picture" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                            <input class="updatefield" name="picture" id="picture" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
                             <br>
                         </p>
                 
                         <p>Link: (youtube/..)
-                            <input class="updatefield" name="link" type="text" id="infotext" />
+                            <input class="updatefield" name="link" type="text" id="link" />
                             <br>
-                            <p>
                 
                     <p>Name:
-                        <input class="updatefield" type="text" name="name" id="name" />
+                        <input class="updatefield" type="text" name="name" value=<?php echo $projectName; ?> id="name"></input>
+                        
                         <br>
                     </p>
+                    <p>Subject:
+                            <input class="updatefield" type="text" name="subject" value=<?php echo $projectSubject; ?> id="subject"></input>
 
-                    <p>Infotext:
-                        <textarea id="infotextproject" name="infotextproject" rows="20" cols="80" style="width: 415px; height: 136px; margin-top: 15px;; margin-bot: 15px;"></textarea>
-
-                        <p>Subject:
-                            <input class="updatefield" type="text" name="subject" id="subject" />
                             <br>
+                    <p>Infotext:
+                        <textarea id="infotextproject" name="infotextproject" rows="20" cols="80" style="width: 415px; height: 136px; margin-top: 15px;; margin-bot: 15px;"><?php echo $projectEditInfotext; ?></textarea>
+
+                        
                         </p>
 
                         <p>AddPeople:
@@ -50,14 +51,14 @@ include_once 'header.php';
                         </p>
 
 
-                                <input id="UpdateBTN" type="button" value="Add" onclick="return AddProjectForms(
+                                <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
                                     this.form,
                                    this.form.name,
                                    this.form.subject,
-                                   this.form.infotext,
+                                   this.form.infotextproject,
                                    this.form.picture,
                                    this.form.link,
-                                   this.form.date);" />
+                                   this.form.AddPeople);" />
             </div>
         </form>
 
@@ -66,9 +67,10 @@ include_once 'header.php';
         <!-- Dette er de 2 knappene som ligger på toppen av siden for og laste opp filer
             Det under trenger Stilsetting og fiksing av variabler. Rett og slett en ferdigstilling-->
         <form action = "editProject.php" method="post" enctype="multipart/form-data">
-            <input class="updatefield" type="file" name="file" id="file"/>
 
-            <input type = "submit" name = "uploadFile" class="" value = "uploadFile"/>
+            <input class="smallUploadBtn" type="file" name="file" id="file"/>
+
+            <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
             <?php 
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
@@ -86,10 +88,10 @@ include_once 'header.php';
         </form>
             
         <!--Upload File Done--> 
-        <p>Return to <a href="index.php">login page</a></p>
+        <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
+                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>
             </p>
             <?php endif; ?>
 

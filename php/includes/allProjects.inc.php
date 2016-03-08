@@ -29,6 +29,8 @@ if (empty($error_msg)) {
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
      
         header('Location: ./addproject_page.php');
+        header('Location: ./editproject_page.php');
+            exit();
     }
 
 }?>

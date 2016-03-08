@@ -1,5 +1,5 @@
 <?php include_once 'header.php';
-      $ID = $_GET['ID'];
+      $ID = (int)$_GET['ID'];
       include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
  ?>
         <?php if (login_check($mysqli) == true) : ?>
@@ -9,7 +9,7 @@
              
             <div id="projectPage">
             <?php
-            echo $ID; die;
+            
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
@@ -39,7 +39,13 @@
 
                     <div id="studentsProject">
                         <p id="studentsProjectP">Studenter:</p>
-                        <p id="getStudentsProject"></p><?php //echo $projectStudents?>
+                        <p id="getStudentsProject"></p>
+                        <?php
+                            for($i = 0; $i<count($peopleInProject); $i++){
+                               echo $peopleInProject[$i];
+                               echo "\r\t";
+                        }
+                        ?>
                     </div>
                 
                 <div id="tutorProject">
@@ -60,10 +66,10 @@
         </form>
 
 
-            <p id="returnLogin" class="col">Return to <a href="index.php">login page</a></p>
+            <p id="returnLogin" class="col">Return to <a href="login.php" class="linkerStyle">login page</a></p>
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
+                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
             </p>
         <?php endif; ?>
 
