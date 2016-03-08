@@ -54,16 +54,16 @@ if (login_check($mysqli) == true) {
       <!--<a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
       <div class="nav">
       <ul>
-        <li id="jobs" class="li-border"><a href="#">Jobber</a></li>
-        <li id="addJob" class="li-border"><a href="#">Legg til en stilling</a></li>
-        <li id="profileLink" class="li-border"><?php if (login_check($mysqli) == true) { echo '<a href="userinfo_page.php">Profil</a>';
+        <li id="jobs" class="li-border navHoverEffect"><a href="#">Jobber</a></li>
+        <li id="addJob" class="li-border navHoverEffect"><a href="#">Legg til en stilling</a></li>
+        <li id="profileLink" class="li-border navHoverEffect"><?php if (login_check($mysqli) == true) { echo '<a href="userinfo_page.php">Profil</a>';
             
         } else{
             echo 'Profil';
             }
               ?>
         </li>
-        <li id="loginLogout" class="li-border">
+        <li id="loginLogout" class="li-border navHoverEffect">
         <?php if (login_check($mysqli) == true) {
             echo '<a href="includes/logout.php">Logout?</a>';  
         } else {
