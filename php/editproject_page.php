@@ -72,7 +72,7 @@ $ProjectID = $_SESSION["OwnProjectID"];
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
 
-            <?php 
+            <?php
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
                 $uploadFileTmp = $_FILES['file']['tmp_name'];
