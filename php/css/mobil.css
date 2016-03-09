@@ -189,6 +189,10 @@
         width: auto;
     }
     
+    #youTubeVideo{
+        width: auto;
+    }
+    
     /** ALL PROJECTS **/
     
     div #projects{
@@ -222,6 +226,10 @@
     }
     
     /** ADD PROJECT **/
+    
+    #addProject{
+        padding-top: 40px;
+    }
     
     #createProjectContainer{
         width: auto;
