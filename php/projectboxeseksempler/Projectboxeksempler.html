@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prosjektbokser</title>
     <style>
+        
+        /*css for å påvirke flere elementer*/
         body{
             font: "arial", sans-serif;
         }
@@ -16,6 +18,7 @@
             float: left;
             cursor: pointer;
             box-shadow: 0 6px 6px 0 gray;
+            overflow: hidden;
         }
         
         img{
@@ -23,7 +26,18 @@
             -webkit-filter: brightness(70%) blur(0px);
         }
         
-        h1{
+        .description{
+            position: relative;
+            text-align: left;
+            color: white;
+            height: 100px;
+            margin-left: 3px;
+            top: -10px;
+        }
+        /*slutt*/
+        
+        /*css for prosjekt 1*/
+        #tittel1{
             position: relative;
             text-align: center;
             top: -240px;
@@ -31,7 +45,7 @@
             font-size: 16px;
         }
         
-        .eier{
+        #eier1{
             position: relative;
             text-align: center;
             top: -240px;
@@ -39,15 +53,41 @@
             font-size: 11px;
         }
         
-        .description{
+        #textfelt1{
             position: relative;
-            top: -171px;
-            text-align: left;
-            opacity: 0;
-            color: white;
             background-color: orange;
             height: 100px;
-            width: 250px;
+            top: -167px;
+            border-top: 1px solid black;
+            opacity: 0;  
+        }
+        /*slutt*/
+        
+        /*css for prosjekt 2*/
+        #tittel2{
+            position: relative;
+            float: left;
+            font-size: 14px;
+            text-align: left;
+            margin: 15px;
+            color: white;
+        }
+        
+        #eier2{
+            position: relative;
+            font-size: 14px;
+            float: right;
+            text-align: right;
+            margin: 15px;
+            color: white;
+        }
+        
+        #textfelt2{
+            position: relative;
+            top: -54px;
+            background-color: deepskyblue;
+            height: 50px;
+            opacity: 0.7;
         }
         
         
@@ -56,15 +96,25 @@
 
 <body>
     
+    <!--prosjekt 1-->
     <div id="boks1" class="bokser">
         <img id="bilde1" class="bilder" src="pineapple.jpg">
-        <h1>TITTEL</h1>
-        <h2 class="eier">Av Navn Navnesen</h2>
-        <div class="textfelt"><p id="desc1" class="description">Sed tempor de cupidatat. Nescius nisi sint te eram. Do veniam possumus ut incididunt eu quorum. Ab ullamco ab admodum, sed ex quorum ipsum multos. Summis 
+        <h1 id="tittel1">TITTEL</h1>
+        <h2 id="eier1">Av Navn Navnesen</h2>
+        <div id="textfelt1"><p id="desc1" class="description">Sed tempor de cupidatat. Nescius nisi sint te eram. Do veniam possumus ut incididunt eu quorum. Ab ullamco ab admodum, sed ex quorum ipsum multos. Summis 
         </p>
         </div>
     </div>
-    <div id="boks2" class="bokser"></div>
+    <!--slutt-->
+    <!--prosjekt 2-->
+    <div id="boks2" class="bokser">
+        <img id="bilde2" class="bilder" src="testbilde1.jpeg">
+        <div id="textfelt2">
+            <h1 id="tittel2">TITTEL</h1>
+            <h2 id="eier2">Av Dank Dankface</h2>
+        </div>
+    </div>
+    <!--slutt-->
     <div id="boks3" class="bokser"></div>
     
     <script src="jquery-2.1.4.min.js"></script>
@@ -78,15 +128,13 @@
             var $bilde1 = $('#bilde1');
             var $bilde2 = $('#bilde2');
             var $bilde3 = $('#bilde3');
-            var $beskrivelse1 = $('#desc1');
+            var $beskrivelse1 = $('#textfelt1');
+            var $beskrivelse2 = $('#textfelt2');
             
+            /*jquery for prosjekt 1*/
             $prosjekt1.mouseover(function() {
                 
-                $beskrivelse1.css(
-                    {
-                        'opacity': '0.7'
-                    }
-                );
+                $beskrivelse1.stop().fadeTo(500, 0.7);
                 
                 $bilde1.css(
                     {
@@ -96,12 +144,7 @@
             });
             $prosjekt1.mouseleave(function() {
                 
-                $beskrivelse1.css(
-                    {
-                        'opacity': '0'
-                    }
-                );
-                
+                $beskrivelse1.stop().fadeTo(500, 0);
                 
                 $bilde1.css(
                     {
@@ -109,6 +152,36 @@
                     }
                 );
             });
+            /*slutt*/
+            
+            /*jquery for prosjekt 2*/
+            $prosjekt2.mouseover(function() {
+                
+                $beskrivelse2.stop().animate({top: '-255px'}, 1000);
+                
+                $prosjekt2.append('<div id=\'desc2\'><p class=\'description\'>Admodum ipsum multos expetendis quis ex aut nulla coniunctione. Labore nescius nescius o elit laborum graviterque, id ne ipsum tempor do ut ea quem quae anim</p></div>');
+                
+                $('#desc2').css({
+                    'position': 'relative',
+                    'top': '-153px',
+                    'background-color': 'deepskyblue',
+                    'opacity': '0',
+                    'height': '100px',
+                    'border-top': '1px solid black'
+                }).fadeTo(1000, 0.7);
+                
+                
+                
+            });
+            
+            $prosjekt2.mouseleave(function() {
+                
+                $beskrivelse2.stop().animate({top: '-54px'}, 500);
+                $('#desc2').remove();
+            });
+            /*slutt*/
+           
+            /**/
         
         });
     </script>
