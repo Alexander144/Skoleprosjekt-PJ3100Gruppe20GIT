@@ -227,6 +227,20 @@
     
     /** ADD PROJECT **/
     
+    #addProjectContainer p{
+        margin-top: 0;
+    }
+    
+    .col-floatleft{
+        float: none;
+        margin-top: 0;
+    }
+    
+    #publish{
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    
     #addProject{
         padding-top: 40px;
     }
@@ -234,6 +248,7 @@
     #createProjectContainer{
         width: auto;
         left: 0;
+        line-height: 0px;
     }
     
     #mainCreateProject{
@@ -242,10 +257,13 @@
     }
     
     #infotextproject{
+        width: 300px;
+        
     }
     
     .test321{
         width: auto;
+        margin-top: 0;
     }
     
     /** LOGIN **/
