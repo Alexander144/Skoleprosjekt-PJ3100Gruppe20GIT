@@ -33,12 +33,10 @@
                             <div id="youtubeContainer">
 
                                 <div id="youTubeVideo"></div>
-                                <div id="player1"></div>
                                 <!-- <div id="projectPicture" style="height:360px; width:640px; background-color:rgb(20,20,20);"></div>-->
 
 
                                 <script src="js/jquery.js"></script>
-                                <!-- <script src="js/youTube.js"></script> -->
 
                                 <script>
                                     var link = <?php echo json_encode($VideoInProject); ?>;
@@ -64,45 +62,40 @@
 
                                     //kjøres antall ganger som linker blir gitt
                                     for (var i = 0; i < linkCount; i++) {
-                                        
-                                        var $newVideo = $("<div>")
-                                            //.addClass("col col-3 projectBoxes")
-                     
-                                        $("#youTubeVideo").append($newVideo);
-                                        
+
+
+                                        //var $newVideo = $("<div>")
+                                        //.addClass("col col-3 projectBoxes")
+
+                                        //$("#youTubeVideo").append($newVideo);
+
                                         var onYouTubeIframeAPIReady = function () {
 
                                             var videokonfigurasjon = {
                                                 width: 640,
                                                 height: 360,
-                                                videoId: link[1],
+                                                videoId: link[0],
                                                 events: {
                                                     onReady: setVideoEvents
                                                 },
                                                 playerVars: {
                                                     //controls: 0
                                                 }
-                                            
+
                                             }; //--- end videokonfigurasjon
 
                                             player = new YT.Player("youTubeVideo", videokonfigurasjon);
-<<<<<<< HEAD
+                                            //<<<<<<< 
 
 
                                         }; //--- end onYouTubeIframeAPIReady
 
                                         //alert(link[i]);
 
-=======
-                                            
 
-                                        }; //--- end onYouTubeIframeAPIReady
-                                      //  alert(link[i]);
-                                        
-                                        
                                         //var curplayer = player(linkCount[i]);
-                                        
->>>>>>> 0480d4a627ddc92bbcd449c8418a589650f1c148
+
+                                        //>>>>>>> 0480d4a627ddc92bbcd449c8418a589650f1c148
                                     }
                                     var setVideoEvents = function () {
                                         $("#playVideoBtn").on("click", function () {
