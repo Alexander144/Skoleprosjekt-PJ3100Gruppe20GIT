@@ -24,8 +24,8 @@ if (login_check($mysqli) == true) {
         <script type="text/JavaScript" src="js/forms.js"></script>
         <script src="https://use.typekit.net/zjw7zcq.js"></script>
         <!--favicon-->
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <!--End favicon-->
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
     </head>
