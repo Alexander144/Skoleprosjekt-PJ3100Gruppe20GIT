@@ -258,6 +258,7 @@ body {
     height: 170px;
     box-shadow: 0 4px 4px 0 rgb(80, 80, 80);
     z-index: 1;
+    cursor: pointer;
 }
 
 .likeBoxes{
