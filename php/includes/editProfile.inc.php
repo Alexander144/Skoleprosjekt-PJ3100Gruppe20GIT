@@ -30,7 +30,7 @@ if($result2 = $mysqli->query("SELECT * FROM project left join userinproject on p
             while ($row2 = $result2->fetch_object()) {
                 if($row2->UserID == $user_id){
                     $YourProjectID[] = $row2->ProjectID;
-                   $YourProjectName[] = $row2->Name;
+                    $YourProjectName[] = $row2->Name;
                     $YourProjectSubject[] = $row2->Subject;
                     $YourProjectAboutProject[] = $row2->AboutProject;
                    }
