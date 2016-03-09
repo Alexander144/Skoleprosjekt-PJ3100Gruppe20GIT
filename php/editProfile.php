@@ -13,11 +13,11 @@
          ?>
 
 
-        <h3>Her kan <?php echo $username;?> redigere profilen sin</h3>
+        <h2>Her kan <?php echo $username;?> redigere profilen sin</h2>
 
         <!--Start updatePhoto-->
         <div id="updatePhoto">
-            <p>Last opp bilde av deg selv</p>
+            <h4>Last opp bilde av deg selv</h4>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="chooseFile" type="file" name="picture" id="picture"/>
@@ -43,7 +43,7 @@
 
         <!--updateGrades-->
         <div id="updateGrades">
-            <p id="updateGradesP">Last opp karakterkortet ditt</p>
+            <h4 id="updateGradesP">Last opp karakterkortet ditt</h4>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input id="grades" class="chooseFile" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
@@ -68,7 +68,7 @@
 
         <!--Start updateCV-->
         <div id="updateCV">
-            <p id="updateCVP">Last opp CV</p>
+            <h4 id="updateCVP">Last opp CV</h4>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input id="cv" class="chooseFile" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
@@ -96,10 +96,10 @@
             <h3 id="aboutMe">Informasjon om deg</h3>
             <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
 
-            <p>Oppdater mailen din</p>
+            <h4 id="updateEmailP" class="marginMobile">Oppdater mailen din</h4>
             <input id="updateEmailTxt" name = "updateEmailTxt" type="text" />
 
-            <p>Oppdater passord</p>
+            <h4 id="updatePasswordP" class="marginMobile">Oppdater passord</h4>
             <input id="updatePasswordTxt" type="text" />
 
     </div><!--end updateProfile-->

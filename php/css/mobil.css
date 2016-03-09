@@ -302,6 +302,17 @@
         width: 100%;
     }
     
+    /** UPDATE PROFILE **/
+    
+    .marginMobile{
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    
+    #profileEditAboutMe{
+        width: 100%;
+    }
+    
     
     /** LOGIN **/
     
