@@ -76,6 +76,7 @@
                 <input class="uploadFile" type = "submit" name = "uploadCV" value = "Upload File"/>
 
             </form>
+
             <?php
                 if(isset($_POST['uploadCV'])){
                     $uploadCV= $_FILES['cv']['name'];
@@ -91,7 +92,7 @@
             ?>
         </div><!--end updateCV-->
 
-        <form action="<?php //echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
+        <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
             <h3 id="aboutMe">Informasjon om deg</h3>
             <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
 
@@ -103,18 +104,18 @@
 
     </div><!--end updateProfile-->
 
-        <input id="UpdateBTN" class="col" type="button" name = "upload"
-                value="Oppdater profilen din"
-                onclick="return ProfileUpdateForms(
-                                this.form,
-                                this.form.profileEditAboutMe,
-                                this.form.updateEmailTxt);" />
+            <input id="UpdateBTN" class="col" type="button" name = "upload"
+                    value="Oppdater profilen din"
+                    onclick="return ProfileUpdateForms(
+                                    this.form,
+                                    this.form.profileEditAboutMe,
+                                    this.form.updateEmailTxt);" />
         </form>
          
-        <p id="returnLogin" class="col">Return to <a href="login.php">login page</a></p>          
+        <!--<p id="returnLogin" class="col">Return to <a href="login.php">login page</a></p>
         <?php else : ?>            
         <p><span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.</p>
-        <?php endif; ?>
+        <?php endif; ?>-->
 
 <?php include_once 'footer.php'; ?>
     <!--</body>
