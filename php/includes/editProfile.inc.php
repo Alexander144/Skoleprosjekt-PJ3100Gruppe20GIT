@@ -65,6 +65,7 @@ if (empty($error_msg)) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
+            //var_dump($_SESSION['uploadGrades']);die;
             //Grades
             if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET Grades = (?) WHERE UserID = '$user_id'")) {
             $insert_stmt->bind_param('s', $_SESSION['uploadGrades']);
@@ -82,10 +83,9 @@ if (empty($error_msg)) {
             }
         }
 
-
             $_SESSION['email'] = $updateEmailTxt;
             //var_dump($_SESSION['email']); die;
         }
-        header('Location: ./editProfile.php');
+        //header('Location: ./editProfile.php');
 }
 }?>
