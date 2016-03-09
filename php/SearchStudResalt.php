@@ -44,10 +44,10 @@
                 
                 </div>
                 
-
-                    <h3><?php echo $profileUsername; 
-                    
-                    ?>'s nyeste projekter</h3>
+                <div id="profileProjects" class="col col-ProfileStudent">
+                <h3><?php echo $profileUsername; ?>'s nyeste projekter</h3>
+                    <div id="projectsProfile"></div>
+             </div>
                     </form>
        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>
     //Get all projects:
@@ -80,7 +80,7 @@
             var $newProject = $("<div>")
                 .addClass("col col-3 projectBoxes");
 
-            $("#projects").append($newProject);
+            $("#projectsProfile").append($newProject);
 
                $newProject
                    .html("<h1>" + YourProjectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + YourProjectSubject[i] + "</p>" + "<br>" + "<p>" + YourProjectAbout[i]);
