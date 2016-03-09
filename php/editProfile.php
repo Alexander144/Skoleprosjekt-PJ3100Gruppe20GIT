@@ -2,7 +2,8 @@
 
 <?php if (login_check($mysqli) == true) : ?>
     
-    <div id="updateProfile">
+
+    <div id="updateProfile" class="col">
 
         <?php
             $username = htmlentities($_SESSION['username']);
@@ -11,9 +12,8 @@
             include_once 'includes/editProfile.inc.php';
          ?>
 
-    <div id="profileBasicInfo" class="col">
 
-    <h3>Her kan <?php echo $username;?> redigere profilen sin</h3>
+        <h3>Her kan <?php echo $username;?> redigere profilen sin</h3>
 
         <!--Start updatePhoto-->
         <div id="updatePhoto">
@@ -41,67 +41,55 @@
 
         </div><!--end updatePhoto-->
 
-        <div id="updatePassword">
+        <!--updateGrades-->
+        <div id="updateGrades">
+            <p id="updateGradesP">Last opp karakterkortet ditt</p>
 
-        </div><!--end updatePassword-->
+            <form action = "editProfile.php" method="post" enctype="multipart/form-data">
+                <input id="grades" class="chooseFile" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                <br><br>
+                <input class="uploadFile" type = "submit" name = "uploadGrades" value = "Upload File"/>
+            </form>
 
-        <div id="updateEmail">
+            <?php
+                if(isset($_POST['uploadGrades'])){
+                    $uploadGrades= $_FILES['grades']['name'];
+                    $uploadGradesTmp = $_FILES['grades']['tmp_name'];
 
-        </div><!--end updateEmail-->
+                if ( ! is_dir("grades_students/$user_id/")) {
+                    mkdir("grades_students/$user_id/");
+                }
+                    move_uploaded_file($uploadGradesTmp, $_SESSION['uploadGrades'] ="grades_students/$user_id/$uploadGrades");
 
-    </div><!--end profileBasicInfo-->
+                    echo "<img src='grades_students/$user_id/$uploadGrades'/>";
+                }
+            ?>
+        </div><!--end updateGrades-->
 
-        <div id="" class="col">
+        <!--Start updateCV-->
+        <div id="updateCV">
+            <p id="updateCVP">Last opp CV</p>
 
-            <!--updateGrades-->
-            <div id="updateGrades">
-                <p id="updateGradesP">Last opp karakterkortet ditt</p>
+            <form action = "editProfile.php" method="post" enctype="multipart/form-data">
+                <input id="cv" class="chooseFile" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                <br><br>
+                <input class="uploadFile" type = "submit" name = "uploadCV" value = "Upload File"/>
 
-                <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                    <input id="grades" class="chooseFile" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                    <br><br>
-                    <input class="uploadFile" type = "submit" name = "uploadGrades" value = "Upload File"/>
-                </form>
+            </form>
+            <?php
+                if(isset($_POST['uploadCV'])){
+                    $uploadCV= $_FILES['cv']['name'];
+                    $uploadCVTmp = $_FILES['cv']['tmp_name'];
 
-                <?php
-                    if(isset($_POST['uploadGrades'])){
-                        $uploadGrades= $_FILES['grades']['name'];
-                        $uploadGradesTmp = $_FILES['grades']['tmp_name'];
+                if ( ! is_dir("cv_students/$user_id/")) {
+                    mkdir("cv_students/$user_id/");
+                }
+                    move_uploaded_file($uploadCVTmp, $_SESSION['uploadCV'] ="cv_students/$user_id/$uploadCV");
 
-                    if ( ! is_dir("grades_students/$user_id/")) {
-                        mkdir("grades_students/$user_id/");
-                    }
-                        move_uploaded_file($uploadGradesTmp, $_SESSION['uploadGrades'] ="grades_students/$user_id/$uploadGrades");
-
-                        echo "<img src='grades_students/$user_id/$uploadGrades'/>";
-                    }
-                ?>
-            </div><!--end updateGrades-->
-
-            <!--Start updateCV-->
-            <div id="updateCV">
-                <p id="updateCVP">Last opp CV</p>
-
-                <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                    <input id="cv" class="chooseFile" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                    <br><br>
-                    <input class="uploadFile" type = "submit" name = "uploadCV" value = "Upload File"/>
-
-                </form>
-                <?php
-                    if(isset($_POST['uploadCV'])){
-                        $uploadCV= $_FILES['cv']['name'];
-                        $uploadCVTmp = $_FILES['cv']['tmp_name'];
-
-                    if ( ! is_dir("cv_students/$user_id/")) {
-                        mkdir("cv_students/$user_id/");
-                    }
-                        move_uploaded_file($uploadCVTmp, $_SESSION['uploadCV'] ="cv_students/$user_id/$uploadCV");
-
-                        echo "<img src='cv_students/$user_id/$uploadCV'/>";
-                    }
-                ?>
-            </div><!--end updateCV-->
+                    echo "<img src='cv_students/$user_id/$uploadCV'/>";
+                }
+            ?>
+        </div><!--end updateCV-->
 
         <form action="<?php //echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
             <h3 id="aboutMe">Informasjon om deg</h3>
@@ -112,8 +100,6 @@
 
             <p>Oppdater passord</p>
             <input id="updatePasswordTxt" type="text" />
-
-        </div><!--end .. -->
 
     </div><!--end updateProfile-->
 
