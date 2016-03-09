@@ -257,6 +257,10 @@ body {
 
 }
 
+.likeBoxes{
+    bottom: 0px;
+}
+
 #projects:hover{
     cursor: pointer;
 }
