@@ -27,16 +27,16 @@
                                 <?php// echo $projectPhoto ?>
                             </div>
 
+                            <!-- Start youtubescript og youtube html-->
                             <div id="yt_api"></div>
 
                             <div id="youtubeContainer">
 
-                                    <div id="youTubeVideo"></div>
-                                    <div id="youTubeVideo2"></div>
-                                    <!-- <div id="projectPicture" style="height:360px; width:640px; background-color:rgb(20,20,20);"></div>-->
+                                <div id="youTubeVideo"></div>
+                                <!-- <div id="projectPicture" style="height:360px; width:640px; background-color:rgb(20,20,20);"></div>-->
+
 
                                 <script src="js/jquery.js"></script>
-                      <!--          <script src="js/youTube.js"></script> -->
 
                                 <script>
                                     var link = <?php echo json_encode($VideoInProject); ?>;
@@ -60,9 +60,14 @@
                                     //https://developers.google.com/youtube/player_parameters?playerVersion=HTML5
 
 
-
+                                    //kjøres antall ganger som linker blir gitt
                                     for (var i = 0; i < linkCount; i++) {
 
+
+                                        //var $newVideo = $("<div>")
+                                        //.addClass("col col-3 projectBoxes")
+
+                                        //$("#youTubeVideo").append($newVideo);
 
                                         var onYouTubeIframeAPIReady = function () {
 
@@ -76,17 +81,21 @@
                                                 playerVars: {
                                                     //controls: 0
                                                 }
+
                                             }; //--- end videokonfigurasjon
 
                                             player = new YT.Player("youTubeVideo", videokonfigurasjon);
-                                            
-                                            
-                                            
-                                            
+                                            //<<<<<<< 
+
 
                                         }; //--- end onYouTubeIframeAPIReady
-                                      //  alert(link[i]);
-                                        
+
+                                        //alert(link[i]);
+
+
+                                        //var curplayer = player(linkCount[i]);
+
+                                        //>>>>>>> 0480d4a627ddc92bbcd449c8418a589650f1c148
                                     }
                                     var setVideoEvents = function () {
                                         $("#playVideoBtn").on("click", function () {
@@ -105,38 +114,44 @@
 
                             </div>
 
-                            <div id="projectTwo" class="col col-projectTwo">
+                            <!-- end youtubescript og youtube html-->
 
-                                <div id="emneProject">
-                                    <p id="emneProjectP">Emne:</p>
-                                    <?php echo $Subject ?>
-                                </div>
+                    </div>
 
-                                <div id="studentsProject">
-                                    <p id="studentsProjectP">Studenter:</p>
-                                    <p id="getStudentsProject"></p>
-                                    <?php
+                    <div id="projectTwo" class="col col-projectTwo">
+
+                        <div id="emneProject">
+                            <p id="emneProjectP">Emne:</p>
+                            <?php echo $Subject ?>
+                        </div>
+
+                        <div id="studentsProject">
+                            <p id="studentsProjectP">Studenter:</p>
+                            <p id="getStudentsProject"></p>
+                            <?php
                             for($i = 0; $i<count($peopleInProject); $i++){
                                echo $peopleInProject[$i];
                                echo "\r\t";
                         }
                         ?>
-                                </div>
+                        </div>
 
-                                <div id="tutorProject">
-                                    <p id="tutorProjectP">Veileder/lærer:</p>
-                                    <p id="getTutorProject"></p>
-                                    <?php //echo $projectTutor ?>
-                                </div>
+                        <div id="tutorProject">
+                            <p id="tutorProjectP">Veileder/lærer:</p>
+                            <p id="getTutorProject"></p>
+                            <?php //echo $projectTutor ?>
+                        </div>
 
-                                <div id="projectDesc">
-                                    <p id="projectDescP">Beskrivelse av prosjekt</p>
-                                    <p id="getProjectDesc"></p>
-                                    <?php echo $AboutProject ?>
-                                </div>
+                        <div id="projectDesc">
+                            <p id="projectDescP">Beskrivelse av prosjekt</p>
+                            <p id="getProjectDesc"></p>
+                            <?php echo $AboutProject ?>
+                        </div>
 
 
-                            </div>
+                        <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
+                        <?php endif; ?>
+
 
                     </div>
 
@@ -145,16 +160,15 @@
             <?php $_SESSION["OwnProjectID"] = $ProjectID;
             $OwnProject = false;
         ?>
-                <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
-                <?php endif; ?>
 
-                    <p id="returnLogin" class="col">Return to <a href="login.php" class="linkerStyle">login page</a></p>
-                    <?php else : ?>
-                        <p>
-                            <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
-                        </p>
-                        <?php endif; ?>
 
-                            <?php include_once 'footer.php'; ?>
-                                <!--</body>
+                <p id="returnLogin" class="col">Return to <a href="login.php" class="linkerStyle">login page</a></p>
+                <?php else : ?>
+                    <p>
+                        <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
+                    </p>
+                    <?php endif; ?>
+
+                        <?php include_once 'footer.php'; ?>
+                            <!--</body>
 </html>

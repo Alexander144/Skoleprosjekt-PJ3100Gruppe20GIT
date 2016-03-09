@@ -197,6 +197,7 @@
     }
     
     #projects{
+        padding-top: 30px;
         display: block;
         width: auto;
         height: auto;
@@ -207,12 +208,17 @@
     }
     
     #projects .projectBoxes{
+        padding-top: 10px;
         margin-left: 0;
         margin-right: 0;
         box-shadow: none;
         width: auto;
         height: 300px;
         margin-bottom: 20px;
+    }
+    
+    #projects .likeBoxes{
+        bottom: 0px;
     }
     
     /** ADD PROJECT **/
