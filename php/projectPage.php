@@ -19,12 +19,12 @@
                     <div id="projectOne" class="col col-projectOne">
 
 
-                        <h3>Tittel på prosjekt</h3>
+                        <h3>Tittel</h3>
                         <?php echo $Name ?>
 
                             <div id="photoProject">
                                 <img src="#">
-                                <?php// echo $projectPhoto ?>
+                        <?php //echo $projectPhoto ?>
                             </div>
 
                             <!-- Start youtubescript og youtube html-->
