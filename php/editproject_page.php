@@ -83,7 +83,6 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 move_uploaded_file($uploadFileTmp, $_SESSION['uploadFile'] ="project/$ProjectID/$uploadFile");
 
                 }
-
             ?> 
         
 
