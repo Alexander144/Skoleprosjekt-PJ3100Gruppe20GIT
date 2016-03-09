@@ -193,6 +193,10 @@
         width: auto;
     }
     
+    #searchProfile{
+        padding-top: 40px;
+    }
+    
     /** ALL PROJECTS **/
     
     div #projects{
@@ -265,6 +269,39 @@
         width: auto;
         margin-top: 0;
     }
+    
+    /** PROJECT PAGE **/
+    
+    #editProjectBtn{
+    
+    }
+    
+    #projectDesc{
+        padding-bottom: 20px;
+    }
+    
+    #projectPage{
+        padding-top: 50px;
+    }
+    
+    #projectTwo{
+        border-left: 0;
+    }
+    
+    #prosjektTittel{
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    #projectOne{
+        border-bottom: 1px solid black;
+        padding-bottom: 20px;
+    }
+    
+    #youTubeVideo{
+        width: 100%;
+    }
+    
     
     /** LOGIN **/
     
