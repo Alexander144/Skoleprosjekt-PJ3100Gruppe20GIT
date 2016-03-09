@@ -429,7 +429,15 @@ font-family: 'Open Sans Condensed', sans-serif;
 #UpdateBTN {
     margin-top: 40px;
     background-color: rgb(253, 253, 248);
+}
 
+.chooseFile{
+    float: left;
+}
+
+.uploadFile{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /***END EDIT PROFILE***/
