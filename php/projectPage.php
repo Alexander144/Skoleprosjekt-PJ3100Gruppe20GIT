@@ -64,29 +64,45 @@
 
                                     //kjøres antall ganger som linker blir gitt
                                     for (var i = 0; i < linkCount; i++) {
-
-
+                                        
+                                        var $newVideo = $("<div>")
+                                            //.addClass("col col-3 projectBoxes")
+                     
+                                        $("#youTubeVideo").append($newVideo);
+                                        
                                         var onYouTubeIframeAPIReady = function () {
 
                                             var videokonfigurasjon = {
                                                 width: 640,
                                                 height: 360,
-                                                videoId: link[0],
+                                                videoId: link[1],
                                                 events: {
                                                     onReady: setVideoEvents
                                                 },
                                                 playerVars: {
                                                     //controls: 0
                                                 }
+                                            
                                             }; //--- end videokonfigurasjon
 
                                             player = new YT.Player("youTubeVideo", videokonfigurasjon);
+<<<<<<< HEAD
 
 
                                         }; //--- end onYouTubeIframeAPIReady
 
                                         //alert(link[i]);
 
+=======
+                                            
+
+                                        }; //--- end onYouTubeIframeAPIReady
+                                      //  alert(link[i]);
+                                        
+                                        
+                                        //var curplayer = player(linkCount[i]);
+                                        
+>>>>>>> 0480d4a627ddc92bbcd449c8418a589650f1c148
                                     }
                                     var setVideoEvents = function () {
                                         $("#playVideoBtn").on("click", function () {
