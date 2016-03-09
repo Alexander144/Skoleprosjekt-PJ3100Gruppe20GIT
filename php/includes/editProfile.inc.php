@@ -86,6 +86,6 @@ if (empty($error_msg)) {
             $_SESSION['email'] = $updateEmailTxt;
             //var_dump($_SESSION['email']); die;
         }
-        header('Location: ./editProfile.php');
+        //header('Location: ./editProfile.php');
 }
 }?>
