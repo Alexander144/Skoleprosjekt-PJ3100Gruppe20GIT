@@ -2,7 +2,7 @@
 include_once 'header.php'; 
 
 ?>
-    <div id="" class="addprojectcontainer">
+    <div id="addProject" class="addprojectcontainer">
         <?php if (login_check($mysqli) == true) : ?>
             <p>Velkommen
                 <?php echo htmlentities($_SESSION['username']); ?>!</p>

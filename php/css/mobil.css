@@ -227,6 +227,10 @@
     
     /** ADD PROJECT **/
     
+    #addProject{
+        padding-top: 40px;
+    }
+    
     #createProjectContainer{
         width: auto;
         left: 0;
