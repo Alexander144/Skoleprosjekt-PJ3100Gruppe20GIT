@@ -54,21 +54,41 @@
         
             
                 var $newProject = $("<div>")
-                    .addClass("col col-3 projectBoxes")
+                    .addClass("col col-3 projectBoxes");
                      
                 $("#projects").append($newProject);
+
+                var $newBox = $("<div>")
+                    .addClass("col col-3 projectBoxes");
+                    
+                     $("#projects").append($newBox.html("hei"));
+
+                
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i]);
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] );
+
+                
+
+                $newBox
+                    .css({
+
+                        "width": "50px",
+                        "height": "50px",
+                        "background-color": "pink",
+                        "margin": "auto",
+                        "top": "40px"
+                    });
                 
                  
-            
+                
                 //$newProject.append($ID);
           
             
             $newProject
                 .css({
-                    "text-align": "center"
+                    "text-align": "center",
+                    "position": "relative"
                 });
             $("h1")
                 .css({
