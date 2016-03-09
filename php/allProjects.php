@@ -48,6 +48,7 @@
         var projectID = <?php echo json_encode($ProjectID); ?>;
         var $newProject = $("<div>");
         
+        
         for(var i = 0; i < allProjects; i++){
             
         
