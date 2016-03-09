@@ -39,6 +39,8 @@ include_once 'header.php';
                         <input class="updatefield col-floatleft" type="text" name="subject" id="subject" />
                     </div>
                     
+                    <div class="clearfix"></div>
+                    
                     <div id="addStudents" class="test321">
                         <p id="addStudentCP" class="col-floatleft">Legg til andre studenter:</p>
                         <input class="updatefield col-floatleft" type="text" name="AddPeople" id="AddPeople" />
