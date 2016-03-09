@@ -16,22 +16,15 @@
                 
         <h3>Her kan <?php echo $username;?> redigere profilen sin</h3>
             
-
             <!--Start updatePhoto-->
             <div id="updatePhoto">
                 <p>Last opp bilde av deg selv</p>
-                
-                <?php    
-                    //var_dump($profileImage); die;
-                    //header("Content-Type: image/jpg");
-                    //echo $profileImage; 
-                    ?>
 
                 <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                    <input class="updatefield" type="file" name="picture" id="picture"/>
-                            
-                    <input type = "submit" name = "uploadImg" value = "Upload File"/>
-                    </form>
+                    <input class="chooseFile" type="file" name="picture" id="picture"/>
+                    <br><br>        
+                    <input class="uploadFile" type = "submit" name = "uploadImg" value = "Upload File"/>
+                </form>
 
                 <?php
                     if(isset($_POST['uploadImg'])){
@@ -59,17 +52,16 @@
         
         </div><!--end profileBasicInfo-->
                 
-            <div id="" class="col">
-                
+            <div id="" class="col">   
 
                 <!--updateGrades-->
                 <div id="updateGrades">
                     <p id="updateGradesP">Last opp karakterkortet ditt</p>
                     
                     <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                        <input id="grades" class = "updatefield" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                        <input id="grades" class="chooseFile" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
 
-                        <input type = "submit" name = "uploadGrades" value = "Upload File"/>
+                        <input class="uploadFile" type = "submit" name = "uploadGrades" value = "Upload File"/>
                     </form>
 
                     <?php
@@ -87,15 +79,14 @@
                     ?>
                 </div><!--end updateGrades-->
 
-
                 <!--Start updateCV-->
                 <div id="updateCV">
                     <p id="updateCVP">Last opp CV</p>
 
                     <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                        <input id="cv" class = "updatefield" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                        <input id="cv" class="chooseFile" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
              
-                        <input type = "submit" name = "uploadCV" value = "Upload File"/>
+                        <input class="uploadFile" type = "submit" name = "uploadCV" value = "Upload File"/>
                     
                     </form>
                     <?php
@@ -123,27 +114,22 @@
 
                 <h3 id="aboutMe">Informasjon om deg</h3>
                 <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
-                 
-           
                   
             </div><!--end .. -->
                 
         </div><!--end updateProfile-->
 
-       
             <input id="UpdateBTN" class="col" type="button" name = "upload"
                     value="Oppdater profilen din"
                     onclick="return ProfileUpdateForms(
                                     this.form,
                                     this.form.profileEditAboutMe,
                                     this.form.updateEmailTxt);" />
-
-</form>
-            <p id="returnLogin" class="col">Return to <a href="login.php">login page</a></p>
-        <?php else : ?>
-            <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
-            </p>
+            </form>
+         
+        <p id="returnLogin" class="col">Return to <a href="login.php">login page</a></p>          
+        <?php else : ?>            
+        <p><span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.</p>
         <?php endif; ?>
 
 <?php include_once 'footer.php'; ?>
