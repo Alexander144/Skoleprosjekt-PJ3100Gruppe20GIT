@@ -55,7 +55,7 @@ if (empty($error_msg)) {
         //Upload file
         if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)"))
         {
-            $insert_stmt->bind_param('is',$ProjectID,$profileEditDocument);
+            $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadFile']);
              // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');

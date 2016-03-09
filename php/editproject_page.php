@@ -71,12 +71,12 @@ $ProjectID = $_SESSION["OwnProjectID"];
             <input class="smallUploadBtn" type="file" name="file" id="file"/>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
-         </form>
+
             <?php 
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
                 $uploadFileTmp = $_FILES['file']['tmp_name'];
-
+                    
                 if ( ! is_dir("project/$ProjectID/")) {
                  mkdir("project/$ProjectID/");
                 }
@@ -85,7 +85,7 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 }
 
             ?> 
-        
+        </form>
 
             
         <!--Upload File Done--> 
