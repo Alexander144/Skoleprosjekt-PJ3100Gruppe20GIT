@@ -1,37 +1,40 @@
-                                //videospilleren
-                                var player;
+var link = <?php echo json_encode($VideoInProject); ?>;
 
-                                //start innhenting/klargjøring av YoutTube Iframe API
-                                var yt_api_script = document.createElement("script");
-                                yt_api_script.src = "https://www.youtube.com/iframe_api";
-                                $("#yt_api").html(yt_api_script);
-                                yt_api_script.onload = onYouTubeIframeAPIReady;
-                                //-- end innhenting av YouTube API
+document.write(link[0]);
+//videospilleren
+var player;
 
-                                //start konfigurering av videospiller       
-                                //https://developers.google.com/youtube/iframe_api_reference
-                                //https://developers.google.com/youtube/player_parameters?playerVersion=HTML5
-                                var onYouTubeIframeAPIReady = function () {
+//start innhenting/klargjøring av YoutTube Iframe API
+var yt_api_script = document.createElement("script");
+yt_api_script.src = "https://www.youtube.com/iframe_api";
+$("#yt_api").html(yt_api_script);
+yt_api_script.onload = onYouTubeIframeAPIReady;
+//-- end innhenting av YouTube API
 
-                                    var videokonfigurasjon = {
-                                        width: 640,
-                                        height: 360,
-                                        videoId: "6Ajhzlq42f0",
-                                        events: {
-                                            onReady: setVideoEvents
-                                        },
-                                        playerVars: {
-                                            //controls: 0
-                                        }
-                                    }; //--- end videokonfigurasjon
+//start konfigurering av videospiller       
+//https://developers.google.com/youtube/iframe_api_reference
+//https://developers.google.com/youtube/player_parameters?playerVersion=HTML5
+var onYouTubeIframeAPIReady = function () {
 
-                                    player = new YT.Player("youTubeVideo", videokonfigurasjon);
+    var videokonfigurasjon = {
+        width: 640,
+        height: 360,
+        videoId: link ,
+        events: {
+            onReady: setVideoEvents
+        },
+        playerVars: {
+            //controls: 0
+        }
+    }; //--- end videokonfigurasjon
 
-                                }; //--- end onYouTubeIframeAPIReady
+    player = new YT.Player("youTubeVideo", videokonfigurasjon);
 
-                                var setVideoEvents = function () {
-                                    $("#playVideoBtn").on("click", function () {
-                                        player.playVideo();
-                                    });
+}; //--- end onYouTubeIframeAPIReady
 
-                                }; //--- end setVideoEvents
+var setVideoEvents = function () {
+    $("#playVideoBtn").on("click", function () {
+        player.playVideo();
+    });
+
+}; //--- end setVideoEvents
