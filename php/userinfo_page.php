@@ -9,7 +9,7 @@
                 method="post" 
                 name="updateProfile_form">
              
-            <div id="updateProfile">
+        <div id="updateProfile">
             <?php
                 $username = htmlentities($_SESSION['username']);
                 $user_id = htmlentities($_SESSION['user_id']);
@@ -42,8 +42,7 @@
             <h3 id="aboutStudentH3">Om <?php echo $username; ?></h3>
             <p id="aboutStudentP"><?php echo $profileAboutUser; ?></p>     
         </div>
-                                        
-                
+
     </div>
                 
         <div id="" class="col col-ProfileStudent">
@@ -83,8 +82,6 @@
         
 
         for(var i = 0; i < YourProjectCount; i++){
-
-            
 
             var $newProject = $("<div>")
                 .addClass("col col-3 projectBoxes")
