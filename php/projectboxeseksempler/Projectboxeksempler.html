@@ -89,7 +89,18 @@
             height: 50px;
             opacity: 0.7;
         }
+        /*slutt*/
         
+        /*css for prosjekt 3*/
+        #tittel3{
+            position: relative;
+            top: -200px;
+        }
+        
+        #eier3{
+            position: relative;
+            top: -200px;
+        }
         
     </style>
 </head>
@@ -115,7 +126,13 @@
         </div>
     </div>
     <!--slutt-->
-    <div id="boks3" class="bokser"></div>
+    <!--prosjekt 3-->
+    <div id="boks3" class="bokser">
+        <img id="bilde3" src="testbilde2.jpeg">
+        <h1 id="tittel3">TITTEL</h1>
+        <h2 id="eier3">Av Doge Dogedog</h2>
+    </div>
+    <!--slutt-->
     
     <script src="jquery-2.1.4.min.js"></script>
     <script>
@@ -168,7 +185,13 @@
                     'opacity': '0',
                     'height': '100px',
                     'border-top': '1px solid black'
-                }).fadeTo(1000, 0.7);
+                }).stop().fadeTo(1000, 0.7);
+                
+                $bilde2.css(
+                    {
+                        '-webkit-filter': 'brightness(70%) blur(2px)'
+                    }
+                );
                 
                 
                 
@@ -178,10 +201,37 @@
                 
                 $beskrivelse2.stop().animate({top: '-54px'}, 500);
                 $('#desc2').remove();
+                
+                $bilde2.css(
+                    {
+                        '-webkit-filter': 'brightness(70%) blur(0px)'
+                    }
+                );
             });
             /*slutt*/
            
-            /**/
+            /*jquery for prosjekt 3*/
+            $prosjekt3.mouseover(function() {
+                
+                $bilde3.css(
+                    {
+                        '-webkit-filter': 'brightness(70%) blur(2px)'
+                    }
+                           );
+            
+            });
+            
+            $prosjekt3.mouseleave(function() {
+                
+                $bilde3.css(
+                    {
+                        '-webkit-filter': 'brightness(70%) blur(0px)'
+                    }
+                );
+                
+            });
+            
+            
         
         });
     </script>
