@@ -5,6 +5,7 @@
  ?>
 
 <?php if (login_check($mysqli) == true) : ?>
+
 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
       method="post"
       name="updateProfile_form">
@@ -16,6 +17,7 @@
             
             <p id="nameProj"></p>
             <?php 
+            $username = htmlentities($_SESSION['username']);
                  //echo $Name[1];
              ?>
             
@@ -40,12 +42,28 @@
 						}
 						});
         }
+         function SendLike(){
+                 $.ajax({
+                        url: 'includes/Like.inc.php',
+                        data: 'ID='+$(this).data("ID")+'&Username=' +$(this).data("Username"),
+                        method: 'GET',
+                        success: function (data) {
+                            
+                            console.log(data);
+
+                         // er er resultatet fra sql-spørringen
+                        }
+                        });
+                     
+        }
          //Get all projects:
         var allProjects = <?php echo $count;?>; //Get value here
         var projectName = <?php echo json_encode($Name); ?>;
         var projectSubject = <?php echo json_encode($Subject); ?>;
         var projectAbout = <?php echo json_encode($AboutProject); ?>;
         var projectID = <?php echo json_encode($ProjectID); ?>;
+        var Username = <?php echo json_encode($username); ?>;
+        var LikeValue = <?php echo json_encode($likeValue); ?>;
         var $newProject = $("<div>");
         var $newBox = $("<div>");
         
@@ -67,14 +85,15 @@
                 
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i]);
-            
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] +"Likes: " + LikeValue[i]);
+                
                 $newProject.append($newBox);
 
                 
 
                 $newBox
                     .css({
+                        "z-index": "1",
                         "width": "50px",
                         "height": "50px",
                         "background-color": "pink",
@@ -89,6 +108,7 @@
             
             $newProject
                 .css({
+                    "z-index": "0",
                     "text-align": "center",
                     "position": "relative"
                 });
@@ -109,10 +129,12 @@
                     "font-style": "italic",
                     "display": "inline"
                    }); 
-
-                $newProject.click(SendData);
-                    $newProject.data("ID", projectID[i]);
-       
+                $newBox.click(SendLike);
+                $newBox.data("ID", projectID[i]);
+                $newBox.data("Username", Username);
+                //$newProject.click(SendData);
+                    //$newProject.data("ID", projectID[i]);
+        
         };
         
                  
