@@ -11,7 +11,7 @@
                 
                 <div class="clearfix"></div>
                 
-                <h3 id="soesResultat" class="col">Søk resultat</h3></div>
+                <p id="soesResultat" class="col">Søk resultat</p></div>
             <?php
 
                 $profileUsername = $_SESSION['profileUsername'];

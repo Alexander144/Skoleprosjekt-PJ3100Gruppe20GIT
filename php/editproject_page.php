@@ -66,26 +66,26 @@ $ProjectID = $_SESSION["OwnProjectID"];
         <!-- upload file -->
         <!-- Dette er de 2 knappene som ligger på toppen av siden for og laste opp filer
             Det under trenger Stilsetting og fiksing av variabler. Rett og slett en ferdigstilling-->
-        <form action = "editProject.php" method="post" enctype="multipart/form-data">
+        <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
 
             <input class="smallUploadBtn" type="file" name="file" id="file"/>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
+
             <?php 
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
                 $uploadFileTmp = $_FILES['file']['tmp_name'];
-
-                if ( ! is_dir("project/$user_id/")) {
-                 mkdir("project/$user_id/");
+                    
+                if ( ! is_dir("project/$ProjectID/")) {
+                 mkdir("project/$ProjectID/");
                 }
-                move_uploaded_file($uploadFileTmp, $_SESSION['uploadImage'] ="project/$user_id/$uploadFile");
+                move_uploaded_file($uploadFileTmp, $_SESSION['uploadFile'] ="project/$ProjectID/$uploadFile");
 
                 }
-
             ?> 
-        
         </form>
+
             
         <!--Upload File Done--> 
         <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>

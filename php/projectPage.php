@@ -19,12 +19,11 @@
                     <div id="projectOne" class="col col-projectOne">
 
 
-                        <h3>Tittel på prosjekt</h3>
-                        <?php echo $Name ?>
+                        <h3 id="prosjektTittel"><?php echo $Name ?></h3>
+                        <?php //echo $Name ?>
 
                             <div id="photoProject">
-                                <img src="#">
-                                <?php// echo $projectPhoto ?>
+                        <?php //echo $projectPhoto ?>
                             </div>
 
                             <!-- Start youtubescript og youtube html-->
@@ -107,10 +106,10 @@
                                 </script>
 
 
-                                <div id="commentField">
+                                <!--<div id="commentField">
                                     <p>Kommentarfelt</p>
                                     <div id="commentDiv"></div>
-                                </div>
+                                </div>-->
 
                             </div>
 
@@ -121,12 +120,12 @@
                     <div id="projectTwo" class="col col-projectTwo">
 
                         <div id="emneProject">
-                            <p id="emneProjectP">Emne:</p>
+                            <h3 id="emneProjectP">Emne:</h3>
                             <?php echo $Subject ?>
                         </div>
 
                         <div id="studentsProject">
-                            <p id="studentsProjectP">Studenter:</p>
+                            <h3 id="studentsProjectP">Studenter:</h3>
                             <p id="getStudentsProject"></p>
                             <?php
                             for($i = 0; $i<count($peopleInProject); $i++){
@@ -137,19 +136,19 @@
                         </div>
 
                         <div id="tutorProject">
-                            <p id="tutorProjectP">Veileder/lærer:</p>
+                            <h3 id="tutorProjectP">Veileder/lærer:</h3>
                             <p id="getTutorProject"></p>
                             <?php //echo $projectTutor ?>
                         </div>
 
                         <div id="projectDesc">
-                            <p id="projectDescP">Beskrivelse av prosjekt</p>
+                            <h3 id="projectDescP">Beskrivelse av prosjekt</h3>
                             <p id="getProjectDesc"></p>
                             <?php echo $AboutProject ?>
                         </div>
 
 
-                        <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
+                        <input id="editProjectBtn" class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
                         <?php endif; ?>
 
 
@@ -162,11 +161,11 @@
         ?>
 
 
-                <p id="returnLogin" class="col">Return to <a href="login.php" class="linkerStyle">login page</a></p>
+               <p id="returnLogin" class="col"><!--Return to <a href="login.php" class="linkerStyle">login page</a>--></p>
                 <?php else : ?>
                     <p>
                         <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
-                    </p>
+                    </p> 
                     <?php endif; ?>
 
                         <?php include_once 'footer.php'; ?>

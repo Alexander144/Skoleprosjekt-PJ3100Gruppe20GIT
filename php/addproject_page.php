@@ -2,7 +2,7 @@
 include_once 'header.php'; 
 
 ?>
-    <div id="" class="addprojectcontainer">
+    <div id="addProject" class="addprojectcontainer">
         <?php if (login_check($mysqli) == true) : ?>
             <p>Velkommen
                 <?php echo htmlentities($_SESSION['username']); ?>!</p>
@@ -38,6 +38,8 @@ include_once 'header.php';
                         <p id="studyTopicCP" class="col-floatleft">Emne:</p>
                         <input class="updatefield col-floatleft" type="text" name="subject" id="subject" />
                     </div>
+                    
+                    <div class="clearfix"></div>
                     
                     <div id="addStudents" class="test321">
                         <p id="addStudentCP" class="col-floatleft">Legg til andre studenter:</p>

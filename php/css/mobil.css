@@ -189,6 +189,14 @@
         width: auto;
     }
     
+    #youTubeVideo{
+        width: auto;
+    }
+    
+    #searchProfile{
+        padding-top: 40px;
+    }
+    
     /** ALL PROJECTS **/
     
     div #projects{
@@ -223,9 +231,28 @@
     
     /** ADD PROJECT **/
     
+    #addProjectContainer p{
+        margin-top: 0;
+    }
+    
+    .col-floatleft{
+        float: none;
+        margin-top: 0;
+    }
+    
+    #publish{
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    
+    #addProject{
+        padding-top: 40px;
+    }
+    
     #createProjectContainer{
         width: auto;
         left: 0;
+        line-height: 0px;
     }
     
     #mainCreateProject{
@@ -234,11 +261,58 @@
     }
     
     #infotextproject{
+        width: 300px;
+        
     }
     
     .test321{
         width: auto;
+        margin-top: 0;
     }
+    
+    /** PROJECT PAGE **/
+    
+    #editProjectBtn{
+    
+    }
+    
+    #projectDesc{
+        padding-bottom: 20px;
+    }
+    
+    #projectPage{
+        padding-top: 50px;
+    }
+    
+    #projectTwo{
+        border-left: 0;
+    }
+    
+    #prosjektTittel{
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    #projectOne{
+        border-bottom: 1px solid black;
+        padding-bottom: 20px;
+    }
+    
+    #youTubeVideo{
+        width: 100%;
+    }
+    
+    /** UPDATE PROFILE **/
+    
+    .marginMobile{
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    
+    #profileEditAboutMe{
+        width: 100%;
+    }
+    
     
     /** LOGIN **/
     

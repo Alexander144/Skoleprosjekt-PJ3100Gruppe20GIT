@@ -258,6 +258,7 @@ body {
     height: 170px;
     box-shadow: 0 4px 4px 0 rgb(80, 80, 80);
     z-index: 1;
+    cursor: pointer;
 }
 
 .likeBoxes{
@@ -429,7 +430,14 @@ font-family: 'Open Sans Condensed', sans-serif;
 #UpdateBTN {
     margin-top: 40px;
     background-color: rgb(253, 253, 248);
+}
 
+.chooseFile{
+    float: left;
+}
+
+.uploadFile{
+    margin-bottom: 20px;
 }
 
 /***END EDIT PROFILE***/

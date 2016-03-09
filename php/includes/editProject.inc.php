@@ -10,19 +10,21 @@ $error_msg = "";
                 $projectName = $row->Name;
                 $projectSubject = $row->Subject;
                 $projectEditInfotext = $row->AboutProject;
+
                                   
             }
             $result->free();
         }
     }
 
-if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproject'])||isset($_POST['picture'])||isset($_POST['link'])||isset($_POST['AddPeople'])) {
+if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproject'])||isset($_POST['picture'])||isset($_POST['link'])||isset($_POST['AddPeople'])||isset($_POST['document'])) {
 	    $profileEditName =  filter_input(INPUT_POST, "name", FILTER_DEFAULT);
         $profileEditSubject =  filter_input(INPUT_POST, "subject", FILTER_DEFAULT);
         $profileEditInfo =  filter_input(INPUT_POST, "infotextproject", FILTER_DEFAULT);
         $profileEditPicture =  filter_input(INPUT_POST, "picture", FILTER_DEFAULT);
         $profileEditLink =  filter_input(INPUT_POST, "link", FILTER_DEFAULT);
         $profileEditAddPeople =  filter_input(INPUT_POST, "AddPeople", FILTER_DEFAULT);
+        $profileEditAddPeople =  filter_input(INPUT_POST, "document", FILTER_DEFAULT);
        //var_dump($_SESSION['uploadImage']); die;
         //var_dump($_SESSION['uploadImageTmp']);die;
          /*if($updateEmailTxt == ""){
@@ -40,6 +42,8 @@ if (empty($error_msg)) {
             }
 
         }
+
+        //Youtube link
          if ($insert_stmt = $mysqli->prepare("INSERT INTO videolink(ProjectID,YoutubeLink) VALUES (?, ?)")) {
             $insert_stmt->bind_param('is',$ProjectID ,$profileEditLink);
             // Execute the prepared query.
@@ -47,6 +51,20 @@ if (empty($error_msg)) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
+
+        //Upload file
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)"))
+        {
+            $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadFile']);
+             // Execute the prepared query.
+            if (! $insert_stmt->execute()) {
+                header('Location: ../error.php?err=Registration failure: INSERT');
+            }
+        }
+
+
+
+
         header('Location: ./editproject_page.php');
            
         
