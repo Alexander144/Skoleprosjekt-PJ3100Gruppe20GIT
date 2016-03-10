@@ -34,23 +34,30 @@ if (empty($error_msg)) {
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
         //Legger til project sitt emne og administrator
         
+        $wasError = False;
+
         if ($insert_stmt = $mysqli->prepare("UPDATE project SET Name = (?), Subject = (?), AboutProject = (?) WHERE ProjectID = '$ProjectID'")) {
             $insert_stmt->bind_param('sss', $profileEditName, $profileEditSubject,$profileEditInfo); 
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
+                $wasError = True;
             }
 
         }
+
+
 
         //Youtube link
          if ($insert_stmt = $mysqli->prepare("INSERT INTO videolink(ProjectID,YoutubeLink) VALUES (?, ?)")) {
             $insert_stmt->bind_param('is',$ProjectID ,$profileEditLink);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
+                $wasError = True;
             }
         }
+
+
+
 
         //Upload file
         if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)"))
@@ -58,14 +65,18 @@ if (empty($error_msg)) {
             $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadFile']);
              // Execute the prepared query.
             if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
+                $wasError = True;
             }
         }
 
 
+    // Var så snill og si att vi ikke trenger dette her??
+
+//if($wasError){header('Location: ../error.php?err=Registration failure: INSERT');}
+  //  else {header('Location: ./editproject_page.php');}
 
 
-        header('Location: ./editproject_page.php');
+
            
         
     }

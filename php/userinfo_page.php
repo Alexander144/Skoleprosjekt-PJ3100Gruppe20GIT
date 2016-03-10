@@ -93,6 +93,31 @@
 
                    $newProject.click(SendData);
                     $newProject.data("ID", YourProjectID[i]);
+            
+                            $newProject
+                    .css({
+                        "text-align": "center",
+                        "padding-top": "10px"
+                });
+            
+            
+            $("#projects h1")
+                .css({
+                    "text-align": "center", 
+                    "font-size": "1em",
+                    "font-weight": "700",
+                    "display": "inline",
+                    "top": "100px",
+                    "border-bottom": "1px solid black"
+                   }); 
+            
+            $("#projects p")
+                .css({
+                    "text-align": "center", 
+                    "font-size": "0.8em",
+                    "font-style": "italic",
+                    "display": "inline"
+                   });
         }
 
     </script><!--end script-->
