@@ -90,18 +90,6 @@
             opacity: 0.7;
         }
         /*slutt*/
-        
-        /*css for prosjekt 3*/
-        #tittel3{
-            position: relative;
-            top: -200px;
-        }
-        
-        #eier3{
-            position: relative;
-            top: -200px;
-        }
-        
     </style>
 </head>
 
@@ -126,13 +114,6 @@
         </div>
     </div>
     <!--slutt-->
-    <!--prosjekt 3-->
-    <div id="boks3" class="bokser">
-        <img id="bilde3" src="testbilde2.jpeg">
-        <h1 id="tittel3">TITTEL</h1>
-        <h2 id="eier3">Av Doge Dogedog</h2>
-    </div>
-    <!--slutt-->
     
     <script src="jquery-2.1.4.min.js"></script>
     <script>
@@ -141,10 +122,8 @@
             var $prosjektbilde = $('.bilder');
             var $prosjekt1 = $('#boks1');
             var $prosjekt2 = $('#boks2');
-            var $prosjekt3 = $('#boks3');
             var $bilde1 = $('#bilde1');
             var $bilde2 = $('#bilde2');
-            var $bilde3 = $('#bilde3');
             var $beskrivelse1 = $('#textfelt1');
             var $beskrivelse2 = $('#textfelt2');
             
@@ -209,30 +188,7 @@
                 );
             });
             /*slutt*/
-           
-            /*jquery for prosjekt 3*/
-            $prosjekt3.mouseover(function() {
-                
-                $bilde3.css(
-                    {
-                        '-webkit-filter': 'brightness(70%) blur(2px)'
-                    }
-                           );
             
-            });
-            
-            $prosjekt3.mouseleave(function() {
-                
-                $bilde3.css(
-                    {
-                        '-webkit-filter': 'brightness(70%) blur(0px)'
-                    }
-                );
-                
-            });
-            
-            
-        
         });
     </script>
 </body>
