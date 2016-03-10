@@ -6,8 +6,7 @@
 $error_msg = "";
 $count;
 
-$likeValue = array();
-$likeValue = array_fill_keys(array_values($likeValue), 0);
+
 if($result = $mysqli->query("SELECT * FROM project")){
         $i = 0;
         if($count = $result->num_rows){
@@ -22,17 +21,24 @@ if($result = $mysqli->query("SELECT * FROM project")){
             $result->free();
         }
     }
-if($result2 = $mysqli->query("SELECT * FROM project left join likes on project.ProjectID = likes.ProjectID")){
+if($result2 = $mysqli->query("SELECT * FROM project right join likes on project.ProjectID = likes.ProjectID")){
         $i = 0;
         if($count2 = $result2->num_rows){
-            
+            $likeValue = array();
             while ($row2 = $result2->fetch_object()) {
-                    
-                    if(!($row2->LikeValue==NULL)){
-                        $likeValue[$row2->ProjectID]=$likeValue[$row2->ProjectID]+1;
+                     if(!(isset( $likeValue[$row2->ProjectID]))){
+                             $likeValue[$row2->ProjectID] = null;
+                     }
+                    if($row2->LikeValue==1){
+
+
+                        $likeValue[$row2->ProjectID]++;
+
                     }
-                 
-                   $i = $i+1;
+
+
+                    
+                   $i++;
             }
             $result2->free();
         }
