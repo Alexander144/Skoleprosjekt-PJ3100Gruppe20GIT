@@ -28,7 +28,6 @@
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
-        
          //Get all projects:
         var allProjects = <?php echo $count;?>; //Get value here
         var projectName = <?php echo json_encode($Name); ?>;
@@ -63,7 +62,7 @@
                 $newProject.append($newBox);
             
             $newBox
-                .html("LikeBox");
+                .html("Like");
 
                 
 
