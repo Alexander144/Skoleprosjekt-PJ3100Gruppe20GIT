@@ -69,9 +69,9 @@ if (empty($error_msg)) {
         }
 
         //Upload projectimage
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, projectImage) VALUES (?, ?)"))
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO pictures(ProjectID, Picture) VALUES (?, ?)"))
         {
-            $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadProjectImg']);
+            $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadProjectImage']);
              // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 $wasError = True;
