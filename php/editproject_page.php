@@ -20,10 +20,10 @@ $ProjectID = $_SESSION["OwnProjectID"];
             include_once 'includes/editProject.inc.php';
             ?>
                 
-                        <p>Picture:
+                <!--        <p>Picture:
                             <input class="updatefield" name="picture" id="picture" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
                             <br>
-                        </p>
+                        </p> -->
                 
                         <p>Link: (youtube/..)
                             <input class="updatefield" name="link" type="text" id="link" />
@@ -88,6 +88,36 @@ $ProjectID = $_SESSION["OwnProjectID"];
 
             
         <!--Upload File Done--> 
+
+        <!-- upload image -->
+
+ <p>
+                            Picture:
+                            <input class="updatefield" name="picture" id="picture" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+                            <br>
+
+        <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
+
+            <input class="smallUploadBtn" type="file" name="file" id="file"/>
+
+            <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
+
+            <?php
+                if(isset($_POST['uploadFile'])){
+                $uploadFile= $_FILES['file']['name'];
+                $uploadFileTmp = $_FILES['file']['tmp_name'];
+
+                if ( ! is_dir("project/$ProjectID/")) {
+                 mkdir("project/$ProjectID/");
+                }
+                move_uploaded_file($uploadFileTmp, $_SESSION['uploadFile'] ="project/$ProjectID/$uploadFile");
+
+                }
+            ?>
+        </form>
+
+
+        <!--Upload Image Done-->
         <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
         <?php else : ?>
             <p>
