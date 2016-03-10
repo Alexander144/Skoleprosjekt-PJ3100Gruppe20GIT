@@ -86,7 +86,9 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
                 if($row5->ProjectID == $ProjectID){
                     $projectImage = $row5->Picture;
 
-               }
+               }else{
+                    $projectImage = "projectPage.php?ID=$ProjectID";
+                }
 
             }
             $result5->free();

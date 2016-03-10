@@ -100,7 +100,7 @@ $ProjectID = $_SESSION["OwnProjectID"];
 
 
             <?php
-                if(isset($_POST['uploadProjectImg'])){
+                if(isset($_POST['uploadProjectImage'])){
                     $uploadProjectImage= $_FILES['picture']['name'];
                     $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
 
