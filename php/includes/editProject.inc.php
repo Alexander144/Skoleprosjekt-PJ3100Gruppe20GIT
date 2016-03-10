@@ -70,10 +70,10 @@ if (empty($error_msg)) {
         }
 
 
-    // Var så snill og si att vi ikke trenger dette her??
 
-//if($wasError){header('Location: ../error.php?err=Registration failure: INSERT');}
-  //  else {header('Location: ./editproject_page.php');}
+
+if($wasError){header('Location: ../error.php?err=Registration failure: INSERT');}
+    else {header('Location: ./editproject_page.php');}
 
 
 
