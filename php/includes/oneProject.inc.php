@@ -61,7 +61,21 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
         }
 
     } 
+    if($result4 = $mysqli->query("SELECT ProjectID,File FROM documents")){
+        if($count4 = $result4->num_rows){
+            
+            while ($row4 = $result4->fetch_object()) {
+                if($row4->ProjectID == $ProjectID){
+                    $projectFile = $row4->File;
+                    
+               }
 
+            }
+            $result4->free();
+        
+        }
+
+    } 
 if (isset($_POST['infotext'])) {
 	    $infotext = filter_input(INPUT_POST, 'infotext', FILTER_SANITIZE_STRING);
         die;

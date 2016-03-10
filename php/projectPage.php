@@ -116,7 +116,7 @@
                             <!-- end youtubescript og youtube html-->
 
                     </div>
-
+                    <a href="./<?php echo $projectFile; ?>" class="linkerStyle"><p>Prosjekt dokumentasjon</p></a>
                     <div id="projectTwo" class="col col-projectTwo">
 
                         <div id="emneProject">
@@ -134,7 +134,7 @@
                         }
                         ?>
                         </div>
-
+                        
                         <div id="tutorProject">
                             <h3 id="tutorProjectP">Veileder/lærer:</h3>
                             <p id="getTutorProject"></p>
