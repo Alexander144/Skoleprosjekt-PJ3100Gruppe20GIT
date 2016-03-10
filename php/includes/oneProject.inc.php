@@ -17,7 +17,7 @@ if($result = $mysqli->query("SELECT ProjectID,Name, Subject, AboutProject FROM p
                     $Subject = $row->Subject;
                     $AboutProject = $row->AboutProject;
                     //$peopleInProject[] = $row->Username: 
-                    
+
                }
 
             }
@@ -79,6 +79,22 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
         }
 
     } 
+    if($result5 = $mysqli->query("SELECT ProjectID,Picture FROM pictures")){
+        if($count5 = $result5->num_rows){
+
+            while ($row5 = $result5->fetch_object()) {
+                if($row5->ProjectID == $ProjectID){
+                    $projectImage = $row5->Picture;
+
+               }
+
+            }
+            $result5->free();
+
+        }
+
+    }
+
 if (isset($_POST['infotext'])) {
 	    $infotext = filter_input(INPUT_POST, 'infotext', FILTER_SANITIZE_STRING);
         die;
