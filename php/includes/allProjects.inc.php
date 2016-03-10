@@ -29,9 +29,9 @@ if($result2 = $mysqli->query("SELECT * FROM project left join likes on project.P
             while ($row2 = $result2->fetch_object()) {
                     
                     if(!($row2->LikeValue==NULL)){
-                        $likeValue[$i]=$likeValue[$i]+1;
+                        $likeValue[$row2->ProjectID]=$likeValue[$row2->ProjectID]+1;
                     }
-                    else{$likeValue[$i] = 0;}
+                 
                    $i = $i+1;
             }
             $result2->free();
@@ -39,16 +39,15 @@ if($result2 = $mysqli->query("SELECT * FROM project left join likes on project.P
     }
     
 
-if (isset($_POST['infotext'])) {
-	    $infotext = filter_input(INPUT_POST, 'infotext', FILTER_SANITIZE_STRING);
-        die;
+if (true) {
+	   
 
 if (empty($error_msg)) {
        
         // Insert the new user into the database 
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
      
-        header('Location: ./addproject_page.php');
+     
        
     }
 
