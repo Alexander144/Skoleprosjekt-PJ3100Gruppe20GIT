@@ -76,8 +76,9 @@
                         "z-index": "1",
                         "width": "50px",
                         "height": "50px",
-                        "background-color": "pink",
+                        "background-color": "",
                         "float": "right",
+                        'background-image':'url(heart.png)',
                        // "margin-top": "25%"
                     });
                 
