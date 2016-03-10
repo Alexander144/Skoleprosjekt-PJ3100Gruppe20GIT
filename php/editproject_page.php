@@ -30,12 +30,12 @@ $ProjectID = $_SESSION["OwnProjectID"];
                             <br>
                 
                     <p>Name:
-                        <input class="updatefield" type="text" name="name" value=<?php echo $projectName; ?> id="name"></input>
+                        <input id="name" class="updatefield" type="text" name="name" value=<?php echo $projectName; ?>></input>
                         
                         <br>
                     </p>
                     <p>Subject:
-                            <input class="updatefield" type="text" name="subject" value=<?php echo $projectSubject; ?> id="subject"></input>
+                            <input id="subject" class="updatefield" type="text" name="subject" value=<?php echo $projectSubject; ?>></input>
 
                             <br>
                     <p>Infotext:
