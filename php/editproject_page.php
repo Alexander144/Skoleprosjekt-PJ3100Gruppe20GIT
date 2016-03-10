@@ -96,11 +96,11 @@ $ProjectID = $_SESSION["OwnProjectID"];
             <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
                 <input class="chooseFile" type="file" name="picture" id="projectPicture" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
                 <br><br>
-                <input class="uploadFile" type = "submit" name = "uploadProjectImg" value = "Upload File"/>
+                <input class="uploadFile" type = "submit" name = "uploadProjectImage" value = "Upload File"/>
 
 
             <?php
-                if(isset($_POST['uploadProjectImg'])){
+                if(isset($_POST['uploadProjectImage'])){
                     $uploadProjectImage= $_FILES['picture']['name'];
                     $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
 
