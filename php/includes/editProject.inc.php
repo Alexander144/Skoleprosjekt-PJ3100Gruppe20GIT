@@ -10,7 +10,6 @@ $error_msg = "";
                 $projectName = $row->Name;
                 $projectSubject = $row->Subject;
                 $projectEditInfotext = $row->AboutProject;
-
                                   
             }
             $result->free();
@@ -69,11 +68,21 @@ if (empty($error_msg)) {
             }
         }
 
+        //Upload projectimage
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, projectImage) VALUES (?, ?)"))
+        {
+            $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadProjectImg']);
+             // Execute the prepared query.
+            if (! $insert_stmt->execute()) {
+                $wasError = True;
+            }
+        }
 
 
 
-if($wasError){header('Location: ../error.php?err=Registration failure: INSERT');}
-    else {header('Location: ./editproject_page.php');}
+
+/*if($wasError){header('Location: ../error.php?err=Registration failure: INSERT');}
+    else {header('Location: ./editproject_page.php');}*/
 
 
 

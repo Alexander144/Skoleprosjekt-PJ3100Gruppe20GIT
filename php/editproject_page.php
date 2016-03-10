@@ -89,35 +89,33 @@ $ProjectID = $_SESSION["OwnProjectID"];
             
         <!--Upload File Done--> 
 
-        <!-- upload image -->
+        <!--Start updatePhoto-->
+        <div id="updatePhoto">
+            <h4>Picture:</h4>
 
- <p>
-                            Picture:
-                            <input class="updatefield" name="picture" id="picture" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                            <br>
+            <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
+                <input class="chooseFile" type="file" name="picture" id="projectPicture" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
+                <br><br>
+                <input class="uploadFile" type = "submit" name = "uploadProjectImg" value = "Upload File"/>
 
-        <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
-
-            <input class="smallUploadBtn" type="file" name="file" id="file"/>
-
-            <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
 
             <?php
-                if(isset($_POST['uploadFile'])){
-                $uploadFile= $_FILES['file']['name'];
-                $uploadFileTmp = $_FILES['file']['tmp_name'];
+                if(isset($_POST['uploadProjectImg'])){
+                    $uploadProjectImage= $_FILES['picture']['name'];
+                    $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
 
                 if ( ! is_dir("project/$ProjectID/")) {
-                 mkdir("project/$ProjectID/");
+                    mkdir("project/$ProjectID/");
                 }
-                move_uploaded_file($uploadFileTmp, $_SESSION['uploadFile'] ="project/$ProjectID/$uploadFile");
+                    move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
 
+                    echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
                 }
             ?>
-        </form>
+                </form>
 
+        </div><!--end updatePhoto-->
 
-        <!--Upload Image Done-->
         <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
         <?php else : ?>
             <p>

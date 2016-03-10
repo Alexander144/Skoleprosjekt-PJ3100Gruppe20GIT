@@ -17,6 +17,7 @@ if($result = $mysqli->query("SELECT ProjectID,Name, Subject, AboutProject FROM p
                     $Subject = $row->Subject;
                     $AboutProject = $row->AboutProject;
                     //$peopleInProject[] = $row->Username: 
+                    $projectPhoto = $row->projectImage;
                     
                }
 

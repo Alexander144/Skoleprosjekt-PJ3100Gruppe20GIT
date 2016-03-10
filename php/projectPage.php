@@ -23,7 +23,7 @@
                         <?php //echo $Name ?>
 
                             <div id="photoProject">
-                        <?php //echo $projectPhoto ?>
+                                <img src='./<?php echo $projectPhoto; ?>'/>
                             </div>
 
                             <!-- Start youtubescript og youtube html-->
