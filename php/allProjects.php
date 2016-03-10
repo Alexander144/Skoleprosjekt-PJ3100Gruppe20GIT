@@ -28,34 +28,6 @@
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
-     function SendData(){
-
- 					 $.ajax({
-						url: 'projectPage.php',
-						data: 'ID='+$(this).data("ID"),
-						method: 'GET',
-						success: function (data) {
-                             window.location.href = this.url;
-                            console.log(data);
-
-						 // er er resultatet fra sql-spørringen
-						}
-						});
-        }
-         function SendLike(){
-                 $.ajax({
-                        url: 'includes/Like.inc.php',
-                        data: 'ID='+$(this).data("ID")+'&Username=' +$(this).data("Username"),
-                        method: 'GET',
-                        success: function (data) {
-                            
-                            console.log(data);
-
-                         // er er resultatet fra sql-spørringen
-                        }
-                        });
-                     
-        }
          //Get all projects:
         var allProjects = <?php echo $count;?>; //Get value here
         var projectName = <?php echo json_encode($Name); ?>;
@@ -92,6 +64,9 @@
                    .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] +"Likes: " + LikeValue[projectID[i]]);
                 
                 $newProject.append($newBox);
+            
+            $newBox
+                .html("Like");
 
                 
 
@@ -116,6 +91,7 @@
                     "text-align": "center",
                     "position": "relative"
                 });
+            
             $("h1")
                 .css({
                     "text-align": "center", 
@@ -133,11 +109,66 @@
                     "font-style": "italic",
                     "display": "inline"
                    }); 
-                $newBox.click(SendLike);
+            /*
+                $newBox.click(function(){
+                    
+                    $newBox(SendLike);
+                    
+                });
+            
+                    $newBox.data("ID", projectID[i]);
+                    $newBox.data("Username", Username);
+            
+            
+               /* $newProject.click(function(){
+                    $newProject(SendData);
+                
+                });
+            
+                $newProject.data("ID", projectID[i]);*/
+            
+            
+            $newProject.on('click', function(e) {
+                if (e.target !== this)
+                return;
+                
+                    $.ajax({
+						url: 'projectPage.php',
+						data: 'ID='+$(this).data("ID"),
+						method: 'GET',
+						success: function (data) {
+                             window.location.href = this.url;
+                            console.log(data);
+
+						 // er er resultatet fra sql-spørringen
+						}
+						});
+                
+                
+                
+            });
+            
+            $newBox.on('click', function(f){
+                if(f.target !== this)
+                return;
+                
+                    $.ajax({
+                        url: 'includes/Like.inc.php',
+                        data: 'ID='+$(this).data("ID")+'&Username=' +$(this).data("Username"),
+                        method: 'GET',
+                        success: function (data) {
+                            
+                            console.log(data);
+
+                         // er er resultatet fra sql-spørringen
+                        }
+                        });
+            });
+            
+
                 $newBox.data("ID", projectID[i]);
                 $newBox.data("Username", Username);
-                //$newProject.click(SendData);
-                    //$newProject.data("ID", projectID[i]);
+                $newProject.data("ID", projectID[i]);
         
         };
         

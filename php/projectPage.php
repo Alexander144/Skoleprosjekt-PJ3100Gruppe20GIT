@@ -23,7 +23,7 @@
                         <?php //echo $Name ?>
 
                             <div id="photoProject">
-                        <?php //echo $projectPhoto ?>
+                                <img src='./<?php echo $projectImage; ?>'/>
                             </div>
 
                             <!-- Start youtubescript og youtube html-->
@@ -114,9 +114,13 @@
                             </div>
 
                             <!-- end youtubescript og youtube html-->
-
+                        
+                        <div id="Project document">
+                            
+                            <a href="./<?php echo $projectFile; ?>" class="linkerStyle"><p>Prosjekt dokumentasjon</p></a>
+                        </div>
                     </div>
-
+                
                     <div id="projectTwo" class="col col-projectTwo">
 
                         <div id="emneProject">
@@ -134,7 +138,7 @@
                         }
                         ?>
                         </div>
-
+                        
                         <div id="tutorProject">
                             <h3 id="tutorProjectP">Veileder/lærer:</h3>
                             <p id="getTutorProject"></p>
@@ -146,6 +150,8 @@
                             <p id="getProjectDesc"></p>
                             <?php echo $AboutProject ?>
                         </div>
+                        
+                        
 
 
                         <input id="editProjectBtn" class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />

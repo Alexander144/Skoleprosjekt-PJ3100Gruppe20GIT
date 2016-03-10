@@ -17,7 +17,7 @@ if($result = $mysqli->query("SELECT ProjectID,Name, Subject, AboutProject FROM p
                     $Subject = $row->Subject;
                     $AboutProject = $row->AboutProject;
                     //$peopleInProject[] = $row->Username: 
-                    
+
                }
 
             }
@@ -60,6 +60,40 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
         }
 
     } 
+    if($result4 = $mysqli->query("SELECT ProjectID,File FROM documents")){
+        if($count4 = $result4->num_rows){
+            
+            while ($row4 = $result4->fetch_object()) {
+                if($row4->ProjectID == $ProjectID){
+                    $projectFile = $row4->File;
+                    
+               }else{
+                    //Se på denne Natalie, den endrer variablen til URL'en til den samme siden.
+                    //Gir en falesafe for udefinerte variabler så den reloader siden.
+                    $projectFile = "projectPage.php?ID=$ProjectID";
+                }
+
+            }
+            $result4->free();
+        
+        }
+
+    } 
+    if($result5 = $mysqli->query("SELECT ProjectID,Picture FROM pictures")){
+        if($count5 = $result5->num_rows){
+
+            while ($row5 = $result5->fetch_object()) {
+                if($row5->ProjectID == $ProjectID){
+                    $projectImage = $row5->Picture;
+
+               }
+
+            }
+            $result5->free();
+
+        }
+
+    }
 
 if (isset($_POST['infotext'])) {
 	    $infotext = filter_input(INPUT_POST, 'infotext', FILTER_SANITIZE_STRING);

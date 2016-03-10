@@ -95,7 +95,7 @@
                 });
             
             
-            $("h1")
+            $("#projectsProfile h1")
                 .css({
                     "text-align": "center", 
                     "font-size": "1em",
@@ -105,7 +105,7 @@
                     "border-bottom": "1px solid black"
                    }); 
             
-            $("p")
+            $("#projectsProfile p")
                 .css({
                     "text-align": "center", 
                     "font-size": "0.8em",
