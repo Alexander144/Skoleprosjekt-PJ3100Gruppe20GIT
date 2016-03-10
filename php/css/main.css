@@ -261,7 +261,7 @@ body {
     cursor: pointer;
 }
 
-#projects h3{
+#projects span{
     opacity: 0;
 }
 
