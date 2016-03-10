@@ -67,7 +67,7 @@
                 $newProject.append($newBox);
             
             $newBox
-                .html("LikeBox");
+                .html("Like");
 
                 
 
