@@ -7,14 +7,16 @@
 <section id="mainContent"> <!-- start Main Content -->
 
 <!-- start projects -->
-    <div id="projects">
-        <?php $projectBox1; ?>
-    </div><!-- end projects -->
+  <!--  <div id="projects">
+        <?php //$projectBox1; ?>
+    </div><!-- end projects
 
-</section> <!-- end Main Content -->
+</section> --><!-- end Main Content -->
+    
+    <?php include_once 'allProjects.php'; ?>
 
 
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!--<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script>
     //Get all projects:
     var allProjects = 12; //Get value here
