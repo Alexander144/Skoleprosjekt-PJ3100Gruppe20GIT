@@ -13,7 +13,7 @@ include_once 'db_connect.php';
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
-            header('Location: ./allProjects.php');
+            
         }
     }
 

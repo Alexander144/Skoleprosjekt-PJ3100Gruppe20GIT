@@ -62,7 +62,7 @@
                 
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" +  "Likes: " + LikeValue[projectID[i]] + "</p>" + "<br>" + "<span>" + projectAbout[i] + "</span>" + "<br>");
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" +  "Likes: " + LikeValue[projectID[i]] + "</p>" + "<br>" + "<article>" + projectAbout[i] + "</article>" + "<br>");
                 
                 $newProject.append($newBox);
             
@@ -97,25 +97,24 @@
                     //"position": "relative"
                 });
             
-            $("span").mouseover(function(){
+            $("article").mouseover(function(){
                 $(this)
                     .stop().fadeTo(500, 0.7);
                 
                 $(this)
                     .css({
                         "z-index": "10000",
-                        "height": "200%",
                         "font-size": "1em",
                         "text-align": "center", 
                         "display": "inline",
                         "top": "100px",
-                        "border": "1px solid black"
+                        //"border": "1px solid black"
                     
                     });
 
             });
             
-            $("#projects span").mouseleave(function(){
+            $("#projects article").mouseleave(function(){
                 $(this)
                     .stop().fadeTo(500, 0);
 
@@ -131,7 +130,7 @@
                     "border-bottom": "1px solid black"
                    }); 
             
-            $("span")
+            $("article")
                 .css({
                     "margin-top": "10px",
                     "font-size": "1em",                       
