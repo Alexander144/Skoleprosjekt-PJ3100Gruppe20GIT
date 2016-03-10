@@ -261,6 +261,10 @@ body {
     cursor: pointer;
 }
 
+#projects h3{
+    opacity: 0;
+}
+
 .likeBoxes{
     bottom: 0px;
 }

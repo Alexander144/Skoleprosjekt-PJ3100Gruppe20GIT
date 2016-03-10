@@ -62,7 +62,7 @@
                 
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] +"Likes: " + LikeValue[projectID[i]]);
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<h3>" + projectAbout[i] + "</h3>" + "<br>" + "<p>" +  "Likes: " + LikeValue[projectID[i]] + "</p>");
                 
                 $newProject.append($newBox);
             
@@ -93,6 +93,29 @@
                     "position": "relative"
                 });
             
+            $("#projects h3").mouseover(function(){
+                $(this)
+                    .stop().fadeTo(500, 0.7);
+                
+                $(this)
+                    .css({
+                        "width": "100px",
+                        "height": "50px",
+                        "border": "1px solid black",
+                        "text-align": "center", 
+                        "display": "inline",
+                        "top": "100px",
+                    
+                    });
+
+            });
+            
+            $("#projects h3").mouseleave(function(){
+                $(this)
+                    .stop().fadeTo(500, 0);
+
+            });
+            
             $("h1")
                 .css({
                     "text-align": "center", 
@@ -102,6 +125,11 @@
                     "top": "100px",
                     "border-bottom": "1px solid black"
                    }); 
+            
+            $("h3")
+                .css({
+                    "font-size": "0.8em"
+            });
             
             $("p")
                 .css({
@@ -172,12 +200,6 @@
                 $newProject.data("ID", projectID[i]);
         
         };
-        
-                 
-             
-
-
-
         
         
         /* EN ANNEN VERSJON SOM IKKE HELT FUNKER NÅ
