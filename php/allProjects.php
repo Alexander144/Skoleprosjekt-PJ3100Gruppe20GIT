@@ -39,11 +39,15 @@
         var LikeValue = <?php echo json_encode($likeValue); ?>;
         var $newProject = $("<div>");
         var $newBox = $("<div>");
-        
+         for(var i = 0; i < allProjects; i++){
+            
+         }
         
         for(var i = 0; i < allProjects; i++){
             
-        
+            if(LikeValue[projectID[i]] == undefined){
+                LikeValue[projectID[i]] = 0;
+            }
             
                 var $newProject = $("<div>")
                     .addClass("col col-3 projectBoxes");
@@ -58,7 +62,7 @@
                 
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] +"Likes: " + LikeValue[i]);
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" + projectAbout[i] +"Likes: " + LikeValue[projectID[i]]);
                 
                 $newProject.append($newBox);
             

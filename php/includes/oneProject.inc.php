@@ -67,7 +67,11 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
                 if($row4->ProjectID == $ProjectID){
                     $projectFile = $row4->File;
                     
-               }
+               }else{
+                    //Se på denne Natalie, den endrer variablen til URL'en til den samme siden.
+                    //Gir en falesafe for udefinerte variabler så den reloader siden.
+                    $projectFile = "projectPage.php?ID=$ProjectID";
+                }
 
             }
             $result4->free();

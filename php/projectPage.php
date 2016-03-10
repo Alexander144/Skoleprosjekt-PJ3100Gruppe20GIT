@@ -114,9 +114,13 @@
                             </div>
 
                             <!-- end youtubescript og youtube html-->
-
+                        
+                        <div id="Project document">
+                            
+                            <a href="./<?php echo $projectFile; ?>" class="linkerStyle"><p>Prosjekt dokumentasjon</p></a>
+                        </div>
                     </div>
-                    <a href="./<?php echo $projectFile; ?>" class="linkerStyle"><p>Prosjekt dokumentasjon</p></a>
+                
                     <div id="projectTwo" class="col col-projectTwo">
 
                         <div id="emneProject">
@@ -146,6 +150,8 @@
                             <p id="getProjectDesc"></p>
                             <?php echo $AboutProject ?>
                         </div>
+                        
+                        
 
 
                         <input id="editProjectBtn" class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
