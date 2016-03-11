@@ -20,11 +20,14 @@
 
 
                         <h3 id="prosjektTittel"><?php echo $Name ?></h3>
-                        <?php //echo $Name ?>
 
-                            <div id="photoProject">
-                                <img src="./<?php echo $projectImage; ?>"/>
-                            </div>
+                            <!--Start show projectImage-->
+                            <?php
+                                if(file_exists($projectImage)){
+                                    echo "<img src='$projectImage'>";
+                                }
+                            ?><!--end show projectImage-->
+
 
                             <!-- Start youtubescript og youtube html-->
                             <div id="yt_api"></div>
