@@ -338,8 +338,14 @@ body {
     left: 35%;
 }
 
+#registerBtn {
+    float:right;
+    margin-right:5px;
+}
+
 #loginBtn,
 #registerBtn {
+    margin-top:40px;
     margin-left: 5px;
 }
 
