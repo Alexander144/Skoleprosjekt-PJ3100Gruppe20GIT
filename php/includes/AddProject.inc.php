@@ -76,7 +76,7 @@ if (empty($error_msg)) {
              //   header('Location: ../error.php?err=Registration failure: INSERT');
             //}
         //}
-        header('Location: ./index.php');
+        //header('Location: ./index.php');
 
 }
 

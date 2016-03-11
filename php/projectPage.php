@@ -1,5 +1,6 @@
 <?php include_once 'header.php';
       $ID = (int)$_GET['ID'];
+        $projectImage = null;
       $username = htmlentities($_SESSION['username']);
       include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
  ?>
@@ -22,11 +23,8 @@
                         <h3 id="prosjektTittel"><?php echo $Name ?></h3>
 
                             <!--Start show projectImage-->
-                            <?php
-                                if(file_exists($projectImage)){
-                                    echo "<img src='$projectImage'>";
-                                }
-                            ?><!--end show projectImage-->
+
+                            <img src="./<?php echo $projectImage; ?>"/>
 
 
                             <!-- Start youtubescript og youtube html-->
