@@ -28,9 +28,7 @@
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
-        
-         //Get all projects:
-        var allProjects = <?php echo $count;?>; //Get value here
+        var allProjects = <?php echo json_encode($count);?>; //Get value here
         var projectName = <?php echo json_encode($Name); ?>;
         var projectSubject = <?php echo json_encode($Subject); ?>;
         var projectAbout = <?php echo json_encode($AboutProject); ?>;
@@ -39,10 +37,10 @@
         var LikeValue = <?php echo json_encode($likeValue); ?>;
         var $newProject = $("<div>");
         var $newBox = $("<div>");
-         for(var i = 0; i < allProjects; i++){
-            
-         }
-        
+
+
+
+
         for(var i = 0; i < allProjects; i++){
             
             if(LikeValue[projectID[i]] == undefined){

@@ -16,12 +16,12 @@ if($result = $mysqli->query("SELECT * FROM project")){
                    $Name[$i] = $row->Name;
                     $Subject[$i] = $row->Subject;
                     $AboutProject[$i] = $row->AboutProject;
-                   $i = $i+1;
+                   $i++;
             }
             $result->free();
         }
     }
-if($result2 = $mysqli->query("SELECT * FROM project right join likes on project.ProjectID = likes.ProjectID")){
+if($result2 = $mysqli->query("SELECT * FROM project left join likes on project.ProjectID = likes.ProjectID")){
         $i = 0;
         if($count2 = $result2->num_rows){
             $likeValue = array();
