@@ -37,6 +37,7 @@
 
                     echo "<img src='images/$user_id/$uploadImage'/>";
                 }
+            else{$_SESSION['uploadImage'] = "";}
             ?>
 
         </div><!--end updatePhoto-->
@@ -63,6 +64,7 @@
 
                     echo "<img src='grades_students/$user_id/$uploadGrades'/>";
                 }
+             else{$_SESSION['uploadGrades'] = "";}
             ?>
         </div><!--end updateGrades-->
 

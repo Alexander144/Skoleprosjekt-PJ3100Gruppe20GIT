@@ -58,6 +58,7 @@ if (empty($error_msg)) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
             $null = NULL;
+            if(!($_SESSION['uploadImage']=="" || $_SESSION['uploadImage']=="images/$user_id/")){
             if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET PictureName = (?) WHERE UserID = '$user_id'")) {
             $insert_stmt->bind_param('s', $_SESSION['uploadImage']); 
 
@@ -65,21 +66,29 @@ if (empty($error_msg)) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
+            }
+            else{
+                $_SESSION['uploadImage']==null;
+            }
             //var_dump($_SESSION['uploadGrades']);die;
             //Grades
-            if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET Grades = (?) WHERE UserID = '$user_id'")) {
-            $insert_stmt->bind_param('s', $_SESSION['uploadGrades']);
+            if(!($_SESSION['uploadGrades']=="" || $_SESSION['uploadGrades']=="grades_students/$user_id/")){
+                    if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET Grades = (?) WHERE UserID = '$user_id'")) {
+                    $insert_stmt->bind_param('s', $_SESSION['uploadGrades']);
 
-            if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
+                    if (! $insert_stmt->execute()) {
+                        header('Location: ../error.php?err=Registration failure: INSERT');
+                    }
+                }
             }
-        }
             //CV
-            if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET CV = (?) WHERE UserID = '$user_id'")) {
-            $insert_stmt->bind_param('s',  $_SESSION['uploadCV']);
+            if(!($_SESSION['uploadCV']=="" || $_SESSION['uploadCV']=="cv_students/$user_id/")){
+                if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET CV = (?) WHERE UserID = '$user_id'")) {
+                    $insert_stmt->bind_param('s',  $_SESSION['uploadCV']);
 
-            if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
+                if (! $insert_stmt->execute()) {
+                    header('Location: ../error.php?err=Registration failure: INSERT');
+                }
             }
         }
 
