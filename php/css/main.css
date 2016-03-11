@@ -410,7 +410,8 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #profilePic {
-    width: 200px;
+    width: 300px;
+    height: 300px;
     float: left;
 }
 
