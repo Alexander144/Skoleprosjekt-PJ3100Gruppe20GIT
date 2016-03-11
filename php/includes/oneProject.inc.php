@@ -85,6 +85,7 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
             while ($row5 = $result5->fetch_object()) {
                 if($row5->ProjectID == $ProjectID){
                     $projectImage = $row5->Picture;
+
                 }
 
             }

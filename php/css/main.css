@@ -261,8 +261,12 @@ body {
     cursor: pointer;
 }
 
-#projects h3{
+.projectBoxes article{
+    margin-top: 10px;
     opacity: 0;
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
 }
 
 .likeBoxes{

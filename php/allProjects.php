@@ -62,7 +62,7 @@
                 
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<h3>" + projectAbout[i] + "</h3>" + "<br>" + "<p>" +  "Likes: " + LikeValue[projectID[i]] + "</p>");
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" +  "Likes: " + LikeValue[projectID[i]] + "</p>" + "<br>" + "<article>" + projectAbout[i] + "</article>" + "<br>");
                 
                 $newProject.append($newBox);
             
@@ -73,7 +73,9 @@
 
                 $newBox
                     .css({
-                        "z-index": "1",
+                        "position": "relative",
+                        "top": "0px",
+                        "z-index": "0",
                         "width": "50px",
                         "height": "50px",
                         "background-color": "",
@@ -89,29 +91,30 @@
             
             $newProject
                 .css({
-                    "z-index": "0",
+                    "padding-top": "10px",
+                    "z-index": "1",
                     "text-align": "center",
-                    "position": "relative"
+                    //"position": "relative"
                 });
             
-            $("#projects h3").mouseover(function(){
+            $("article").mouseover(function(){
                 $(this)
                     .stop().fadeTo(500, 0.7);
                 
                 $(this)
                     .css({
-                        "width": "100px",
-                        "height": "50px",
-                        "border": "1px solid black",
+                        "z-index": "10000",
+                        "font-size": "1em",
                         "text-align": "center", 
                         "display": "inline",
                         "top": "100px",
+                        //"border": "1px solid black"
                     
                     });
 
             });
             
-            $("#projects h3").mouseleave(function(){
+            $("#projects article").mouseleave(function(){
                 $(this)
                     .stop().fadeTo(500, 0);
 
@@ -127,9 +130,14 @@
                     "border-bottom": "1px solid black"
                    }); 
             
-            $("h3")
+            $("article")
                 .css({
-                    "font-size": "0.8em"
+                    "margin-top": "10px",
+                    "font-size": "1em",                       
+                    "height": "100%",
+                    "text-align": "center", 
+                    "display": "inline",
+                    "top": "100px",
             });
             
             $("p")
@@ -188,11 +196,12 @@
                         method: 'GET',
                         success: function (data) {
                             
+                            
                             console.log(data);
-
                          // er er resultatet fra sql-spørringen
                         }
                         });
+                window.location.href = "index.php";
             });
             
 
