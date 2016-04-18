@@ -2,6 +2,7 @@
         $row;
         include_once 'includes/allProjects.inc.php';
         include_once 'menu.php';
+       
  ?>
 
 <?php if (login_check($mysqli) == true) : ?>
@@ -18,6 +19,8 @@
             <p id="nameProj"></p>
             <?php 
             $username = htmlentities($_SESSION['username']);
+
+            $likeValueSort = true;
                  //echo $Name[1];
              ?>
             
@@ -37,12 +40,41 @@
         var LikeValue = <?php echo json_encode($likeValue); ?>;
         var $newProject = $("<div>");
         var $newBox = $("<div>");
+        var AllValues = {projectName, projectSubject, projectAbout, projectID, LikeValue };
+        var LikevalueSort = <?php echo json_encode($likeValueSort); ?>;
+  
 
 
+        function bubbleSort() {
+          var length = LikeValue.length;
+          for (var i = 0; projectID[i] < length; i++) { //Number of passes
+            for (var j = 0; projectID[j] < (length - projectID[i] - 1); j++) { //Notice that j < (length - i)
+              //Compare the adjacent positions
+              if(Likevalue[projectID[j]] > LikeValue[projectID[j+1]]) {
+                //Swap the numbers
+                var tmp = LikeValue[projectID[j]];  //Temporary variable to hold the current number
+                LikeValue[projectID[j]] = LikeValue[projectID[j+1]]; //Replace current number with adjacent number
+                LikeValue[projectID[j+1]] = tmp; //Replace adjacent number with current number
 
+                var tmpName = projectName[j];  //Temporary variable to hold the current number
+                projectName[j] = projectName[j+1]; //Replace current number with adjacent number
+                projectName[j+1] = tmpName; //Replace adjacent number with current number
+              }
+            }        
+          }
+        }
+
+        if(LikevalueSort == true){
+           //var $AllValues = QuickSort($AllValues, 0, LikeValue.length - 1);
+        //bubbleSort();
+
+
+           //var LikeValue = QuickSort($Likevalue, 0, Likevalue.length - 1);
+        }
 
         for(var i = 0; i < allProjects; i++){
             
+
             if(LikeValue[projectID[i]] == undefined){
                 LikeValue[projectID[i]] = 0;
             }
@@ -231,6 +263,8 @@
             });
         
 */
+  //sorteringsalgoritme, bruke mergesort
+   
     </script><!--end script-->
     <!-- End of body content field -->
     <!-- Knapp funkjsonen-->
