@@ -59,7 +59,7 @@ if (login_check($mysqli) == true) {
       <div class="nav">
       <ul>
         <li id="jobs" class="li-border navHoverEffect"><a href="#">Jobber</a></li>
-        <li id="addJob" class="li-border navHoverEffect"><a href="#">Legg til en stilling</a></li>
+        <li id="addJob" class="li-border navHoverEffect"><a href="addproject_page.php"> Legg til et prosjekt </a></li>
         <li id="profileLink" class="li-border navHoverEffect"><?php if (login_check($mysqli) == true) { echo '<a href="userinfo_page.php">Profil</a>';
             
         } else{
