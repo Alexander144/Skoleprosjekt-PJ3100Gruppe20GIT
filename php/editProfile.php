@@ -99,10 +99,10 @@
             <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
 
             <h4 id="updateEmailP" class="marginMobile">Oppdater mailen din</h4>
-            <input id="updateEmailTxt" name = "updateEmailTxt" type="text" />
+            <input id="updateEmailTxt" class="addProjInput" name = "updateEmailTxt" type="text" />
 
             <h4 id="updatePasswordP" class="marginMobile">Oppdater passord</h4>
-            <input id="updatePasswordTxt" type="text" />
+            <input id="updatePasswordTxt" class="addProjInput" type="text" />
 
     </div><!--end updateProfile-->
 
