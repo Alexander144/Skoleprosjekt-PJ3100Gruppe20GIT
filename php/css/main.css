@@ -403,6 +403,23 @@ font-family: 'Open Sans Condensed', sans-serif;
 /*end register page*/
 
 
+/** start register successful **/
+
+#regSuksess{
+    margin-top: 150px;
+}
+
+#regSuksess p{
+    text-align: center;
+}
+
+#regSuksess h3{
+    text-align: center;
+}
+
+
+/** end register successful **/
+
 /*student profile*/
 
 .studentCol {
