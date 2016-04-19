@@ -53,11 +53,11 @@ if (login_check($mysqli) == true) {
         
       <div id="navWeb" class="nav">
         -->
-    <header id="mainPageHeader" class="col nav">
+    <header id="mainPageHeader" class=" nav">
      <!--<a id="title" href="index.php"><h2>TUNG?</h2></a>-->
       <!--<a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
         <a href="index.php"><img id="bigLogo" src="img/WACT_hovedlogo_farge_rgb.png" class=""></a>   
-      <div class="nav">
+      <div id="headerMenu" class="nav">
       <ul>
         <li><a id="title" href="index.php"><h2>TUNG?</h2></a></li>
         <li id="jobs" class="li-border navHoverEffect"><a href="allProjects.php">Prosjekter</a></li>
