@@ -9,7 +9,13 @@
 
         <li class="sort-program sortMenu" <?php $sortProgram; ?>><a id="avd" href="#">Avdeling</a>
             <ul>
-                <li><a id="teknologi" href="#" <?php $sortProgramTeknologi; ?>>Teknologi/IT</a></li>
+                <li><a id="teknologi" class="tek" href="#" <?php $sortProgramTeknologi; ?>>Teknologi/IT</a>                <ul>
+                    <li><a id="tekProg" class="tek" href="#" <?php $sortProgramTeknologi; ?>>Programmering</a></li>
+                    <li><a id="tekUX" href="#" <?php $sortProgramTeknologi; ?>>Interaktivt Design</a></li>
+                    <li><a id="tekSpillProg" href="#" <?php $sortProgramTeknologi; ?>>Spillprogrammering</a></li>
+                    <li><a id="tekSpillDesign" href="#" <?php $sortProgramTeknologi; ?>>Spilldesign</a></li>
+                    <li><a id="tekIS" href="#" <?php $sortProgramTeknologi; ?>>Intelligente Systemer</a></li>
+                </ul></li>
                 <li><a id="ledelse" href="#" <?php $sortProgramLedelse; ?>>Ledelse</a></li>
                 <li><a id="kommunikasjon" href="#" <?php $sortProgramKommunikasjon; ?>>Kommunikasjon</a></li>
                 <li><a id="kunstfag" href="#" <?php $sortProgramKunstfag; ?>>Kunstfag</a></li>

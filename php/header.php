@@ -54,22 +54,24 @@ if (login_check($mysqli) == true) {
       <div id="navWeb" class="nav">
         -->
     <header id="mainPageHeader" class="col nav">
-      <a id="title" href="index.php"><h2>TUNG?</h2></a>
+     <!--<a id="title" href="index.php"><h2>TUNG?</h2></a>-->
       <!--<a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
+        <a href="index.php"><img id="bigLogo" src="img/WACT_hovedlogo_farge_rgb.png" class=""></a>   
       <div class="nav">
       <ul>
-        <li id="jobs" class="li-border navHoverEffect"><a href="allProjects.php">Prosjekt</a></li>
+        <li><a id="title" href="index.php"><h2>TUNG?</h2></a></li>
+        <li id="jobs" class="li-border navHoverEffect"><a href="allProjects.php">Prosjekter</a></li>
         <li id="addJob" class="li-border navHoverEffect"><a href="addproject_page.php"> Legg til et prosjekt </a></li>
-        <li id="profileLink" class="li-border navHoverEffect"><?php if (login_check($mysqli) == true) { echo '<a href="userinfo_page.php">Profil</a>';
+        <li id="profileLink" class="li-border"><?php if (login_check($mysqli) == true) { echo '<a class="navHoverEffect" href="userinfo_page.php">Min Profil</a>';
             
         } else{
-            echo 'Profil';
+            echo '<a id="menuInvisible" href="userinfo_page.php">Min Profil</a>';
             }
               ?>
         </li>
         <li id="loginLogout" class="li-border navHoverEffect">
         <?php if (login_check($mysqli) == true) {
-            echo '<a href="includes/logout.php">Logout?</a>';  
+            echo '<a href="includes/logout.php">Logg ut</a>';  
         } else {
                     echo '<a href="login.php">Logg inn</a></li>';        
                 }
@@ -83,10 +85,9 @@ echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
           </li>
       </ul>  
     </div>
-    <a href="index.php"><img id="blackWLogo" src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
+    <!--<a href="index.php"><img id="blackWLogo" src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
+    <div class="clearfix"></div>
   </header>
         
     <div class="clearfix"></div>
-
-
-  <?php include_once 'menu.php'; ?>
+        
