@@ -1,3 +1,5 @@
+<?php include_once 'header.php'; ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +8,11 @@
         <link rel="stylesheet" href="styles/main.css" />
     </head>
     <body>
-        <h1>Registration successful!</h1>
-        <p>You can now go back to the <a href="login.php">login page</a> and log in</p>
+        <div id="regSuksess" class="col">
+        <h3 id="">Registreringen var suksessfull!</h3>
+        <p>Du kan nå <a href="login.php">logge deg inn</a> og begynne å laste opp prosjekter.</p>
+        </div>
     </body>
 </html>
+
+<?php include_once 'footer.php'; ?>
