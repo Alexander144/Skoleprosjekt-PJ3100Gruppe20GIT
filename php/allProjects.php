@@ -40,6 +40,7 @@
         var LikeValue = <?php echo json_encode($likeValue); ?>;
         var $newProject = $("<div>");
         var $newBox = $("<div>");
+        var $dislike = $("<div>");
         var AllValues = {projectName, projectSubject, projectAbout, projectID, LikeValue };
         var LikevalueSort = <?php echo json_encode($likeValueSort); ?>;
   
@@ -86,6 +87,9 @@
 
                 var $newBox = $("<div>")
                     .addClass("col col-3 likeBoxes");
+                
+                var $dislike = $("<div>")
+                    .addClass("col col-3 likeboxes");
                     
                      //$("#projects").append($newBox.html("hei"));
 
@@ -94,7 +98,7 @@
                $newProject
                    .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" +  "Likes: " + LikeValue[projectID[i]] + "</p>" + "<br>" + "<article>" + projectAbout[i] + "</article>" + "<br>");
                 
-                $newProject.append($newBox);
+                $newProject.append($newBox, $dislike);
             
             $newBox
                 .html("Like");
@@ -113,6 +117,20 @@
                         'background-image':'url(heart.png)',
                        // "margin-top": "25%"
                     });
+            
+                $dislike
+                    .css({
+                        "position": "relative",
+                        "top": "0px",
+                        "z-index": "-1",
+                        "width": "50px",
+                        "height": "50px",
+                        "background-color": "",
+                        "float": "right",
+                        "background-image": "url(dislikeHeart.png)",
+                    });
+            
+                
                 
                  
                 
@@ -231,8 +249,27 @@
                          // er er resultatet fra sql-spørringen
                         }
                         });
-                window.location.href = "index.php";
+                window.location.href = "index.php";    
             });
+            
+            $dislike.on('click', function(f){
+                if(f.target !== this)
+                return;
+                
+                    $.ajax({
+                        url: 'includes/Like.inc.php',
+                        data: 'ID='+$(this).data("ID")+'&Username=' +$(this).data("Username"),
+                        method: 'GET',
+                        success: function (data) {
+                            
+                            
+                            console.log(data);
+                         // er er resultatet fra sql-spørringen
+                        }
+                        });
+                window.location.href = "index.php";    
+            });
+            
             
 
                 $newBox.data("ID", projectID[i]);
