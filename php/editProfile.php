@@ -20,10 +20,10 @@
             <h4>Last opp bilde av deg selv</h4>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                <input class="chooseFile" type="file" name="picture" id="picture"/>
-                <br><br>
-                <input class="uploadFile" type = "submit" name = "uploadImg" value = "Upload File"/>
-            </form>
+                <input class="chooseFile smallUploadBtn"  type="file" name="picture" id="picture"/>
+
+                <input  class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Laste opp foto"/>
+
 
             <?php
                 if(isset($_POST['uploadImg'])){
@@ -39,7 +39,7 @@
                 }
             else{$_SESSION['uploadImage'] = "";}
             ?>
-
+             </form>
         </div><!--end updatePhoto-->
 
         <!--updateGrades-->
@@ -47,9 +47,9 @@
             <h4 id="updateGradesP">Last opp karakterkortet ditt</h4>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                <input id="grades" class="chooseFile" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                <br><br>
-                <input class="uploadFile" type = "submit" name = "uploadGrades" value = "Upload File"/>
+                <input id="grades" class="chooseFile smallUploadBtn" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+
+                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Laste opp fil"/>
             </form>
 
             <?php
@@ -73,9 +73,9 @@
             <h4 id="updateCVP">Last opp CV</h4>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                <input id="cv" class="chooseFile" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                <br><br>
-                <input class="uploadFile" type = "submit" name = "uploadCV" value = "Upload File"/>
+                <input id="cv" class="chooseFile smallUploadBtn" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
+
+                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Laste opp fil"/>
 
             </form>
 

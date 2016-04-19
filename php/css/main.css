@@ -479,6 +479,10 @@ font-family: 'Open Sans Condensed', sans-serif;
 .uploadFile{
     margin-bottom: 20px;
 }
+#profileEditAboutMe{
+    background-color: rgb(253, 253, 248);
+
+}
 
 /***END EDIT PROFILE***/
 
