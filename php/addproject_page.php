@@ -21,17 +21,15 @@ include_once 'header.php';
             <div id="createProjectContainer">
             
                 <div id="mainCreateProject">
+
                     <div id="nameFileCreateProject">
-                        
                         <p id="nameProjectCP" class="col-floatleft">Navn på prosjekt:</p>
                         <input class="updatefield col-floatleft" type="text" name="name" id="name" />
                     </div>
                     
                     <div id="description" class="test321">
-                        
                         <p id="descProjCP" class="col-floatleft">Beskrivelse av prosjekt</p>
                         <textarea id="infotextproject" name="infotextproject" class="test321"></textarea> <!--  rows="20" cols="90" -->
-                        
                     </div>
                     
                     <div id="studyTopic" class="test321">
