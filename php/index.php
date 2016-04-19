@@ -13,7 +13,7 @@
 
 </section> --><!-- end Main Content -->
     
-    <?php include_once 'allProjects.php'; ?>
+     <?php include_once 'allProjects.php'; ?>
 
 
 <!--<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

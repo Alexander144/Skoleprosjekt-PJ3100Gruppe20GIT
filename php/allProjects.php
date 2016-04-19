@@ -1,7 +1,7 @@
  <?php include_once 'header.php';
         $row;
         include_once 'includes/allProjects.inc.php';
-        include_once 'menu.php';
+        //include_once 'menu.php';
        
  ?>
 
