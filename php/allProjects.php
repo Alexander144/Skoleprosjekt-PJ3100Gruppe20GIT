@@ -50,6 +50,7 @@ function swap(items, firstIndex, secondIndex){
     items[projectID[secondIndex]] = temp;
    
 }
+
 function swapOthers(other, firstIndex, secondIndex){
     var temp = other[firstIndex];
     other[firstIndex] = other[secondIndex];
@@ -79,6 +80,7 @@ function partition(items, left, right) {
         if (i <= j) {
             swap(items,i , j);
             projectName = swapOthers(projectName, i, j);
+
             i++;
             j--;
         }
@@ -99,7 +101,7 @@ function quickSort(items, left, right) {
         }
 
         if (index < right) {
-            quickSort(items, index, right-1);
+            quickSort(items, index, right);
         }
 
     }
@@ -110,7 +112,7 @@ function quickSort(items, left, right) {
         if(LikevalueSort == true){
            //var $AllValues = QuickSort($AllValues, 0, LikeValue.length - 1);
             var length = projectID.length-1;
-            var LikeValue = quickSort(LikeValue,0,length);
+           LikeValue = quickSort(LikeValue,0,length);
 
 
            //var LikeValue = QuickSort($Likevalue, 0, Likevalue.length - 1);
