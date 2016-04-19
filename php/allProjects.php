@@ -43,30 +43,73 @@
         var AllValues = {projectName, projectSubject, projectAbout, projectID, LikeValue };
         var LikevalueSort = <?php echo json_encode($likeValueSort); ?>;
   
+function swap(items, firstIndex, secondIndex){
+    var temp = items[projectID[firstIndex]];
+    items[projectID[firstIndex]] = items[projectID[secondIndex]];
+    items[projectID[secondIndex]] = temp;
+   
+}
+function swapOthers(other, firstIndex, secondIndex){
+    var temp = other[firstIndex];
+    other[firstIndex] = other[secondIndex];
+    other[secondIndex] = temp;
+
+    return other;
+   
+}
+function partition(items, left, right) {
+
+    var pivot   = items[(projectID[(left+right)/2])],
+        i       = left,
+        j       = right;
+        
 
 
-        function bubbleSort() {
-          var length = LikeValue.length;
-          for (var i = 0; projectID[i] < length; i++) { //Number of passes
-            for (var j = 0; projectID[j] < (length - projectID[i] - 1); j++) { //Notice that j < (length - i)
-              //Compare the adjacent positions
-              if(Likevalue[projectID[j]] > LikeValue[projectID[j+1]]) {
-                //Swap the numbers
-                var tmp = LikeValue[projectID[j]];  //Temporary variable to hold the current number
-                LikeValue[projectID[j]] = LikeValue[projectID[j+1]]; //Replace current number with adjacent number
-                LikeValue[projectID[j+1]] = tmp; //Replace adjacent number with current number
+    while (i <= j) {
 
-                var tmpName = projectName[j];  //Temporary variable to hold the current number
-                projectName[j] = projectName[j+1]; //Replace current number with adjacent number
-                projectName[j+1] = tmpName; //Replace adjacent number with current number
-              }
-            }        
-          }
+        while (items[projectID[i]] < pivot) {
+            i++;
         }
+
+        while (items[projectID[j]] > pivot) {
+            j--;
+        }
+
+        if (i <= j) {
+            swap(items,i , j);
+            projectName = swapOthers(projectName, i, j);
+            i++;
+            j--;
+        }
+    }
+    document.write(i);
+    return i;
+}
+function quickSort(items, left, right) {
+
+    var index;
+    document.write(projectID.length-1);
+    if (projectID.length-1 > 1) {
+
+        index = partition(items, left, right);
+
+        if (left < index - 1) {
+            quickSort(items, left, index - 1);
+        }
+
+        if (index < right) {
+            quickSort(items, index, right-1);
+        }
+
+    }
+
+    return items;
+}
 
         if(LikevalueSort == true){
            //var $AllValues = QuickSort($AllValues, 0, LikeValue.length - 1);
-        //bubbleSort();
+            var length = projectID.length-1;
+            var LikeValue = quickSort(LikeValue,0,length);
 
 
            //var LikeValue = QuickSort($Likevalue, 0, Likevalue.length - 1);
