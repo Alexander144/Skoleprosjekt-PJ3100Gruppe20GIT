@@ -1,7 +1,7 @@
  <?php include_once 'header.php';
         $row;
         include_once 'includes/allProjects.inc.php';
-        //include_once 'menu.php';
+        include_once 'menu.php';
        
  ?>
 
@@ -11,7 +11,7 @@
       method="post"
       name="updateProfile_form">
 <!-- Entry of body content field for index below -->
-
+    <?php include_once 'menu.php'; ?>
     <section id="mainContent"> <!-- start Main Content -->
         <!-- start projects -->
         <div id="projects">
