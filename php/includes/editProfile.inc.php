@@ -38,6 +38,39 @@ if($result2 = $mysqli->query("SELECT * FROM project left join userinproject on p
             $result2->free();
         }
     }
+
+//Delete Buttons queries
+ if(isset($_POST['deleteImg'])){
+    $uploadImage="";
+    $insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET PictureName = (?) WHERE UserID = '$user_id'");
+        $insert_stmt->bind_param('s', $_SESSION['uploadImage']); 
+
+        if (! $insert_stmt->execute()) {
+            header('Location: ../error.php?err=Registration failure: INSERT');
+        }
+    }
+
+if(isset($_POST['deleteGrades'])){
+    $uploadGrades="";
+    $insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET Grades = (?) WHERE UserID = '$user_id'");
+        $insert_stmt->bind_param('s', $_SESSION['uploadGrades']); 
+
+    if (! $insert_stmt->execute()) {
+        header('Location: ../error.php?err=Registration failure: INSERT');
+    }
+}
+
+if(isset($_POST['deleteCV'])){
+    $uploadCV="";
+    $insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET CV = (?) WHERE UserID = '$user_id'");
+        $insert_stmt->bind_param('s', $_SESSION['uploadCV']); 
+
+    if (! $insert_stmt->execute()) {
+        header('Location: ../error.php?err=Registration failure: INSERT');
+    }
+}
+//End Delete Button queries
+
 if (isset($_POST['profileEditAboutMe'])||isset($_POST['updateEmailTxt'])) {
 	    $profileEditAboutMe =  filter_input(INPUT_POST, "profileEditAboutMe", FILTER_DEFAULT);
         $updateEmailTxt =  filter_input(INPUT_POST, "updateEmailTxt", FILTER_DEFAULT);
@@ -62,14 +95,13 @@ if (empty($error_msg)) {
             if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET PictureName = (?) WHERE UserID = '$user_id'")) {
             $insert_stmt->bind_param('s', $_SESSION['uploadImage']); 
 
-            if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
+                if (! $insert_stmt->execute()) {
+                    header('Location: ../error.php?err=Registration failure: INSERT');
+                    }
+                }
             }
-        }
-            }
-            else{
-                $_SESSION['uploadImage']==null;
-            }
+            
+            
             //var_dump($_SESSION['uploadGrades']);die;
             //Grades
             if(!($_SESSION['uploadGrades']=="" || $_SESSION['uploadGrades']=="grades_students/$user_id/")){

@@ -9,7 +9,8 @@
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
-            include_once 'includes/editProfile.inc.php';
+            
+           
          ?>
 
 
@@ -23,9 +24,12 @@
                 <input class="chooseFile" type="file" name="picture" id="picture"/>
                 <br><br>
                 <input class="uploadFile" type = "submit" name = "uploadImg" value = "Upload File"/>
+                <input class="deleteFile" type = "submit" name = "deleteImg" value = "Delete File"/>
             </form>
 
             <?php
+            
+                include_once 'includes/editProfile.inc.php';
                 if(isset($_POST['uploadImg'])){
                     $uploadImage= $_FILES['picture']['name'];
                     $uploadImageTmp = $_FILES['picture']['tmp_name'];
@@ -38,6 +42,7 @@
                     echo "<img src='images/$user_id/$uploadImage'/>";
                 }
             else{$_SESSION['uploadImage'] = "";}
+                    
             ?>
 
         </div><!--end updatePhoto-->
@@ -50,6 +55,7 @@
                 <input id="grades" class="chooseFile" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
                 <br><br>
                 <input class="uploadFile" type = "submit" name = "uploadGrades" value = "Upload File"/>
+                <input class="deleteFile" type = "submit" name = "deleteGrades" value = "Delete File"/>
             </form>
 
             <?php
@@ -65,6 +71,7 @@
                     echo "<img src='grades_students/$user_id/$uploadGrades'/>";
                 }
              else{$_SESSION['uploadGrades'] = "";}
+            
             ?>
         </div><!--end updateGrades-->
 
@@ -76,7 +83,7 @@
                 <input id="cv" class="chooseFile" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
                 <br><br>
                 <input class="uploadFile" type = "submit" name = "uploadCV" value = "Upload File"/>
-
+                <input class="deleteFile" type = "submit" name = "deleteCV" value = "Delete File"/>
             </form>
 
             <?php
