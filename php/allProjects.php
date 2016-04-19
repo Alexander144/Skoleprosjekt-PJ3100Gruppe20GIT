@@ -1,5 +1,7 @@
  <?php include_once 'header.php';
         $row;
+        $Avdeling = "IT";
+        $SortByAvdeling = false;
         include_once 'includes/allProjects.inc.php';
         include_once 'menu.php';
        
@@ -20,7 +22,19 @@
             <?php 
             $username = htmlentities($_SESSION['username']);
 
+
+
+            //////////////////////////////////
+            //                              // 
+            //   Disse verdiene bestemmer   //
+            //     Sorteringsalgoritmene    //
+            //                              //
+            //////////////////////////////////
+
+            //Verdien som Sorterer etter likes
             $likeValueSort = true;
+            //Verdien som sorterer etter dato
+        
                  //echo $Name[1];
              ?>
             
@@ -41,90 +55,68 @@
         var $newProject = $("<div>");
         var $newBox = $("<div>");
         var $dislike = $("<div>");
-        var AllValues = {projectName, projectSubject, projectAbout, projectID, LikeValue };
         var LikevalueSort = <?php echo json_encode($likeValueSort); ?>;
-  
-function swap(items, firstIndex, secondIndex){
-    var temp = items[projectID[firstIndex]];
-    items[projectID[firstIndex]] = items[projectID[secondIndex]];
-    items[projectID[secondIndex]] = temp;
-   
+
+        setZeroOnProjectLikes();
+
+function setZeroOnProjectLikes(){
+    for(var i = 0; i < allProjects; i++){
+            if(LikeValue[projectID[i]] == undefined){
+                LikeValue[projectID[i]] = 0;
+            }
+        }
 }
-
-function swapOthers(other, firstIndex, secondIndex){
-    var temp = other[firstIndex];
-    other[firstIndex] = other[secondIndex];
-    other[secondIndex] = temp;
-
-    return other;
-   
-}
-function partition(items, left, right) {
-
-    var pivot   = items[(projectID[(left+right)/2])],
-        i       = left,
-        j       = right;
+function insertionSort(array) {
+    var arrayLength = allProjects;
+    var checkIndex, sorter, temp, indexTemp;
+    for (var checkIndex = 0; checkIndex < arrayLength; checkIndex++) {
+        var temp = array[projectID[checkIndex]];
+        var tempName = projectName[checkIndex];
+        var tempSubject = projectSubject[checkIndex];
+        var tempID = projectID[checkIndex];
+        var tempProjectAbout = projectAbout[checkIndex];
+        sorter = checkIndex - 1;
         
-
-
-    while (i <= j) {
-
-        while (items[projectID[i]] < pivot) {
-            i++;
+        while ((sorter >= 0) && (temp > array[projectID[sorter]])) {
+           
+             projectID[sorter + 1] = projectID[sorter];
+            LikeValue[projectID[sorter + 1]] = LikeValue[projectID[sorter]];
+            projectName[sorter + 1] = projectName[sorter];
+            projectSubject[sorter + 1] = projectSubject[sorter];
+            projectAbout[sorter + 1] = projectAbout[sorter];
+            
+            sorter = sorter - 1;
         }
-
-        while (items[projectID[j]] > pivot) {
-            j--;
-        }
-
-        if (i <= j) {
-            swap(items,i , j);
-            projectName = swapOthers(projectName, i, j);
-
-            i++;
-            j--;
-        }
+    LikeValue[projectID[sorter + 1]] = temp;
+    projectName[sorter + 1] = tempName;
+    projectSubject[sorter + 1] = tempSubject;
+    projectID[sorter + 1] = tempID;
+    projectAbout[sorter + 1] = tempProjectAbout;
     }
-    document.write(i);
-    return i;
+    document.write(LikeValue[projectID[2]]);
+    return array;
+
 }
-function quickSort(items, left, right) {
 
-    var index;
-    document.write(projectID.length-1);
-    if (projectID.length-1 > 1) {
 
-        index = partition(items, left, right);
-
-        if (left < index - 1) {
-            quickSort(items, left, index - 1);
-        }
-
-        if (index < right) {
-            quickSort(items, index, right);
-        }
-
-    }
-
-    return items;
-}
+    /*var date1 = 2016-04-18 16:56:37;
+    var date2 = 2016-04-18 16:56:52;
+    if(date2>date1){
+        date2
+    }*/
 
         if(LikevalueSort == true){
            //var $AllValues = QuickSort($AllValues, 0, LikeValue.length - 1);
             var length = projectID.length-1;
-           LikeValue = quickSort(LikeValue,0,length);
+           //document.write(lenth);
+           insertionSort(LikeValue);
 
 
            //var LikeValue = QuickSort($Likevalue, 0, Likevalue.length - 1);
         }
 
         for(var i = 0; i < allProjects; i++){
-            
-
-            if(LikeValue[projectID[i]] == undefined){
-                LikeValue[projectID[i]] = 0;
-            }
-            
+                        
                 var $newProject = $("<div>")
                     .addClass("col col-3 projectBoxes");
                      

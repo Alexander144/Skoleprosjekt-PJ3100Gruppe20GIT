@@ -11,7 +11,7 @@ if (isset($_POST['subject'])||isset($_POST['name'])||isset($_POST['infotextproje
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
         $infotextproject = filter_input(INPUT_POST, 'infotextproject', FILTER_DEFAULT);
         $AddPeople = filter_input(INPUT_POST, 'AddPeople', FILTER_SANITIZE_STRING);
-
+        $Avdeling = filter_input(INPUT_POST, 'Avdeling', FILTER_SANITIZE_STRING);
         if($result = $mysqli->query("SELECT * FROM user")){
         if($result->num_rows){
             
@@ -42,8 +42,8 @@ if (empty($error_msg)) {
        
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
         //Legger til project sitt emne og administrator
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO project(Subject,Name,AboutProject,Creator) VALUES (?,?,?,?)")) {
-            $insert_stmt->bind_param('sssi',$subject,$name,$infotextproject, $user_id);
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO project(Subject,Name,AboutProject,Creator,Avdeling) VALUES (?,?,?,?,?)")) {
+            $insert_stmt->bind_param('sssis',$subject,$name,$infotextproject, $user_id, $Avdeling);
              if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }

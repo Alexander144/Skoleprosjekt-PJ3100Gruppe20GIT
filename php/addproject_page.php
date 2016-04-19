@@ -43,6 +43,10 @@ include_once 'header.php';
                         <p id="addStudentCP" class="col-floatleft">Legg til andre studenter:</p>
                         <input class="addProjInput updatefield col-floatleft" type="text" name="AddPeople" id="AddPeople" />
                     </div>
+                      <div id="Avdeling" class="test321">
+                        <p id="Avdeling" class="col-floatleft">Avdeling:</p>
+                        <input class="addProjInput updatefield col-floatleft" type="text" name="Avdeling" id="Avdeling" />
+                    </div>
                     
                     <div id="publish" class="test321">
                     <input id="publishBtn" class="buttonDesign test321" type="button" value="Add project" onclick="return AddProjectForms(
@@ -52,7 +56,8 @@ include_once 'header.php';
                                    this.form.infotext,
                                    this.form.picture,
                                    this.form.link,
-                                   this.form.date);" />
+                                   this.form.date,
+                                   this.form.Avdeling);" />
                     </div>
 
             </form>

@@ -7,7 +7,7 @@ $error_msg = "";
 $count;
 
 
-if($result = $mysqli->query("SELECT * FROM project")){
+if($result = $mysqli->query("SELECT * FROM project ORDER BY Date DESC")){
         $i = 0;
         if($count = $result->num_rows){
             
@@ -21,6 +21,22 @@ if($result = $mysqli->query("SELECT * FROM project")){
             $result->free();
         }
     }
+    if($SortByAvdeling == true){
+    if($result = $mysqli->query("SELECT * FROM project where Avdeling = '$Avdeling' ORDER BY Date DESC")){
+        $i = 0;
+        if($count = $result->num_rows){
+            
+            while ($row = $result->fetch_object()) {
+                    $ProjectID[$i] = $row->ProjectID;
+                   $Name[$i] = $row->Name;
+                    $Subject[$i] = $row->Subject;
+                    $AboutProject[$i] = $row->AboutProject;
+                   $i++;
+            }
+            $result->free();
+        }
+    }
+}
 if($result2 = $mysqli->query("SELECT * FROM project left join likes on project.ProjectID = likes.ProjectID")){
         $i = 0;
         if($count2 = $result2->num_rows){

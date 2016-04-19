@@ -82,7 +82,7 @@ function ProfileUpdateForms(form, profileEditAboutMe,updateEmailTxt) {
     form.submit();
     return true;
 }
-function AddProjectForms(form, uploadFile,nameProject, descProjCPTxt, addStudentCP, studyTopicCPTxt) {
+function AddProjectForms(form, uploadFile,nameProject, descProjCPTxt, addStudentCP, studyTopicCPTxt, Avdeling) {
 
     form.submit();
     return true;
