@@ -486,6 +486,14 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 /*** START CREATE PROJECT ***/
 
+.addProjInput{
+    width: 200px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: rgb(253, 253, 248);
+}
+
 #createProjectContainer {
     width: 530px;
     height: 900px;
@@ -552,6 +560,8 @@ font-family: 'Open Sans Condensed', sans-serif;
     height: 136px;
     margin-top: 15px;
     margin-bottom: 15px;
+    background-color: rgb(253, 253, 248);
+    border: 1px solid black;
 }
 
 #descProjCP {
