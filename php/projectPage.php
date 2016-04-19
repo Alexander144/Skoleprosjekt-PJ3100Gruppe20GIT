@@ -22,9 +22,33 @@
 
                         <h3 id="prosjektTittel"><?php echo $Name ?></h3>
 
-                            <!--Start show projectImage-->
+                        <!--Start show projectImage-->
+
+                        <div id="imgContainer">
 
                             <img src="./<?php echo $projectImage; ?>"/>
+
+                        
+                            <!--Forsøk på å vise fleire bilder i ett prosjekt-->
+                            <!--<img id="imgUrlPath" src="./ "/>
+
+                            <script src="js/jquery.js"></script>
+                            
+                            <script>
+                                var imgUrl = <?php //echo json_encode($projectImage); ?>
+                                var imgCount = <?php //echo json_encode(count($projectImage)); ?>
+
+                                document.write(imgUrl[0]);
+                                document.write(imgCount);
+                                
+                                var getImgUrlPath = document.getElementById(imgUrlPath);
+                                
+                                for (var i = 0; i < imgUrl; i++) {
+                                    <?php //echo $getImgUrlPath + $projectImage ?>;
+                                }
+                            </script>-->
+
+                        </div>
 
 
                             <!-- Start youtubescript og youtube html-->
