@@ -35,24 +35,45 @@ include_once 'includes/functions.php';
                 </ul>
             </li>
             <li>Your password and confirmation must match exactly</li>
-        </ul>
+        </ul><br>
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
                 method="post" 
                 name="registration_form">
+
             <div id="registration">
-            Username: <input class="registerField" type='text' 
-                name='username' 
-                id='username' /><br>
-            Email: <input class="registerField" type='text' name='email' id='email' /><br>
-            Password: <input class="registerField" type="password"
-                             name="password" 
-                             id="password"/><br>
-            Confirm password: <input class="RegisterField" type="password" 
-                                     name="confirmpwd" 
-                                     id="confirmpwd" /><br>
-            <input id="registrationBTN" type="button" 
-                   value="Register" 
-                   onclick="return regformhash(this.form,
+                Username: <input
+                            class="registerField"
+                            type='text'
+                            name='username'
+                            id='username' />
+                            <br><br>
+
+                Email: <input
+                            class="registerField"
+                            type='text'
+                            name='email'
+                            id='email' />
+                            <br><br>
+
+                Password: <input
+                            class="registerField"
+                            type="password"
+                            name="password"
+                            id="password"/>
+                            <br><br>
+
+            Confirm password: <input
+                            class="RegisterField"
+                            type="password"
+                            name="confirmpwd"
+                            id="confirmpwd" />
+                            <br><br>
+
+                            <input
+                                id="registrationBTN"
+                                type="button"
+                                value="Register"
+                                onclick="return regformhash(this.form,
                                    this.form.username,
                                    this.form.email,
                                    this.form.password,
