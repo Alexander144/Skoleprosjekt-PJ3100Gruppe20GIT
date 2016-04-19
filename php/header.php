@@ -54,8 +54,9 @@ if (login_check($mysqli) == true) {
       <div id="navWeb" class="nav">
         -->
     <header id="mainPageHeader" class="col nav">
-      <a id="title" href="index.php"><h2>TUNG?</h2></a>
+     <a id="title" href="index.php"><h2>TUNG?</h2></a>
       <!--<a href="index.php"><img src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>-->
+        
       <div class="nav">
       <ul>
         <li id="jobs" class="li-border navHoverEffect"><a href="allProjects.php">Prosjekter</a></li>
@@ -83,9 +84,8 @@ echo '<p>Hi ' . htmlentities($_SESSION['username']) .  '.</p>';
           </li>
       </ul>  
     </div>
-    <a href="index.php"><img id="blackWLogo" src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo">
+    <a href="index.php"><img id="blackWLogo" src="img/WACT_hovedlogo_sort_rgb.png" class="imgLogo"></a>
   </header>
         
     <div class="clearfix"></div>
         
-         <?php include_once 'menu.php'; 
