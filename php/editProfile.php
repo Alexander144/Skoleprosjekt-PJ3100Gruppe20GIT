@@ -24,7 +24,7 @@
                 <input class="chooseFile smallUploadBtn" type="file" name="picture" id="picture"/>
                 <br><br>
                 <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/>
-                <input class="deleteFile" type = "submit" name = "deleteImg" value = "Delete File"/>
+                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Delete File"/>
             </form>
 
             <?php
@@ -55,7 +55,7 @@
                 <input id="grades" class="chooseFile smallUploadBtn" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
                 <br><br>
                 <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/>
-                <input class="deleteFile" type = "submit" name = "deleteGrades" value = "Delete File"/>
+                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/>
 
             </form>
 
@@ -84,7 +84,7 @@
                 <input id="cv" class="chooseFile smallUploadBtn" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
                 <br><br>
                 <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Upload File"/>
-                <input class="deleteFile" type = "submit" name = "deleteCV" value = "Delete File"/>
+                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Delete File"/>
 
             </form>
 
