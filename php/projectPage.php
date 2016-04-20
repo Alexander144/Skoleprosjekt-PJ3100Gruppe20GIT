@@ -1,6 +1,6 @@
 <?php include_once 'header.php';
       $ID = (int)$_GET['ID'];
-        $projectImage = null;
+        $projectImage = 'defaultBilde.png';
       $username = htmlentities($_SESSION['username']);
       include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
  ?>
