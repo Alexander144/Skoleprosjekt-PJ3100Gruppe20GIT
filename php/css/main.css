@@ -523,6 +523,25 @@ font-family: 'Open Sans Condensed', sans-serif;
     background-color: rgb(253, 253, 248);
 
 }
+.addProfilInput{
+    width: 370px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: rgb(253, 253, 248);
+    left: 0;
+}
+.edProfMainHeading{
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.edProfUnderHeading{
+    font-size: 1em;
+    font-weight: 200;
+}
+
+
 
 /***END EDIT PROFILE***/
 
