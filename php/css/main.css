@@ -697,6 +697,27 @@ font-family: 'Open Sans Condensed', sans-serif;
     height: 300px;
 }
 
+/*** EDIT PROJECT ***/
+.editProjInput{
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: rgb(253, 253, 248);
+}
+#youtubeLink{
+    width: 267px;
+}
+#name{
+    width: 388px;
+}
+#subject{
+    width: 383px;
+}
+#addClassmate{
+    width: 263px;
+}
+/*** END EDIT PROJECT ***/
+
 /*h1{
     font-size: 35px;
     font-family: 'Georgia', serif;
