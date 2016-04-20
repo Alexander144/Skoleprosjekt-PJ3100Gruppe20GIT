@@ -22,10 +22,13 @@
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="chooseFile smallUploadBtn" type="file" name="picture" id="picture"/>
-                <br><br>
-                <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/>
+                <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/><br>
+                <div class="addProfileBorder">
+                <h5>Fjerne eksisterende bilde<h5/>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Delete File"/>
-            </form>
+                </div>
+            </form><br><br>
+
 
             <?php
             
@@ -51,11 +54,12 @@
         <div id="updateGrades">
             <h4 id="updateGradesP">Last opp karakterkortet ditt</h4>
 
-            <form action = "editProfile.php" method="post" enctype="multipart/form-data">
+            <form action = "editProfile.php" method="post"               enctype="multipart/form-data">
                 <input id="grades" class="chooseFile smallUploadBtn" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                <br><br>
-                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/>
+                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/><br>
+
+                <p>Fjerne eksisterende karakterkort<p/>
+                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/><br><br>
 
             </form>
 
@@ -81,9 +85,9 @@
             <h4 id="updateCVP">Last opp CV</h4>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
-                <input id="cv" class="chooseFile smallUploadBtn" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                <br><br>
+                <input id="cv" class="chooseFile smallUploadBtn" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
                 <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Upload File"/>
+                <h5>Fjerne eksisterende CV</h5>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Delete File"/>
 
             </form>
@@ -108,10 +112,10 @@
             <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
 
             <h4 id="updateEmailP" class="marginMobile">Oppdater mailen din</h4>
-            <input id="updateEmailTxt" class="addProjInput" name = "updateEmailTxt" type="text" />
+            <input id="updateEmailTxt" class="addProfilInput" name = "updateEmailTxt" type="text" />
 
             <h4 id="updatePasswordP" class="marginMobile">Oppdater passord</h4>
-            <input id="updatePasswordTxt" class="addProjInput" type="text" />
+            <input id="updatePasswordTxt" class="addProfilInput" type="text" />
 
     </div><!--end updateProfile-->
 
