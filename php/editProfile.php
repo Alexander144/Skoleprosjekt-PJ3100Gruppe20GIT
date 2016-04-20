@@ -9,25 +9,21 @@
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
-            
-           
          ?>
-
 
         <h2>Her kan <?php echo $username;?> redigere profilen sin</h2>
 
         <!--Start updatePhoto-->
         <div id="updatePhoto">
-            <h4>Last opp bilde av deg selv</h4>
+            <p class="edProfMainHeading">Last opp bilde av deg selv</p>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="chooseFile smallUploadBtn" type="file" name="picture" id="picture"/>
                 <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/><br>
-                <div class="addProfileBorder">
-                <h5>Fjerne eksisterende bilde<h5/>
+                <p class="edProfUnderHeading">Fjerne eksisterende bilde<p>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Delete File"/>
-                </div>
-            </form><br><br>
+
+            </form><br><br><br><br>
 
 
             <?php
@@ -52,14 +48,14 @@
 
         <!--updateGrades-->
         <div id="updateGrades">
-            <h4 id="updateGradesP">Last opp karakterkortet ditt</h4>
+            <p class="edProfMainHeading">Last opp karakterkortet ditt</p>
 
             <form action = "editProfile.php" method="post"               enctype="multipart/form-data">
                 <input id="grades" class="chooseFile smallUploadBtn" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
                 <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/><br>
 
-                <p>Fjerne eksisterende karakterkort<p/>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/><br><br>
+                <p class="edProfUnderHeading">Fjerne eksisterende karakterkort<p/>
+                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/><br><br><br><br>
 
             </form>
 
@@ -82,15 +78,15 @@
 
         <!--Start updateCV-->
         <div id="updateCV">
-            <h4 id="updateCVP">Last opp CV</h4>
+            <p class="edProfMainHeading">Last opp CV</p>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input id="cv" class="chooseFile smallUploadBtn" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
                 <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Upload File"/>
-                <h5>Fjerne eksisterende CV</h5>
+                <p class="edProfUnderHeading">Fjerne eksisterende CV</p>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Delete File"/>
 
-            </form>
+            </form><br><br><br><br>
 
             <?php
                 if(isset($_POST['uploadCV'])){
@@ -108,13 +104,13 @@
         </div><!--end updateCV-->
 
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
-            <h3 id="aboutMe">Informasjon om deg</h3>
+            <p class="edProfMainHeading">Informasjon om deg</p>
             <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
 
-            <h4 id="updateEmailP" class="marginMobile">Oppdater mailen din</h4>
+            <p id="updateEmailP" class="marginMobile edProfMainHeading">Oppdater mailen din</p>
             <input id="updateEmailTxt" class="addProfilInput" name = "updateEmailTxt" type="text" />
 
-            <h4 id="updatePasswordP" class="marginMobile">Oppdater passord</h4>
+            <p id="updatePasswordP" class="marginMobile edProfMainHeading">Oppdater passord</p>
             <input id="updatePasswordTxt" class="addProfilInput" type="text" />
 
     </div><!--end updateProfile-->

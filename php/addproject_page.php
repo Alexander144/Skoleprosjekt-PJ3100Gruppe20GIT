@@ -45,7 +45,15 @@ include_once 'header.php';
                     </div>
                       <div id="Avdeling" class="test321">
                         <p id="Avdeling" class="col-floatleft">Avdeling</p>
-                        <input class="addProjInput col-floatleft updatefield" type="text" name="Avdeling" id="Avdeling" />
+                          
+                          <select id="Avdeling" class="addProjInput col-floatleft updatefield">
+                            <option class="addProjInput col-floatleft updatefield" value="Teknologi">Teknologi</option>
+                            <option value="Ledelse">Ledelse</option>
+                            <option value="Kommunikasjon">Kommunikasjon</option>
+                            <option value="Kunstfag">Kunstfag</option>
+                            <option value="FilmTvSpill">Film/TV/Spill</option>
+                        </select>
+                       <!-- <input class="addProjInput col-floatleft updatefield" type="text" name="Avdeling" id="Avdeling" />-->
                     </div>
                     
                     <div id="publish" class="test321">
