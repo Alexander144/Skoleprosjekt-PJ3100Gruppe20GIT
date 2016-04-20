@@ -59,7 +59,19 @@ if($result2 = $mysqli->query("SELECT * FROM project left join likes on project.P
             $result2->free();
         }
     }
-    
+     if($result3 = $mysqli->query("SELECT * FROM likes where Username = '$username'")){
+        $i = 0;
+        if($count3 = $result3->num_rows){
+            while ($row3 = $result3->fetch_object()) {
+                   $ProjectIDLike[$i] = $row3->ProjectID;
+
+                    
+                   $i++;
+            }
+            $result3->free();
+        }
+    }
+
 
 if (true) {
 	   

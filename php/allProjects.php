@@ -7,6 +7,7 @@
 
         $likeValueSort = false;
         
+        $username = htmlentities($_SESSION['username']);
         //Verdien som Sorterer etter likes
         if(isset($_GET['MostPopular'])){$likeValueSort = true;}
          if(isset($_GET['Teknologi'])){$Avdeling = "Teknologi";  $SortByAvdeling = true;}
@@ -33,7 +34,7 @@
             
             <p id="nameProj"></p>
             <?php 
-            $username = htmlentities($_SESSION['username']);
+            
 
 
 
@@ -68,7 +69,7 @@
         var $newBox = $("<div>");
         var $dislike = $("<div>");
         var LikevalueSort = <?php echo json_encode($likeValueSort); ?>;
-
+        var LikeUp = <?php echo json_encode($LikeUp); ?>;
         setZeroOnProjectLikes();
 
 function setZeroOnProjectLikes(){
@@ -106,7 +107,7 @@ function insertionSort(array) {
     projectSubject[sorter + 1] = tempSubject;
     projectAbout[sorter + 1] = tempProjectAbout;
     }
-    document.write(LikeValue[projectID[2]]);
+
     return array;
 
 }
@@ -135,9 +136,11 @@ function insertionSort(array) {
                      
                 $("#projects").append($newProject);
 
+                
                 var $newBox = $("<div>")
                     .addClass("col col-3 likeBoxes");
-                
+                //}
+               
                 var $dislike = $("<div>")
                     .addClass("col col-3 likeboxes");
                     
@@ -167,7 +170,12 @@ function insertionSort(array) {
                         'background-image':'url(heart.png)',
                        // "margin-top": "25%"
                     });
-            
+                if(LikeUp == false){
+                $newBox
+                    .css({
+                       "display": "none",
+                    });
+            }
                 $dislike
                     .css({
                         "position": "relative",
@@ -179,6 +187,11 @@ function insertionSort(array) {
                         "float": "right",
                         "background-image": "url(dislikeHeart.png)",
                     });
+                     $dislike
+                    .css({
+                            
+                    });
+            
             
                 
                 
