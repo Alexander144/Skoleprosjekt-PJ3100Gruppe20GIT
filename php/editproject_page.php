@@ -4,7 +4,7 @@
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
             
             <!--Start edit project-->
-            <div id="" class="col addprojectcontainer">
+            <div id="editProject" class="col addprojectcontainer">
                 <?php
                     $username = htmlentities($_SESSION['username']);
                     $user_id = htmlentities($_SESSION['user_id']); 

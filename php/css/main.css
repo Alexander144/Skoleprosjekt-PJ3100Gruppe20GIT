@@ -87,7 +87,7 @@ body {
 
 #mainPageHeader {
     height: 12em;
-    margin-bottom: 100px;
+    margin-bottom: 250px;
     margin-top: 10px;
     z-index: 99;
     width: 100%;
@@ -856,7 +856,6 @@ p{
 
 #sortingMenu {
     width: 1008px;
-    
 }
 
 #searchUsernameH3 {
