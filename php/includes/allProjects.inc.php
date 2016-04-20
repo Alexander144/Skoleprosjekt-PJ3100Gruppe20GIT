@@ -5,12 +5,13 @@
 
 $error_msg = "";
 $count;
-
+$count3;
 
 if($result = $mysqli->query("SELECT * FROM project")){
         $i = 0;
+
         if($count = $result->num_rows){
-            
+              
             while ($row = $result->fetch_object()) {
                     $ProjectID[$i] = $row->ProjectID;
                    $Name[$i] = $row->Name;
@@ -22,18 +23,18 @@ if($result = $mysqli->query("SELECT * FROM project")){
         }
     }
     if($SortByAvdeling == true){
-    if($result = $mysqli->query("SELECT * FROM project where Avdeling = '$Avdeling' ORDER BY Date DESC")){
+    if($result1 = $mysqli->query("SELECT * FROM project where Avdeling = '$Avdeling' ORDER BY Date DESC")){
         $i = 0;
-        if($count = $result->num_rows){
+        if($count1 = $result1->num_rows){
             
-            while ($row = $result->fetch_object()) {
+            while ($row1 = $result1->fetch_object()) {
                     $ProjectID[$i] = $row->ProjectID;
-                   $Name[$i] = $row->Name;
-                    $Subject[$i] = $row->Subject;
-                    $AboutProject[$i] = $row->AboutProject;
+                   $Name[$i] = $row1->Name;
+                    $Subject[$i] = $row1->Subject;
+                    $AboutProject[$i] = $row1->AboutProject;
                    $i++;
             }
-            $result->free();
+            $result1->free();
         }
     }
 }
@@ -58,10 +59,13 @@ if($result2 = $mysqli->query("SELECT * FROM project left join likes on project.P
             }
             $result2->free();
         }
-    }
+    } 
+
      if($result3 = $mysqli->query("SELECT * FROM likes where Username = '$username'")){
+ 
         $i = 0;
         if($count3 = $result3->num_rows){
+              
             while ($row3 = $result3->fetch_object()) {
                    $ProjectIDLike[$i] = $row3->ProjectID;
 
@@ -69,6 +73,11 @@ if($result2 = $mysqli->query("SELECT * FROM project left join likes on project.P
                    $i++;
             }
             $result3->free();
+        }
+        else{
+            $count3 = 0;
+            $ProjectIDLike = null;
+
         }
     }
 

@@ -6,7 +6,7 @@
         $LikeUp = false;
 
         $likeValueSort = false;
-        
+        $ProjectIDLike;
         $username = htmlentities($_SESSION['username']);
         //Verdien som Sorterer etter likes
         if(isset($_GET['MostPopular'])){$likeValueSort = true;}
@@ -70,6 +70,8 @@
         var $dislike = $("<div>");
         var LikevalueSort = <?php echo json_encode($likeValueSort); ?>;
         var LikeUp = <?php echo json_encode($LikeUp); ?>;
+        var ProjectIDLike = <?php echo json_encode($ProjectIDLike); ?>;
+         var ProjectIDLikeLength = <?php echo json_encode($count3); ?>;
         setZeroOnProjectLikes();
 
 function setZeroOnProjectLikes(){
@@ -170,7 +172,16 @@ function insertionSort(array) {
                         'background-image':'url(heart.png)',
                        // "margin-top": "25%"
                     });
-                if(LikeUp == false){
+
+                    LikeUp = false;
+                    for(var j = 0; j < ProjectIDLikeLength; j++){
+                      
+                        if(ProjectIDLike[j] == projectID[i]){
+                            LikeUp = true;                            
+                        }
+                    }
+
+                if(LikeUp == true){
                 $newBox
                     .css({
                        "display": "none",
@@ -180,7 +191,7 @@ function insertionSort(array) {
                     .css({
                         "position": "relative",
                         "top": "0px",
-                        "z-index": "-1",
+                        "z-index": "0",
                         "width": "50px",
                         "height": "50px",
                         "background-color": "",
@@ -188,11 +199,13 @@ function insertionSort(array) {
                         "left": "80px",
                         "background-image": "url(dislikeHeart.png)",
                     });
+
+                    if(LikeUp == false){
                      $dislike
                     .css({
-                            
+                           "display": "none", 
                     });
-            
+                    }
             
                 
                 
@@ -304,7 +317,7 @@ function insertionSort(array) {
                 
                     $.ajax({
                         url: 'includes/Like.inc.php',
-                        data: 'ID='+$(this).data("ID")+'&Username=' +$(this).data("Username"),
+                        data: 'Method=Insert' +'&ID='+$(this).data("ID")+'&Username=' +$(this).data("Username"),
                         method: 'GET',
                         success: function (data) {
                             
@@ -316,13 +329,13 @@ function insertionSort(array) {
                 window.location.href = "index.php";    
             });
             
-            $dislike.on('click', function(f){
-                if(f.target !== this)
+            $dislike.on('click', function(d){
+                if(d.target !== this)
                 return;
                 
                     $.ajax({
                         url: 'includes/Like.inc.php',
-                        data: 'ID='+$(this).data("ID")+'&Username=' +$(this).data("Username"),
+                        data: 'Method=Delete' + '&ID='+$(this).data("ID")+'&Username=' +$(this).data("Username"),
                         method: 'GET',
                         success: function (data) {
                             
@@ -338,6 +351,8 @@ function insertionSort(array) {
 
                 $newBox.data("ID", projectID[i]);
                 $newBox.data("Username", Username);
+                $dislike.data("ID", projectID[i]);
+                $dislike.data("Username", Username);
                 $newProject.data("ID", projectID[i]);
         
         };
