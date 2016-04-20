@@ -708,8 +708,31 @@ font-family: 'Open Sans Condensed', sans-serif;
 #projectTwo {
     border-left: solid black 1px;
     padding-left: 250px;
-    height: 300px;
+    height: auto;
 }
+
+#emneProject{
+    margin-bottom: 30px;
+}
+
+#studentsProject{
+    margin-bottom: 30px;
+}
+
+#tutorProject{
+    margin-bottom: 30px;
+}
+
+#projectDesc{
+    margin-bottom: 30px;
+}
+
+#editProjectBtn{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+/*** END PROJECT PAGE ***/
+
 
 /*** EDIT PROJECT ***/
 .editProjInput{
