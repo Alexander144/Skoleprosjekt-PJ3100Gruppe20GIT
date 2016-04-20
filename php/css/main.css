@@ -649,7 +649,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 /** ADD PROJECT **/
 
 .updatefield {
-    float: right;
+   /*float: right;*/
 }
 
 .addprojectcontainer {
