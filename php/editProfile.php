@@ -9,10 +9,7 @@
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
-            
-           
          ?>
-
 
         <h2>Her kan <?php echo $username;?> redigere profilen sin</h2>
 
@@ -23,10 +20,9 @@
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="chooseFile smallUploadBtn" type="file" name="picture" id="picture"/>
                 <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/><br>
-                <div class="addProfileBorder">
                 <p class="edProfUnderHeading">Fjerne eksisterende bilde<p>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Delete File"/>
-                </div>
+
             </form><br><br><br><br>
 
 
