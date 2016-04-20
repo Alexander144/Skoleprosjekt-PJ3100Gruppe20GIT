@@ -22,7 +22,6 @@
                 <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/><br>
                 <p class="edProfUnderHeading">Fjerne eksisterende bilde<p>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Delete File"/>
-
             </form><br><br><br>
 
 
@@ -56,7 +55,6 @@
 
                 <p class="edProfUnderHeading">Fjerne eksisterende karakterkort<p/>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/>
-
             </form><br><br><br>
 
             <?php
@@ -85,7 +83,6 @@
                 <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Upload File"/>
                 <p class="edProfUnderHeading">Fjerne eksisterende CV</p>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Delete File"/>
-
             </form><br><br><br><br>
 
             <?php
