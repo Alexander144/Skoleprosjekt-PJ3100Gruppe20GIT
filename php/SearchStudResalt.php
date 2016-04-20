@@ -5,13 +5,6 @@
 		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
                 method="post"
                 name="updateProfile_form">
-
-
-            <div id="searchProfile" class="col">
-                
-                <div class="clearfix"></div>
-                
-                <p id="soesResultat" class="col">Søk resultat</p></div>
             <?php
 
                 $profileUsername = $_SESSION['profileUsername'];
@@ -23,6 +16,8 @@
                 //var_dump($profileImage); die;
            //var_dump($profileUsername); die;
              ?>
+             
+             <div id="profilContainer">
                 <div id="" class="col col-ProfileStudent">
 
                     <h3><?php echo $profileUsername; ?></h3>
@@ -49,6 +44,7 @@
                     <div id="projectsProfile"></div>
              </div>
                     </form>
+             </div>
        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>
     //Get all projects:
     function SendData(){
@@ -115,8 +111,7 @@
         }
 
     </script><!--end script-->
-        
-            <p>Return to <a href="login.php">login page</a></p>
+
         <?php else : ?>
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.

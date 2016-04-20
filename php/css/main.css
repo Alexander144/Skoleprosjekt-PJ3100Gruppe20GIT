@@ -793,6 +793,29 @@ p{
 }
 
 #profilContainer {
-    margin-left: -500px;
-    margin-right: -500px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#velkommenProfile {
+    margin-left: 11%;
+}
+
+#aboutStudentH3 {
+    margin: 0;
+}
+
+
+
+#studentProjectsH3 {
+    margin: 0;
+}
+
+#aboutStudentP {
+    margin: 0;
+}
+
+#studentProjectBoxes .projectBoxes {
+    margin: 0;
+    margin-bottom: 15px;
 }
