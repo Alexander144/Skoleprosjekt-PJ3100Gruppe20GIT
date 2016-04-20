@@ -234,24 +234,24 @@ body {
    background-color: rgb(250, 250, 250);
 }
 
-.sort-container #teknologi:hover {
+.sort-container #Teknologi:hover {
     background-color: rgb(97, 175, 202);
 }
 
-.sort-container #ledelse:hover {
+.sort-container #Ledelse:hover {
     background-color: rgb(121, 85, 128);
     color: rgb(250, 250, 250); /*Finne ein passande farge for alle underlenker?*/
 }
 
-.sort-container #kommunikasjon:hover {
+.sort-container #Kommunikasjon:hover {
     background-color: rgb(255, 208, 102);
 }
 
-.sort-container #kunstfag:hover {
+.sort-container #Kunstfag:hover {
     background-color: rgb(126, 197, 157);
 }
 
-.sort-container #filmTVSpill:hover {
+.sort-container #FilmTVSpill:hover {
     background-color: rgb(255, 112, 97);
 }
 
@@ -530,6 +530,15 @@ font-family: 'Open Sans Condensed', sans-serif;
     border-bottom: 1px solid black;
     background-color: rgb(253, 253, 248);
     left: 0;
+}
+.edProfMainHeading{
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.edProfUnderHeading{
+    font-size: 1em;
+    font-weight: 200;
 }
 
 
