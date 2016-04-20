@@ -7,7 +7,7 @@ $error_msg = "";
 $count;
 
 
-if($result = $mysqli->query("SELECT * FROM project ORDER BY Date DESC")){
+if($result = $mysqli->query("SELECT * FROM project")){
         $i = 0;
         if($count = $result->num_rows){
             

@@ -9,24 +9,24 @@
 
         <li class="sort-program sortMenu" <?php $sortProgram; ?>><a id="avd" href="#">Avdeling</a>
             <ul>
-                <li><a id="teknologi" class="tek" href="#" <?php $sortProgramTeknologi; ?>>Teknologi/IT</a>                <ul>
+                <li><a id="Teknologi" class="tek" href="?Teknologi">Teknologi/IT</a>                <ul>
                     <li><a id="tekProg" class="tek" href="#" <?php $sortProgramTeknologi; ?>>Programmering</a></li>
                     <li><a id="tekUX" href="#" <?php $sortProgramTeknologi; ?>>Interaktivt Design</a></li>
                     <li><a id="tekSpillProg" href="#" <?php $sortProgramTeknologi; ?>>Spillprogrammering</a></li>
                     <li><a id="tekSpillDesign" href="#" <?php $sortProgramTeknologi; ?>>Spilldesign</a></li>
                     <li><a id="tekIS" href="#" <?php $sortProgramTeknologi; ?>>Intelligente Systemer</a></li>
                 </ul></li>
-                <li><a id="ledelse" href="#" <?php $sortProgramLedelse; ?>>Ledelse</a></li>
-                <li><a id="kommunikasjon" href="#" <?php $sortProgramKommunikasjon; ?>>Kommunikasjon</a></li>
-                <li><a id="kunstfag" href="#" <?php $sortProgramKunstfag; ?>>Kunstfag</a></li>
-                <li><a id="filmTVSpill" href="#" <?php $sortProgramFilmTVSpill; ?>>Film, TV og Spill</a></li>
+                <li><a id="Ledelse" href="?Ledelse" <?php $sortProgramLedelse; ?>>Ledelse</a></li>
+                <li><a id="Kommunikasjon" href="?Kommunikasjon" <?php $sortProgramKommunikasjon; ?>>Kommunikasjon</a></li>
+                <li><a id="Kunstfag" href="?Kunstfag" <?php $sortProgramKunstfag; ?>>Kunstfag</a></li>
+                <li><a id="FilmTVSpill" href="?FilmTvSpill" <?php $sortProgramFilmTVSpill; ?>>Film, TV og Spill</a></li>
             </ul>
         </li>
 
         <li class="sort-orderBy sortMenu" <?php $sortBy; ?>><a href="#">Rekkefølge</a>
             <ul>
-                <li><a href="#" <?php $sortByMostPopular; ?>>Mest Populære</a></li>
-                <li><a href="#" <?php $sortByNewest; ?>>Nyeste</a></li>
+                <li><a href="?MostPopular" >Mest Populære</a></li>
+                <li><a href="?Nyeste">Nyeste</a></li>
             </ul>
         </li>
         
