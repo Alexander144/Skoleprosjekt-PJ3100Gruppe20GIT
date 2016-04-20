@@ -24,7 +24,7 @@
         display: block;
         width: auto;
         height: auto;
-        font-size: 1em;
+        font-size: 0.5em;
         text-align: center;
         margin: 0;
     }
@@ -141,6 +141,7 @@
     
     .sort-container ul{
         background-color: none;
+        width: 100%;
     }
     
     .sort-container{
