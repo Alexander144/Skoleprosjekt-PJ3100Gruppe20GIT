@@ -1,6 +1,7 @@
 body {
     background-color: rgb(253, 253, 248);
     font-family: "nimbus-sans", sans-serif;
+    margin: 0;
 }
 
 
@@ -9,6 +10,12 @@ body {
 #container {
     width: 1008px;
     margin: auto;
+}
+
+.col-center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .col {
@@ -57,7 +64,7 @@ body {
     width: 100px;*/
     font-size: 20px;
     text-decoration: line-through;
-    color: rgb(80, 80, 80);
+    color: rgb(253, 253, 248);
     text-shadow: 1px 1px;
 }
 
@@ -85,12 +92,27 @@ body {
     width: 100%;
 }
 
+#seProsjekter {
+    
+    text-decoration: rgb(253, 253, 248);
+    
+}
+
 
 /** start navigation HEADER **/
 
 #headerMenu ul{
     background-color: grey;
     width: 100%;
+}
+
+.titleHead h2{
+    height: 0;
+}
+
+.sort-container #title li{
+    height: 10px;
+    line-height: 0px;
 }
 
 #menuInvisible{
@@ -109,8 +131,8 @@ body {
 
 .nav li {
     font-size: 1.3em;
-    line-height: 50px;
-    height: 50px;
+    line-height: 20px;
+    height: 35px;
    /* margin-top: 1em;*/
     display: inline-block;
     width: 190px;
@@ -124,17 +146,17 @@ body {
 
 .nav a{
     text-decoration: none;
-    color: rgb(50, 50, 50);
+    color: rgb(253, 253, 248);
     display: block;
 }
 
 .navHoverEffect:hover {
-    /*background-color: #005f5f;
-    color: rgb(250, 250, 250);*/
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid rgb(253, 253, 248);
     cursor: pointer;
-    color: rgb(120, 120, 120);
+}
 
+#title:hover{
+    text-decoration: rgb(80, 80, 80);
 }
 
 
@@ -153,6 +175,8 @@ body {
 #mainContent {
     display: block;
     float: left;
+    width: 1008px;
+    margin: 0 auto;
 }
 
 
@@ -170,6 +194,8 @@ body {
     position: relative;
     right: 178px;
     z-index: 9999;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #searchField{
@@ -189,7 +215,7 @@ body {
 .sort-container li {
     text-align: left;
     width: 130px;
-    height: 50px;
+    height: 40px;
     line-height: 50px;
     font-size: 1em;
     display: inline-block;
@@ -290,6 +316,14 @@ body {
 #projects:hover{
     cursor: pointer;
 }
+
+#projects{
+    width: 1008px;
+    margin: 0 auto;
+    display: block;
+}
+
+
 
 
 /** end sorting content INDEX **/
@@ -496,7 +530,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 /*** START CREATE PROJECT ***/
 
 .addProjInput{
-    width: 200px;
+    width: 300px;
     height: 20px;
     border: none;
     border-bottom: 1px solid black;
@@ -506,9 +540,11 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #createProjectContainer {
     width: 530px;
-    height: 900px;
+    height: auto;
     left: 40px;
     position: relative;
+    display: block;
+    margin-right: 100px;
 }
 
 
@@ -674,7 +710,6 @@ p{
     height: 50px;
     background-color: rgb(253, 253, 248);
     font-size: 17px;
-    font-family: 'Georgia', serif;
     border: solid 1px;
 }
 
@@ -707,5 +742,4 @@ p{
     color: rgb(120, 120, 120);
     transition: all 2s;
 }
-
 

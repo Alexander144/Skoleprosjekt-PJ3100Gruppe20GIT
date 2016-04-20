@@ -23,8 +23,8 @@ include_once 'header.php';
                 <div id="mainCreateProject">
 
                     <div id="nameFileCreateProject">
-                        <p id="nameProjectCP" class="col-floatleft">Navn på prosjekt:</p>
-                        <input class="addProjInput updatefield col-floatleft" type="text" name="name" id="name" />
+                        <p id="nameProjectCP" class="col-floatleft">Navn på prosjekt</p>
+                        <input class="addProjInput col-floatleft" type="text" name="name" id="name" />
                     </div>
                     
                     <div id="description" class="test321">
@@ -33,19 +33,19 @@ include_once 'header.php';
                     </div>
                     
                     <div id="studyTopic" class="test321">
-                        <p id="studyTopicCP" class="col-floatleft">Emne:</p>
-                        <input class="addProjInput updatefield col-floatleft" type="text" name="subject" id="subject" />
+                        <p id="studyTopicCP" class="col-floatleft">Emne</p>
+                        <input class="addProjInput col-floatleft" type="text" name="subject" id="subject" />
                     </div>
                     
                     <div class="clearfix"></div>
                     
                     <div id="addStudents" class="test321">
-                        <p id="addStudentCP" class="col-floatleft">Legg til andre studenter:</p>
-                        <input class="addProjInput updatefield col-floatleft" type="text" name="AddPeople" id="AddPeople" />
+                        <p id="addStudentCP" class="col-floatleft">Legg til andre studenter</p>
+                        <input class="addProjInput col-floatleft" type="text" name="AddPeople" id="AddPeople" />
                     </div>
                       <div id="Avdeling" class="test321">
-                        <p id="Avdeling" class="col-floatleft">Avdeling:</p>
-                        <input class="addProjInput updatefield col-floatleft" type="text" name="Avdeling" id="Avdeling" />
+                        <p id="Avdeling" class="col-floatleft">Avdeling</p>
+                        <input class="addProjInput col-floatleft" type="text" name="Avdeling" id="Avdeling" />
                     </div>
                     
                     <div id="publish" class="test321">
@@ -95,7 +95,6 @@ include_once 'header.php';
                                    this.form.date);" />
 
             </form> -->
-            <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
     </div>
 
     <?php else : ?>
