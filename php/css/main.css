@@ -621,8 +621,8 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #infotextproject {
     margin-left: 15px;
-    width: 510px;
-    height: 136px;
+    width: 415px;
+    height: 400px;
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: rgb(253, 253, 248);
@@ -673,7 +673,6 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 .addprojectcontainer {
     width: 450px;
-    margin-left:"";
 }
 
 .addprojectcontainer p {
