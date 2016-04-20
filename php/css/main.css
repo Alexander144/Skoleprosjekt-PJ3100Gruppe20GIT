@@ -29,7 +29,7 @@ body {
 }
 
 .col-projectOne {
-    width: 612px;
+    width: 400px;
     float: left;
 }
 
@@ -700,9 +700,14 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 /*** PROJECT PAGE ***/
 
+#projectOne{
+    margin-left: 200px;
+}
+
+
 #projectTwo {
     border-left: solid black 1px;
-    padding-left: 10px;
+    padding-left: 250px;
     height: 300px;
 }
 
