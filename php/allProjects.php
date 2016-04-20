@@ -1,8 +1,20 @@
  <?php include_once 'header.php';
         $row;
-        $Avdeling = "IT";
+
         $SortByAvdeling = false;
+
         $LikeUp = false;
+
+        $likeValueSort = false;
+        
+        //Verdien som Sorterer etter likes
+        if(isset($_GET['MostPopular'])){$likeValueSort = true;}
+         if(isset($_GET['Teknologi'])){$Avdeling = "Teknologi";  $SortByAvdeling = true;}
+         if(isset($_GET['Ledelse'])){$Avdeling = "Ledelse";  $SortByAvdeling = true;}
+         if(isset($_GET['Kommunikasjon'])){$Avdeling = "Kommunikasjon";  $SortByAvdeling = true;}
+         if(isset($_GET['Kunstfag'])){$Avdeling = "Kunstfag";  $SortByAvdeling = true;}
+         if(isset($_GET['FilmTvSpill'])){$Avdeling = "FilmTvSpill";  $SortByAvdeling = true;}
+
         include_once 'includes/allProjects.inc.php';
         include_once 'menu.php';
        
@@ -32,9 +44,8 @@
             //                              //
             //////////////////////////////////
 
-            //Verdien som Sorterer etter likes
-            $likeValueSort = true;
-            //Verdien som sorterer etter dato
+            
+         
         
                  //echo $Name[1];
              ?>
@@ -67,8 +78,9 @@ function setZeroOnProjectLikes(){
             }
         }
 }
+        
 function insertionSort(array) {
-    var arrayLength = allProjects-1;
+    var arrayLength = allProjects;
     var checkIndex, sorter, temp, indexTemp;
     for (var checkIndex = 0; checkIndex < arrayLength; checkIndex++) {
         var temp = array[projectID[checkIndex]];

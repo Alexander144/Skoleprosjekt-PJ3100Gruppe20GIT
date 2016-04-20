@@ -41,7 +41,7 @@ if($result2 = $mysqli->query("SELECT * FROM project left join userinproject on p
 
 //Delete Buttons queries
  if(isset($_POST['deleteImg'])){
-    $uploadImage="";
+    $_SESSION['uploadImage']="";
     $insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET PictureName = (?) WHERE UserID = '$user_id'");
         $insert_stmt->bind_param('s', $_SESSION['uploadImage']); 
 
@@ -51,7 +51,7 @@ if($result2 = $mysqli->query("SELECT * FROM project left join userinproject on p
     }
 
 if(isset($_POST['deleteGrades'])){
-    $uploadGrades="";
+    $_SESSION['uploadGrades']="";
     $insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET Grades = (?) WHERE UserID = '$user_id'");
         $insert_stmt->bind_param('s', $_SESSION['uploadGrades']); 
 
@@ -61,7 +61,7 @@ if(isset($_POST['deleteGrades'])){
 }
 
 if(isset($_POST['deleteCV'])){
-    $uploadCV="";
+    $_SESSION['uploadCV']="";
     $insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET CV = (?) WHERE UserID = '$user_id'");
         $insert_stmt->bind_param('s', $_SESSION['uploadCV']); 
 
@@ -91,6 +91,8 @@ if (empty($error_msg)) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
             $null = NULL;
+            
+            //ProfilBilde
             if(!($_SESSION['uploadImage']=="" || $_SESSION['uploadImage']=="images/$user_id/")){
             if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET PictureName = (?) WHERE UserID = '$user_id'")) {
             $insert_stmt->bind_param('s', $_SESSION['uploadImage']); 

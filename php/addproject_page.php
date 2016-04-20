@@ -15,6 +15,7 @@ include_once 'header.php';
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']); 
             $email = htmlentities($_SESSION['email']);
+            $Avdeling;
             include_once 'includes/AddProject.inc.php';
             ?>
 
