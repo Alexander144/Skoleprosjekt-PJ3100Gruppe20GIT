@@ -69,65 +69,22 @@
                                     document.write(link[0]);
                                     document.write(linkCount);
 
-                                    //videospilleren
-                                    var player;
+                                for (var i = 0; i < linkCount; i++) {
 
-                                    //start innhenting/klargjøring av YoutTube Iframe API
-                                    var yt_api_script = document.createElement("script");
-                                    yt_api_script.src = "https://www.youtube.com/iframe_api";
-                                    $("#yt_api").html(yt_api_script);
-                                    yt_api_script.onload = onYouTubeIframeAPIReady;
-                                    //-- end innhenting av YouTube API
+                                    var ytVid = "ytVid" + i;
 
-                                    //start konfigurering av videospiller       
-                                    //https://developers.google.com/youtube/iframe_api_reference
-                                    //https://developers.google.com/youtube/player_parameters?playerVersion=HTML5
+                                    $("#youtubeContainer").append('<div><iframe width="560" height="315" src=mySrc frameborder="0" id="ytVid" allowfullscreen></iframe></div>')
+                                    $("#youtubeContainer").append('<iframe src="http://www.youtube.com/embed/>' + link[i])
 
+                                    var mySrc = "https://www.youtube.com/embed/" + link[i];
 
-                                    //kjøres antall ganger som linker blir gitt
-                                    for (var i = 0; i < linkCount; i++) {
+                                    document.getElementById('ytVid').src = mySrc;
+                                    
+                                    document.getElementById('ytVid').id = "ytVid" + i;
 
+                                    //alert(link[i]);
+                                }
 
-                                        //var $newVideo = $("<div>")
-                                        //.addClass("col col-3 projectBoxes")
-
-                                        //$("#youTubeVideo").append($newVideo);
-
-                                        var onYouTubeIframeAPIReady = function () {
-
-                                            var videokonfigurasjon = {
-                                                width: 640,
-                                                height: 360,
-                                                videoId: link[0],
-                                                events: {
-                                                    onReady: setVideoEvents
-                                                },
-                                                playerVars: {
-                                                    //controls: 0
-                                                }
-
-                                            }; //--- end videokonfigurasjon
-
-                                            player = new YT.Player("youTubeVideo", videokonfigurasjon);
-                                            //<<<<<<< 
-
-
-                                        }; //--- end onYouTubeIframeAPIReady
-
-                                        //alert(link[i]);
-
-
-                                        //var curplayer = player(linkCount[i]);
-
-                                        //>>>>>>> 0480d4a627ddc92bbcd449c8418a589650f1c148
-                                    }
-                                    var setVideoEvents = function () {
-                                        $("#playVideoBtn").on("click", function () {
-                                            player.playVideo();
-                                        });
-
-
-                                    }; //--- end setVideoEvents
                                 </script>
 
 
