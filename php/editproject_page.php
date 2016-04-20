@@ -22,7 +22,7 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 <!-- Dette er brukerens profil-->
                 <p>Redigere prosjekt</p>
                 
-                <p>Link: (youtube.com/..)
+                <p>Youtube video ID(f.eks 97QkO7nAn68)
                     <input class="updatefield" name="link" type="text" id="link" />
                     <br>
                 </p>
