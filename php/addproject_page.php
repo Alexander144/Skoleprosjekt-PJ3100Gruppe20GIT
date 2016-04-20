@@ -47,19 +47,19 @@ include_once 'header.php';
                       <div id="Avdeling" class="test321">
                         <p id="Avdeling" class="col-floatleft">Avdeling</p>
                           
-                          <select id="Avdeling" class="addProjInput col-floatleft updatefield" onclick="">
+                          <select id="Avdeling" class="addProjInput col-floatleft updatefield"  name="Avdeling">
                               
-                            <option id="Teknologi" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "Teknologi" ?>">Teknologi</option>
+                            <option id="Teknologi" class="addProjInput col-floatleft updatefield" value="Teknologi">Teknologi</option>
                               
-                            <option id="Ledelse" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "Ledelse" ?>">Ledelse</option>
+                            <option id="Ledelse" class="addProjInput col-floatleft updatefield" value="Ledelse">Ledelse</option>
                               
-                            <option id="Kommunikasjon" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "Kommunikasjon" ?>">Kommunikasjon</option>
+                            <option id="Kommunikasjon" class="addProjInput col-floatleft updatefield" value="Kommunikasjon">Kommunikasjon</option>
                               
-                            <option id="Kunstfag" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "Kunstfag" ?>" >Kunstfag</option>
+                            <option id="Kunstfag" class="addProjInput col-floatleft updatefield" value="Kunstfag" >Kunstfag</option>
                               
-                            <option id="FilmTvSpill" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "FilmTvSpill" ?>" >Film/TV/Spill</option>
+                            <option id="FilmTvSpill" class="addProjInput col-floatleft updatefield" value="FilmTvSpill" >Film/TV/Spill</option>
                               
-                        </select>
+                       </select>
                        <!-- <input class="addProjInput col-floatleft updatefield" type="text" name="Avdeling" id="Avdeling" />-->
                     </div>
                     
