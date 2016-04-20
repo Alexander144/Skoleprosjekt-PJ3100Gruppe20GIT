@@ -67,7 +67,7 @@ function setZeroOnProjectLikes(){
         }
 }
 function insertionSort(array) {
-    var arrayLength = allProjects;
+    var arrayLength = allProjects-1;
     var checkIndex, sorter, temp, indexTemp;
     for (var checkIndex = 0; checkIndex < arrayLength; checkIndex++) {
         var temp = array[projectID[checkIndex]];
