@@ -318,7 +318,7 @@ body {
 }
 
 #projects{
-    width: 1008px;
+    width: auto;
     margin: 0 auto;
     display: block;
 }
