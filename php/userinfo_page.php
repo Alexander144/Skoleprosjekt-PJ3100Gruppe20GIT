@@ -16,13 +16,12 @@
                     include_once 'includes/editProfile.inc.php';
              ?>
                 
+        <h3>Velkommen <?php echo $username;?>!</h3><!--Welcome-->
+    <div id="profilContainer"></div>
                 
-        <div id="studentProfil" class="col col-ProfileStudent">
+    <div id="studentProfil" class="col col-ProfileStudent">
             
             <div class="clearfix"></div>
-                
-            <h3>Velkommen <?php echo $username;?>!</h3><!--Welcome-->
-            <p>Bilde av studenten</p>
 
             <img id="profilePic" src='./<?php echo $profileImage; ?>'/><!--Profile picture-->
 

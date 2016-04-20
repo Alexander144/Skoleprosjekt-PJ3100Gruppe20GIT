@@ -762,3 +762,16 @@ p{
     transition: all 2s;
 }
 
+
+#studentProfil {
+        display: block;
+        width: auto;
+        height: 100%;
+        margin-right: auto;
+        margin-left: auto;
+}
+
+#profilContainer {
+    margin-left: -500px;
+    margin-right: -500px;
+}

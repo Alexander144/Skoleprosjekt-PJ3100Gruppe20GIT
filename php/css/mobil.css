@@ -183,9 +183,9 @@
     }
     
     #studentProfil{
-        width: auto;;
+        display: block;
+        width: auto;
         height: 100%;
-        margin: auto;
     }
     
     #profileEditAboutMe{
