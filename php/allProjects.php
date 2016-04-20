@@ -67,7 +67,7 @@ function setZeroOnProjectLikes(){
         }
 }
 function insertionSort(array) {
-    var arrayLength = allProjects;
+    var arrayLength = allProjects-1;
     var checkIndex, sorter, temp, indexTemp;
     for (var checkIndex = 0; checkIndex < arrayLength; checkIndex++) {
         var temp = array[projectID[checkIndex]];
@@ -86,11 +86,11 @@ function insertionSort(array) {
             projectAbout[sorter + 1] = projectAbout[sorter];
             
             sorter = sorter - 1;
-        }
+        } 
+    projectID[sorter + 1] = tempID;
     LikeValue[projectID[sorter + 1]] = temp;
     projectName[sorter + 1] = tempName;
     projectSubject[sorter + 1] = tempSubject;
-    projectID[sorter + 1] = tempID;
     projectAbout[sorter + 1] = tempProjectAbout;
     }
     document.write(LikeValue[projectID[2]]);

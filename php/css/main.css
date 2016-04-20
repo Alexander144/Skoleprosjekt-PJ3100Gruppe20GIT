@@ -523,6 +523,16 @@ font-family: 'Open Sans Condensed', sans-serif;
     background-color: rgb(253, 253, 248);
 
 }
+.addProfilInput{
+    width: 370px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: rgb(253, 253, 248);
+    left: 0;
+}
+
+
 
 /***END EDIT PROFILE***/
 
@@ -649,7 +659,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 /** ADD PROJECT **/
 
 .updatefield {
-    float: right;
+   /*float: right;*/
 }
 
 .addprojectcontainer {
