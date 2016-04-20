@@ -24,20 +24,18 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 
                 <h4>Link: (youtube.com/..)
                     <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
-                    <br>
                 </h4>
 
                 <h4>Navn:
-                    <input id="name" class="updatefield editProjInput" type="text" name="name" value=<?php echo $projectName; ?>></input>
-
+                    <input id="name" class="updatefield editProjInput" type="text" name="name" value=<?php echo $projectName; ?>>
                     <br>
                 </h4>
 
                 <h4>Emne:
-                        <input id="subject" class="updatefield editProjInput" type="text" name="subject" value=<?php echo $projectSubject; ?>></input>
+                        <input id="subject" class="updatefield editProjInput" type="text" name="subject" value=<?php echo $projectSubject; ?>>
+                    <br>
                 </h4>
 
-                        <br>
                 <h4>Om prosjektet:
                     <textarea id="infotextproject" name="infotextproject" rows="20" cols="80" style="width: 415px; height: 136px; margin-top: 15px;; margin-bot: 15px;"><?php echo $projectEditInfotext; ?></textarea>
                 </h4>
@@ -63,6 +61,8 @@ $ProjectID = $_SESSION["OwnProjectID"];
         <!-- upload file -->
         <!-- Dette er de 2 knappene som ligger på toppen av siden for og laste opp filer
             Det under trenger Stilsetting og fiksing av variabler. Rett og slett en ferdigstilling-->
+
+        <h4>Last opp fil:</h4>
         <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
 
             <input class="smallUploadBtn" type="file" name="file" id="file"/>
@@ -81,37 +81,36 @@ $ProjectID = $_SESSION["OwnProjectID"];
 
                 }
             ?> 
-        </form>
-
-            
+        </form> 
         <!--Upload File Done--> 
 
         <!--Start updatePhoto-->
+        <h4>Bilde:</h4>
         <div id="updatePhoto">
-            <h4>Bilde:</h4>
 
             <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
-                <input class="chooseFile" type="file" name="picture" id="projectPicture" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
-                <br><br>
-                <input class="uploadFile" type = "submit" name = "uploadProjectImage" value = "Upload File"/>
+                
+                <input class="smallUploadBtn" type="file" name="picture" id="projectPicture" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
+                
+                <input class="smallUploadBtn" type="submit" name="uploadProjectImage" value="Last opp bilde"/>
 
+                <?php
+                    if(isset($_POST['uploadProjectImage'])){
+                        $uploadProjectImage= $_FILES['picture']['name'];
+                        $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
 
-            <?php
-                if(isset($_POST['uploadProjectImage'])){
-                    $uploadProjectImage= $_FILES['picture']['name'];
-                    $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
+                    if ( ! is_dir("project/$ProjectID/")) {
+                        mkdir("project/$ProjectID/");
+                    }
+                        move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
 
-                if ( ! is_dir("project/$ProjectID/")) {
-                    mkdir("project/$ProjectID/");
-                }
-                    move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
-
-                    echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
-                }
-            ?>
-                </form>
-
+                        echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
+                    }
+                ?>
+            </form>
         </div><!--end updatePhoto-->
+
+
 
         <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
         <?php else : ?>
@@ -120,4 +119,4 @@ $ProjectID = $_SESSION["OwnProjectID"];
             </p>
             <?php endif; ?>
 
-                <?php include_once 'footer.php'; ?>
+        <?php include_once 'footer.php'; ?>
