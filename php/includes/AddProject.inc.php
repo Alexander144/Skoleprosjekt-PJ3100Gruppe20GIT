@@ -11,7 +11,7 @@ if (isset($_POST['subject'])||isset($_POST['name'])||isset($_POST['infotextproje
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
         $infotextproject = filter_input(INPUT_POST, 'infotextproject', FILTER_DEFAULT);
         $AddPeople = filter_input(INPUT_POST, 'AddPeople', FILTER_SANITIZE_STRING);
-        $Avdeling = $_SESSION['Avdeling'];
+        $Avdeling = $_POST['Avdeling'];
     
         if($result = $mysqli->query("SELECT * FROM user")){
         if($result->num_rows){

@@ -66,10 +66,10 @@
                                     var link = <?php echo json_encode($VideoInProject); ?>;
                                     var linkCount = <?php echo json_encode(count($VideoInProject)); ?>;
 
-                                    document.write(link[0]);
-                                    document.write(linkCount);
+
 
                                 for (var i = 0; i < linkCount; i++) {
+                                    
 
                                     var ytVid = "ytVid" + i;
 

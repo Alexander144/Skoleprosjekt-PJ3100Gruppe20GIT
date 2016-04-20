@@ -1,25 +1,17 @@
-<?php
-include_once 'header.php'; 
-$ProjectID = $_SESSION["OwnProjectID"];
-?>
+<?php include_once 'header.php'; $ProjectID = $_SESSION["OwnProjectID"];?>
     <?php if (login_check($mysqli) == true) : ?>
 
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
             
             <!--Start edit project-->
-            <div id="" class="addprojectcontainer">
+            <div id="" class="col addprojectcontainer">
                 <?php
                     $username = htmlentities($_SESSION['username']);
                     $user_id = htmlentities($_SESSION['user_id']); 
                     $email = htmlentities($_SESSION['email']);
                     include_once 'includes/editProject.inc.php';
                 ?>
-                
-                <!--<p>Picture:
-                        <input class="updatefield" name="picture" id="picture" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                        <br>
-                    </p> -->
-                
+
                 <!-- Dette er brukerens profil-->
                 <h2>Redigere prosjekt</h2>
 
@@ -34,7 +26,7 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 </h4>
 
                 <h4>Om prosjektet:
-                    <textarea id="infotextproject" name="infotextproject" rows="20" cols="80" style="width: 415px; height: 136px; margin-top: 15px;; margin-bot: 15px;"><?php echo $projectEditInfotext; ?></textarea>
+                    <textarea id="infotextproject" name="infotextproject"><?php echo $projectEditInfotext; ?></textarea>
                 </h4>
 
                 <h4>Legg til medstudenter:
@@ -44,11 +36,10 @@ $ProjectID = $_SESSION["OwnProjectID"];
 
                 <h4>Link: (youtube.com/..)
                     <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
+                    <br>
                 </h4>
+            </form>
 
-    </form>
-
-        
         <!-- upload file -->
         <!-- Dette er de 2 knappene som ligger på toppen av siden for og laste opp filer
             Det under trenger Stilsetting og fiksing av variabler. Rett og slett en ferdigstilling-->
@@ -73,12 +64,11 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 }
             ?> 
         </form> 
-        <!--Upload File Done--> 
+        <!--end Upload File-->
 
         <!--Start updatePhoto-->
         <h4>Bilde:</h4>
         <div id="updatePhoto">
-
             <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
                 
                 <input class="smallUploadBtn" type="file" name="picture" id="projectPicture" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
@@ -100,21 +90,21 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 ?>
             </form>
         </div><!--end updatePhoto-->
+        <br><br>
 
-            <!--Update btn-->
-                <input class="col" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
-                    this.form,
-                    this.form.name,
-                    this.form.subject,
-                    this.form.infotextproject,
-                    this.form.picture,
-                    this.form.link,
-                    this.form.AddPeople);" />
-            </div><!--End edit project-->
+        <!--Update btn-->
+        <input class="col buttonDesign" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
+            this.form,
+            this.form.name,
+            this.form.subject,
+            this.form.infotextproject,
+            this.form.picture,
+            this.form.link,
+            this.form.AddPeople);" /><!--end update btn-->
+        </div><!--end edit project-->
+        <br><br>
 
-
-
-        <p>Return to <a href="login.php" class="linkerStyle">login page</a></p>
+        <!--<p>Return to <a href="login.php" class="linkerStyle">login page</a></p>-->
         <?php else : ?>
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>

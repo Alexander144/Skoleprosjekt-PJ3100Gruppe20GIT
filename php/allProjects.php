@@ -26,7 +26,7 @@
       method="post"
       name="updateProfile_form">
 <!-- Entry of body content field for index below -->
-    <?php include_once 'menu.php'; ?>
+    <?php //include_once 'menu.php'; ?>
     <section id="mainContent" class="container col-12"> <!-- start Main Content -->
         <!-- start projects -->
         <div id="projects">
