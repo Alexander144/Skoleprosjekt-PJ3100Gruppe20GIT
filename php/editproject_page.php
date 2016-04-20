@@ -14,6 +14,7 @@
 
                 <!-- Dette er brukerens profil-->
                 <h2>Redigere prosjekt</h2>
+                <br>
 
                 <h4>Navn:
                     <input id="name" class="updatefield editProjInput" type="text" name="name" value=<?php echo $projectName; ?>>
@@ -22,7 +23,7 @@
 
                 <h4>Emne:
                         <input id="subject" class="updatefield editProjInput" type="text" name="subject" value=<?php echo $projectSubject; ?>>
-                    <br>
+                    <br><br>
                 </h4>
 
                 <h4>Om prosjektet:
@@ -36,7 +37,7 @@
 
                 <h4>Link: (youtube.com/..)
                     <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
-                    <br>
+                    <br><br>
                 </h4>
             </form>
 
@@ -63,7 +64,7 @@
 
                 }
             ?> 
-        </form> 
+        </form><br>
         <!--end Upload File-->
 
         <!--Start updatePhoto-->
