@@ -30,7 +30,7 @@ body {
 }
 
 .col-projectOne {
-    width: 612px;
+    width: 400px;
     float: left;
 }
 
@@ -524,7 +524,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 }
 .addProfilInput{
-    width: 370px;
+    width: 375px;
     height: 20px;
     border: none;
     border-bottom: 1px solid black;
@@ -700,11 +700,39 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 /*** PROJECT PAGE ***/
 
+#projectOne{
+    margin-left: 200px;
+}
+
+
 #projectTwo {
     border-left: solid black 1px;
-    padding-left: 10px;
-    height: 300px;
+    padding-left: 250px;
+    height: auto;
 }
+
+#emneProject{
+    margin-bottom: 30px;
+}
+
+#studentsProject{
+    margin-bottom: 30px;
+}
+
+#tutorProject{
+    margin-bottom: 30px;
+}
+
+#projectDesc{
+    margin-bottom: 30px;
+}
+
+#editProjectBtn{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+/*** END PROJECT PAGE ***/
+
 
 /*** EDIT PROJECT ***/
 .editProjInput{

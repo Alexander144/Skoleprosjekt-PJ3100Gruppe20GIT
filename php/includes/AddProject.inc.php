@@ -52,7 +52,7 @@ if (empty($error_msg)) {
             }
         }
        $ProjectID = $mysqli->insert_id;
-   
+
        $Role = "";
         //Legger til admin i useraccount som viser hvilket prosjekter han er i
         if ($insert_stmt = $mysqli->prepare("INSERT INTO userinproject(ProjectID, UserID, Role) VALUES (?, ?, ?)")) {
