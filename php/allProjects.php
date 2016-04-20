@@ -2,6 +2,7 @@
         $row;
         $Avdeling = "IT";
         $SortByAvdeling = false;
+        $LikeUp = false;
         include_once 'includes/allProjects.inc.php';
         include_once 'menu.php';
        
