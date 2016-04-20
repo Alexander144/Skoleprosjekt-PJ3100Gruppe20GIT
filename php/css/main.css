@@ -704,6 +704,17 @@ font-family: 'Open Sans Condensed', sans-serif;
     margin-left: 200px;
 }
 
+#prosjektTittel{
+    margin-bottom: 30px;
+}
+
+#imgContainer{
+    margin-bottom: 30px;
+}
+
+#youtubeContainer{
+    margin-bottom: 50px;
+}
 
 #projectTwo {
     border-left: solid black 1px;
