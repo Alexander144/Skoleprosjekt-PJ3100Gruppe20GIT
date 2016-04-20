@@ -20,31 +20,33 @@ $ProjectID = $_SESSION["OwnProjectID"];
                     </p> -->
                 
                 <!-- Dette er brukerens profil-->
-                <p>Redigere prosjekt</p>
+                <h2>Redigere prosjekt</h2>
                 
-                <p>Link: (youtube.com/..)
-                    <input class="updatefield" name="link" type="text" id="link" />
+                <h4>Link: (youtube.com/..)
+                    <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
                     <br>
-                </p>
+                </h4>
 
-                <p>Navn:
-                    <input id="name" class="updatefield" type="text" name="name" value=<?php echo $projectName; ?>></input>
+                <h4>Navn:
+                    <input id="name" class="updatefield editProjInput" type="text" name="name" value=<?php echo $projectName; ?>></input>
 
                     <br>
-                </p>
-                <p>Emne:
-                        <input id="subject" class="updatefield" type="text" name="subject" value=<?php echo $projectSubject; ?>></input>
+                </h4>
+
+                <h4>Emne:
+                        <input id="subject" class="updatefield editProjInput" type="text" name="subject" value=<?php echo $projectSubject; ?>></input>
+                </h4>
 
                         <br>
-                <p>Om prosjektet:
+                <h4>Om prosjektet:
                     <textarea id="infotextproject" name="infotextproject" rows="20" cols="80" style="width: 415px; height: 136px; margin-top: 15px;; margin-bot: 15px;"><?php echo $projectEditInfotext; ?></textarea>
-                </p>
+                </h4>
 
-                <p>Legg til medstudenter:
-                    <input class="updatefield" type="text" name="AddPeople" id="AddPeople" />
+                <h4>Legg til medstudenter:
+                    <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
                     <br>
                     <br>
-                </p>
+                </h4>
 
                 <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
                     this.form,

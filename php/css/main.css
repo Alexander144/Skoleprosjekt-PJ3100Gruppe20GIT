@@ -102,7 +102,7 @@ body {
 /** start navigation HEADER **/
 
 #headerMenu ul{
-    background-color: grey;
+    background-color: rgb(190, 190, 190);
     width: 100%;
 }
 
@@ -711,6 +711,27 @@ font-family: 'Open Sans Condensed', sans-serif;
     height: 300px;
 }
 
+/*** EDIT PROJECT ***/
+.editProjInput{
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: rgb(253, 253, 248);
+}
+#youtubeLink{
+    width: 267px;
+}
+#name{
+    width: 388px;
+}
+#subject{
+    width: 383px;
+}
+#addClassmate{
+    width: 263px;
+}
+/*** END EDIT PROJECT ***/
+
 /*h1{
     font-size: 35px;
     font-family: 'Georgia', serif;
@@ -767,3 +788,39 @@ p{
     transition: all 2s;
 }
 
+
+#studentProfil {
+        display: block;
+        width: auto;
+        height: 100%;
+        margin-right: auto;
+        margin-left: auto;
+}
+
+#profilContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#velkommenProfile {
+    margin-left: 11%;
+}
+
+#aboutStudentH3 {
+    margin: 0;
+}
+
+
+
+#studentProjectsH3 {
+    margin: 0;
+}
+
+#aboutStudentP {
+    margin: 0;
+}
+
+#studentProjectBoxes .projectBoxes {
+    margin: 0;
+    margin-bottom: 15px;
+}

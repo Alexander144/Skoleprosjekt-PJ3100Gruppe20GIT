@@ -16,13 +16,12 @@
                     include_once 'includes/editProfile.inc.php';
              ?>
                 
+        <h3 id="velkommenProfile">Velkommen <?php echo $username;?>!</h3><!--Welcome-->
+    <div id="profilContainer">
                 
-        <div id="studentProfil" class="col col-ProfileStudent">
+    <div id="" class="col col-ProfileStudent">
             
             <div class="clearfix"></div>
-                
-            <h3>Velkommen <?php echo $username;?>!</h3><!--Welcome-->
-            <p>Bilde av studenten</p>
 
             <img id="profilePic" src='./<?php echo $profileImage; ?>'/><!--Profile picture-->
 
@@ -40,10 +39,9 @@
             <p id="aboutStudentP"><?php echo $profileAboutUser; ?></p>     
         </div>
 
-    </div>
                 
-        <div id="" class="col col-ProfileStudent">
-            <h3>Mine Projekter:</h3>
+        <div id="studentProjectBoxes" class="col-ProfileStudent">
+            <h3 id="studentProjectsH3">Mine Projekter:</h3>
 
             <div id="projects">
                 <?php $projectBox1; ?>
@@ -53,6 +51,8 @@
         </div>
 
         </form>
+             
+             </div>
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>
     //Get all projects:

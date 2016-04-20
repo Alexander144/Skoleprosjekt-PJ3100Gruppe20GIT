@@ -2,6 +2,9 @@
         $row;
 
         $SortByAvdeling = false;
+
+        $LikeUp = false;
+
         $likeValueSort = false;
         
         //Verdien som Sorterer etter likes
@@ -11,6 +14,7 @@
          if(isset($_GET['Kommunikasjon'])){$Avdeling = "Kommunikasjon";  $SortByAvdeling = true;}
          if(isset($_GET['Kunstfag'])){$Avdeling = "Kunstfag";  $SortByAvdeling = true;}
          if(isset($_GET['FilmTvSpill'])){$Avdeling = "FilmTvSpill";  $SortByAvdeling = true;}
+
         include_once 'includes/allProjects.inc.php';
         include_once 'menu.php';
        
