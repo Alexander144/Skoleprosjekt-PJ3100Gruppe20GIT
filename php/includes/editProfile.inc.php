@@ -24,7 +24,7 @@ $error_msg = "";
             $result->free();
         }
     }
-if($result2 = $mysqli->query("SELECT * FROM project left join userinproject on project.ProjectID = userinproject.ProjectID")){
+if($result2 = $mysqli->query("SELECT * FROM project left join userinproject on project.ProjectID = userinproject.ProjectID ORDER BY Date desc limit 4")){
         if($count2 = $result2->num_rows){
             
             while ($row2 = $result2->fetch_object()) {

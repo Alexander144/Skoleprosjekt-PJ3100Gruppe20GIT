@@ -4,7 +4,7 @@
 
 
 $error_msg = "";
-if($result = $mysqli->query("SELECT * FROM project left join userinproject on project.ProjectID = userinproject.ProjectID")){
+if($result = $mysqli->query("SELECT * FROM project left join userinproject on project.ProjectID = userinproject.ProjectID ORDER BY Date desc limit 4")){
         if($count = $result->num_rows){
             
             while ($row = $result->fetch_object()) {
