@@ -41,7 +41,7 @@
 
                 
         <div id="studentProjectBoxes" class="col-ProfileStudent">
-            <h3 id="studentProjectsH3">Mine Projekter:</h3>
+            <h3 id="studentProjectsH3">Mine nyeste Projekter:</h3>
 
             <div id="projects">
                 <?php $projectBox1; ?>

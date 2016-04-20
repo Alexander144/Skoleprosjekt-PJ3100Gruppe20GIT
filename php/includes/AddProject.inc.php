@@ -5,13 +5,14 @@
 $error_msg = "";
 $ProjectID;
 $AddOtherUserID;
-
-if (isset($_POST['subject'])||isset($_POST['name'])||isset($_POST['infotextproject'])) {
+$Avdeling = "";
+if (isset($_POST['subject'])||isset($_POST['name'])||isset($_POST['infotextproject'])||isset($_POST['Avdeling'])) {
         $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
         $infotextproject = filter_input(INPUT_POST, 'infotextproject', FILTER_DEFAULT);
         $AddPeople = filter_input(INPUT_POST, 'AddPeople', FILTER_SANITIZE_STRING);
-        $Avdeling = filter_input(INPUT_POST, 'Avdeling', FILTER_SANITIZE_STRING);
+        $Avdeling = $_SESSION['Avdeling'];
+    
         if($result = $mysqli->query("SELECT * FROM user")){
         if($result->num_rows){
             
@@ -51,7 +52,7 @@ if (empty($error_msg)) {
             }
         }
        $ProjectID = $mysqli->insert_id;
-       var_dump($ProjectID); die;
+   
        $Role = "";
         //Legger til admin i useraccount som viser hvilket prosjekter han er i
         if ($insert_stmt = $mysqli->prepare("INSERT INTO userinproject(ProjectID, UserID, Role) VALUES (?, ?, ?)")) {

@@ -20,7 +20,7 @@
              <div id="profilContainer">
                 <div id="" class="col col-ProfileStudent">
 
-                    <h3><?php echo $profileUsername; ?></h3>
+                    <h3 id="searchUsernameH3"><?php echo $profileUsername; ?></h3>
                     <p>Bilde av studenten</p>
 
                     <img src='./<?php echo $profileImage; ?>'/>  
@@ -39,8 +39,8 @@
                 
                 </div>
                 
-                <div id="profileProjects" class="col col-ProfileStudent">
-                <h3><?php echo $profileUsername; ?>'s nyeste projekter</h3>
+                <div id="profileProjects" class="col-ProfileStudent">
+                <h3 id="searchUserProjectsH3"><?php echo $profileUsername; ?>'s nyeste projekter</h3>
                     <div id="projectsProfile"></div>
              </div>
                     </form>

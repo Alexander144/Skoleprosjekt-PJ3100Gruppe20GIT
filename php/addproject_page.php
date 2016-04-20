@@ -47,12 +47,18 @@ include_once 'header.php';
                       <div id="Avdeling" class="test321">
                         <p id="Avdeling" class="col-floatleft">Avdeling</p>
                           
-                          <select id="Avdeling" class="addProjInput col-floatleft updatefield">
-                            <option class="addProjInput col-floatleft updatefield" value="Teknologi">Teknologi</option>
-                            <option value="Ledelse">Ledelse</option>
-                            <option value="Kommunikasjon">Kommunikasjon</option>
-                            <option value="Kunstfag">Kunstfag</option>
-                            <option value="FilmTvSpill">Film/TV/Spill</option>
+                          <select id="Avdeling" class="addProjInput col-floatleft updatefield" onclick="">
+                              
+                            <option id="Teknologi" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "Teknologi" ?>">Teknologi</option>
+                              
+                            <option id="Ledelse" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "Ledelse" ?>">Ledelse</option>
+                              
+                            <option id="Kommunikasjon" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "Kommunikasjon" ?>">Kommunikasjon</option>
+                              
+                            <option id="Kunstfag" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "Kunstfag" ?>" >Kunstfag</option>
+                              
+                            <option id="FilmTvSpill" class="addProjInput col-floatleft updatefield" value="<?php $_SESSION['Avdeling'] = "FilmTvSpill" ?>" >Film/TV/Spill</option>
+                              
                         </select>
                        <!-- <input class="addProjInput col-floatleft updatefield" type="text" name="Avdeling" id="Avdeling" />-->
                     </div>
