@@ -57,13 +57,26 @@ if (empty($error_msg)) {
             }
         }
 
+    
+         if(isset($_SESSION['deleteFile'])){
+             $insert_stmt = $mysqli->prepare("DELETE FROM documents (ProjectID) VALUES (?)");
+                $insert_stmt->bind_param('i',$ProjectID);
+         }
+ 
+
+        
         //Upload file
+        if($_SESSION['uploadFile']!=""){
         if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)"))
         {
             $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadFile']);
              // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 $wasError = True;
+                }
+            else{
+                $_SESSION['uploadFile'] = "";
+            }
             }
         }
 

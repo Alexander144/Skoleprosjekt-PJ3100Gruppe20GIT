@@ -50,6 +50,7 @@
             <input class="smallUploadBtn" type="file" name="file" id="file"/>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
+            <input type = "submit" name = "DeleteFile" class="smallUploadBtn" value = "Slette fil"/>
 
             <?php
                 if(isset($_POST['uploadFile'])){
