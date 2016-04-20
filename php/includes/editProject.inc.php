@@ -55,11 +55,6 @@ if (empty($error_msg)) {
             }
         }
 
-        if(isset($_POST['deleteFile'])){
-            $insert_stmt = $mysqli->prepare("DELETE FROM documents WHERE ProjectID = ?");
-                $insert_stmt->bind_param('i',$ProjectID);
-            }
-
 
         //Upload file
         if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)"))
