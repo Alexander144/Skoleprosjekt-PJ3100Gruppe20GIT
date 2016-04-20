@@ -7,7 +7,7 @@ $error_msg = "";
 $count;
 $count3;
 
-if($result = $mysqli->query("SELECT * FROM project")){
+if($result = $mysqli->query("SELECT * FROM project ORDER BY Date DESC")){
         $i = 0;
 
         if($count = $result->num_rows){
@@ -25,10 +25,10 @@ if($result = $mysqli->query("SELECT * FROM project")){
     if($SortByAvdeling == true){
     if($result1 = $mysqli->query("SELECT * FROM project where Avdeling = '$Avdeling' ORDER BY Date DESC")){
         $i = 0;
-        if($count1 = $result1->num_rows){
+        if($count = $result1->num_rows){
             
             while ($row1 = $result1->fetch_object()) {
-                    $ProjectID[$i] = $row->ProjectID;
+                    $ProjectID[$i] = $row1->ProjectID;
                    $Name[$i] = $row1->Name;
                     $Subject[$i] = $row1->Subject;
                     $AboutProject[$i] = $row1->AboutProject;

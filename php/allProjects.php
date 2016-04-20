@@ -7,6 +7,7 @@
 
         $likeValueSort = false;
         $ProjectIDLike;
+        $ProjectID;
         $username = htmlentities($_SESSION['username']);
         //Verdien som Sorterer etter likes
         if(isset($_GET['MostPopular'])){$likeValueSort = true;}
