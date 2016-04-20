@@ -23,7 +23,7 @@
                 <p class="edProfUnderHeading">Fjerne eksisterende bilde<p>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Delete File"/>
 
-            </form><br><br><br><br>
+            </form><br><br><br>
 
 
             <?php
@@ -55,9 +55,9 @@
                 <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/><br>
 
                 <p class="edProfUnderHeading">Fjerne eksisterende karakterkort<p/>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/><br><br><br><br>
+                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/>
 
-            </form>
+            </form><br><br><br>
 
             <?php
                 if(isset($_POST['uploadGrades'])){
@@ -115,7 +115,7 @@
 
     </div><!--end updateProfile-->
 
-            <input id="UpdateBTN" class="col" type="button" name = "upload"
+            <input id="UpdateBTN" class="col buttonDesign" type="button" name = "upload"
                     value="Oppdater profilen din"
                     onclick="return ProfileUpdateForms(
                                     this.form,

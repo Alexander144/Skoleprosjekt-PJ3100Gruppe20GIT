@@ -6,6 +6,7 @@ $ProjectID = $_SESSION["OwnProjectID"];
 
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
             
+            <!--Start edit project-->
             <div id="" class="addprojectcontainer">
                 <?php
                     $username = htmlentities($_SESSION['username']);
@@ -21,10 +22,6 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 
                 <!-- Dette er brukerens profil-->
                 <h2>Redigere prosjekt</h2>
-                
-                <h4>Link: (youtube.com/..)
-                    <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
-                </h4>
 
                 <h4>Navn:
                     <input id="name" class="updatefield editProjInput" type="text" name="name" value=<?php echo $projectName; ?>>
@@ -43,18 +40,12 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 <h4>Legg til medstudenter:
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
                     <br>
-                    <br>
                 </h4>
 
-                <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
-                    this.form,
-                    this.form.name,
-                    this.form.subject,
-                    this.form.infotextproject,
-                    this.form.picture,
-                    this.form.link,
-                    this.form.AddPeople);" />
-        </div>
+                <h4>Link: (youtube.com/..)
+                    <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
+                </h4>
+
     </form>
 
         
@@ -109,6 +100,17 @@ $ProjectID = $_SESSION["OwnProjectID"];
                 ?>
             </form>
         </div><!--end updatePhoto-->
+
+            <!--Update btn-->
+                <input class="col" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
+                    this.form,
+                    this.form.name,
+                    this.form.subject,
+                    this.form.infotextproject,
+                    this.form.picture,
+                    this.form.link,
+                    this.form.AddPeople);" />
+            </div><!--End edit project-->
 
 
 

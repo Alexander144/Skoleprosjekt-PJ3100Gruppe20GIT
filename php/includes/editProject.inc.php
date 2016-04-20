@@ -47,19 +47,15 @@ if (empty($error_msg)) {
 
 
         //Youtube link
+        if(! ($_POST['link']=="" )){
          if ($insert_stmt = $mysqli->prepare("INSERT INTO videolink(ProjectID,YoutubeLink) VALUES (?, ?)")) {
-            $insert_stmt->bind_param('is',$ProjectID ,$profileEditLink);
-            // Execute the prepared query.
-            if (! $insert_stmt->execute()) {
-                $wasError = True;
+                $insert_stmt->bind_param('is',$ProjectID ,$profileEditLink);
+                // Execute the prepared query.
+                if (! $insert_stmt->execute()) {
+                    $wasError = True;
+                }
             }
         }
-
-        if(isset($_POST['deleteFile'])){
-            $insert_stmt = $mysqli->prepare("DELETE FROM documents WHERE ProjectID = ?");
-                $insert_stmt->bind_param('i',$ProjectID);
-            }
-
 
         //Upload file
         if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)"))
