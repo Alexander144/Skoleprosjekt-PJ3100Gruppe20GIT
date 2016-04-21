@@ -137,7 +137,7 @@
         </div><!--end edit project-->
         
         
-        32 knappen går tilbake til prosjekt siden du var på
+        32 knappen går tilbake til prosjekt siden du var på<br>
         ekstremt jalla men det funker enn så lenge.
         <form action="projectPage.php?ID=<?php echo $ProjectID ?>">
             <input class="col buttonDesign" type="submit" value="<?php echo $ProjectID ?>" 
