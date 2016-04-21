@@ -1,7 +1,13 @@
 
 <?php include_once 'header.php'; 
-  
+
 ?>
+
+<div id="aboutSiteDiv" class="">
+    
+    <p id="aboutSiteP">TUNG er en studentportal hvor du som Westerdøling kan laste opp prosjekter du har jobbet med som student. Ved å være registrert kan du med din egne profil se på andre sine prosjekter, 'like' andres prosjekter og legge til prosjekter selv. <b>Registrer deg som bruker idag!</b></p>
+
+</div>
 <!-- Entry of body content field for index below -->
 <?php if (login_check($mysqli) == true) : ?>
 
