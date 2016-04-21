@@ -197,7 +197,7 @@ function insertionSort(array) {
                         "height": "50px",
                         "background-color": "",
                         "float": "right",
-                        "left": "80px",
+                        "left": "0px",
                         "background-image": "url(dislikeHeart.png)",
                     });
 
