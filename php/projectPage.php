@@ -97,7 +97,7 @@
 
                             <!-- end youtubescript og youtube html-->
                         
-                        <div id="Project document">
+                        <div id="projectDocument">
                             
                             <a href="./<?php echo $projectFile; ?>" class="linkerStyle"><p>Prosjekt dokumentasjon</p></a>
                         </div>
