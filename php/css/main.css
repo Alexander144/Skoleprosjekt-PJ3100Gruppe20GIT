@@ -896,3 +896,7 @@ p{
 #addNameProjectInput {
     width: 365px;
 }
+
+#likeContainerPPage {
+    float: left;
+}
