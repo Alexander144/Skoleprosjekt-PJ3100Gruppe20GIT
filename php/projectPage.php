@@ -12,7 +12,7 @@
             for($i=0; $i<count($VideoInProject); $i++){
                 echo $VideoInProject[$i];
             }
-            
+             $_SESSION['i'] = null;
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
              

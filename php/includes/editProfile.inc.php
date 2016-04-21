@@ -76,6 +76,7 @@ if (isset($_POST['profileEditAboutMe'])||isset($_POST['updateEmailTxt'])) {
         $updateEmailTxt =  filter_input(INPUT_POST, "updateEmailTxt", FILTER_DEFAULT);
        //var_dump($_SESSION['uploadImage']); die;
         //var_dump($_SESSION['uploadImageTmp']);die;
+        $_SESSION['i'] = null;
          if($updateEmailTxt == ""){
             $updateEmailTxt = $_SESSION['email'];
          }
@@ -83,7 +84,7 @@ if (empty($error_msg)) {
        
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
         //Legger til project sitt emne og administrator
-        
+          
         if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET AboutUser = (?), Email = (?) WHERE UserID = '$user_id'")) {
             $insert_stmt->bind_param('ss', $profileEditAboutMe, $updateEmailTxt); 
             // Execute the prepared query.
