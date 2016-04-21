@@ -107,8 +107,8 @@ if (empty($error_msg)) {
         }
 
         //Delete Uploaded File
-        if(($_SESSION['deleteFile'])!= null){
-            $_SESSION['deleteFile'] = null;
+        if(($_SESSION['deleteFile'])!= ""){
+            $_SESSION['deleteFile'] = "";
             $insert_stmt = $mysqli->prepare("DELETE FROM documents WHERE ProjectID = ?");
                 
                 $insert_stmt->bind_param ('i', $ProjectID);
@@ -134,13 +134,28 @@ if (empty($error_msg)) {
             }
         }
 
-        //Upload projectimage
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO pictures(ProjectID, Picture) VALUES (?, ?)"))
-        {
-            $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadProjectImage']);
-             // Execute the prepared query.
+        //Delete Uploaded projectimage
+        if(($_SESSION['deleteProjectImage'])!= ""){
+            $_SESSION['deleteProjectImage'] = "";
+            $insert_stmt = $mysqli->prepare("DELETE FROM pictures WHERE ProjectID = ?");
+                
+                $insert_stmt->bind_param ('i', $ProjectID);
             if (! $insert_stmt->execute()) {
-                $wasError = True;
+                header('Location: ../error.php?err=Registration failure: INSERT');
+            }
+        }
+    
+    //Upload projectimage
+    if(($_SESSION['uploadProjectImage'])!=""){
+            if ($insert_stmt = $mysqli->prepare("INSERT INTO pictures(ProjectID, Picture) VALUES (?, ?)")){
+                $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadProjectImage']);
+             // Execute the prepared query.
+                if (! $insert_stmt->execute()) {
+                    $wasError = True;
+                }
+                else{
+                $_SESSION['uploadProjectImage'] = "";
+            }
             }
         }
 

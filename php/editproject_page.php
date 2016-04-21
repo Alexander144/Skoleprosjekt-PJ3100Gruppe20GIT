@@ -53,7 +53,7 @@
             <input class="smallUploadBtn" type="file" name="file" id="file"/>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
-            <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slette fil"/>
+            <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slette Alle filer"/>
 
             <?php
                 if(isset($_POST['uploadFile'])){
@@ -81,8 +81,10 @@
                 <input class="smallUploadBtn" type="file" name="picture" id="projectPicture" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
                 
                 <input class="smallUploadBtn" type="submit" name="uploadProjectImage" value="Last opp bilde"/>
+                <input class="smallUploadBtn" type="submit" name="deleteProjectImage" value="Slett Alle Bilder"/>
 
                 <?php
+                    
                     if(isset($_POST['uploadProjectImage'])){
                         $uploadProjectImage= $_FILES['picture']['name'];
                         $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
@@ -94,6 +96,9 @@
 
                         echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
                     }
+                if(isset($_POST['deleteProjectImage'])){
+                    $_SESSION['deleteProjectImage'] = "1";
+                }
                 ?>
             </form>
         </div><!--end updatePhoto-->
