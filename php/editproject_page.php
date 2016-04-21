@@ -32,6 +32,19 @@
 
                 <h4>Legg til medstudenter:
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
+                    <?php
+                    if(isset($_POST['uploadProjectImage'])){
+                        $uploadProjectImage= $_FILES['picture']['name'];
+                        $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
+
+                    if ( ! is_dir("project/$ProjectID/")) {
+                        mkdir("project/$ProjectID/");
+                    }
+                        move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
+
+                        echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
+                    }
+                    ?>
                     <br>
                 </h4>
 

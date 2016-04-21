@@ -2,7 +2,7 @@
 
 $projectEditInfotext;
 $error_msg = "";
-
+$AddOtherUserID = "";
  if($result = $mysqli->query("SELECT * FROM project WHERE ProjectID = '$ProjectID'")){
         if($result->num_rows){
             
@@ -15,6 +15,7 @@ $error_msg = "";
             $result->free();
         }
     }
+    
 
 if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproject'])||isset($_POST['picture'])||isset($_POST['link'])||isset($_POST['AddPeople'])||isset($_POST['document'])) {
 	    $profileEditName =  filter_input(INPUT_POST, "name", FILTER_DEFAULT);
@@ -22,8 +23,37 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
         $profileEditInfo =  filter_input(INPUT_POST, "infotextproject", FILTER_DEFAULT);
         $profileEditPicture =  filter_input(INPUT_POST, "picture", FILTER_DEFAULT);
         $profileEditLink =  filter_input(INPUT_POST, "link", FILTER_DEFAULT);
-        $profileEditAddPeople =  filter_input(INPUT_POST, "AddPeople", FILTER_DEFAULT);
-        $profileEditAddPeople =  filter_input(INPUT_POST, "document", FILTER_DEFAULT);
+        $AddPeople =  filter_input(INPUT_POST, "AddPeople", FILTER_DEFAULT);
+        $profileEditAddDocument =  filter_input(INPUT_POST, "document", FILTER_DEFAULT);
+
+
+
+        if($result2 = $mysqli->query("SELECT * FROM user")){
+        if($result2->num_rows){
+            
+            while ($row2 = $result2->fetch_object()) {
+               
+                if(!($username == $AddPeople||$AddPeople=="")&&$row2->Username == $AddPeople)
+                {
+                    $AddOtherUserID = $row2->ID;
+                    $error_msg = "";
+                    break;
+
+                }
+                elseif ($AddPeople=="") {
+                    $AddOtherUserID = null;
+                    break;
+                }
+                else{
+                    $error_msg = "Add User Not Valid";
+                    $AddOtherUserID = null;
+                    
+
+                }
+            }
+            $result2->free();
+        }
+    }
        //var_dump($_SESSION['uploadImage']); die;
         //var_dump($_SESSION['uploadImageTmp']);die;
          /*if($updateEmailTxt == ""){
@@ -43,7 +73,21 @@ if (empty($error_msg)) {
             }
 
         }
-
+             $AddOtherRole = "";
+        if(!($AddOtherUserID == null)){
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO userinproject(ProjectID, UserID, Role) VALUES (?, ?, ?)")) {
+           $ProjectID = (int)$ProjectID;
+           $AddOtherUserID = (int)$AddOtherUserID;
+           $AddOtherRole = "";
+           
+            $insert_stmt->bind_param('iis',$ProjectID,$AddOtherUserID,$AddOtherRole);
+            // Execute the prepared query.
+            if (! $insert_stmt->execute()) {
+                echo "User are allready in this project";
+                //header('Location: ../error.php?err=Registration failure: INSERT userinproject2');
+            }
+        }
+    }
 
 
         //Youtube link

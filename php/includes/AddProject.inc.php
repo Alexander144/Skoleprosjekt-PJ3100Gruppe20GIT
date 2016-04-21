@@ -63,7 +63,7 @@ if (empty($error_msg)) {
             }
         }
         $AddOtherRole = "";
-        if(!($AddOtherUserID == null)){
+        if(!($AddOtherUserID == "")){
         if ($insert_stmt = $mysqli->prepare("INSERT INTO userinproject(ProjectID, UserID, Role) VALUES (?, ?, ?)")) {
             $insert_stmt->bind_param('iis',$ProjectID,$AddOtherUserID,$AddOtherRole);
             // Execute the prepared query.
