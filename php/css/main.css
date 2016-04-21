@@ -415,7 +415,6 @@ body {
 
 #registration {
     width: 270px;
-    text-align: right;
 }
 
 
@@ -424,29 +423,32 @@ font-family: 'Open Sans Condensed', sans-serif;
 }*/
 
 #registrationPage {
-    position: absolute;
-    background-color: rgb(199, 199, 199);
+    position: relative;
     width: 50%;
     left: 25%;
+    margin-top: 15%;
+    text-align: 
 }
 
 .registerField {
     position: relative;
-    float: right;
     top: 5px;
+    width: inherit;
 }
 
+
 #registrationBTN {
-    width: 130px;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 20px;
-    background-color: rgb(152, 152, 152);
+    width: inherit;
 }
 
 #registrationBTN:hover {
     cursor: pointer;
     background-color: rgb(120, 120, 120);
     transition: all 2s;
+}
+
+#registerh3{
+    float:left;
 }
 
 
@@ -904,3 +906,5 @@ p{
 #likeContainerPPage {
     float: left;
 }
+
+

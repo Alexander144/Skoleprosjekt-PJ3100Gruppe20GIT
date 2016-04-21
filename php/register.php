@@ -1,6 +1,7 @@
 <?php
 include_once 'includes/register.inc.php';
 include_once 'includes/functions.php';
+include_once 'header.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +23,7 @@ include_once 'includes/functions.php';
         if (!empty($error_msg)) {
             echo $error_msg;
         }
-        ?>
+        ?><!--
         <ul>
             <li>Usernames may contain only digits, upper and lowercase letters and underscores</li>
             <li>Emails must have a valid email format</li>
@@ -35,35 +36,40 @@ include_once 'includes/functions.php';
                 </ul>
             </li>
             <li>Your password and confirmation must match exactly</li>
-        </ul><br>
+        </ul><br>-->
         <form action = "<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
                 method = "post"
                 name = "registration_form">
 
             <div id="registration">
-                Username: <input
-                            class = "registerField"
+                <h3 id="registerh3">Registrer deg her</h3>
+                    <input
+                            placeholder="Username"
+                            class = "registerField" 
                             type = "text"
                             name = "username"
                             id = "username" />
                             <br><br>
 
-                Email: <input
+                    <input
+                            placeholder="Email"
                             class = "registerField"
                             type = "text"
                             name = "email"
                             id = "email" />
                             <br><br>
 
-                Password: <input
+                    <input
+                            placeholder="Password"
                             class = "registerField"
                             type = "password"
                             name = "password"
                             id = "password"/>
                             <br><br>
 
-            Confirm password: <input
-                            class = "RegisterField"
+                    <input
+                            placeholder="Confirm password"
+                            class = "registerField"
                             type = "password"
                             name = "confirmpwd"
                             id = "confirmpwd" />
@@ -71,6 +77,7 @@ include_once 'includes/functions.php';
 
                             <input
                                 id = "registrationBTN"
+                                class="buttonDesign"
                                 type = "button"
                                 value = "Register"
                                 onclick = "return regformhash(this.form,
@@ -84,3 +91,5 @@ include_once 'includes/functions.php';
         </div>
     </body>
 </html>
+
+    <?php include_once 'footer.php'; ?>
