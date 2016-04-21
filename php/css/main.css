@@ -921,6 +921,10 @@ p{
     font-size: 1.2em;
 }
 
+#aboutSiteP a{
+    color: rgb(255, 112, 97);
+}
+
 #aboutSiteDiv {
     margin-top: 200px;
     margin-bottom: 100px;
