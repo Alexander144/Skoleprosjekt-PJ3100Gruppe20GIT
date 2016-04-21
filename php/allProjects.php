@@ -29,7 +29,7 @@
       name="updateProfile_form">
 <!-- Entry of body content field for index below -->
     <?php //include_once 'menu.php'; ?>
-    <section id="mainContent" class="container col-12"> <!-- start Main Content -->
+    <!--<section id="mainContent" class="container col-12"> <!-- start Main Content -->
         <!-- start projects -->
         <div id="projects">
             
@@ -55,7 +55,7 @@
 
         </div><!--end projects-->
         
-    </section><!--end Main Content-->
+    <!--</section><!--end Main Content-->
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
@@ -268,10 +268,10 @@ function insertionSort(array) {
             
             $("p")
                 .css({
-                    "text-align": "center", 
+                    /*"text-align": "center", 
                     "font-size": "0.8em",
                     "font-style": "italic",
-                    "display": "inline"
+                    "display": "inline"*/
                    }); 
             /*
                 $newBox.click(function(){

@@ -75,14 +75,19 @@ include_once 'header.php';
                     </div>
 
             </form>
-                </div>
                 
+                
+
                 </div>
+</div>
+</div>
 
     <?php else : ?>
 
             <span class="error"><p>Du må være </span><a href="index.php" class="linkerStyle">logge inn </a>for å kunne legge til et prosjekt!</p>
         <?php endif; ?>
+
+<?php include_once 'footer.php'; ?>
 
 <script src="js/jquery.js"></script>
 <script>
@@ -93,4 +98,3 @@ include_once 'header.php';
 
 </script>
         
-<?php include_once 'footer.php'; ?>

@@ -87,7 +87,7 @@ body {
 
 #mainPageHeader {
     height: 12em;
-    margin-bottom: 250px;
+    margin-bottom: 150px;
     margin-top: 10px;
     z-index: 99;
     width: 100%;
@@ -188,14 +188,16 @@ body {
     border-bottom: 1px solid rgb(0, 0, 0);
     margin-top: 0px;
     z-index: 999;
+    width: auto;
 }
 
 .sortMenu {
     position: relative;
-    right: 178px;
+    right: 25%;
     z-index: 9999;
     margin-left: auto;
     margin-right: auto;
+    width: auto;
 }
 
 #searchField{
@@ -296,7 +298,8 @@ body {
 .projectBoxes {
     background-color: rgb(150, 150, 150);
     background: url("../defaultBilde.png");
-    height: 170px;
+    height: 200px;
+    width: 250px;
     box-shadow: 0 4px 4px 0 rgb(80, 80, 80);
     z-index: 1;
     cursor: pointer;
@@ -325,10 +328,17 @@ body {
 
 #projects{
     width: auto;
-    margin: 0 auto;
+    margin-left: 5%;
+    margin-right: 5%;
     display: block;
 }
 
+.projectBoxes{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    
+}
 
 
 
@@ -861,7 +871,8 @@ p{
 }
 
 #sortingMenu {
-    width: 1008px;
+    width: 100%;
+    margin-left: 0;
 }
 
 #searchUsernameH3 {
@@ -895,4 +906,38 @@ p{
 
 #addNameProjectInput {
     width: 365px;
+}
+
+
+
+
+#aboutSiteP{
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    color: rgb(255, 112, 97);
+    text-align: center;
+    line-height: 1.2;
+    font-size: 1.2em;
+}
+
+#aboutSiteP a{
+    color: rgb(255, 112, 97);
+}
+
+#aboutSiteDiv {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+#aboutSiteH3 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 0;
+
+    
+#likeContainerPPage {
+    float: left;
+
 }
