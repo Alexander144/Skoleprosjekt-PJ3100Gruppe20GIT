@@ -556,7 +556,8 @@ font-family: 'Open Sans Condensed', sans-serif;
 /*** START CREATE PROJECT ***/
 
 .addProjInput{
-    width: 300px;
+    margin: 0;
+    width: 150px;
     height: 20px;
     border: none;
     border-bottom: 1px solid black;
@@ -628,8 +629,8 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #infotextproject {
     margin-left: 15px;
-    width: 415px;
-    height: 400px;
+    width: 515px;
+    height: 300px;
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: rgb(253, 253, 248);
@@ -878,4 +879,16 @@ p{
 
 #loginDiv {
     margin-left: 30%;
+}
+
+#addStudentInput {
+    width: 310px;
+}
+
+#addTopicInput {
+    width: 445px;
+}
+
+#addNameProjectInput {
+    width: 365px;
 }
