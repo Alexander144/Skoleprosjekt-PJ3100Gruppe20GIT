@@ -13,6 +13,15 @@ include_once 'header.php';
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script>
         <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script>
+          $(function() {
+            $( document ).tooltip();
+          });
+        </script>
     </head>
     <body>
         <!-- Registration form to be output if the POST variables are not
@@ -48,7 +57,8 @@ include_once 'header.php';
                             class = "registerField" 
                             type = "text"
                             name = "username"
-                            id = "username" />
+                            id = "username"
+                            title= "Usernames may contain only digits, upper and lowercase letters and underscores"/>
                             <br><br>
 
                     <input
@@ -56,7 +66,8 @@ include_once 'header.php';
                             class = "registerField"
                             type = "text"
                             name = "email"
-                            id = "email" />
+                            id = "email"
+                            title = "Emails must have a valid email format"/>
                             <br><br>
 
                     <input
@@ -64,7 +75,8 @@ include_once 'header.php';
                             class = "registerField"
                             type = "password"
                             name = "password"
-                            id = "password"/>
+                            id = "password"
+                            title="Passwords must contain at least one uppercase letter, one lowercase letter, one number "/>
                             <br><br>
 
                     <input
@@ -77,8 +89,8 @@ include_once 'header.php';
 
                             <input
                                 id = "registrationBTN"
-                                class="buttonDesign"
-                                type = "button registrationBTN"
+                                class="buttonDesign registrationBTN"
+                                type = "button"
                                 value = "Register"
                                 onclick = "return regformhash(this.form,
                                    this.form.username,
