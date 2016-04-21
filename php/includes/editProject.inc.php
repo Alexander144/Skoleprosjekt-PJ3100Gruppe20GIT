@@ -23,6 +23,7 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
         $profileEditInfo =  filter_input(INPUT_POST, "infotextproject", FILTER_DEFAULT);
         $profileEditPicture =  filter_input(INPUT_POST, "picture", FILTER_DEFAULT);
         $profileEditLink =  filter_input(INPUT_POST, "link", FILTER_DEFAULT);
+
         $AddPeople =  filter_input(INPUT_POST, "AddPeople", FILTER_DEFAULT);
         $profileEditAddDocument =  filter_input(INPUT_POST, "document", FILTER_DEFAULT);
 
@@ -54,6 +55,10 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
             $result2->free();
         }
     }
+
+       
+        
+
        //var_dump($_SESSION['uploadImage']); die;
         //var_dump($_SESSION['uploadImageTmp']);die;
          /*if($updateEmailTxt == ""){
@@ -101,19 +106,24 @@ if (empty($error_msg)) {
             }
         }
 
-    
-         if(isset($_SESSION['deleteFile'])){
-             $insert_stmt = $mysqli->prepare("DELETE FROM documents (ProjectID) VALUES (?)");
-                $insert_stmt->bind_param('i',$ProjectID);
-         }
- 
+        //Delete Uploaded File
+        if(($_SESSION['deleteFile'])!= null){
+            $_SESSION['deleteFile'] = null;
+            $insert_stmt = $mysqli->prepare("DELETE FROM documents WHERE ProjectID = ?");
+                
+                $insert_stmt->bind_param ('i', $ProjectID);
+            if (! $insert_stmt->execute()) {
+                header('Location: ../error.php?err=Registration failure: INSERT');
+            }
+        }
+        
 
         
         //Upload file
         if($_SESSION['uploadFile']!=""){
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)"))
-        {
-            $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadFile']);
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)")){
+               $ProjectID = (int)$ProjectID;
+                $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadFile']);
              // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 $wasError = True;

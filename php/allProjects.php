@@ -29,7 +29,7 @@
       name="updateProfile_form">
 <!-- Entry of body content field for index below -->
     <?php //include_once 'menu.php'; ?>
-    <section id="mainContent" class="container col-12"> <!-- start Main Content -->
+    <!--<section id="mainContent" class="container col-12"> <!-- start Main Content -->
         <!-- start projects -->
         <div id="projects">
             
@@ -55,7 +55,7 @@
 
         </div><!--end projects-->
         
-    </section><!--end Main Content-->
+    <!--</section><!--end Main Content-->
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
@@ -152,7 +152,7 @@ function insertionSort(array) {
                 
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + projectSubject[i] + "</p>" + "<br>" + "<p>" +  "Likes: " + LikeValue[projectID[i]] + "</p>" + "<br>" + "<article>" + projectAbout[i] + "</article>" + "<br>");
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + projectSubject[i] + "</p>" + "<br>" + "<p>" + LikeValue[projectID[i]] + " Likes" + "</p>" + "<br>" + "<article>" + projectAbout[i] + "</article>" + "<br>");
                 
                 $newProject.append($newBox, $dislike);
             
