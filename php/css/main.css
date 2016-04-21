@@ -563,6 +563,14 @@ font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 200;
 }
 
+/*Someone Edit This one please*/
+#ProfileEditImage{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    position: absolute;
+    border: 6px solid black;
+}
 
 
 /***END EDIT PROFILE***/
@@ -757,6 +765,22 @@ font-family: 'Open Sans Condensed', sans-serif;
     margin-top: 30px;
     margin-bottom: 50px;
 }
+
+#imgContainer img{
+    width: 300px;
+    height: 300px;
+}
+
+
+/*Noen som vil fikse på desse 2?*/
+#projectDocument h3{
+    margin-top: 0;
+    border-bottom: 1px solid black;
+}
+
+#projectDocument{
+    border: 1px solid black;
+}
 /*** END PROJECT PAGE ***/
 
 
@@ -837,7 +861,6 @@ p{
     transition: all 2s;
 }
 
-
 #studentProfil {
         display: block;
         width: auto;
@@ -859,8 +882,6 @@ p{
 #aboutStudentH3 {
     margin: 0;
 }
-
-
 
 #studentProjectsH3 {
     margin: 0;
@@ -913,9 +934,6 @@ p{
     width: 365px;
 }
 
-
-
-
 #aboutSiteP{
     margin-left: auto;
     margin-right: auto;
@@ -941,7 +959,8 @@ p{
     text-align: center;
     line-height: 0;
 
-    
+}
+
 #likeContainerPPage {
     float: left;
 
