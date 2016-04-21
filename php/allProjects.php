@@ -385,11 +385,7 @@ function insertionSort(array) {
     </script><!--end script-->
     <!-- End of body content field -->
     <!-- Knapp funkjsonen-->
-    <!--<input class="smallUploadBtn" type="button"
-           value="Update"
-           onclick="return SearchOnProject(
-                    this.form,
-                    this.form.;" />-->
+
     </form>
 
     <?php else : ?>

@@ -4,8 +4,7 @@ include_once 'header.php';
 ?>
     <div id="addProject" class="addprojectcontainer">
         <?php if (login_check($mysqli) == true) : ?>
-            <!--<p>Velkommen
-                <?php //echo htmlentities($_SESSION['username']); ?>!</p>-->
+          
             <!-- Dette er brukerens profil-->
 
             <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
@@ -60,7 +59,7 @@ include_once 'header.php';
                             <option id="FilmTvSpill" class="addProjInput col-floatleft updatefield" value="FilmTvSpill" >Film/TV/Spill</option>
                               
                        </select>
-                       <!-- <input class="addProjInput col-floatleft updatefield" type="text" name="Avdeling" id="Avdeling" />-->
+
                     </div>
                     
                     <div id="publish" class="test321">
@@ -78,47 +77,12 @@ include_once 'header.php';
             </form>
                 </div>
                 
-            </div>
-<!--
-                           <p>Name:
-                                <input class="updatefield" type="text" name="name" id="name" />
-                                <br>
-                            </p>
-
-                            <p>Infotext:
-                                <textarea id="infotextproject" name="infotextproject" rows="20" cols="80" style="width: 415px; height: 136px; margin-top: 15px;; margin-bot: 15px;"></textarea>
-
-                                <p>Subject:
-                                    <input class="updatefield" type="text" name="subject" id="subject" />
-                                    <br>
-                                </p>
-
-                                <p>AddPeople:
-                                    <input class="updatefield" type="text" name="AddPeople" id="AddPeople" />
-                                    <br>
-                                    <br>
-                                </p>
-
-
-                                <input class="buttonDesign" type="button" value="Add project" onclick="return AddProjectForms(
-                                    this.form,
-                                   this.form.name,
-                                   this.form.subject,
-                                   this.form.infotext,
-                                   this.form.picture,
-                                   this.form.link,
-                                   this.form.date);" />
-
-            </form> -->
-    </div>
+                </div>
 
     <?php else : ?>
-        <p>
-            <span class="error">You are not authorized to access this page.</span> Please <a href="index.php" class="linkerStyle">login</a>.
-        </p>
-        <?php endif; ?>
 
-            <?php include_once 'footer.php'; ?>
+            <span class="error"><p>Du må være </span><a href="index.php" class="linkerStyle">logge inn </a>for å kunne legge til et prosjekt!</p>
+        <?php endif; ?>
 
 <script src="js/jquery.js"></script>
 <script>
@@ -128,3 +92,5 @@ include_once 'header.php';
         });
 
 </script>
+        
+<?php include_once 'footer.php'; ?>

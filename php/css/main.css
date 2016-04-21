@@ -345,6 +345,7 @@ body {
     background-color: rgb(253, 253, 248);
     clear: both;
     padding-top: 20px;
+    margin: auto;
 }
 
 .imgFooter {
@@ -564,12 +565,11 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #createProjectContainer {
-    width: 530px;
+    width: 600px;
     height: auto;
-    left: 40px;
+    margin-left: 50%;
     position: relative;
     display: block;
-    margin-right: 100px;
 }
 
 
@@ -615,6 +615,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #publish {
     margin-top: 50px;
+    margin-left: 10px;
 }
 
 #uploadCPBtn {
@@ -873,4 +874,8 @@ p{
 
 #ProfileBTN {
     margin: 0;
+}
+
+#loginDiv {
+    margin-left: 30%;
 }

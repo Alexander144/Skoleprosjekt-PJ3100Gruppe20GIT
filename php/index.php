@@ -4,47 +4,15 @@
 ?>
 <!-- Entry of body content field for index below -->
 <?php if (login_check($mysqli) == true) : ?>
-<section id="mainContent"> <!-- start Main Content -->
 
 <!-- start projects -->
-  <!--  <div id="projects">
-        <?php //$projectBox1; ?>
-    </div><!-- end projects
-
-</section> --><!-- end Main Content -->
-    
-    
-    
+        
      <?php include_once 'allProjects.php'; ?>
 
-
-<!--<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script>
-    //Get all projects:
-    var allProjects = 12; //Get value here
-
-    for(var i = 0; i < allProjects; i++){
-        var $newProject = $("<div>")
-            .addClass("col col-3 projectBoxes")
-                     
-            $("#projects").append($newProject);
-        }
-</script><!--end script-->
 <!-- End of body content field -->
 
-<?php include_once 'footer.php'; ?>
-        <!-- Knapp funkjsonen-->
-    <input class="smallUploadBtn" type="button"
-           value="Update"
-           onclick="return ProfileUpdateForms(
-                    this.form,
-                    this.form.picture,
-                    this.form.profileEditAboutMe,
-                    this.form.grades,
-                    this.form.cv);" />
 
-    <p>Return to <a href="login.php" class="linkerStyle">login page</a>
-    </p>
+        <!-- Knapp funkjsonen-->
     <?php else : ?>
     <p>
         <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
@@ -52,3 +20,5 @@
     <?php endif; ?>
     </body>
 </html>
+
+<?php include_once 'footer.php'; ?>
