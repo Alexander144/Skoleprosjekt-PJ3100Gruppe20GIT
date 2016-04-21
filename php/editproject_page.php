@@ -29,10 +29,31 @@
                 <h4>Om prosjektet:
                     <textarea id="infotextproject" name="infotextproject"><?php echo $projectEditInfotext; ?></textarea>
                 </h4>
-
+                <?php $_SESSION['i'] = 0; ?>
                 <h4>Legg til medstudenter:
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
-                    <input type = "submit" name = "addStudent" class="smallUploadBtn" value = "Legg til"/>
+                    <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til"/>
+                      <?php 
+                        $AddPeople = null;
+                      if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])){
+                        $AddPeople = $_POST['AddPeople'];
+                        include_once 'includes/editProject.inc.php';
+                        if($AddOtherUserID != null){
+                            
+                            $j =  $_SESSION['i'];
+                            $_SESSION[$StudentAdd[$j]] = $_POST['AddPeople'];
+                         
+                            
+                            echo $_SESSION[$StudentAdd[$j]];   
+                            $_SESSION['i']++;
+                        }
+                        echo $j = $_SESSION['i'];
+                         echo $_SESSION[$StudentAdd[0]];
+                         echo $_SESSION[$StudentAdd[1]];
+                        
+                }
+            
+            ?> 
                     <br>
                 </h4>
 

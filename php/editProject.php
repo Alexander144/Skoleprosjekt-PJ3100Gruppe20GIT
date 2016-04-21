@@ -48,7 +48,7 @@
 
                     <div id="addStudents" class="test321">
                         <p id="addStudentCP" class="col-floatleft">Legg til andre studenter:</p>
-                        <input id="addStudentCPTxt" class="col-floatright" type="text" name="Add Students">
+                        <input id="addStudentCPTxt"  class="col-floatright" type="text" name="Add Students">
                     </div>
                     <!--<?php echo $chooseStudent; ?>-->
 

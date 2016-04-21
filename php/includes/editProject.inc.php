@@ -15,7 +15,35 @@ $AddOtherUserID = "";
             $result->free();
         }
     }
-    
+
+    if(isset($AddPeople) ){
+        if($result2 = $mysqli->query("SELECT * FROM user")){
+        if($result2->num_rows){
+            
+            while ($row2 = $result2->fetch_object()) {
+               
+                if(!($username == $AddPeople||$AddPeople=="")&&$row2->Username == $AddPeople)
+                {
+                    $AddOtherUserID = $row2->ID;
+                    $error_msg = "";
+                    break;
+
+                }
+                elseif ($AddPeople=="") {
+                    $AddOtherUserID = null;
+                    break;
+                }
+                else{
+                    $error_msg = "Add User Not Valid";
+                    $AddOtherUserID = null;
+                    
+
+                }
+            }
+            $result2->free();
+        }
+    }
+}
 
 if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproject'])||isset($_POST['picture'])||isset($_POST['link'])||isset($_POST['AddPeople'])||isset($_POST['document'])) {
         $profileEditName =  filter_input(INPUT_POST, "name", FILTER_DEFAULT);
