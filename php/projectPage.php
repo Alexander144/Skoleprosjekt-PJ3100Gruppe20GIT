@@ -133,6 +133,15 @@
                             <?php echo $AboutProject ?>
                         </div>
                         
+                        <!-- Like container -->
+                        <div id="likeContainerPPage">
+                            <div id="likeBtnPPage" class="col col-3 likeBoxes" style="position: relative; top: 0px; z-index: 0; width: 50px; height: 50px; float: right; background-image: url(&quot;heart.png&quot;);">Like</div>
+                            <div class="col col-3 likeboxes" style="position: relative; top: 0px; z-index: 0; width: 50px; height: 50px; float: right; left: 0px; background-image: url(&quot;dislikeHeart.png&quot;); display: none;"></div>
+                        </div>
+                        <p style="text-align: center; font-size: 0.8em; font-style: italic; display: inline;">Likes: 0</p>
+                        <!-- Like container end -->
+
+                        
                         
 
                        <?php  if($OwnProject) { ?>
