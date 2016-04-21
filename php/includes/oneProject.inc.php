@@ -6,6 +6,7 @@ $peopleInProject = array();
 $error_msg = ""; 
 $count;
 $VideoInProject =  array();
+$projectImage = array();
 $OwnProject = false;
 if($result = $mysqli->query("SELECT ProjectID,Name, Subject, AboutProject FROM project")){
         if($count = $result->num_rows){
@@ -84,7 +85,7 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
 
             while ($row5 = $result5->fetch_object()) {
                 if($row5->ProjectID == $ProjectID){
-                    $projectImage = $row5->Picture;
+                    $projectImage[] = $row5->Picture;
 
                 }
 

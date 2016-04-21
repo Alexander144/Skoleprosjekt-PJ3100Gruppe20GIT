@@ -1,8 +1,8 @@
 <?php include_once 'header.php';
-      $ID = (int)$_GET['ID'];
-        $projectImage = 'defaultBilde.png';
-      $username = htmlentities($_SESSION['username']);
-      include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
+    $ID = (int)$_GET['ID'];
+    $projectImage = 'defaultBilde.png';
+    $username = htmlentities($_SESSION['username']);
+    include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
  ?>
     <?php if (login_check($mysqli) == true) : ?>
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
@@ -26,7 +26,10 @@
 
                         <div id="imgContainer">
 
-                            <img src="./<?php echo $projectImage; ?>"/>
+                          
+                            <?php for($i=0; $i<count($projectImage); $i++){
+                                echo '<img src="./' . $projectImage[$i] . '"/>';
+                            } ?>
 
                         
                             <!--Forsøk på å vise fleire bilder i ett prosjekt-->
