@@ -708,13 +708,17 @@ font-family: 'Open Sans Condensed', sans-serif;
 /*** PROJECT PAGE ***/
 
 #projectOne{
-    margin-left: 200px;
+    margin-left: 16%;
+}
+
+#projectDocument{
+    margin-top: 100px;
 }
 
 
 #projectTwo {
     border-left: solid black 1px;
-    padding-left: 250px;
+    padding-left: 19%;
     height: auto;
 }
 
