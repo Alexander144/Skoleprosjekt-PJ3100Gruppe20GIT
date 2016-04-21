@@ -32,11 +32,13 @@
 
                 <h4>Legg til medstudenter:
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
+                    <input type = "submit" name = "addStudent" class="smallUploadBtn" value = "Legg til"/>
                     <br>
                 </h4>
 
                 <h4>Link: (youtube.com/..)
                     <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
+                    <input type = "submit" name = "uploadVideo" class="smallUploadBtn" value = "Legg til"/>
                     <br><br>
                 </h4>
             </form>
