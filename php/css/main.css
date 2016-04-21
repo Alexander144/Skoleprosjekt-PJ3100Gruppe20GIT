@@ -422,6 +422,8 @@ body {
 
 #registration {
     width: 270px;
+    position: relative;
+    left: 25%;
 }
 
 
@@ -446,6 +448,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #registrationBTN {
     width: inherit;
+    text-align: center;
 }
 
 #registrationBTN:hover {

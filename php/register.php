@@ -18,7 +18,6 @@ include_once 'header.php';
         <!-- Registration form to be output if the POST variables are not
         set or if the registration script caused an error. -->
         <div id="registrationPage">
-        <h1>Register with us</h1>
         <?php
         if (!empty($error_msg)) {
             echo $error_msg;
@@ -42,6 +41,7 @@ include_once 'header.php';
                 name = "registration_form">
 
             <div id="registration">
+                        <h1>Register with us</h1>
                 <h3 id="registerh3">Registrer deg her</h3>
                     <input
                             placeholder="Username"
@@ -78,7 +78,7 @@ include_once 'header.php';
                             <input
                                 id = "registrationBTN"
                                 class="buttonDesign"
-                                type = "button"
+                                type = "button registrationBTN"
                                 value = "Register"
                                 onclick = "return regformhash(this.form,
                                    this.form.username,
