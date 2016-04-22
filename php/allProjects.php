@@ -155,10 +155,6 @@ function insertionSort(array) {
                    .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + projectSubject[i] + "</p>" + "<br>" + "<p>" + LikeValue[projectID[i]] + " Likes" + "</p>" + "<br>" + "<article>" + projectAbout[i] + "</article>" + "<br>");
                 
                 $newProject.append($newBox, $dislike);
-            
-            $newBox
-                .html("Like");
-
                 
 
                 $newBox

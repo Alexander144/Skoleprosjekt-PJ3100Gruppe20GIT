@@ -1,4 +1,8 @@
-<?php include_once 'header.php'; $ProjectID = $_SESSION["OwnProjectID"];?>
+<?php include_once 'header.php'; $ProjectID = $_SESSION["OwnProjectID"];
+$_SESSION['uploadFile'] ="";
+
+
+?>
     <?php if (login_check($mysqli) == true) : ?>
 
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">

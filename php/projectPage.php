@@ -16,7 +16,7 @@
             $email = htmlentities($_SESSION['email']);
              
              ?>
-                    <div id="projectOne" class="col col-projectOne">
+                    <div id="projectOne" class="col-projectOne">
 
 
                         <h3 id="prosjektTittel"><?php echo $Name ?></h3>
@@ -75,7 +75,7 @@
 
                                     var ytVid = "ytVid" + i;
 
-                                    $("#youtubeContainer").append('<div><iframe width="560" height="315" src=mySrc frameborder="0" id="ytVid" allowfullscreen></iframe></div>')
+                                    $("#youtubeContainer").append('<div><iframe width="560" height="315" left="50px src=mySrc frameborder="0" id="ytVid" allowfullscreen></iframe></div>')
                                     $("#youtubeContainer").append('<iframe src="http://www.youtube.com/embed/>' + link[i])
 
                                     var mySrc = "https://www.youtube.com/embed/" + link[i];
@@ -101,15 +101,17 @@
                         
                         <div id="projectDocument">
                             <h3>Prosjekt Dokumentasjon</h3>   
-                                <?php 
-
+                                <?php
+                            
                                 for($i=0; $i<count($projectFile); $i++){
+                                    
+                                    
                                     $fileMinusFilepath = $fileFileName[$i];
                                     $fileNameString = "project/" . $ID . "/";
                                     $trimmed = str_replace($fileNameString, "", $fileMinusFilepath);
 
                                     echo '<a href="./' . $projectFile[$i] . '"/>' . $trimmed . '</a></br>';
-
+                                    
                                 } ?>
                             
                         </div>
