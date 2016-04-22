@@ -286,6 +286,10 @@
         bottom: 0px;
     }
     
+    #likeValProj{
+        opacity: 0;
+    }
+    
     /** ADD PROJECT **/
     
     #addProjectContainer p{
