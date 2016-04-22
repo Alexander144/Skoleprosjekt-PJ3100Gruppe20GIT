@@ -191,6 +191,7 @@
     }
     
     .projectBoxes{
+        
     }
     
     .sortMenu{
@@ -236,6 +237,19 @@
     
     #searchProfile{
         padding-top: 40px;
+    }
+    
+    #aboutStudent{
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #studentProjectBoxes #projects{
+        padding-top: 10px;
     }
     
     /** ALL PROJECTS **/
@@ -329,8 +343,12 @@
         border-left: 0;
     }
     
+    #projectOne{
+        margin-left: 5%;
+    }
+    
     #prosjektTittel{
-        text-align: center;
+        text-align: left;
         font-size: 2em;
     }
     
@@ -359,10 +377,6 @@
     
     #loginFeide h1{
         font-size: 2em;
-    }
-    
-    #loginFeide{
-        top: 0;
     }
     
     #loginBtn{
