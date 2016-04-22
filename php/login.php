@@ -26,7 +26,7 @@ if (login_check($mysqli) == true) {
                         <br><br>
                     Password: <input id="password" class="textField" type="password" name="password"/>
                         <br><br>
-                    <input id="loginBtn" class="buttonDesign" type="button"
+                    <input id="loginBtn" class="buttonDesign" type="submit"
                            value="Login"
                            onclick="formhash(this.form, this.form.password);" />
 

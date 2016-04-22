@@ -29,7 +29,7 @@
                 method="post"
                 name="updateProfile_form">
             <input type="text" name="searchOnUser" id="searchOnUser" placeholder="Søk" />
-            <input type="button" class="smallUploadBtn" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk etter bruker"/>
+            <input type="button" class="smallUploadBtn" onclick="SearchOnProfile(this.form,this.form.searchOnUser);" value="Søk etter bruker" style="font-size: 10px; height:23px"/>
             </form>
         </div>
     </ul>
