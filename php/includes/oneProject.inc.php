@@ -7,6 +7,8 @@ $error_msg = "";
 $count;
 $VideoInProject =  array();
 $projectImage = array();
+$projectFile = array();
+$fileFileName = array();
 $OwnProject = false;
 if($result = $mysqli->query("SELECT ProjectID,Name, Subject, AboutProject FROM project")){
         if($count = $result->num_rows){
@@ -66,8 +68,9 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
             
             while ($row4 = $result4->fetch_object()) {
                 if($row4->ProjectID == $ProjectID){
-                    $projectFile = $row4->File;
-                    
+                    $projectFile[] = $row4->File;
+                    $fileFileName[] = $row4->File;
+
                }else{
                     //Se på denne Natalie, den endrer variablen til URL'en til den samme siden.
                     //Gir en falesafe for udefinerte variabler så den reloader siden.

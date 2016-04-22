@@ -19,7 +19,18 @@
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="chooseFile smallUploadBtn" type="file" name="picture" id="picture"/>
-                <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/><br>
+                <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/>
+                
+                <?php 
+                    include_once 'includes/editProfile.inc.php';
+                    $trimmedImg = str_replace("images/", "", $profileImage);
+
+                    echo $trimmedImg;
+                ?>
+                
+                <img id="ProfileEditImage"src="<?php echo $profileImage?>"/>
+                
+                <br>
                 <p class="edProfUnderHeading">Fjerne eksisterende bilde<p>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Delete File"/>
             </form><br><br><br>
@@ -27,7 +38,7 @@
 
             <?php
             
-                include_once 'includes/editProfile.inc.php';
+                
                 if(isset($_POST['uploadImg'])){
                     $uploadImage= $_FILES['picture']['name'];
                     $uploadImageTmp = $_FILES['picture']['tmp_name'];
@@ -51,7 +62,15 @@
 
             <form action = "editProfile.php" method="post"               enctype="multipart/form-data">
                 <input id="grades" class="chooseFile smallUploadBtn" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/><br>
+                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/>
+                <?php 
+                    include_once 'includes/editProfile.inc.php';
+                    $trimmedGrade = str_replace("grades_students/", "", $gradesFile);
+
+                    echo $trimmedGrade;
+                
+                ?>
+                <br>
 
                 <p class="edProfUnderHeading">Fjerne eksisterende karakterkort<p/>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/>
@@ -81,6 +100,16 @@
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input id="cv" class="chooseFile smallUploadBtn" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
                 <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Upload File"/>
+                
+                <?php
+
+                    include_once 'includes/editProfile.inc.php';
+                    $trimmedCV = str_replace("cv_students/", "", $cvFile);
+
+                    echo $trimmedCV;
+                
+                ?>
+                
                 <p class="edProfUnderHeading">Fjerne eksisterende CV</p>
                 <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Delete File"/>
             </form><br><br><br><br>

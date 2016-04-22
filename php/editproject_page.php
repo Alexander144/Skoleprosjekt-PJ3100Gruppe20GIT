@@ -9,6 +9,9 @@
                     $username = htmlentities($_SESSION['username']);
                     $user_id = htmlentities($_SESSION['user_id']); 
                     $email = htmlentities($_SESSION['email']);
+                    $deleteprojectUserName;
+                                $deleteStudentFromProject = false;
+                  
                     include_once 'includes/editProject.inc.php';
                 ?>
 
@@ -29,29 +32,52 @@
                 <h4>Om prosjektet:
                     <textarea id="infotextproject" name="infotextproject"><?php echo $projectEditInfotext; ?></textarea>
                 </h4>
-                <?php $_SESSION['i'] = 0; ?>
+                <?php $_SESSION['i']; ?>
                 <h4>Legg til medstudenter:
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
                     <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til"/>
                       <?php 
-                        $AddPeople = null;
-                      if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])){
+                        
+                      $exist = true;
+                      for($j = 0; $j<$countID; $j++){
+                           echo $projectUserName[$j];
+                           echo "            ";
+                           if($j != 0){
+                   echo "<input type = 'submit' name = 'deleteStudent".$j."' class='smallUploadBtn'  value = 'X'/>";
+                            if(isset($_POST["deleteStudent".$j.""])){
+                                $deleteprojectUserName = $projectUserName[$j];
+                                $deleteStudentFromProject = true;
+                                $_SESSION['deleteStudentFromProject'] = true;
+                                include_once 'includes/editProject.inc.php';
+                            }
+                        }
+
+                           if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])){
+                              $AddPeople = $_POST['AddPeople']; 
+                               include_once 'includes/editProject.inc.php';
+                                if( $AddPeople != $projectUserName[$j]  && $error_msg != ""){
+                                    $exist = false;                              
+                                }
+
+                           }
+                      }
+                      if($exist == false){
+                            echo "User not Exist";
+                      }
+
+                      /*if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])&& $_POST['AddPeople'] != $AddPeople){
                         $AddPeople = $_POST['AddPeople'];
                         include_once 'includes/editProject.inc.php';
                         if($AddOtherUserID != null){
                             
                             $j =  $_SESSION['i'];
-                            $_SESSION[$StudentAdd[$j]] = $_POST['AddPeople'];
-                         
-                            
-                            echo $_SESSION[$StudentAdd[$j]];   
+                       
                             $_SESSION['i']++;
                         }
-                        echo $j = $_SESSION['i'];
-                         echo $_SESSION[$StudentAdd[0]];
-                         echo $_SESSION[$StudentAdd[1]];
+                        echo $j = $_SESSION['i'];*/
                         
-                }
+                        
+                //}
             
             ?> 
                     <br>
@@ -135,6 +161,17 @@
             this.form.link,
             this.form.AddPeople);" /><!--end update btn-->
         </div><!--end edit project-->
+        
+        
+        32 knappen går tilbake til prosjekt siden du var på<br>
+        ekstremt jalla men det funker enn så lenge.
+        <form action="projectPage.php?ID=<?php echo $ProjectID ?>">
+            <input class="col buttonDesign" type="submit" value="<?php echo $ProjectID ?>" 
+                 name="ID"/>
+        </form>
+
+        <?php echo '<a href=projectPage.php?ID=' . $ProjectID .'>Tilbake til prosjekt siden</a>'  ?>
+
         <br><br>
 
         <!--<p>Return to <a href="login.php" class="linkerStyle">login page</a></p>-->

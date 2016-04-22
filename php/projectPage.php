@@ -11,7 +11,7 @@
                 <?php
             for($i=0; $i<count($VideoInProject); $i++){
             }
-            
+             $_SESSION['i'] = null;
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
              
@@ -100,8 +100,17 @@
                             <!-- end youtubescript og youtube html-->
                         
                         <div id="projectDocument">
+                            <h3>Prosjekt Dokumentasjon</h3>   
+                                <?php 
+
+                                for($i=0; $i<count($projectFile); $i++){
+                                    $fileMinusFilepath = $fileFileName[$i];
+                                    $trimmed = str_replace("project/32/", "", $fileMinusFilepath);
+
+                                    echo '<a href="./' . $projectFile[$i] . '"/>' . $trimmed . '</a></br>';
+
+                                } ?>
                             
-                            <a href="./<?php echo $projectFile; ?>" class="linkerStyle"><p>Prosjekt dokumentasjon</p></a>
                         </div>
                     </div>
                 

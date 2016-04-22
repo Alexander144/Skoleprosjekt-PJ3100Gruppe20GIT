@@ -15,6 +15,16 @@ $AddOtherUserID = "";
             $result->free();
         }
     }
+ if($result3 = $mysqli->query("SELECT * FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = '$ProjectID'")){
+        if($countID = $result3->num_rows){
+            
+            while ($row3 = $result3->fetch_object()) {
+                $projectUserName[] = $row3->Username;
+            }
+            $result3->free();
+        }
+    }
+
 
     if(isset($AddPeople) ){
         if($result2 = $mysqli->query("SELECT * FROM user")){
@@ -43,6 +53,19 @@ $AddOtherUserID = "";
             $result2->free();
         }
     }
+}
+ if(isset($deleteprojectUserName)){
+   
+            if($deleteStudentFromProject==true){
+            
+            if($insert_stmt = $mysqli->prepare("DELETE FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = ?, Username= ?")){
+                $id = 38; $lol = "lol";
+                $insert_stmt->bind_param ('is', $ProjectID,$deleteprojectUserName);
+            if (! $insert_stmt->execute()) {
+                header('Location: ../error.php?err=Registration failure: INSERT');
+             }
+         }
+     }
 }
 
 if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproject'])||isset($_POST['picture'])||isset($_POST['link'])||isset($_POST['AddPeople'])||isset($_POST['document'])) {
@@ -144,8 +167,7 @@ if (empty($error_msg)) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
-        
-
+       
         
         //Upload file
         if($_SESSION['uploadFile']!=""){
