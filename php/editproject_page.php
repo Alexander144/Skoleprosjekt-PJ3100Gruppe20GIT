@@ -116,7 +116,7 @@
             <input class="smallUploadBtn" type="file" name="file" id="file"/></h4>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
-            <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slette Alle filer"/>
+            <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slett filer"/>
 
             <?php
 
@@ -145,7 +145,7 @@
                 <input class="smallUploadBtn" type="file" name="picture" id="projectPicture" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
                 
                 <input class="smallUploadBtn" type="submit" name="uploadProjectImage" value="Last opp bilde"/>
-                <input class="smallUploadBtn" type="submit" name="deleteProjectImage" value="Slett Alle Bilder"/>
+                <input class="smallUploadBtn" type="submit" name="deleteProjectImage" value="Slett Bilder"/>
 
                 <?php
                     
@@ -177,20 +177,15 @@
             this.form.infotextproject,
             this.form.picture,
             this.form.link,
-            this.form.AddPeople);" /><!--end update btn-->
-        </div><!--end edit project-->
+            this.form.AddPeople);" />
+                <!--end update btn-->
+        </div>  <!--end edit project-->
         
-        
-        32 knappen går tilbake til prosjekt siden du var på<br>
-        ekstremt jalla men det funker enn så lenge.
-        <form action="projectPage.php?ID=<?php echo $ProjectID ?>">
-            <input class="col buttonDesign" type="submit" value="<?php echo $ProjectID ?>" 
-                 name="ID"/>
-        </form>
+<br/>  
+      
 
-        <?php echo '<a href=projectPage.php?ID=' . $ProjectID .'>Tilbake til prosjekt siden</a>'  ?>
-
-        <br><br>
+            <a id="tilbakeTilProsjekt" href="projectPage.php?ID=<?php echo $ProjectID ?>">
+                <div class="col buttonDesign"><p>tilbake til prosjekt</p></div></a>    
 
         <!--<p>Return to <a href="login.php" class="linkerStyle">login page</a></p>-->
         <?php else : ?>

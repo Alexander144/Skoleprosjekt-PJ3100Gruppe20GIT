@@ -800,6 +800,13 @@ font-family: 'Open Sans Condensed', sans-serif;
     border-bottom: 1px solid black;
     background-color: rgb(253, 253, 248);
 }
+
+#tilbakeTilProsjekt{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
 #youtubeLink{
     width: 267px;
 }
