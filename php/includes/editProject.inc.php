@@ -118,7 +118,7 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
     }
 
       
-        
+     $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
 
        //var_dump($_SESSION['uploadImage']); die;
         //var_dump($_SESSION['uploadImageTmp']);die;
@@ -132,7 +132,9 @@ if (empty($error_msg)) {
         $wasError = False;
 
         if ($insert_stmt = $mysqli->prepare("UPDATE project SET Name = (?), Subject = (?), AboutProject = (?) WHERE ProjectID = '$ProjectID'")) {
-
+            if($_SESSION['projectEditInfotext'] != $_POST['infotextproject']){
+                $profileEditInfo = $_POST['infotextproject'];
+            }
             $insert_stmt->bind_param('sss', $profileEditName, $profileEditSubject,$profileEditInfo); 
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
@@ -155,6 +157,7 @@ if (empty($error_msg)) {
                 echo '</script>';
                 //header('Location: ../error.php?err=Registration failure: INSERT userinproject2');
             }
+            //header("Refresh:0");
         }
     }
 

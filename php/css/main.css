@@ -36,7 +36,7 @@ body {
 
 .col-projectTwo {
     width: 295px;
-    float: left;
+    float: right;
 }
 
 .col-12 {
@@ -732,7 +732,9 @@ font-family: 'Open Sans Condensed', sans-serif;
 /*** PROJECT PAGE ***/
 
 #projectOne{
-    margin-left: 15%;
+    margin: 3%;
+    width: 60%;
+    padding: 10px;
 }
 
 
@@ -745,6 +747,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     border-left: solid black 1px;
     padding-left: 3%;
     height: auto;
+    float: right;
 }
 
 #emneProject{

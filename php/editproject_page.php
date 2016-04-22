@@ -1,6 +1,4 @@
 <?php include_once 'header.php'; $ProjectID = $_SESSION["OwnProjectID"];
-$_SESSION['uploadFile'] ="";
-
 
 ?>
     <?php if (login_check($mysqli) == true) : ?>
@@ -41,7 +39,7 @@ $_SESSION['uploadFile'] ="";
                 <?php $_SESSION['i']; ?>
                 <h4>Legg til medstudenter:
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
-                    <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til" onclick="window.location.reload()"">
+                    <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til">
                       <?php 
                         
                       $exist = true;
@@ -61,11 +59,11 @@ $_SESSION['uploadFile'] ="";
 
                            if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])){
                               $AddPeople = $_POST['AddPeople']; 
-                               include_once 'includes/editProject.inc.php';
+                               //include_once 'includes/editProject.inc.php';
                                 if( $AddPeople != $projectUserName[$j]  && $error_msg != ""){
                                     $exist = false;                              
                                 }
-
+                                //header("Refresh:0");
                            }
                       }
                       if($exist == false){
@@ -91,7 +89,7 @@ $_SESSION['uploadFile'] ="";
             
             ?> 
                     <br>
-                </h4>
+                
 
                 <h4>Link: (youtube.com/..)
                     <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
@@ -107,7 +105,7 @@ $_SESSION['uploadFile'] ="";
         <h4>Last opp fil:</h4>
         <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
 
-            <input class="smallUploadBtn" type="file" name="file" id="file"/>
+            <input class="smallUploadBtn" type="file" name="file" id="file"/></h4>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
             <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slette Alle filer"/>
@@ -153,6 +151,7 @@ $_SESSION['uploadFile'] ="";
                         move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
 
                         echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
+                        $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
                     }
                 if(isset($_POST['deleteProjectImage'])){
                     $_SESSION['deleteProjectImage'] = "1";
