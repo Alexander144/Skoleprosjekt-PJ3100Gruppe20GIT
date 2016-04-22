@@ -735,9 +735,12 @@ font-family: 'Open Sans Condensed', sans-serif;
     margin-left: 15%;
 }
 
+
 #projectDocument{
     margin-top: 100px;
+    width: inherit;
 }
+
 
 
 #projectTwo {
