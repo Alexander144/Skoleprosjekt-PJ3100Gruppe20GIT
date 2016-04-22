@@ -47,7 +47,7 @@
                 <?php $projectBox1; ?>
             </div><!--end projects-->
             
-            <a href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt"></a>
+            <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt" ></a>
         </div>
 
         </form>
