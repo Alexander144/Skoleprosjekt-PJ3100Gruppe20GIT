@@ -76,7 +76,7 @@ include_once 'header.php';
                             type = "password"
                             name = "password"
                             id = "password"
-                            title="Passwords must contain at least one uppercase letter, one lowercase letter, one number "/>
+                            title="Passwords must contain at least one uppercase letter, one lowercase letter and one number "/>
                             <br><br>
 
                     <input
@@ -97,9 +97,10 @@ include_once 'header.php';
                                    this.form.email,
                                    this.form.password,
                                    this.form.confirmpwd);" />
+                <p>Allerede registrert? <a href="login.php">Logg på</a></p>
             </div>
+            
         </form>
-        <p>Return to the <a href="login.php">login page</a>.</p>
         </div>
     </body>
 </html>

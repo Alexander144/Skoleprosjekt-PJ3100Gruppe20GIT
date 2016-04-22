@@ -10,7 +10,6 @@
             <div id="projectPage">
                 <?php
             for($i=0; $i<count($VideoInProject); $i++){
-                echo $VideoInProject[$i];
             }
             
             $user_id = htmlentities($_SESSION['user_id']);

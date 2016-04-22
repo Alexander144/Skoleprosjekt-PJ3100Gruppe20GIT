@@ -421,7 +421,7 @@ body {
 /*register page*/
 
 #registration {
-    width: 270px;
+    width: 350px;
     position: relative;
     left: 25%;
 }
@@ -442,7 +442,8 @@ font-family: 'Open Sans Condensed', sans-serif;
 .registerField {
     position: relative;
     top: 5px;
-    width: inherit;
+    width: 343px;
+    height: 30px;
 }
 
 
