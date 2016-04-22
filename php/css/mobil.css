@@ -114,6 +114,8 @@
     
     .nav li{
         font-size: 4em;
+        margin-bottom: 5px;
+        height: 40px;
     }
     
     #mainPageHeader img{

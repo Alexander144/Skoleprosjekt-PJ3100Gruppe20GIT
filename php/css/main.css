@@ -305,8 +305,11 @@ body {
     opacity: 0.8;
 }
 
+.aboutProjBox:hover{
+    opacity: 1;
+}
 .projectBoxes:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 .projectBoxes article{
