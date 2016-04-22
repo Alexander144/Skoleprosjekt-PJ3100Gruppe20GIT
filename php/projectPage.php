@@ -105,7 +105,8 @@
 
                                 for($i=0; $i<count($projectFile); $i++){
                                     $fileMinusFilepath = $fileFileName[$i];
-                                    $trimmed = str_replace("project/32/", "", $fileMinusFilepath);
+                                    $fileNameString = "project/" . $ID . "/";
+                                    $trimmed = str_replace($fileNameString, "", $fileMinusFilepath);
 
                                     echo '<a href="./' . $projectFile[$i] . '"/>' . $trimmed . '</a></br>';
 
