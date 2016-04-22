@@ -1,20 +1,29 @@
 <?php
 
-$projectEditInfotext;
+
 $error_msg = "";
 $AddOtherUserID = "";
+
  if($result = $mysqli->query("SELECT * FROM project WHERE ProjectID = '$ProjectID'")){
         if($result->num_rows){
             
             while ($row = $result->fetch_object()) {
                 $projectName = $row->Name;
                 $projectSubject = $row->Subject;
-                $projectEditInfotext = $row->AboutProject;
+                $oldprojectEdit = $_SESSION['OldprojectEditInfotext'];
+                $newprojectEdit = $_SESSION['projectEditInfotext'];
+                
+                $_SESSION['projectEditInfotext'] = $row->AboutProject;
+          
                                   
             }
             $result->free();
+
         }
+
     }
+
+    //$_SESSION['OldprojectEditInfotext'] = $_SESSION['projectEditInfotext'];
  if($result3 = $mysqli->query("SELECT * FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = '$ProjectID'")){
         if($countID = $result3->num_rows){
             
@@ -67,6 +76,7 @@ $AddOtherUserID = "";
          }
      }
 }
+            
 
 if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproject'])||isset($_POST['picture'])||isset($_POST['link'])||isset($_POST['AddPeople'])||isset($_POST['document'])) {
         $profileEditName =  filter_input(INPUT_POST, "name", FILTER_DEFAULT);
@@ -107,8 +117,8 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
         }
     }
 
-       
-        
+      
+     $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
 
        //var_dump($_SESSION['uploadImage']); die;
         //var_dump($_SESSION['uploadImageTmp']);die;
@@ -122,6 +132,9 @@ if (empty($error_msg)) {
         $wasError = False;
 
         if ($insert_stmt = $mysqli->prepare("UPDATE project SET Name = (?), Subject = (?), AboutProject = (?) WHERE ProjectID = '$ProjectID'")) {
+            if($_SESSION['projectEditInfotext'] != $_POST['infotextproject']){
+                $profileEditInfo = $_POST['infotextproject'];
+            }
             $insert_stmt->bind_param('sss', $profileEditName, $profileEditSubject,$profileEditInfo); 
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
@@ -139,9 +152,12 @@ if (empty($error_msg)) {
             $insert_stmt->bind_param('iis',$ProjectID,$AddOtherUserID,$AddOtherRole);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
-                echo "User are allready in this project";
+                echo '<script language="javascript">';
+                echo 'alert("User are allready in this project")';
+                echo '</script>';
                 //header('Location: ../error.php?err=Registration failure: INSERT userinproject2');
             }
+            //header("Refresh:0");
         }
     }
 
@@ -208,8 +224,6 @@ if (empty($error_msg)) {
             }
             }
         }
-
-
 
 
 /*if($wasError){header('Location: ../error.php?err=Registration failure: INSERT');}

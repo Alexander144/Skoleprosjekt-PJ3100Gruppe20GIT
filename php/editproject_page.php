@@ -1,4 +1,6 @@
-<?php include_once 'header.php'; $ProjectID = $_SESSION["OwnProjectID"];?>
+<?php include_once 'header.php'; $ProjectID = $_SESSION["OwnProjectID"];
+
+?>
     <?php if (login_check($mysqli) == true) : ?>
 
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
@@ -13,6 +15,8 @@
                                 $deleteStudentFromProject = false;
                   
                     include_once 'includes/editProject.inc.php';
+
+
                 ?>
 
                 <!-- Dette er brukerens profil-->
@@ -30,12 +34,12 @@
                 </h4>
 
                 <h4>Om prosjektet:
-                    <textarea id="infotextproject" name="infotextproject"><?php echo $projectEditInfotext; ?></textarea>
+                    <textarea id="infotextproject" id ="infotextproject" name="infotextproject"><?php echo $_SESSION['projectEditInfotext']; ?></textarea>
                 </h4>
                 <?php $_SESSION['i']; ?>
                 <h4>Legg til medstudenter:
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
-                    <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til"/>
+                    <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til">
                       <?php 
                         
                       $exist = true;
@@ -47,6 +51,7 @@
                             if(isset($_POST["deleteStudent".$j.""])){
                                 $deleteprojectUserName = $projectUserName[$j];
                                 $deleteStudentFromProject = true;
+
                                 $_SESSION['deleteStudentFromProject'] = true;
                                 include_once 'includes/editProject.inc.php';
                             }
@@ -54,15 +59,18 @@
 
                            if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])){
                               $AddPeople = $_POST['AddPeople']; 
-                               include_once 'includes/editProject.inc.php';
+                               //include_once 'includes/editProject.inc.php';
                                 if( $AddPeople != $projectUserName[$j]  && $error_msg != ""){
                                     $exist = false;                              
                                 }
-
+                                //header("Refresh:0");
                            }
                       }
                       if($exist == false){
-                            echo "User not Exist";
+                         echo '<script language="javascript">';
+                         echo 'alert("User not Exist")';
+                        echo '</script>';
+
                       }
 
                       /*if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])&& $_POST['AddPeople'] != $AddPeople){
@@ -81,7 +89,7 @@
             
             ?> 
                     <br>
-                </h4>
+                
 
                 <h4>Link: (youtube.com/..)
                     <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
@@ -97,12 +105,13 @@
         <h4>Last opp fil:</h4>
         <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
 
-            <input class="smallUploadBtn" type="file" name="file" id="file"/>
+            <input class="smallUploadBtn" type="file" name="file" id="file"/></h4>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
             <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slette Alle filer"/>
 
             <?php
+
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
                 $uploadFileTmp = $_FILES['file']['tmp_name'];
@@ -142,6 +151,7 @@
                         move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
 
                         echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
+                        $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
                     }
                 if(isset($_POST['deleteProjectImage'])){
                     $_SESSION['deleteProjectImage'] = "1";

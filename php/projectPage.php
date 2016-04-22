@@ -75,7 +75,7 @@
 
                                     var ytVid = "ytVid" + i;
 
-                                    $("#youtubeContainer").append('<div><iframe width="560" height="315" src=mySrc frameborder="0" id="ytVid" allowfullscreen></iframe></div>')
+                                    $("#youtubeContainer").append('<div><iframe width="560" height="315" left="50px src=mySrc frameborder="0" id="ytVid" allowfullscreen></iframe></div>')
                                     $("#youtubeContainer").append('<iframe src="http://www.youtube.com/embed/>' + link[i])
 
                                     var mySrc = "https://www.youtube.com/embed/" + link[i];
@@ -101,8 +101,8 @@
                         
                         <div id="projectDocument">
                             <h3>Prosjekt Dokumentasjon</h3>   
-                                <?php 
-                            if($projectFile[0]!=null){
+                                <?php
+                            
                                 for($i=0; $i<count($projectFile); $i++){
                                     
                                     
@@ -111,7 +111,7 @@
                                     $trimmed = str_replace($fileNameString, "", $fileMinusFilepath);
 
                                     echo '<a href="./' . $projectFile[$i] . '"/>' . $trimmed . '</a></br>';
-                                    }
+                                    
                                 } ?>
                             
                         </div>
