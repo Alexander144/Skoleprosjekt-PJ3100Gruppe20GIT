@@ -741,8 +741,6 @@ font-family: 'Open Sans Condensed', sans-serif;
     width: auto;
 }
 
-
-
 #projectTwo {
     border-left: solid black 1px;
     padding-left: 3%;
@@ -768,6 +766,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 #editProjectBtn{
     margin-top: 30px;
     margin-bottom: 50px;
+    width: inherit;
 }
 
 #imgContainer img{
