@@ -920,6 +920,7 @@ p{
 
 #ProfileBTN {
     margin: 0;
+    width: inherit;
 }
 
 #loginDiv {
