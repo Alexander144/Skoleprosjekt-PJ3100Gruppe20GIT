@@ -65,7 +65,7 @@ if (login_check($mysqli) == true) {
         <li id="profileLink" class="li-border navHoverEffect"><?php if (login_check($mysqli) == true) { echo '<a class="" href="userinfo_page.php">Min profil</a>';
             
         } else{
-            echo '<a id="menuInvisible" href="userinfo_page.php">Min profil</a>';
+            echo '<a id="" href="register.php">Registrer deg</a>';
             }
               ?>
         </li>
