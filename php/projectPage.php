@@ -101,8 +101,8 @@
                         
                         <div id="projectDocument">
                             <h3>Prosjekt Dokumentasjon</h3>   
-                                <?php 
-                            if($projectFile[0]!=null){
+                                <?php
+                            
                                 for($i=0; $i<count($projectFile); $i++){
                                     
                                     
@@ -111,7 +111,7 @@
                                     $trimmed = str_replace($fileNameString, "", $fileMinusFilepath);
 
                                     echo '<a href="./' . $projectFile[$i] . '"/>' . $trimmed . '</a></br>';
-                                    }
+                                    
                                 } ?>
                             
                         </div>
