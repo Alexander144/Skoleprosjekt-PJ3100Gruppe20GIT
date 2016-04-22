@@ -116,7 +116,7 @@
             <input class="smallUploadBtn" type="file" name="file" id="file"/></h4>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
-            <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slette Alle filer"/>
+            <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slett filer"/>
 
             <?php
 
@@ -145,7 +145,7 @@
                 <input class="smallUploadBtn" type="file" name="picture" id="projectPicture" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
                 
                 <input class="smallUploadBtn" type="submit" name="uploadProjectImage" value="Last opp bilde"/>
-                <input class="smallUploadBtn" type="submit" name="deleteProjectImage" value="Slett Alle Bilder"/>
+                <input class="smallUploadBtn" type="submit" name="deleteProjectImage" value="Slett Bilder"/>
 
                 <?php
                     
@@ -177,8 +177,9 @@
             this.form.infotextproject,
             this.form.picture,
             this.form.link,
-            this.form.AddPeople);" /><!--end update btn-->
-        </div><!--end edit project-->
+            this.form.AddPeople);" />
+                <!--end update btn-->
+        </div>  <!--end edit project-->
         
 <br/>  
       
