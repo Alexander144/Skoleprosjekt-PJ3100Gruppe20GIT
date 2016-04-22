@@ -361,11 +361,21 @@
         font-size: 2em;
     }
     
+    #loginFeide{
+        top: 0;
+    }
+    
     #loginBtn{
         width: 120px;
     }
     
     #registerBtn{
         width: 120px;
+    }
+    
+        
+    #loginDiv{
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
