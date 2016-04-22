@@ -32,7 +32,8 @@
                         <input id="subject" class="updatefield editProjInput" type="text" name="subject" value=<?php echo $projectSubject; ?>>
                     <br><br>
                 </h4>
-
+                </form>
+                <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
                 <h4>Om prosjektet:
                     <textarea id="infotextproject" id ="infotextproject" name="infotextproject"><?php echo $_SESSION['projectEditInfotext']; ?></textarea>
                 </h4>
@@ -96,7 +97,7 @@
                     <input type = "submit" name = "uploadVideo" class="smallUploadBtn" value = "Legg til"/>
                     <br><br>
                 </h4>
-            </form>
+            
 
         <!-- upload file -->
         <!-- Dette er de 2 knappene som ligger på toppen av siden for og laste opp filer
