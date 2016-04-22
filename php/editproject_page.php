@@ -12,7 +12,8 @@
                     $user_id = htmlentities($_SESSION['user_id']); 
                     $email = htmlentities($_SESSION['email']);
                     $deleteprojectUserName;
-                                $deleteStudentFromProject = false;
+                                $deleteStudentFromProject = false;   
+                                    
                   
                     include_once 'includes/editProject.inc.php';
 
@@ -44,42 +45,66 @@
                       <?php 
                         
                       $exist = true;
+                       
                       for($j = 0; $j<$countID; $j++){
-                           echo $projectUserName[$j];
+                        
+                           
                            echo "            ";
                            if($j != 0){
                    echo "<input type = 'submit' name = 'deleteStudent".$j."' class='smallUploadBtn'  value = 'X'/>";
+                    //var_dump($_SESSION['deleteStudentFromProject']); die;
                             if(isset($_POST["deleteStudent".$j.""])){
+                               
                                 $deleteprojectUserName = $projectUserName[$j];
                                 $deleteStudentFromProject = true;
-
+                                 $_SESSION['addStudentToProject'] = false;
                                 $_SESSION['deleteStudentFromProject'] = true;
-                                include_once 'includes/editProject.inc.php';
+                               
+                                $_SESSION['deleteStudentUsername'] = $projectUserName[$j];
+                                $_SESSION['deleteStudentProjectID'] = $ProjectID;
+
+                               echo '<script>parent.window.location.reload(true);</script>';
+                                //var_dump($_SESSION['deleteStudentFromProject']);die;
+                               //include_once 'includes/editProject.inc.php';
+                                var_dump($_SESSION['deleteStudentFromProject']);
                             }
-                        }
+                             
+                        }   
+                        echo $projectUserName[$j];
 
                            if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])){
                               $AddPeople = $_POST['AddPeople']; 
+                              //$_SESSION['deleteStudentFromProject'] = false;
+                               
                                //include_once 'includes/editProject.inc.php';
-                                if( $AddPeople != $projectUserName[$j]  && $error_msg != ""){
-                                    $exist = false;                              
+                                if( $AddPeople != $projectUserName[$j]  && $error_msg != "" ){
+                                   echo '<script language="javascript">';
+                                    echo 'alert("User are allready in this project")';
+                                     echo '</script>';
+                                    $_SESSION['addStudentToProject'] = false;
+
                                 }
-                                
+                                else{
+                                    $_SESSION['addStudentToProject'] = true;
+                                    
+                                }
+                               
+                                                                 
                                 //header("Refresh:0");
                            }
                       }
-                      if($exist == false){
-                         echo '<script language="javascript">';
-                         echo 'alert("User not Exist")';
-                        echo '</script>';
-                      }
-                      else{
+                      //if($exist == false){
+                       //  echo '<script language="javascript">';
+                        // echo 'alert("User not Exist")';
+                        //echo '</script>';
+                      //}
+                      //else{
                     /*echo "
               <script type=\"text/javascript\">
             window.location.reload(); 
             </script>";
            $_POST['addStudent'] ="";*/
-                      }
+                     // }
 
                       /*if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])&& $_POST['AddPeople'] != $AddPeople){
                         $AddPeople = $_POST['AddPeople'];

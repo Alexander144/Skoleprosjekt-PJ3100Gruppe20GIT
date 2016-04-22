@@ -63,19 +63,8 @@ $AddOtherUserID = "";
         }
     }
 }
- if(isset($deleteprojectUserName)){
-   
-            if($deleteStudentFromProject==true){
-            
-            if($insert_stmt = $mysqli->prepare("DELETE FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = ?, Username= ?")){
-                $id = 38; $lol = "lol";
-                $insert_stmt->bind_param ('is', $ProjectID,$deleteprojectUserName);
-            if (! $insert_stmt->execute()) {
-                //header('Location: ../error.php?err=Registration failure: INSERT');
-             }
-         }
-     }
-}
+      
+
             
 
 if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproject'])||isset($_POST['picture'])||isset($_POST['link'])||isset($_POST['AddPeople'])||isset($_POST['document'])) {
@@ -98,6 +87,7 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
                 if(!($username == $AddPeople||$AddPeople=="")&&$row2->Username == $AddPeople)
                 {
                     $AddOtherUserID = $row2->ID;
+                    //$_SESSION['addStudentToProject'] = true;
                     $error_msg = "";
                     break;
 
@@ -107,7 +97,7 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
                     break;
                 }
                 else{
-                    $error_msg = "Add User Not Valid";
+                    $error_msg = "";
                     $AddOtherUserID = null;
                     
 
@@ -120,12 +110,33 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
       
      $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
 
+        //if($_SESSION['deleteStudentUsername'] != null && $_SESSION['deleteStudentProjectID']!=null){
+           
        //var_dump($_SESSION['uploadImage']); die;
         //var_dump($_SESSION['uploadImageTmp']);die;
          /*if($updateEmailTxt == ""){
             $updateEmailTxt = $_SESSION['email'];*/
 if (empty($error_msg)) {
        
+        if( $_SESSION['deleteStudentFromProject'] == true){
+                //echo  $_SESSION['deleteStudentUsername'];
+                //echo  $_SESSION['deleteStudentProjectID'];
+                //die;
+                var_dump($_SESSION['deleteStudentFromProject']);
+            if($insert_stmt = $mysqli->prepare("DELETE userinproject FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = ? AND Username= ?")){
+                $id = 38; $lol = "lol";
+                $insert_stmt->bind_param ('is', $_SESSION['deleteStudentProjectID'],$_SESSION['deleteStudentUsername']);
+            if (! $insert_stmt->execute()) {
+                //header('Location: ../error.php?err=Registration failure: INSERT');
+              
+             }
+              
+                 $_SESSION['deleteStudentFromProject'] = false;
+                $_SESSION['deleteStudentUsername'] = null;
+                $_SESSION['deleteStudentProjectID'] = null;
+        // }
+ }
+}
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
         //Legger til project sitt emne og administrator
         
@@ -143,7 +154,7 @@ if (empty($error_msg)) {
 
         }
              $AddOtherRole = "";
-        if(!($AddOtherUserID == null)){
+        if(!($AddOtherUserID == null) && $_SESSION['addStudentToProject'] == true){
         if ($insert_stmt = $mysqli->prepare("INSERT INTO userinproject(ProjectID, UserID, Role) VALUES (?, ?, ?)")) {
            $ProjectID = (int)$ProjectID;
            $AddOtherUserID = (int)$AddOtherUserID;
@@ -152,15 +163,32 @@ if (empty($error_msg)) {
             $insert_stmt->bind_param('iis',$ProjectID,$AddOtherUserID,$AddOtherRole);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
-                echo '<script language="javascript">';
-                echo 'alert("User are allready in this project")';
-                echo '</script>';
-                //header('Location: ../error.php?err=Registration failure: INSERT userinproject2');
+             
+                
+        
+              
             }
+            else{
+                $AddOtherUserID = null;
+                //$_SESSION['addStudentToProject'] = true;
+                $_SESSION['addStudentToProject'] = false;
+               echo '<script>parent.window.location.reload(true);</script>';
+               echo '<script>parent.window.location.reload(true);</script>';
+            
+            
+           
+            }
+
             //header("Refresh:0");
         }
-    }
-
+    } 
+    else{
+        if($_SESSION['addStudentToProject'] == true){
+                echo '<script language="javascript">';
+                echo 'alert("User are not valid")';
+                echo '</script>';
+            }
+}
 
         //Youtube link
         if(! ($_POST['link']=="" )){
