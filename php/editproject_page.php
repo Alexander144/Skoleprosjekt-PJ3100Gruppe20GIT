@@ -74,6 +74,9 @@
 
                            if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])){
                               $AddPeople = $_POST['AddPeople']; 
+                               
+                               $_SESSION['AddStudentUsername'] = $AddPeople;
+                                $_SESSION['AddStudentProjectID'] = $ProjectID;
                               //$_SESSION['deleteStudentFromProject'] = false;
                                
                                //include_once 'includes/editProject.inc.php';
@@ -83,11 +86,10 @@
                                      echo '</script>';
                                     $_SESSION['addStudentToProject'] = false;
 
-                                }
-                                else{
+                                }else{
                                     $_SESSION['addStudentToProject'] = true;
-                                    
                                 }
+                                echo '<script>parent.window.location.reload(true);</script>';
                                
                                                                  
                                 //header("Refresh:0");

@@ -159,7 +159,8 @@ if (empty($error_msg)) {
            $ProjectID = (int)$ProjectID;
            $AddOtherUserID = (int)$AddOtherUserID;
            $AddOtherRole = "";
-           
+            $_SESSION['AddStudentUsername'] = $AddPeople;
+            $_SESSION['AddStudentProjectID'] = $ProjectID;
             $insert_stmt->bind_param('iis',$ProjectID,$AddOtherUserID,$AddOtherRole);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
@@ -171,24 +172,18 @@ if (empty($error_msg)) {
             else{
                 $AddOtherUserID = null;
                 //$_SESSION['addStudentToProject'] = true;
-                $_SESSION['addStudentToProject'] = false;
                echo '<script>parent.window.location.reload(true);</script>';
-               echo '<script>parent.window.location.reload(true);</script>';
+             
             
             
            
             }
+            $_SESSION['addStudentToProject'] == false;
 
             //header("Refresh:0");
         }
-    } 
-    else{
-        if($_SESSION['addStudentToProject'] == true){
-                echo '<script language="javascript">';
-                echo 'alert("User are not valid")';
-                echo '</script>';
-            }
-}
+    }
+ 
 
         //Youtube link
         if(! ($_POST['link']=="" )){
