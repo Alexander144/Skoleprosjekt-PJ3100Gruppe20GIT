@@ -13,6 +13,8 @@
                                 $deleteStudentFromProject = false;
                   
                     include_once 'includes/editProject.inc.php';
+
+
                 ?>
 
                 <!-- Dette er brukerens profil-->
@@ -30,12 +32,12 @@
                 </h4>
 
                 <h4>Om prosjektet:
-                    <textarea id="infotextproject" name="infotextproject"><?php echo $projectEditInfotext; ?></textarea>
+                    <textarea id="infotextproject" id ="infotextproject" name="infotextproject"><?php echo $_SESSION['projectEditInfotext']; ?></textarea>
                 </h4>
                 <?php $_SESSION['i']; ?>
                 <h4>Legg til medstudenter:
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
-                    <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til"/>
+                    <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til" onclick="window.location.reload()"">
                       <?php 
                         
                       $exist = true;
@@ -47,6 +49,7 @@
                             if(isset($_POST["deleteStudent".$j.""])){
                                 $deleteprojectUserName = $projectUserName[$j];
                                 $deleteStudentFromProject = true;
+
                                 $_SESSION['deleteStudentFromProject'] = true;
                                 include_once 'includes/editProject.inc.php';
                             }
@@ -62,7 +65,10 @@
                            }
                       }
                       if($exist == false){
-                            echo "User not Exist";
+                         echo '<script language="javascript">';
+                         echo 'alert("User not Exist")';
+                        echo '</script>';
+
                       }
 
                       /*if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])&& $_POST['AddPeople'] != $AddPeople){
@@ -103,6 +109,7 @@
             <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slette Alle filer"/>
 
             <?php
+
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
                 $uploadFileTmp = $_FILES['file']['tmp_name'];
