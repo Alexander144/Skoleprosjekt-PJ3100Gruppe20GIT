@@ -16,7 +16,7 @@
             $email = htmlentities($_SESSION['email']);
              
              ?>
-                    <div id="projectOne" class="col col-projectOne">
+                    <div id="projectOne" class="col-projectOne">
 
 
                         <h3 id="prosjektTittel"><?php echo $Name ?></h3>

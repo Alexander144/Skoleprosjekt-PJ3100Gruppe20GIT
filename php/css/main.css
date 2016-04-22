@@ -30,7 +30,7 @@ body {
 }
 
 .col-projectOne {
-    width: 44%;
+    width: auto;
     float: left;
 }
 
@@ -738,7 +738,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #projectDocument{
     margin-top: 100px;
-    width: inherit;
+    width: auto;
 }
 
 
