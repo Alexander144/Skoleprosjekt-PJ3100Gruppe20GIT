@@ -30,7 +30,7 @@ body {
 }
 
 .col-projectOne {
-    width: 400px;
+    width: auto;
     float: left;
 }
 
@@ -732,17 +732,18 @@ font-family: 'Open Sans Condensed', sans-serif;
 /*** PROJECT PAGE ***/
 
 #projectOne{
-    margin-left: 16%;
+    margin-left: 15%;
 }
+
 
 #projectDocument{
     margin-top: 100px;
+    width: auto;
 }
-
 
 #projectTwo {
     border-left: solid black 1px;
-    padding-left: 19%;
+    padding-left: 3%;
     height: auto;
 }
 
@@ -765,6 +766,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 #editProjectBtn{
     margin-top: 30px;
     margin-bottom: 50px;
+    width: inherit;
 }
 
 #imgContainer img{
@@ -917,6 +919,7 @@ p{
 
 #ProfileBTN {
     margin: 0;
+    width: inherit;
 }
 
 #loginDiv {

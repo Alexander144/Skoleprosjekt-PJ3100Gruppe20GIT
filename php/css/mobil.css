@@ -19,6 +19,11 @@
     }
     
     /** HEADER **/
+    
+    #headerMenu ul{
+        background-color: rgb(253, 253, 248);
+        text-decoration-color: black;
+    }
         
     .nav{
         display: block;
@@ -27,6 +32,7 @@
         font-size: 0.5em;
         text-align: center;
         margin: 0;
+        
     }
     
     .nav ul{
@@ -34,12 +40,15 @@
         width: 100%;
     }
     
+    .navHoverEffect:hover{
+        border: 1px solid rgb(253, 253, 248);
+    }
+    
     .nav li{
         width: 100%;
     }
     
     .nav a:hover{
-        background-color: rgb(253, 253, 248);
         color: rgb(000, 000, 000);
     }
     
@@ -73,16 +82,24 @@
         width: 100%;
         height: 100%;
         float: left;
+        margin-bottom: 50px;
 
     }
     
     #title{
         float: none;
+        margin-bottom: 20px;
     }
     
     #title h2{
         font-size: 5em;
         line-height: 0;
+        color: black;
+        text-decoration: none;
+    }
+    
+    #seProsjekter{
+        margin-top: 20px;
     }
     
     #mainPageHeader a{
@@ -91,6 +108,12 @@
         width: auto;
         margin-left: 0;
         margin-right: 0;
+        color: black;
+        margin-top: 5px;
+    }
+    
+    .nav li{
+        font-size: 4em;
     }
     
     #mainPageHeader img{
@@ -100,6 +123,20 @@
         height: 20%;
         margin-left: auto;
         margin-right: auto;
+    }
+    
+    /** INDEX **/
+    
+    #aboutSiteP{
+        width: auto;
+        font-size: 1em;
+    }
+    
+    #aboutSiteDiv{
+        margin-top: 0px;
+        margin-bottom: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     
     /** FOOTER **/
