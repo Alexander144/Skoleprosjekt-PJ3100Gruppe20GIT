@@ -9,6 +9,7 @@
             $username = htmlentities($_SESSION['username']);
             $user_id = htmlentities($_SESSION['user_id']);
             $email = htmlentities($_SESSION['email']);
+            $_SESSION['uploadCV']="";
          ?>
 
         <h2>Her kan <?php echo $username;?> redigere profilen sin</h2>
@@ -23,7 +24,8 @@
                 
                 <?php 
                     include_once 'includes/editProfile.inc.php';
-                    $trimmedImg = str_replace("images/", "", $profileImage);
+                    $trimmedImgPath = "images/" . $user_id . "/";
+                    $trimmedImg = str_replace($trimmedImgPath, "", $profileImage);
 
                     echo $trimmedImg;
                 ?>
@@ -65,7 +67,8 @@
                 <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/>
                 <?php 
                     include_once 'includes/editProfile.inc.php';
-                    $trimmedGrade = str_replace("grades_students/", "", $gradesFile);
+                    $trimmedGradePath = "grades_students/" . $user_id . "/";    
+                $trimmedGrade = str_replace($trimmedGradePath, "", $gradesFile);
 
                     echo $trimmedGrade;
                 
@@ -104,7 +107,8 @@
                 <?php
 
                     include_once 'includes/editProfile.inc.php';
-                    $trimmedCV = str_replace("cv_students/", "", $cvFile);
+                    $trimmedCVPath = "cv_students/" . $user_id . "/";
+                    $trimmedCV = str_replace($trimmedCVPath, "", $cvFile);
 
                     echo $trimmedCV;
                 
