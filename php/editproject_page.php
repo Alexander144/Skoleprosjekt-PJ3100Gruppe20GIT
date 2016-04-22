@@ -64,6 +64,7 @@
                                 if( $AddPeople != $projectUserName[$j]  && $error_msg != ""){
                                     $exist = false;                              
                                 }
+                                
                                 //header("Refresh:0");
                            }
                       }
@@ -71,7 +72,13 @@
                          echo '<script language="javascript">';
                          echo 'alert("User not Exist")';
                         echo '</script>';
-
+                      }
+                      else{
+                    /*echo "
+              <script type=\"text/javascript\">
+            window.location.reload(); 
+            </script>";
+           $_POST['addStudent'] ="";*/
                       }
 
                       /*if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])&& $_POST['AddPeople'] != $AddPeople){
