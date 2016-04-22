@@ -34,10 +34,7 @@ if (login_check($mysqli) == true) {
                           onclick="location.href='register.php';" value="Registrering" />
                 </form>
             </div>
-        </div>
-  </div>
-
-<?php
+                <?php
         if (login_check($mysqli) == true) {
                     
                         echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
@@ -47,4 +44,6 @@ if (login_check($mysqli) == true) {
                         echo '<p>Currently logged ' . $logged . '.</p>';
                 }
 ?>
+        </div>
+  </div>
 <?php include_once 'footer.php'; ?>
