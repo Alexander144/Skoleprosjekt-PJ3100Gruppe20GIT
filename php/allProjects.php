@@ -208,8 +208,6 @@ function insertionSort(array) {
                     });
                     }
             
-                
-                
                  
                 
                 //$newProject.append($ID);
@@ -266,13 +264,14 @@ function insertionSort(array) {
                     "top": "100px",
             });
             
-            $("p")
+            $(".projectBoxes p")
                 .css({
-                    /*"text-align": "center", 
+                    "text-align": "center", 
                     "font-size": "0.8em",
                     "font-style": "italic",
-                    "display": "inline"*/
+                    "display": "inline"
                    }); 
+        
             /*
                 $newBox.click(function(){
                     
