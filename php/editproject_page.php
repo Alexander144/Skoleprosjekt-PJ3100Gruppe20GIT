@@ -1,6 +1,4 @@
 <?php include_once 'header.php'; $ProjectID = $_SESSION["OwnProjectID"];
-$_SESSION['uploadFile'] ="";
-
 
 ?>
     <?php if (login_check($mysqli) == true) : ?>
