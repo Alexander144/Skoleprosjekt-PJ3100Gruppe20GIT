@@ -71,7 +71,7 @@ $AddOtherUserID = "";
                 $id = 38; $lol = "lol";
                 $insert_stmt->bind_param ('is', $ProjectID,$deleteprojectUserName);
             if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
+                //header('Location: ../error.php?err=Registration failure: INSERT');
              }
          }
      }

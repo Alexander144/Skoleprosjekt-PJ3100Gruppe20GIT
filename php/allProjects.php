@@ -69,6 +69,7 @@
         var $newProject = $("<div>");
         var $newBox = $("<div>");
         var $dislike = $("<div>");
+        var $overlayAbout = $("<div>");
         var LikevalueSort = <?php echo json_encode($likeValueSort); ?>;
         var LikeUp = <?php echo json_encode($LikeUp); ?>;
         var ProjectIDLike = <?php echo json_encode($ProjectIDLike); ?>;
@@ -146,21 +147,27 @@ function insertionSort(array) {
                
                 var $dislike = $("<div>")
                     .addClass("col col-3 likeboxes");
+            
+                var $overlayAbout = $("<div>")
+                    .addClass("col col-3 aboutProjBox")
                     
                      //$("#projects").append($newBox.html("hei"));
 
                 
             
                $newProject
-                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + projectSubject[i] + "</p>" + "<br>" + "<p>" + LikeValue[projectID[i]] + " Likes" + "</p>" + "<br>" + "<article>" + projectAbout[i] + "</article>" + "<br>");
+                   .html("<h1>" + projectName[i]+ "</h1>" + "<br>" + "<p>" + projectSubject[i] + "</p>" + "<br>" + "<p>" + LikeValue[projectID[i]] + " Likes" + "</p>" + "<br>" + "<article id='/aboutProjBox/'>" + /*projectAbout[i]*/ + "</article>" + "<br>");
                 
-                $newProject.append($newBox, $dislike);
+                $newProject.append($newBox, $dislike, $overlayAbout);
+            
+            $overlayAbout
+                .html("<article>" + projectAbout[i] + "</article>");
                 
 
                 $newBox
                     .css({
                         "position": "relative",
-                        "top": "0px",
+                        "top": "60px",
                         "z-index": "0",
                         "width": "50px",
                         "height": "50px",
@@ -169,7 +176,7 @@ function insertionSort(array) {
                         'background-image':'url(heart.png)',
                        // "margin-top": "25%"
                     });
-
+                
                     LikeUp = false;
                     for(var j = 0; j < ProjectIDLikeLength; j++){
                       
@@ -187,8 +194,8 @@ function insertionSort(array) {
                 $dislike
                     .css({
                         "position": "relative",
-                        "top": "0px",
-                        "z-index": "0",
+                        "top": "60px",
+                        "z-index": "999",
                         "width": "50px",
                         "height": "50px",
                         "background-color": "",
@@ -217,24 +224,29 @@ function insertionSort(array) {
                     //"position": "relative"
                 });
             
-            $("article").mouseover(function(){
+            $overlayAbout.mouseover(function(){
                 $(this)
                     .stop().fadeTo(500, 0.7);
                 
                 $(this)
                     .css({
-                        "z-index": "10000",
                         "font-size": "1em",
                         "text-align": "center", 
-                        "display": "inline",
-                        "top": "100px",
+                        "display": "block",
                         //"border": "1px solid black"
                     
                     });
 
             });
             
-            $("#projects article").mouseleave(function(){
+            $overlayAbout
+                .css({
+                    "z-index": "-5",
+                    "opacity": "0",
+                    "top": "-200px",
+            });
+            
+            $overlayAbout.mouseleave(function(){
                 $(this)
                     .stop().fadeTo(500, 0);
 
@@ -307,6 +319,26 @@ function insertionSort(array) {
                 
             });
             
+            $overlayAbout.on('click', function(e) {
+                if (e.target !== this)
+                return;
+                
+                    $.ajax({
+						url: 'projectPage.php',
+						data: 'ID='+$(this).data("ID"),
+						method: 'GET',
+						success: function (data) {
+                             window.location.href = this.url;
+                            console.log(data);
+
+						 // er er resultatet fra sql-spørringen
+						}
+						});
+                
+                
+                
+            });
+            
             $newBox.on('click', function(f){
                 if(f.target !== this)
                 return;
@@ -350,6 +382,7 @@ function insertionSort(array) {
                 $dislike.data("ID", projectID[i]);
                 $dislike.data("Username", Username);
                 $newProject.data("ID", projectID[i]);
+                $overlayAbout.data("ID", projectID[i]);
         
         };
         
