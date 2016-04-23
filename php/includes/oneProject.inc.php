@@ -94,7 +94,48 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
         }
 
     }
+  if($result6 = $mysqli->query("SELECT * FROM likes where Username = '$username' AND ProjectID = '$ID'")){
+ 
+        $i = 0;
+        if($count6 = $result6->num_rows){
+              
+            while ($row6 = $result6->fetch_object()) {
+                   $ProjectIDLike = $row6->ProjectID;
 
+                    
+                   $i++;
+            }
+            $result6->free();
+        }
+        else{
+            $count6 = 0;
+            $ProjectIDLike = null;
+
+        }
+       
+    }
+    if($result7 = $mysqli->query("SELECT * FROM project left join likes on project.ProjectID = likes.ProjectID WHERE project.ProjectID = '$ID'")){
+        $i = 0;
+        if($count7 = $result7->num_rows){
+            $likeValue = array();
+            while ($row7 = $result7->fetch_object()) {
+                     if(!(isset( $likeValue[$row7->ProjectID]))){
+                             $likeValue[$row7->ProjectID] = null;
+                     }
+                    if($row7->LikeValue==1){
+
+
+                        $likeValue[$row7->ProjectID]++;
+
+                    }
+
+
+                    
+                   $i++;
+            }
+            $result7->free();
+        }
+    } 
 if (isset($_POST['infotext'])) {
 	    $infotext = filter_input(INPUT_POST, 'infotext', FILTER_SANITIZE_STRING);
         die;

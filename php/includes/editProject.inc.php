@@ -8,9 +8,11 @@ $AddOtherUserID = "";
         if($result->num_rows){
             
             while ($row = $result->fetch_object()) {
-                $projectName = $row->Name;
-                $projectSubject = $row->Subject;
-                $oldprojectEdit = $_SESSION['OldprojectEditInfotext'];
+                 $_SESSION['projectName'] = $row->Name;
+
+                $_SESSION['projectSubject'] = $row->Subject;
+
+                
                 $newprojectEdit = $_SESSION['projectEditInfotext'];
                 
                 $_SESSION['projectEditInfotext'] = $row->AboutProject;
@@ -79,37 +81,11 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
 
 
 
-        if($result2 = $mysqli->query("SELECT * FROM user")){
-        if($result2->num_rows){
-            
-            while ($row2 = $result2->fetch_object()) {
-               
-                if(!($username == $AddPeople||$AddPeople=="")&&$row2->Username == $AddPeople)
-                {
-                    $AddOtherUserID = $row2->ID;
-                    //$_SESSION['addStudentToProject'] = true;
-                    $error_msg = "";
-                    break;
-
-                }
-                elseif ($AddPeople=="") {
-                    $AddOtherUserID = null;
-                    break;
-                }
-                else{
-                    $error_msg = "";
-                    $AddOtherUserID = null;
-                    
-
-                }
-            }
-            $result2->free();
-        }
-    }
-
+      
       
      $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
-
+      $_SESSION['projectSubject'] = $_POST['subject'];
+      $_SESSION['projectName'] = $_POST['name'];
         //if($_SESSION['deleteStudentUsername'] != null && $_SESSION['deleteStudentProjectID']!=null){
            
        //var_dump($_SESSION['uploadImage']); die;
@@ -143,8 +119,10 @@ if (empty($error_msg)) {
         $wasError = False;
 
         if ($insert_stmt = $mysqli->prepare("UPDATE project SET Name = (?), Subject = (?), AboutProject = (?) WHERE ProjectID = '$ProjectID'")) {
-            if($_SESSION['projectEditInfotext'] != $_POST['infotextproject']){
+            if($_SESSION['projectEditInfotext'] != $_POST['infotextproject'] || $_SESSION['projectSubject'] != $_POST['subject']){
                 $profileEditInfo = $_POST['infotextproject'];
+                 $profileEditName = $_POST['name'];
+                $profileEditSubject = $_POST['subject'];
             }
             $insert_stmt->bind_param('sss', $profileEditName, $profileEditSubject,$profileEditInfo); 
             // Execute the prepared query.
@@ -153,36 +131,8 @@ if (empty($error_msg)) {
             }
 
         }
-             $AddOtherRole = "";
-        if(!($AddOtherUserID == null) && $_SESSION['addStudentToProject'] == true){
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO userinproject(ProjectID, UserID, Role) VALUES (?, ?, ?)")) {
-           $ProjectID = (int)$ProjectID;
-           $AddOtherUserID = (int)$AddOtherUserID;
-           $AddOtherRole = "";
-            $_SESSION['AddStudentUsername'] = $AddPeople;
-            $_SESSION['AddStudentProjectID'] = $ProjectID;
-            $insert_stmt->bind_param('iis',$ProjectID,$AddOtherUserID,$AddOtherRole);
-            // Execute the prepared query.
-            if (! $insert_stmt->execute()) {
+      
              
-                
-        
-              
-            }
-            else{
-                $AddOtherUserID = null;
-                //$_SESSION['addStudentToProject'] = true;
-               echo '<script>parent.window.location.reload(true);</script>';
-             
-            
-            
-           
-            }
-            $_SESSION['addStudentToProject'] == false;
-
-            //header("Refresh:0");
-        }
-    }
  
 
         //Youtube link
@@ -197,7 +147,7 @@ if (empty($error_msg)) {
         }
 
         //Delete Uploaded File
-        if(($_SESSION['deleteFile'])!= ""){
+        if(isset($_SESSION['deleteFile'])!= ""){
             $_SESSION['deleteFile'] = "";
             $insert_stmt = $mysqli->prepare("DELETE FROM documents WHERE ProjectID = ?");
                 
@@ -224,7 +174,7 @@ if (empty($error_msg)) {
         }
 
         //Delete Uploaded projectimage
-        if(($_SESSION['deleteProjectImage'])!= ""){
+        if(isset($_SESSION['deleteProjectImage'])!= ""){
             $_SESSION['deleteProjectImage'] = "";
             $insert_stmt = $mysqli->prepare("DELETE FROM pictures WHERE ProjectID = ?");
                 

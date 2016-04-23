@@ -23,29 +23,32 @@
                 <!-- Dette er brukerens profil-->
                 <h2>Redigere prosjekt</h2>
                 <br>
-
+</form> <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
                 <h4>Navn:
-                    <input id="name" class="updatefield editProjInput" type="text" name="name" value=<?php echo $projectName; ?>>
+                    <input id="name" class="updatefield editProjInput" type="text" name="name" value=<?php echo $_SESSION['projectName']; ?>>
                     <br>
                 </h4>
 
                 <h4>Emne:
-                        <input id="subject" class="updatefield editProjInput" type="text" name="subject" value=<?php echo $projectSubject; ?>>
+                        <input id="subject" class="updatefield editProjInput" type="text" name="subject" value=<?php echo $_SESSION['projectSubject']; ?>>
                     <br><br>
                 </h4>
-                </form>
-                <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
+                
+               
                 <h4>Om prosjektet:
                     <textarea id="infotextproject" id ="infotextproject" name="infotextproject"><?php echo $_SESSION['projectEditInfotext']; ?></textarea>
                 </h4>
                 <?php $_SESSION['i']; ?>
                 <h4>Legg til medstudenter:
+               
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
                     <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til">
+
                       <?php 
                         
                       $exist = true;
-                       
+                       $_SESSION['addStudentToProject'] = false; 
+
                       for($j = 0; $j<$countID; $j++){
                         
                            
@@ -70,16 +73,18 @@
                             }
                              
                         }   
-                        echo $projectUserName[$j];
+                        
+                       
+
 
                            if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])){
                               $AddPeople = $_POST['AddPeople']; 
-                               
+                              $AddOtherUserID = $AddPeople;
                                $_SESSION['AddStudentUsername'] = $AddPeople;
                                 $_SESSION['AddStudentProjectID'] = $ProjectID;
                               //$_SESSION['deleteStudentFromProject'] = false;
                                
-                               //include_once 'includes/editProject.inc.php';
+                               //include_once 'includes/AddUserInProject.inc.php';
                                 if( $AddPeople != $projectUserName[$j]  && $error_msg != "" ){
                                    echo '<script language="javascript">';
                                     echo 'alert("User are allready in this project")';
@@ -88,13 +93,17 @@
 
                                 }else{
                                     $_SESSION['addStudentToProject'] = true;
+                                        $AddPeople =  filter_input(INPUT_POST, "AddPeople", FILTER_DEFAULT);
+                                        include_once 'includes/AddUserToProject.inc.php';
+
                                 }
-                                echo '<script>parent.window.location.reload(true);</script>';
+                                  
                                
                                                                  
                                 //header("Refresh:0");
-                           }
+                           }echo $projectUserName[$j];
                       }
+                     
                       //if($exist == false){
                        //  echo '<script language="javascript">';
                         // echo 'alert("User not Exist")';
@@ -122,7 +131,7 @@
                         
                 //}
             
-            ?> 
+            ?>   
                     <br>
                 
 
@@ -155,13 +164,17 @@
                  mkdir("project/$ProjectID/");
                 }
                 move_uploaded_file($uploadFileTmp, $_SESSION['uploadFile'] ="project/$ProjectID/$uploadFile");
-
+                if( $uploadFile != null){
+                echo "Filen du har valgt: "; echo $uploadFile;
+            }
+                $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
+                         $_SESSION['projectSubject'] = $_POST['subject'];
                 }
             if(isset($_POST['deleteFile'])){
                 $_SESSION['deleteFile'] = "1";
             }
             ?> 
-        </form><br>
+        <br>
         <!--end Upload File-->
 
         <!--Start updatePhoto-->
@@ -180,18 +193,22 @@
                         $uploadProjectImage= $_FILES['picture']['name'];
                         $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
 
+
                     if ( ! is_dir("project/$ProjectID/")) {
                         mkdir("project/$ProjectID/");
                     }
                         move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
-
+                          
                         echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
                         $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
+                         $_SESSION['projectSubject'] = $_POST['subject'];
                     }
                 if(isset($_POST['deleteProjectImage'])){
                     $_SESSION['deleteProjectImage'] = "1";
+                    $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
+                         $_SESSION['projectSubject'] = $_POST['subject'];
                 }
-                ?>
+                ?></form>
             </form>
         </div><!--end updatePhoto-->
         <br><br>
