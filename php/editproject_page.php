@@ -23,7 +23,7 @@
                 <!-- Dette er brukerens profil-->
                 <h2>Redigere prosjekt</h2>
                 <br>
-</form> <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
+</form> <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
                 <h4>Navn:
                     <input id="name" class="updatefield editProjInput" type="text" name="name" value=<?php echo $_SESSION['projectName']; ?>>
                     <br>
@@ -69,7 +69,7 @@
                                echo '<script>parent.window.location.reload(true);</script>';
                                 //var_dump($_SESSION['deleteStudentFromProject']);die;
                                //include_once 'includes/editProject.inc.php';
-                                var_dump($_SESSION['deleteStudentFromProject']);
+                                
                             }
                              
                         }   
@@ -86,11 +86,7 @@
                                
                                //include_once 'includes/AddUserInProject.inc.php';
                                 if( $AddPeople != $projectUserName[$j]  && $error_msg != "" ){
-                                   echo '<script language="javascript">';
-                                    echo 'alert("User are allready in this project")';
-                                     echo '</script>';
-                                    $_SESSION['addStudentToProject'] = false;
-
+                            
                                 }else{
                                     $_SESSION['addStudentToProject'] = true;
                                         $AddPeople =  filter_input(INPUT_POST, "AddPeople", FILTER_DEFAULT);
@@ -147,7 +143,7 @@
             Det under trenger Stilsetting og fiksing av variabler. Rett og slett en ferdigstilling-->
 
         <h4>Last opp fil:</h4>
-        <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
+        <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
 
             <input class="smallUploadBtn" type="file" name="file" id="file"/></h4>
 

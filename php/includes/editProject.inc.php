@@ -185,7 +185,7 @@ if (empty($error_msg)) {
         }
     
     //Upload projectimage
-    if(($_SESSION['uploadProjectImage'])!=""){
+    if(isset($_SESSION['uploadProjectImage'])!=""){
             if ($insert_stmt = $mysqli->prepare("INSERT INTO pictures(ProjectID, Picture) VALUES (?, ?)")){
                 $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadProjectImage']);
              // Execute the prepared query.
@@ -199,8 +199,7 @@ if (empty($error_msg)) {
         }
 
 
-/*if($wasError){header('Location: ../error.php?err=Registration failure: INSERT');}
-    else {header('Location: ./editproject_page.php');}*/
+
 
 
 
