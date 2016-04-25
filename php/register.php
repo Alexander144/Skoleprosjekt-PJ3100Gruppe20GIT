@@ -50,7 +50,6 @@ include_once 'header.php';
                 name = "registration_form">
 
             <div id="registration">
-                        <h1>Register with us</h1>
                 <h3 id="registerh3">Registrer deg her</h3>
                     <input
                             placeholder="Username"

@@ -543,6 +543,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 #UpdateBTN {
     margin-top: 40px;
     background-color: rgb(253, 253, 248);
+    margin-left: 100px;
 }
 
 .chooseFile{
@@ -557,7 +558,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 }
 .addProfilInput{
-    width: 375px;
+    width: 150px;
     height: 20px;
     border: none;
     border-bottom: 1px solid black;
@@ -567,11 +568,13 @@ font-family: 'Open Sans Condensed', sans-serif;
 .edProfMainHeading{
     font-size: 1em;
     font-weight: 700;
+    line-height: 0;
 }
 
 .edProfUnderHeading{
     font-size: 1em;
     font-weight: 200;
+    line-height: 0;
 }
 
 /*Someone Edit This one please*/
@@ -870,6 +873,10 @@ p{
     color: rgb(120, 120, 120);
 }
 
+.smallUploadBtn #editProfileDeleteCv{
+    margin-top: 0;
+}
+
 .smallUploadBtn{
     background-color: rgb(253, 253, 248);
     margin-top: 8px;
@@ -995,4 +1002,12 @@ p{
     margin-top: 10px;
     margin-bottom: 50px;
     width: inherit;
+}
+
+.editProfileClass {
+    margin-left: 100px;
+}
+
+#updatePasswordTxt {
+    width: 100px;
 }
