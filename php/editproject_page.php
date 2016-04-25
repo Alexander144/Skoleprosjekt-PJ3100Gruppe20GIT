@@ -129,11 +129,13 @@
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
                 $uploadFileTmp = $_FILES['file']['tmp_name'];
-                    $_SESSION['uploadFile'] = $uploadFile;
+                   // $_SESSION['uploadFile'] = $uploadFile;
                 if ( ! is_dir("project/$ProjectID/")) {
                  mkdir("project/$ProjectID/");
                 }
-                move_uploaded_file($uploadFileTmp,  $_SESSION['uploadFile'] ="project/$ProjectID/$uploadFile");
+
+                move_uploaded_file($uploadFileTmp, $_SESSION['uploadFile'] ="project/$ProjectID/$uploadFile");
+
                 if( $uploadFile != null){
                 echo "Filen du har valgt: "; echo $uploadFile;
             }
@@ -145,6 +147,7 @@
             }
             ?> 
         <br>
+        </form>
         <!--end Upload File-->
 
         <!--Start updatePhoto-->
@@ -179,7 +182,7 @@
                          $_SESSION['projectSubject'] = $_POST['subject'];
                 }
                 ?></form>
-            </form>
+            
         </div><!--end updatePhoto-->
         <br><br>
 
