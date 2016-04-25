@@ -52,34 +52,34 @@ include_once 'header.php';
             <div id="registration">
                 <h3 id="registerh3">Registrer deg her</h3>
                     <input
-                            placeholder="Username"
+                            placeholder="Brukernavn"
                             class = "registerField" 
                             type = "text"
                             name = "username"
                             id = "username"
-                            title= "Usernames may contain only digits, upper and lowercase letters and underscores"/>
+                            title= "Brukernavn kan bare inneholde tall, små og store bokstaver"/>
                             <br><br>
 
                     <input
-                            placeholder="Email"
+                            placeholder="Epost"
                             class = "registerField"
                             type = "text"
                             name = "email"
                             id = "email"
-                            title = "Emails must have a valid email format"/>
+                            title = "Epost må ha et gyldig epost format"/>
                             <br><br>
 
                     <input
-                            placeholder="Password"
+                            placeholder="Passord"
                             class = "registerField"
                             type = "password"
                             name = "password"
                             id = "password"
-                            title="Passwords must contain at least one uppercase letter, one lowercase letter and one number "/>
+                            title="Passordet må inneholde minst et tall, en stor og en liten bokstav"/>
                             <br><br>
 
                     <input
-                            placeholder="Confirm password"
+                            placeholder="Bekreft passord"
                             class = "registerField"
                             type = "password"
                             name = "confirmpwd"
@@ -90,7 +90,7 @@ include_once 'header.php';
                                 id = "registrationBTN"
                                 class="buttonDesign registrationBTN"
                                 type = "button"
-                                value = "Register"
+                                value = "Registrer"
                                 onclick = "return regformhash(this.form,
                                    this.form.username,
                                    this.form.email,
