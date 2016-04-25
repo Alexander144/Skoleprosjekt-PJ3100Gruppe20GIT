@@ -110,7 +110,7 @@ if (empty($error_msg)) {
                 //echo  $_SESSION['deleteStudentUsername'];
                 //echo  $_SESSION['deleteStudentProjectID'];
                 //die;
-                var_dump($_SESSION['deleteStudentFromProject']);
+              
             if($insert_stmt = $mysqli->prepare("DELETE userinproject FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = ? AND Username= ?")){
                 $id = 38; $lol = "lol";
                 $insert_stmt->bind_param ('is', $_SESSION['deleteStudentProjectID'],$_SESSION['deleteStudentUsername']);
