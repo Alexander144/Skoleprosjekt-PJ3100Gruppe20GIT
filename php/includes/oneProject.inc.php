@@ -1,4 +1,4 @@
-
+﻿
 
 <?php
 
@@ -82,7 +82,7 @@ if (empty($error_msg)) {
                 $error = true;
              }
              else{
-            //echo '<script>parent.window.location.replace("./index.php");</script>';
+            //echo '<script>parent.window.location.replace("./allProjects.php");</script>';
         }
     }
     if( $error == false){
