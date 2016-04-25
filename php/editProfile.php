@@ -3,7 +3,7 @@
 <?php if (login_check($mysqli) == true) : ?>
     
 
-    <div id="updateProfile" class="col editProfileClass">
+    <div id="updateProfile" class="editProfileClass">
 
         <?php
             $username = htmlentities($_SESSION['username']);
@@ -16,7 +16,7 @@
 
         <!--Start updatePhoto-->
         <div id="updatePhoto">
-            <p class="edProfMainHeading">Last opp bilde av deg selv</p>
+            <p id="editProfilePicP" class="edProfMainHeading">Last opp bilde av deg selv</p>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="chooseFile smallUploadBtn" type="file" name="picture" id="picture"/>
@@ -60,7 +60,7 @@
 
         <!--updateGrades-->
         <div id="updateGrades">
-            <p class="edProfMainHeading">Last opp karakterkortet ditt</p>
+            <p id="updateProfileGrades" class="edProfMainHeading">Last opp karakterkortet ditt</p>
 
             <form action = "editProfile.php" method="post"               enctype="multipart/form-data">
                 <input id="grades" class="chooseFile smallUploadBtn" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
@@ -98,7 +98,7 @@
 
         <!--Start updateCV-->
         <div id="updateCV">
-            <p class="edProfMainHeading">Last opp CV</p>
+            <p id="editProfileCV" class="edProfMainHeading">Last opp CV</p>
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input id="cv" class="chooseFile smallUploadBtn" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
@@ -135,19 +135,22 @@
         </div><!--end updateCV-->
 
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
-            <p class="edProfMainHeading">Informasjon om deg</p>
-            <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
+            <div id="updateDescProfileDiv" class="test321">    
+            <p id="updateProfileDescP" class="edProfMainHeading">Informasjon om deg</p>
+            <textarea name="profileEditAboutMe" id="profileEditAboutMe" class="test321"><?php echo $profileEditAboutMe; ?></textarea>
+            </div>
             
-            <div id="updateEmailDiv">
-            <p id="updateEmailP" class="marginMobile edProfMainHeading">Oppdater mailen din</p>
-            <input id="updateEmailTxt" class="addProfilInput" name = "updateEmailTxt" type="text" />
+            <div id="updateEmailDiv" class="test321">
+                
+            <p id="updateEmailP" class="marginMobile edProfMainHeading col-floatleft">Oppdater mailen din</p>
+            <input id="updateEmailTxt" class="addProfilInput col-floatleft" name = "updateEmailTxt" type="text" />
             </div>
             
             <br>
 
-            <div id="updatePasswordDiv">
-            <p id="updatePasswordP" class="marginMobile edProfMainHeading">Oppdater passord</p>
-            <input id="updatePasswordTxt" class="addProfilInput" type="text" />
+            <div id="updatePasswordDiv" class="test321">
+            <p id="updatePasswordP" class="marginMobile edProfMainHeading col-floatleft">Oppdater passord</p>
+            <input id="updatePasswordTxt" class="addProfilInput col-floatleft" type="text" />
             </div>
 
     </div><!--end updateProfile-->

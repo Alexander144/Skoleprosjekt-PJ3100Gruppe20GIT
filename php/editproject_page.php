@@ -37,6 +37,7 @@
                
                 <h4>Om prosjektet:
                     <textarea id="infotextproject" id ="infotextproject" name="infotextproject"><?php echo $_SESSION['projectEditInfotext']; ?></textarea>
+                    
                 </h4>
                 <?php $_SESSION['i']; ?>
                 <h4>Legg til medstudenter:

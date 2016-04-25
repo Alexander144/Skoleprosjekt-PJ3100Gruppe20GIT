@@ -137,12 +137,6 @@
                         }
                         ?>
                         </div>
-                        
-                        <div id="tutorProject">
-                            <h3 id="tutorProjectP">Veileder/lærer:</h3>
-                            <p id="getTutorProject"></p>
-                            <?php //echo $projectTutor ?>
-                        </div>
 
                         <div id="projectDesc">
                             <h3 id="projectDescP">Beskrivelse av prosjekt</h3>
@@ -155,7 +149,7 @@
                           
 
                         </div>
-                        <p style="text-align: center; font-size: 0.8em; font-style: italic; display: inline;">Likes: <?php echo $count6; ?></p>
+                        <p>Prosjektet har <?php echo $count6; ?> likes</p>
                         <!-- Like container end -->
 
                         

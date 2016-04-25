@@ -1,67 +1,74 @@
-<!-- HER STARTER SELVE SIDEN, DET OVER ER BARE FOR HJELP FORELØBI, DET OVER SKAL TAS VEKK -->
-
-
 <?php include_once 'header.php';
  ?>
-        <?php if (login_check($mysqli) == true) : ?>
-		 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
-                method="post" 
-                name="updateProfile_form">
-             
-        <div id="updateProfile">
-            <?php
-                $username = htmlentities($_SESSION['username']);
-                $user_id = htmlentities($_SESSION['user_id']);
-                $email = htmlentities($_SESSION['email']);
-                    include_once 'includes/editProfile.inc.php';
-             ?>
+    <?php if (login_check($mysqli) == true) : ?>
+     <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
+            method="post"
+            name="updateProfile_form">
+
+    <div id="updateProfile">
+        <?php
+            $username = htmlentities($_SESSION['username']);
+            $user_id = htmlentities($_SESSION['user_id']);
+            $email = htmlentities($_SESSION['email']);
+                include_once 'includes/editProfile.inc.php';
+         ?>
                 
         <h3 id="velkommenProfile">Velkommen <?php echo $username;?>!</h3><!--Welcome-->
-    <div id="profilContainer">
+
+        <div id="profilContainer">
+
+            <div id="" class="col col-ProfileStudent">
+                <div class="clearfix"></div>
+
+                <!--Profile picture-->
+                <img id="profilePic" src='./<?php echo $profileImage; ?>'/>
+
+                <!--Email-->
+                <p>Email: <?php echo $email; ?> </p>
+
+                <!--Grades-->
+                <a href="./<?php echo $gradesFile; ?>" class="linkerStyle"><p>Karakterkort</p></a>
+
+                <!--CV-->
+                <a href="./<?php echo $cvFile; ?>" class="linkerStyle"><p>CV<p></a>
                 
-    <div id="" class="col col-ProfileStudent">
-            
-            <div class="clearfix"></div>
+                <!--Update Btn-->
+                <a href="editProfile.php"><input class="smallUploadBtn" type="button" value="Oppdater profilen din"/></a>
 
-            <img id="profilePic" src='./<?php echo $profileImage; ?>'/><!--Profile picture-->
+            </div><!--end studentProfil-->
 
-            <p>Email: <?php echo $email; ?> </p><!--Email-->
-            
-            <a href="./<?php echo $gradesFile; ?>" class="linkerStyle"><p>Karakterkort</p></a><!--Grades-->
+            <div id="aboutStudent" class="col col-ProfileStudent studentCol">
+                <h3 id="aboutStudentH3">Om <?php echo $username; ?></h3>
+                <p id="aboutStudentP"><?php echo $profileAboutUser; ?></p>
+            </div><!--end aboutStudent-->
 
-            <a href="./<?php echo $cvFile; ?>" class="linkerStyle"><p>CV<p></a><!--CV-->
-            <a href="editProfile.php"><input class="smallUploadBtn" type="button" value="Oppdater profilen din"/></a><!--Update Btn-->
-        
-        </div><!--end studentProfil-->
 
-        <div id="aboutStudent" class="col col-ProfileStudent studentCol">
-            <h3 id="aboutStudentH3">Om <?php echo $username; ?></h3>
-            <p id="aboutStudentP"><?php echo $profileAboutUser; ?></p>     
-        </div>
+            <div id="studentProjectBoxes" class="col-ProfileStudent">
+                <h3 id="studentProjectsH3">Mine nyeste Prosjekter:</h3>
 
-                
-        <div id="studentProjectBoxes" class="col-ProfileStudent">
-            <h3 id="studentProjectsH3">Mine nyeste Projekter:</h3>
+                <div id="projects" class="projectUserBox">
+                    <?php $projectBox1; ?>
+                </div><!--end projects-->
 
-            <div id="projects" class="projectUserBox">
-                <?php $projectBox1; ?>
-            </div><!--end projects-->
-            
-            <a style="width:inherit;" href="userinfo_Allpage.php"><input id="seeYourProjecBTN" class="buttonDesign" type="button"value="Se dine prosjekter" ></a>
-            
-            <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign" type="button"value="Legg til ett prosjekt" ></a>
-            
-        </div>
+                <!--"Se dine prosjekter"-->
+                <a style="width:inherit;" href="userinfo_Allpage.php"><input id="seeYourProjecBTN" class="buttonDesign" type="button"value="Se dine prosjekter" ></a>
 
-        </form>
-             
-             </div>
+                <!--"Legg til ett prosjekt"-->
+                <a style="width:inherit;" href="addproject_page.php"><input id="addProjBTN" class="buttonDesign" type="button"value="Legg til ett prosjekt" ></a>
+
+            </div><!--end studentProjectBoxes-->
+        </div><!--end profilContainer-->
+
+            </form>
+
+    </div><!--end utdateProfile-->
+
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>
     //Get all projects:
     function SendData(){
 
-                     $.ajax({
+                    $.ajax({
                         url: 'projectPage.php',
                         data: 'ID='+$(this).data("ID"),
                         method: 'GET',
@@ -71,7 +78,7 @@
 
                          // er er resultatet fra sql-spørringen
                         }
-                        });
+                    });
         }
 
         var YourProjectID = <?php echo json_encode($YourProjectID); ?>;

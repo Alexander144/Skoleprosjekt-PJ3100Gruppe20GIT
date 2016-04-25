@@ -554,10 +554,15 @@ font-family: 'Open Sans Condensed', sans-serif;
     margin-bottom: 20px;
 }
 #profileEditAboutMe{
+    width: 515px;
+    height: 300px;
+    margin-bottom: 15px;
     background-color: rgb(253, 253, 248);
+    border: 1px solid black;
 
 }
 .addProfilInput{
+    margin: 0;
     width: 150px;
     height: 20px;
     border: none;
@@ -568,7 +573,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 .edProfMainHeading{
     font-size: 1em;
     font-weight: 700;
-    line-height: 0;
+    /*line-height: 0;*/
 }
 
 .edProfUnderHeading{
@@ -757,9 +762,17 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #projectTwo {
     border-left: solid black 1px;
-    padding-left: 3%;
+    padding-left: 1%;
     height: auto;
     float: right;
+}
+
+#projectTwo h3{
+    line-height: 0;
+}
+
+#projectTwo p{
+    line-height: 0;
 }
 
 #emneProject{
@@ -848,7 +861,7 @@ p{
 /*** stilsettning for knapper og linker som brukes på flere steder **/
 
 .buttonDesign {
-    width: 200px;
+    width: 250px;
     height: 50px;
     background-color: rgb(253, 253, 248);
     font-size: 17px;
@@ -937,11 +950,15 @@ p{
     margin-bottom: 10px;
 }
 
-#ProfileBTN, #seeYourProjecBTN {
+#addProjBTN, #seeYourProjecBTN, #addProjBTN2 {
     margin-bottom: 10px;
-    width: inherit;
+    /*width: inherit;*/
     position: relative;
     float: left;
+}
+
+#addProjBTN2{
+    margin-left: 6px;
 }
 
 #loginDiv {
@@ -1022,12 +1039,12 @@ p{
     margin-top: 190px;
 }
 
-#updatePasswordDiv {
+#updatePasswordDiv .col-floatleft{
+    margin-left: 0;
 }
 
 #updateEmailTxt {
     width: 200px;
-    float: left;
 }
 
 #updateEmailDiv {
@@ -1053,3 +1070,29 @@ p{
 #editProjectPhotoH4 {
     line-height: 0;
 }
+
+#updateProfileDescP {
+    float: left;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+#editProfileCV {
+    margin: 0;
+}
+
+#updateProfileGrades {
+    margin: 0;
+}
+
+#editProfilePicP {
+    margin: 0;
+}
+
+#updateEmailDiv .col-floatleft{
+    margin-left: 0;
+
+}
+
+
