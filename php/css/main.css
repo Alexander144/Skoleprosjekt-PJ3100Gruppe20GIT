@@ -543,7 +543,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 #UpdateBTN {
     margin-top: 40px;
     background-color: rgb(253, 253, 248);
-    margin-left: 100px;
+    margin-left: 30px;
 }
 
 .chooseFile{
@@ -665,7 +665,6 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #infotextproject {
-    margin-left: 15px;
     width: 515px;
     height: 300px;
     margin-top: 15px;
@@ -874,9 +873,7 @@ p{
     color: rgb(120, 120, 120);
 }
 
-.smallUploadBtn #editProfileDeleteCv{
-    margin-top: 0;
-}
+
 
 .smallUploadBtn{
     background-color: rgb(253, 253, 248);
@@ -1004,9 +1001,55 @@ p{
 }
 
 .editProfileClass {
-    margin-left: 100px;
+    margin-left: 30px;
 }
 
 #updatePasswordTxt {
-    width: 100px;
+    width: 200px;
+}
+
+#editProfileH2 {
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+}
+
+#deleteProfPicP {
+    margin-top: 150px;
+}
+
+#updateProfile {
+    margin-top: 190px;
+}
+
+#updatePasswordDiv {
+}
+
+#updateEmailTxt {
+    width: 200px;
+    float: left;
+}
+
+#updateEmailDiv {
+}
+
+#backToProjDiv {
+    margin-top: 10px;
+}
+
+#editProjH2 {
+    border-bottom: 1px solid black;
+    width: 265%;
+}
+
+#editProject {
+    margin-left: 30px;
+}
+
+#editProjectFileH4 {
+    line-height: 0;
+}
+
+#editProjectPhotoH4 {
+    line-height: 0;
 }
