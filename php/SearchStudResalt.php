@@ -42,7 +42,7 @@
                 <div id="profileProjects" class="col-ProfileStudent">
                 <h3 id="searchUserProjectsH3"><?php echo $profileUsername; ?>'s nyeste projekter</h3>
                     <div id="projectsProfile"></div>
-             </div>
+                </div>
                     </form>
              </div>
        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>

@@ -3,7 +3,7 @@
 <?php if (login_check($mysqli) == true) : ?>
     
 
-    <div id="updateProfile" class="col">
+    <div id="updateProfile" class="col editProfileClass">
 
         <?php
             $username = htmlentities($_SESSION['username']);
@@ -20,7 +20,7 @@
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="chooseFile smallUploadBtn" type="file" name="picture" id="picture"/>
-                <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/>
+                <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Last opp bilde"/>
                 
                 <?php 
                     include_once 'includes/editProfile.inc.php';
@@ -34,7 +34,7 @@
                 
                 <br>
                 <p class="edProfUnderHeading">Fjerne eksisterende bilde<p>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Delete File"/>
+                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Slett nåværende bilde"/>
             </form><br><br><br>
 
 
@@ -64,7 +64,7 @@
 
             <form action = "editProfile.php" method="post"               enctype="multipart/form-data">
                 <input id="grades" class="chooseFile smallUploadBtn" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/>
+                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Last opp fil"/>
                 <?php 
                     include_once 'includes/editProfile.inc.php';
                     $trimmedGradePath = "grades_students/" . $user_id . "/";    
@@ -76,7 +76,7 @@
                 <br>
 
                 <p class="edProfUnderHeading">Fjerne eksisterende karakterkort<p/>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/>
+                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Slett fil"/>
             </form><br><br><br>
 
             <?php
@@ -102,7 +102,7 @@
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input id="cv" class="chooseFile smallUploadBtn" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
-                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Upload File"/>
+                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Last opp fil"/>
                 
                 <?php
 
@@ -115,7 +115,7 @@
                 ?>
                 
                 <p class="edProfUnderHeading">Fjerne eksisterende CV</p>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Delete File"/>
+                <input id="editProfileDeleteCv" class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Slett fil"/>
             </form><br><br><br><br>
 
             <?php
