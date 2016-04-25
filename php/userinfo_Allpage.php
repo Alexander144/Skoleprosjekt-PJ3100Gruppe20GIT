@@ -16,23 +16,25 @@
         <h3 id="velkommenProfile">Velkommen <?php echo $username;?>!</h3><!--Welcome-->
     <div id="profilContainer">
                 
-        <div id="" class="col col-ProfileStudent">
+        <!--<div id="" class="col col-ProfileStudent">
             
             <div class="clearfix"></div>
                 
-                <div id="studentProjectBoxes" class="col-ProfileStudent">
-                    <h3 id="studentProjectsH3">Mine nyeste Projekter:</h3>
+                <!--<div id="studentProjectBoxes" class="col-ProfileStudent">-->
+                    <h3 id="studentProjectsH3">Mine Projekter:</h3>
 
                     <div id="projects">
                         <?php $projectBox1; ?>
                     </div><!--end projects-->
 
-                    <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt" ></a>
-                </div><!--end studentProjectBoxes-->
+                    <a style="width:inherit;" href="addproject_page.php">
+                        <input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt" >
+                    </a>
+                <!--</div><!--end studentProjectBoxes-->
 
         </form>
              
-        </div><!--end col-ProfileStudent-->
+        <!--</div><!--end col-ProfileStudent-->
     </div><!--end profileContainer-->
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>
@@ -76,20 +78,31 @@
                     .css({
                         "text-align": "center",
                         "padding-top": "10px",
+                        "z-index": "1"
                 });
             
             
-            $("#projects h1")
+            $("h1")
                 .css({
                     "text-align": "center", 
-                    "font-size": "1em",
+                    "font-size": "1.3em",
                     "font-weight": "700",
                     "display": "inline",
                     "top": "100px",
                     "border-bottom": "1px solid black"
                    }); 
             
-            $("#projects p")
+            $("article")
+                .css({
+                    "margin-top": "10px",
+                    "font-size": "1em",
+                    "height": "100%",
+                    "text-align": "center",
+                    "display": "inline",
+                    "top": "100px",
+            });
+
+            $("p")
                 .css({
                     "text-align": "center", 
                     "font-size": "0.8em",
