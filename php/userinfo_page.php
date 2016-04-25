@@ -49,7 +49,7 @@
             
             <a style="width:inherit;" href="userinfo_Allpage.php"><input id="seeYourProjecBTN" class="buttonDesign" type="button"value="Se dine prosjekter" ></a>
             
-            <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign" type="button"value="Legg til ett prosjekt" ></a>
+            <a style="width:inherit;" href="addproject_page.php"><input id="addProjBTN" class="buttonDesign" type="button"value="Legg til ett prosjekt" ></a>
             
         </div>
 
@@ -61,7 +61,7 @@
     //Get all projects:
     function SendData(){
 
-                     $.ajax({
+                    $.ajax({
                         url: 'projectPage.php',
                         data: 'ID='+$(this).data("ID"),
                         method: 'GET',
@@ -71,7 +71,7 @@
 
                          // er er resultatet fra sql-spørringen
                         }
-                        });
+                    });
         }
 
         var YourProjectID = <?php echo json_encode($YourProjectID); ?>;

@@ -22,7 +22,7 @@
                 </div><!--end projects-->
 
                 <a style="width:inherit;" href="addproject_page.php">
-                    <input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt" >
+                    <input id="addProjBTN2" class="buttonDesign" type="button"value="Legg til et prosjekt" >
                 </a>
             </div><!--end profileContainer-->
         </form>
