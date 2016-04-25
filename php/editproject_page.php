@@ -104,7 +104,7 @@
             ?>   
                     <br>
                 
-
+                    </form>
                 <h4>Link: (youtube.com/..)
                     <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
                     <input type = "submit" name = "uploadVideo" class="smallUploadBtn" value = "Legg til"/>
@@ -133,12 +133,12 @@
                 if ( ! is_dir("project/$ProjectID/")) {
                  mkdir("project/$ProjectID/");
                 }
-                move_uploaded_file($uploadFileTmp, $uploadFile ="project/$ProjectID/$uploadFile");
+                move_uploaded_file($uploadFileTmp,  $_SESSION['uploadFile'] ="project/$ProjectID/$uploadFile");
                 if( $uploadFile != null){
                 echo "Filen du har valgt: "; echo $uploadFile;
             }
-                $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
-                         $_SESSION['projectSubject'] = $_POST['subject'];
+                $_SESSION['projectEditInfotext'] = isset($_POST['infotextproject']);
+                         $_SESSION['projectSubject'] = isset($_POST['subject']);
                 }
             if(isset($_POST['deleteFile'])){
                 $_SESSION['deleteFile'] = "1";
@@ -167,11 +167,11 @@
                     if ( ! is_dir("project/$ProjectID/")) {
                         mkdir("project/$ProjectID/");
                     }
-                        move_uploaded_file($uploadProjectImageTmp, $uploadProjectImage ="project/$ProjectID/$uploadProjectImage");
+                        move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
                           
                         echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
-                        $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
-                         $_SESSION['projectSubject'] = $_POST['subject'];
+                        $_SESSION['projectEditInfotext'] = isset($_POST['infotextproject']);
+                         $_SESSION['projectSubject'] = isset($_POST['subject']);
                     }
                 if(isset($_POST['deleteProjectImage'])){
                     $_SESSION['deleteProjectImage'] = "1";
