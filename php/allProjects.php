@@ -417,8 +417,5 @@ function insertionSort(array) {
     </form>
 
     <?php else : ?>
-    <p>
-        <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
-    </p>
     <?php endif; ?>
     <?php include_once 'footer.php'; ?>

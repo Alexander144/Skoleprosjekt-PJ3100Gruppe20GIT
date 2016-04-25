@@ -771,7 +771,6 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #editProjectBtn{
     margin-top: 30px;
-    margin-bottom: 50px;
     width: inherit;
 }
 
@@ -984,3 +983,9 @@ p{
 }
 
 
+
+#deleteProjectBtn {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: inherit;
+}

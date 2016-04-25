@@ -161,6 +161,8 @@
 
                        <?php  if($OwnProject) { ?>
                         <input id="editProjectBtn" class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
+                        
+                        <input id="deleteProjectBtn" class="buttonDesign" type="button" value="Slett prosjekt" onclick="location.href ='editproject_page.php';" />
                         <?php } ?>
                         <?php endif; ?>
 
