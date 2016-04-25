@@ -62,7 +62,7 @@ include_once 'header.php';
                     </div>
                     
                     <div id="publish" class="test321">
-                    <input id="publishBtn" class="buttonDesign test321" type="button" value="Add project" onclick="return AddProjectForms(
+                    <input id="publishBtn" class="buttonDesign test321" type="button" value="Lagre prosjekt" onclick="return AddProjectForms(
                                     this.form,
                                    this.form.name,
                                    this.form.subject,
@@ -96,4 +96,3 @@ include_once 'header.php';
         });
 
 </script>
-        
