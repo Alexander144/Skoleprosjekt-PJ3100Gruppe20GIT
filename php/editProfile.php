@@ -12,7 +12,7 @@
             $_SESSION['uploadCV']="";
          ?>
 
-        <h2>Her kan <?php echo $username;?> redigere profilen sin</h2>
+        <h2 id="editProfileH2">Rediger din profil</h2>
 
         <!--Start updatePhoto-->
         <div id="updatePhoto">
@@ -33,8 +33,8 @@
                 <img id="ProfileEditImage"src="<?php echo $profileImage?>"/>
                 
                 <br>
-                <p class="edProfUnderHeading">Fjerne eksisterende bilde<p>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Slett nåværende bilde"/>
+               <!-- <p id="deleteProfPicP" class="edProfUnderHeading">Fjerne eksisterende bilde<p>-->
+                <input id="deleteProfPicP" class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Slett nåværende bilde"/>
             </form><br><br><br>
 
 
@@ -75,8 +75,8 @@
                 ?>
                 <br>
 
-                <p class="edProfUnderHeading">Fjerne eksisterende karakterkort<p/>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Slett fil"/>
+                <!--<p class="edProfUnderHeading">Fjerne eksisterende karakterkort<p/>-->
+                <input id="editProfileDeleteGrades" class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Slett nåværende karakterkort"/>
             </form><br><br><br>
 
             <?php
@@ -114,8 +114,9 @@
                 
                 ?>
                 
-                <p class="edProfUnderHeading">Fjerne eksisterende CV</p>
-                <input id="editProfileDeleteCv" class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Slett fil"/>
+               <!-- <p class="edProfUnderHeading">Fjerne eksisterende CV</p>-->
+                <br>
+                <input id="editProfileDeleteCv" class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Slett nåværende CV"/>
             </form><br><br><br><br>
 
             <?php
@@ -136,12 +137,18 @@
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
             <p class="edProfMainHeading">Informasjon om deg</p>
             <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
-
+            
+            <div id="updateEmailDiv">
             <p id="updateEmailP" class="marginMobile edProfMainHeading">Oppdater mailen din</p>
             <input id="updateEmailTxt" class="addProfilInput" name = "updateEmailTxt" type="text" />
+            </div>
+            
+            <br>
 
+            <div id="updatePasswordDiv">
             <p id="updatePasswordP" class="marginMobile edProfMainHeading">Oppdater passord</p>
             <input id="updatePasswordTxt" class="addProfilInput" type="text" />
+            </div>
 
     </div><!--end updateProfile-->
 
