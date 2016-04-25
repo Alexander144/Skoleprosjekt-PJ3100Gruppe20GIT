@@ -12,9 +12,9 @@ $AddOtherUserID = "";
 
                 $_SESSION['projectSubject'] = $row->Subject;
 
-                if(isset($_SESSION['projectEditInfotext'])){
+                
                 $newprojectEdit = $_SESSION['projectEditInfotext'];
-                }
+                
                 $_SESSION['projectEditInfotext'] = $row->AboutProject;
           
                                   
@@ -26,7 +26,7 @@ $AddOtherUserID = "";
     }
 
     //$_SESSION['OldprojectEditInfotext'] = $_SESSION['projectEditInfotext'];
- if($result3 = $mysqli->query("SELECT * FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = '$ProjectID'")){
+if($result3 = $mysqli->query("SELECT * FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = '$ProjectID'")){
         if($countID = $result3->num_rows){
             $result4 = $mysqli->query("SELECT * FROM project WHERE ProjectID = '$ProjectID'");
             $row4 = $result4->fetch_object();
@@ -47,7 +47,6 @@ $AddOtherUserID = "";
             $result4->free();
         }
     }
-
 
     if(isset($AddPeople) ){
         if($result2 = $mysqli->query("SELECT * FROM user")){
@@ -106,11 +105,11 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
             $updateEmailTxt = $_SESSION['email'];*/
 if (empty($error_msg)) {
        
-        if(isset($_SESSION['deleteStudentFromProject']) == true){
+        if( $_SESSION['deleteStudentFromProject'] == true){
                 //echo  $_SESSION['deleteStudentUsername'];
                 //echo  $_SESSION['deleteStudentProjectID'];
                 //die;
-              
+                var_dump($_SESSION['deleteStudentFromProject']);
             if($insert_stmt = $mysqli->prepare("DELETE userinproject FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = ? AND Username= ?")){
                 $id = 38; $lol = "lol";
                 $insert_stmt->bind_param ('is', $_SESSION['deleteStudentProjectID'],$_SESSION['deleteStudentUsername']);
@@ -158,65 +157,7 @@ if (empty($error_msg)) {
             }
         }
 
-        //Delete Uploaded File
-        if(isset($_SESSION['deleteFile'])!= ""){
-            $_SESSION['deleteFile'] = "";
-            $insert_stmt = $mysqli->prepare("DELETE FROM documents WHERE ProjectID = ?");
-                
-                $insert_stmt->bind_param ('i', $ProjectID);
-            if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
-            }
-        }
-       
-        
-        //Upload file
-        if(isset($uploadFile)){
-        if($uploadFile!=""){
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)")){
-               $ProjectID = (int)$ProjectID;
-                $insert_stmt->bind_param('is',$ProjectID, $uploadFile);
-             // Execute the prepared query.
-            if (! $insert_stmt->execute()) {
-                $wasError = True;
-                }
-            else{
-                $_SESSION['uploadFile'] = "";
-            }
-            }
-        }
-        }
-        //Delete Uploaded projectimage
-        if(isset($_SESSION['deleteProjectImage'])!= ""){
-            $_SESSION['deleteProjectImage'] = "";
-            $insert_stmt = $mysqli->prepare("DELETE FROM pictures WHERE ProjectID = ?");
-                
-                $insert_stmt->bind_param ('i', $ProjectID);
-            if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
-            }
-        }
-    
-    //Upload projectimage
-    if(isset($uploadProjectImage)!=""){
-            if ($insert_stmt = $mysqli->prepare("INSERT INTO pictures(ProjectID, Picture) VALUES (?, ?)")){
-                $insert_stmt->bind_param('is',$ProjectID, $uploadProjectImage);
-             // Execute the prepared query.
-                if (! $insert_stmt->execute()) {
-                    $wasError = True;
-                }
-                else{
-                $_SESSION['uploadProjectImage'] = "";
-            }
-            }
-        }
-
-
-
-
-
-
-           
+               
         
     }
 

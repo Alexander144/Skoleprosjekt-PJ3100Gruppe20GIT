@@ -37,17 +37,18 @@
            //$AddOtherUserID = (int)$AddOtherUserID;
 
            $AddOtherRole = "";
-            $AddOtherUserID = 2;
+            $AddOtherUserID;
             $ProjectID = $_SESSION['AddStudentProjectID'];
             $insert_stmt->bind_param('iis',$ProjectID,$AddOtherUserID,$AddOtherRole);
                          // Execute the prepared query.
             if (! $insert_stmt->execute()) {
-                   
- 
+                    $_SESSION['AddStudentProjectID'] = "";
+        
             }
             else{
                 if($_SESSION['addStudentToProject'] == false){
                 $AddOtherUserID = null;
+                 $_SESSION['AddStudentProjectID'] = "";
                 //$_SESSION['addStudentToProject'] = true;
             
             
