@@ -851,6 +851,7 @@ p{
     background-color: rgb(253, 253, 248);
     font-size: 17px;
     border: solid 1px;
+    position: relative;
 }
 
 .buttonDesign:hover {
@@ -936,7 +937,7 @@ p{
     margin-bottom: 10px;
 }
 
-#ProfileBTN {
+#ProfileBTN, #seeYourProjecBTN {
     margin-top: 10px;
     width: inherit;
 }
