@@ -306,7 +306,7 @@
     }
     
     #addTopicInput{
-        width: 100%;
+        width: 80%;
     }
     
     .addProjInput{
@@ -340,8 +340,11 @@
         
     }
     
+#Avdeling{
+        width: 80%;
+    }
+    
     .test321{
-        width: auto;
         margin-top: 0;
     }
     

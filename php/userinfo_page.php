@@ -43,11 +43,14 @@
         <div id="studentProjectBoxes" class="col-ProfileStudent">
             <h3 id="studentProjectsH3">Mine nyeste Projekter:</h3>
 
-            <div id="projects">
+            <div id="projects" class="projectUserBox">
                 <?php $projectBox1; ?>
             </div><!--end projects-->
             
-            <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt" ></a>
+            <a style="width:inherit;" href="userinfo_Allpage.php"><input id="ProfileBTN" class="buttonDesign" type="button"value="Se alle prosjekter" ></a>
+            
+            <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign" type="button"value="Legg til et prosjekt" ></a>
+            
         </div>
 
         </form>
