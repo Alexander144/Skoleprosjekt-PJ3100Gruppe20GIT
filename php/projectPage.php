@@ -158,7 +158,7 @@
                        <?php  if($OwnProject) { ?>
                         <input id="editProjectBtn" class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
                                       
-                        <input id="Delete" name="Delete" class="buttonDesign" type="submit" value="Slett prosjekt""/> 
+                        <input id="Delete" name="Delete" class="buttonDesign" type="submit" value="Slett prosjekt"/> 
                                     
                                  
                         <?php } ?>
@@ -182,5 +182,14 @@
                    
 
                         <?php include_once 'footer.php'; ?>
+                
+                <script src="js/jquery.js"></script>
+<script>
+
+        $("#Delete").click(function(){
+            alert("Prosjektet er nå slettet.");
+        });
+
+</script>
                             <!--</body>
 </html>
