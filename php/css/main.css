@@ -853,6 +853,7 @@ p{
     background-color: rgb(253, 253, 248);
     font-size: 17px;
     border: solid 1px;
+    position: relative;
 }
 
 .buttonDesign:hover {
@@ -910,7 +911,7 @@ p{
 }
 
 #studentProjectsH3 {
-    margin: 0;
+    margin-bottom: 20px;
 }
 
 #aboutStudentP {
@@ -940,9 +941,11 @@ p{
     margin-bottom: 10px;
 }
 
-#ProfileBTN {
-    margin-top: 10px;
+#ProfileBTN, #seeYourProjecBTN {
+    margin-bottom: 10px;
     width: inherit;
+    position: relative;
+    float: left;
 }
 
 #loginDiv {

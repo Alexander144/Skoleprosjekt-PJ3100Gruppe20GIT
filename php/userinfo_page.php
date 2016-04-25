@@ -47,9 +47,9 @@
                 <?php $projectBox1; ?>
             </div><!--end projects-->
             
-            <a style="width:inherit;" href="userinfo_Allpage.php"><input id="ProfileBTN" class="buttonDesign" type="button"value="Se dine prosjekter" ></a>
+            <a style="width:inherit;" href="userinfo_Allpage.php"><input id="seeYourProjecBTN" class="buttonDesign" type="button"value="Se dine prosjekter" ></a>
             
-            <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign" type="button"value="Legg til et prosjekt" ></a>
+            <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign" type="button"value="Legg til ett prosjekt" ></a>
             
         </div>
 
