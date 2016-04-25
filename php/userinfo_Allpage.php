@@ -1,6 +1,3 @@
-<!-- HER STARTER SELVE SIDEN, DET OVER ER BARE FOR HJELP FORELØBI, DET OVER SKAL TAS VEKK -->
-
-
 <?php include_once 'header.php';
  ?>
         <?php if (login_check($mysqli) == true) : ?>
@@ -19,28 +16,28 @@
         <h3 id="velkommenProfile">Velkommen <?php echo $username;?>!</h3><!--Welcome-->
     <div id="profilContainer">
                 
-    <div id="" class="col col-ProfileStudent">
+        <div id="" class="col col-ProfileStudent">
             
             <div class="clearfix"></div>
-
                 
-        <div id="studentProjectBoxes" class="col-ProfileStudent">
-            <h3 id="studentProjectsH3">Mine nyeste Projekter:</h3>
+                <div id="studentProjectBoxes" class="col-ProfileStudent">
+                    <h3 id="studentProjectsH3">Mine nyeste Projekter:</h3>
 
-            <div id="projects">
-                <?php $projectBox1; ?>
-            </div><!--end projects-->
-            
-            <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt" ></a>
-        </div>
+                    <div id="projects">
+                        <?php $projectBox1; ?>
+                    </div><!--end projects-->
+
+                    <a style="width:inherit;" href="addproject_page.php"><input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt" ></a>
+                </div><!--end studentProjectBoxes-->
 
         </form>
              
-             </div>
+        </div><!--end col-ProfileStudent-->
+    </div><!--end profileContainer-->
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>
-    //Get all projects:
-    function SendData(){
+            //Get all projects:
+             function SendData(){
 
                      $.ajax({
                         url: 'projectPage.php',
@@ -52,8 +49,8 @@
 
                          // er er resultatet fra sql-spørringen
                         }
-                        });
-        }
+                    });
+            }
 
         var YourProjectID = <?php echo json_encode($YourProjectID); ?>;
         var YourProjectCount = <?php echo json_encode(count($YourProjectName)); ?>; //Get value here
@@ -72,13 +69,13 @@
                $newProject
                    .html("<h1>" + YourProjectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + YourProjectSubject[i] + "</p>" + "<br>" + "<p>" + YourProjectAbout[i]);
 
-                   $newProject.click(SendData);
+                    $newProject.click(SendData);
                     $newProject.data("ID", YourProjectID[i]);
             
-                            $newProject
+                    $newProject
                     .css({
                         "text-align": "center",
-                        "padding-top": "10px"
+                        "padding-top": "10px",
                 });
             
             
