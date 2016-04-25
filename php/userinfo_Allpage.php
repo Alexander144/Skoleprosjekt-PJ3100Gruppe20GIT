@@ -5,37 +5,27 @@
                 method="post" 
                 name="updateProfile_form">
              
-        <div id="updateProfile">
-            <?php
-                $username = htmlentities($_SESSION['username']);
-                $user_id = htmlentities($_SESSION['user_id']);
-                $email = htmlentities($_SESSION['email']);
-                    include_once 'includes/editProfileAllProject.inc.php';
-             ?>
-                
-        <h3 id="velkommenProfile">Velkommen <?php echo $username;?>!</h3><!--Welcome-->
-    <div id="profilContainer">
-                
-        <!--<div id="" class="col col-ProfileStudent">
-            
-            <div class="clearfix"></div>
-                
-                <!--<div id="studentProjectBoxes" class="col-ProfileStudent">-->
-                    <h3 id="studentProjectsH3">Mine Projekter:</h3>
+            <div id="updateProfile">
+                <?php
+                    $username = htmlentities($_SESSION['username']);
+                    $user_id = htmlentities($_SESSION['user_id']);
+                    $email = htmlentities($_SESSION['email']);
+                        include_once 'includes/editProfileAllProject.inc.php';
+                 ?>
 
-                    <div id="projects">
-                        <?php $projectBox1; ?>
-                    </div><!--end projects-->
+            <div id="profilContainer">
 
-                    <a style="width:inherit;" href="addproject_page.php">
-                        <input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt" >
-                    </a>
-                <!--</div><!--end studentProjectBoxes-->
+                <h3 id="studentProjectsH3">Mine Projekter:</h3>
 
+                <div id="projects">
+                    <?php $projectBox1; ?>
+                </div><!--end projects-->
+
+                <a style="width:inherit;" href="addproject_page.php">
+                    <input id="ProfileBTN" class="buttonDesign col" type="button"value="Legg til et prosjekt" >
+                </a>
+            </div><!--end profileContainer-->
         </form>
-             
-        <!--</div><!--end col-ProfileStudent-->
-    </div><!--end profileContainer-->
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><script>
             //Get all projects:
