@@ -856,7 +856,7 @@ p{
 /*** stilsettning for knapper og linker som brukes på flere steder **/
 
 .buttonDesign {
-    width: 200px;
+    width: 250px;
     height: 50px;
     background-color: rgb(253, 253, 248);
     font-size: 17px;
@@ -945,11 +945,15 @@ p{
     margin-bottom: 10px;
 }
 
-#ProfileBTN, #seeYourProjecBTN {
+#addProjBTN, #seeYourProjecBTN, #addProjBTN2 {
     margin-bottom: 10px;
-    width: inherit;
+    /*width: inherit;*/
     position: relative;
     float: left;
+}
+
+#addProjBTN2{
+    margin-left: 6px;
 }
 
 #loginDiv {

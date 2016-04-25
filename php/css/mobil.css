@@ -254,6 +254,14 @@
         padding-top: 10px;
     }
     
+    #seeYourProjecBTN, #addProjBTN{
+        width: 295px;
+    }
+
+    #addProjBTN2{
+        width: 315px;
+    }
+
     /** ALL PROJECTS **/
     
     div #projects{
