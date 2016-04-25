@@ -906,11 +906,7 @@ p{
     margin-left: 11%;
 }
 
-#aboutStudentH3 {
-    margin: 0;
-}
-
-#studentProjectsH3 {
+#aboutStudentH3, #studentProjectsH3{
     margin-bottom: 20px;
 }
 
