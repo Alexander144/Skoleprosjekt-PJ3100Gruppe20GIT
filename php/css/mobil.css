@@ -229,7 +229,7 @@
     }
     
     #profileEditAboutMe{
-        width: auto;
+        width: 90%;
         background-color: rgb(253, 253, 248);
     }
     
@@ -256,6 +256,7 @@
     
     #seeYourProjecBTN, #addProjBTN{
         width: 295px;
+        
     }
 
     #addProjBTN2{
@@ -409,9 +410,7 @@
         margin-bottom: 0;
     }
     
-    #profileEditAboutMe{
-        width: 100%;
-    }
+
     
     
     /** LOGIN **/
@@ -464,4 +463,17 @@
     #name {
         width: 80%;
     }
+    
+    #ProfileBTN {
+    display: none;
+}
+
+}
+.editProfileClass {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#UpdateBTN {
+    margin-left: 15px;
 }
