@@ -3,7 +3,7 @@
 <?php if (login_check($mysqli) == true) : ?>
     
 
-    <div id="updateProfile" class="col">
+    <div id="updateProfile" class="col editProfileClass">
 
         <?php
             $username = htmlentities($_SESSION['username']);
@@ -12,7 +12,7 @@
             $_SESSION['uploadCV']="";
          ?>
 
-        <h2>Her kan <?php echo $username;?> redigere profilen sin</h2>
+        <h2 id="editProfileH2">Rediger din profil</h2>
 
         <!--Start updatePhoto-->
         <div id="updatePhoto">
@@ -20,7 +20,7 @@
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input class="chooseFile smallUploadBtn" type="file" name="picture" id="picture"/>
-                <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Upload File"/>
+                <input class="smallUploadBtn" type = "submit" name = "uploadImg" value = "Last opp bilde"/>
                 
                 <?php 
                     include_once 'includes/editProfile.inc.php';
@@ -33,8 +33,8 @@
                 <img id="ProfileEditImage"src="<?php echo $profileImage?>"/>
                 
                 <br>
-                <p class="edProfUnderHeading">Fjerne eksisterende bilde<p>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Delete File"/>
+               <!-- <p id="deleteProfPicP" class="edProfUnderHeading">Fjerne eksisterende bilde<p>-->
+                <input id="deleteProfPicP" class="deleteFile smallUploadBtn" type = "submit" name = "deleteImg" value = "Slett nåværende bilde"/>
             </form><br><br><br>
 
 
@@ -64,7 +64,7 @@
 
             <form action = "editProfile.php" method="post"               enctype="multipart/form-data">
                 <input id="grades" class="chooseFile smallUploadBtn" name="grades" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" />
-                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Upload File"/>
+                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadGrades" value = "Last opp fil"/>
                 <?php 
                     include_once 'includes/editProfile.inc.php';
                     $trimmedGradePath = "grades_students/" . $user_id . "/";    
@@ -75,8 +75,8 @@
                 ?>
                 <br>
 
-                <p class="edProfUnderHeading">Fjerne eksisterende karakterkort<p/>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Delete File"/>
+                <!--<p class="edProfUnderHeading">Fjerne eksisterende karakterkort<p/>-->
+                <input id="editProfileDeleteGrades" class="deleteFile smallUploadBtn" type = "submit" name = "deleteGrades" value = "Slett nåværende karakterkort"/>
             </form><br><br><br>
 
             <?php
@@ -102,7 +102,7 @@
 
             <form action = "editProfile.php" method="post" enctype="multipart/form-data">
                 <input id="cv" class="chooseFile smallUploadBtn" name="cv" type="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"/>
-                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Upload File"/>
+                <input class="uploadFile smallUploadBtn" type = "submit" name = "uploadCV" value = "Last opp fil"/>
                 
                 <?php
 
@@ -114,8 +114,9 @@
                 
                 ?>
                 
-                <p class="edProfUnderHeading">Fjerne eksisterende CV</p>
-                <input class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Delete File"/>
+               <!-- <p class="edProfUnderHeading">Fjerne eksisterende CV</p>-->
+                <br>
+                <input id="editProfileDeleteCv" class="deleteFile smallUploadBtn" type = "submit" name = "deleteCV" value = "Slett nåværende CV"/>
             </form><br><br><br><br>
 
             <?php
@@ -136,12 +137,18 @@
         <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
             <p class="edProfMainHeading">Informasjon om deg</p>
             <textarea cols="60" rows="20" name="profileEditAboutMe" id="profileEditAboutMe"><?php echo $profileEditAboutMe; ?></textarea>
-
+            
+            <div id="updateEmailDiv">
             <p id="updateEmailP" class="marginMobile edProfMainHeading">Oppdater mailen din</p>
             <input id="updateEmailTxt" class="addProfilInput" name = "updateEmailTxt" type="text" />
+            </div>
+            
+            <br>
 
+            <div id="updatePasswordDiv">
             <p id="updatePasswordP" class="marginMobile edProfMainHeading">Oppdater passord</p>
             <input id="updatePasswordTxt" class="addProfilInput" type="text" />
+            </div>
 
     </div><!--end updateProfile-->
 

@@ -10,6 +10,85 @@ $projectImage = array();
 $projectFile = array();
 $fileFileName = array();
 $OwnProject = false;
+
+$ID = (int)$_GET['ID'];
+if (isset($_POST['Delete'])) {
+  
+        
+//var_dump(""); die;
+if (empty($error_msg)) {
+       if($insert_stmt = $mysqli->prepare("DELETE FROM userinproject WHERE ProjectID = ?")){
+               
+                $insert_stmt->bind_param ('i',$ID);
+            if (! $insert_stmt->execute()) {
+                //header('Location: ../error.php?err=Registration failure: INSERT');
+                var_dump("wrong"); die;
+             }
+             else{
+            //echo '<script>parent.window.location.replace("./index.php");</script>';
+        }
+    }
+    if($insert_stmt = $mysqli->prepare("DELETE FROM videolink WHERE ProjectID = ?")){
+               
+                $insert_stmt->bind_param ('i',$ID);
+            if (! $insert_stmt->execute()) {
+                //header('Location: ../error.php?err=Registration failure: INSERT');
+                var_dump("wrong"); die;
+             }
+             else{
+            //echo '<script>parent.window.location.replace("./index.php");</script>';
+        }
+    }
+    if($insert_stmt = $mysqli->prepare("DELETE FROM likes WHERE ProjectID = ?")){
+               
+                $insert_stmt->bind_param ('i',$ID);
+            if (! $insert_stmt->execute()) {
+                //header('Location: ../error.php?err=Registration failure: INSERT');
+                var_dump("wrong"); die;
+             }
+             else{
+            //echo '<script>parent.window.location.replace("./index.php");</script>';
+        }
+    }
+    if($insert_stmt = $mysqli->prepare("DELETE FROM pictures WHERE ProjectID = ?")){
+               
+                $insert_stmt->bind_param ('i',$ID);
+            if (! $insert_stmt->execute()) {
+                //header('Location: ../error.php?err=Registration failure: INSERT');
+                var_dump("wrong"); die;
+             }
+             else{
+            //echo '<script>parent.window.location.replace("./index.php");</script>';
+        }
+    }
+    if($insert_stmt = $mysqli->prepare("DELETE FROM documents WHERE ProjectID = ?")){
+               
+                $insert_stmt->bind_param ('i',$ID);
+            if (! $insert_stmt->execute()) {
+                //header('Location: ../error.php?err=Registration failure: INSERT');
+                var_dump("wrong"); die;
+             }
+             else{
+            //echo '<script>parent.window.location.replace("./index.php");</script>';
+        }
+    }
+    if($insert_stmt = $mysqli->prepare("DELETE FROM project WHERE ProjectID = ?")){
+               
+                $insert_stmt->bind_param ('i',$ID);
+            if (! $insert_stmt->execute()) {
+                //header('Location: ../error.php?err=Registration failure: INSERT');
+                var_dump("wrong"); die;
+             }
+             else{
+            //echo '<script>parent.window.location.replace("./index.php");</script>';
+        }
+    }
+        // Insert the new user into the database 
+        //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
+     
+    }
+}
+
 if($result = $mysqli->query("SELECT ProjectID,Name, Subject, AboutProject FROM project")){
         if($count = $result->num_rows){
             
@@ -136,16 +215,6 @@ if($result2 = $mysqli->query("SELECT Username,ProjectID FROM userinproject left 
             $result7->free();
         }
     } 
-if (isset($_POST['infotext'])) {
-	    $infotext = filter_input(INPUT_POST, 'infotext', FILTER_SANITIZE_STRING);
-        die;
 
-if (empty($error_msg)) {
-       
-        // Insert the new user into the database 
-            //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
-     
-        header('Location: ./addproject_page.php');
-    }
 
-}?>
+?>

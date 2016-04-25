@@ -335,6 +335,13 @@ body {
     display: block;
 }
 
+#studentProjectBoxes #projects{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
 .projectBoxes{
     margin-left: 5px;
     margin-right: 5px;
@@ -536,6 +543,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 #UpdateBTN {
     margin-top: 40px;
     background-color: rgb(253, 253, 248);
+    margin-left: 30px;
 }
 
 .chooseFile{
@@ -550,7 +558,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 }
 .addProfilInput{
-    width: 375px;
+    width: 150px;
     height: 20px;
     border: none;
     border-bottom: 1px solid black;
@@ -560,11 +568,13 @@ font-family: 'Open Sans Condensed', sans-serif;
 .edProfMainHeading{
     font-size: 1em;
     font-weight: 700;
+    line-height: 0;
 }
 
 .edProfUnderHeading{
     font-size: 1em;
     font-weight: 200;
+    line-height: 0;
 }
 
 /*Someone Edit This one please*/
@@ -655,7 +665,6 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #infotextproject {
-    margin-left: 15px;
     width: 515px;
     height: 300px;
     margin-top: 15px;
@@ -771,7 +780,6 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #editProjectBtn{
     margin-top: 30px;
-    margin-bottom: 50px;
     width: inherit;
 }
 
@@ -845,6 +853,7 @@ p{
     background-color: rgb(253, 253, 248);
     font-size: 17px;
     border: solid 1px;
+    position: relative;
 }
 
 .buttonDesign:hover {
@@ -863,6 +872,8 @@ p{
 .linkerStyle:visited{
     color: rgb(120, 120, 120);
 }
+
+
 
 .smallUploadBtn{
     background-color: rgb(253, 253, 248);
@@ -895,12 +906,8 @@ p{
     margin-left: 11%;
 }
 
-#aboutStudentH3 {
-    margin: 0;
-}
-
-#studentProjectsH3 {
-    margin: 0;
+#aboutStudentH3, #studentProjectsH3{
+    margin-bottom: 20px;
 }
 
 #aboutStudentP {
@@ -930,9 +937,11 @@ p{
     margin-bottom: 10px;
 }
 
-#ProfileBTN {
-    margin: 0;
+#ProfileBTN, #seeYourProjecBTN {
+    margin-bottom: 10px;
     width: inherit;
+    position: relative;
+    float: left;
 }
 
 #loginDiv {
@@ -984,3 +993,63 @@ p{
 }
 
 
+
+#deleteProjectBtn {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: inherit;
+}
+
+.editProfileClass {
+    margin-left: 30px;
+}
+
+#updatePasswordTxt {
+    width: 200px;
+}
+
+#editProfileH2 {
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+}
+
+#deleteProfPicP {
+    margin-top: 150px;
+}
+
+#updateProfile {
+    margin-top: 190px;
+}
+
+#updatePasswordDiv {
+}
+
+#updateEmailTxt {
+    width: 200px;
+    float: left;
+}
+
+#updateEmailDiv {
+}
+
+#backToProjDiv {
+    margin-top: 10px;
+}
+
+#editProjH2 {
+    border-bottom: 1px solid black;
+    width: 265%;
+}
+
+#editProject {
+    margin-left: 30px;
+}
+
+#editProjectFileH4 {
+    line-height: 0;
+}
+
+#editProjectPhotoH4 {
+    line-height: 0;
+}

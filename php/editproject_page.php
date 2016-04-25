@@ -21,9 +21,9 @@
                 ?>
 
                 <!-- Dette er brukerens profil-->
-                <h2>Redigere prosjekt</h2>
+                <h2 id="editProjH2">Redigere prosjekt</h2>
                 <br>
-</form> <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
+</form> <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
                 <h4>Navn:
                     <input id="name" class="updatefield editProjInput" type="text" name="name" value=<?php echo $_SESSION['projectName']; ?>>
                     <br>
@@ -69,7 +69,7 @@
                                echo '<script>parent.window.location.reload(true);</script>';
                                 //var_dump($_SESSION['deleteStudentFromProject']);die;
                                //include_once 'includes/editProject.inc.php';
-                                var_dump($_SESSION['deleteStudentFromProject']);
+                                
                             }
                              
                         }   
@@ -86,11 +86,7 @@
                                
                                //include_once 'includes/AddUserInProject.inc.php';
                                 if( $AddPeople != $projectUserName[$j]  && $error_msg != "" ){
-                                   echo '<script language="javascript">';
-                                    echo 'alert("User are allready in this project")';
-                                     echo '</script>';
-                                    $_SESSION['addStudentToProject'] = false;
-
+                            
                                 }else{
                                     $_SESSION['addStudentToProject'] = true;
                                         $AddPeople =  filter_input(INPUT_POST, "AddPeople", FILTER_DEFAULT);
@@ -103,33 +99,6 @@
                                 //header("Refresh:0");
                            }echo $projectUserName[$j];
                       }
-                     
-                      //if($exist == false){
-                       //  echo '<script language="javascript">';
-                        // echo 'alert("User not Exist")';
-                        //echo '</script>';
-                      //}
-                      //else{
-                    /*echo "
-              <script type=\"text/javascript\">
-            window.location.reload(); 
-            </script>";
-           $_POST['addStudent'] ="";*/
-                     // }
-
-                      /*if(isset($_POST['addStudent']) && isset($_POST['AddPeople'])&& $_POST['AddPeople'] != $AddPeople){
-                        $AddPeople = $_POST['AddPeople'];
-                        include_once 'includes/editProject.inc.php';
-                        if($AddOtherUserID != null){
-                            
-                            $j =  $_SESSION['i'];
-                       
-                            $_SESSION['i']++;
-                        }
-                        echo $j = $_SESSION['i'];*/
-                        
-                        
-                //}
             
             ?>   
                     <br>
@@ -146,10 +115,10 @@
         <!-- Dette er de 2 knappene som ligger på toppen av siden for og laste opp filer
             Det under trenger Stilsetting og fiksing av variabler. Rett og slett en ferdigstilling-->
 
-        <h4>Last opp fil:</h4>
-        <form action = "editProject_page.php" method="post" enctype="multipart/form-data">
+        <h4 id="editProjectFileH4">Last opp fil:</h4>
+        <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
 
-            <input class="smallUploadBtn" type="file" name="file" id="file"/></h4>
+            <input class="smallUploadBtn" type="file" name="file" id="file"/>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
             <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slett filer"/>
@@ -178,7 +147,7 @@
         <!--end Upload File-->
 
         <!--Start updatePhoto-->
-        <h4>Bilde:</h4>
+        <h4 id="editProjectPhotoH4">Bilde:</h4>
         <div id="updatePhoto">
             <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
                 
@@ -214,7 +183,7 @@
         <br><br>
 
         <!--Update btn-->
-        <input class="col buttonDesign" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
+        <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
             this.form,
             this.form.name,
             this.form.subject,
@@ -223,15 +192,18 @@
             this.form.link,
             this.form.AddPeople);" />
                 <!--end update btn-->
+            
+            <div id="backToProjDiv">
+                    
+            <a id="tilbakeTilProsjekt" href="projectPage.php?ID=<?php echo $ProjectID ?>" ><input class="buttonDesign" type="button" value="Tilbake til prosjektet"/></a>  
+                
+            </div>
         </div>  <!--end edit project-->
         
 <br/>  
       
 
-            <a id="tilbakeTilProsjekt" href="projectPage.php?ID=<?php echo $ProjectID ?>">
-                <div class="col buttonDesign"><p>tilbake til prosjekt</p></div></a>    
-
-        <!--<p>Return to <a href="login.php" class="linkerStyle">login page</a></p>-->
+<!--<p>Return to <a href="login.php" class="linkerStyle">login page</a></p>-->
         <?php else : ?>
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>

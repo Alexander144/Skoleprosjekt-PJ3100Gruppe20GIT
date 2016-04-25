@@ -301,6 +301,19 @@
         margin-top: 0;
     }
     
+    #addNameProjectInput{
+        width: 80%;
+    }
+    
+    #addTopicInput{
+        width: 80%;
+    }
+    
+    .addProjInput{
+        width: 100%;
+        float: left;
+    }
+    
     #publish{
         margin-top: 15px;
         margin-left: 15px;
@@ -314,6 +327,7 @@
         width: auto;
         left: 0;
         line-height: 0px;
+        margin-left: 0;
     }
     
     #mainCreateProject{
@@ -326,8 +340,11 @@
         
     }
     
+#Avdeling{
+        width: 80%;
+    }
+    
     .test321{
-        width: auto;
         margin-top: 0;
     }
     

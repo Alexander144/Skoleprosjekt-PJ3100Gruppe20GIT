@@ -12,7 +12,7 @@ if (login_check($mysqli) == true) {
 ?>
         <?php
         if (isset($_GET['error'])) {
-            echo '<p class="error">Error Logging In!</p>';
+            echo '<p class="error">Feil brukernavn/passord</p>';
         }
         ?>
 <div id="loginDiv">
