@@ -757,9 +757,17 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #projectTwo {
     border-left: solid black 1px;
-    padding-left: 3%;
+    padding-left: 1%;
     height: auto;
     float: right;
+}
+
+#projectTwo h3{
+    line-height: 0;
+}
+
+#projectTwo p{
+    line-height: 0;
 }
 
 #emneProject{
