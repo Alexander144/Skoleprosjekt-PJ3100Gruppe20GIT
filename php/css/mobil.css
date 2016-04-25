@@ -366,12 +366,22 @@
         padding-bottom: 20px;
     }
     
-    #projectPage{
-        padding-top: 50px;
-    }
+
     
     #projectTwo{
         border-left: 0;
+        padding-left: 0;
+        float: left;
+        margin-left: 30px;
+        
+    }
+    
+    #projectTwo h3{
+        line-height: 0;
+    }
+    
+    #projectTwo p{
+        line-height: 0;
     }
     
     #projectOne{
@@ -381,11 +391,11 @@
     #prosjektTittel{
         text-align: left;
         font-size: 2em;
+        line-height: 0;
     }
     
     #projectOne{
         border-bottom: 1px solid black;
-        padding-bottom: 20px;
     }
     
     #youTubeVideo{
@@ -423,4 +433,17 @@
         margin-left: 5%;
         margin-right: 5%;
     }
+    
+    
+#addProjectProfile {
+    display: none;
+}
+
+#addJob {
+    display: none;
+}
+}
+
+#projectDocument {
+    margin-top: 0;
 }

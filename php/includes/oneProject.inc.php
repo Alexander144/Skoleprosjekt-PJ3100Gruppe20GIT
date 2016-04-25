@@ -1,4 +1,4 @@
-
+﻿
 
 <?php
 
@@ -17,12 +17,13 @@ if (isset($_POST['Delete'])) {
         
 //var_dump(""); die;
 if (empty($error_msg)) {
+    $error = false;
        if($insert_stmt = $mysqli->prepare("DELETE FROM userinproject WHERE ProjectID = ?")){
                
                 $insert_stmt->bind_param ('i',$ID);
             if (! $insert_stmt->execute()) {
                 //header('Location: ../error.php?err=Registration failure: INSERT');
-                var_dump("wrong"); die;
+                $error = true;
              }
              else{
             //echo '<script>parent.window.location.replace("./index.php");</script>';
@@ -33,7 +34,7 @@ if (empty($error_msg)) {
                 $insert_stmt->bind_param ('i',$ID);
             if (! $insert_stmt->execute()) {
                 //header('Location: ../error.php?err=Registration failure: INSERT');
-                var_dump("wrong"); die;
+                $error = true;
              }
              else{
             //echo '<script>parent.window.location.replace("./index.php");</script>';
@@ -44,7 +45,8 @@ if (empty($error_msg)) {
                 $insert_stmt->bind_param ('i',$ID);
             if (! $insert_stmt->execute()) {
                 //header('Location: ../error.php?err=Registration failure: INSERT');
-                var_dump("wrong"); die;
+                 $error = true;
+               
              }
              else{
             //echo '<script>parent.window.location.replace("./index.php");</script>';
@@ -55,7 +57,7 @@ if (empty($error_msg)) {
                 $insert_stmt->bind_param ('i',$ID);
             if (! $insert_stmt->execute()) {
                 //header('Location: ../error.php?err=Registration failure: INSERT');
-                var_dump("wrong"); die;
+                $error = true;
              }
              else{
             //echo '<script>parent.window.location.replace("./index.php");</script>';
@@ -66,7 +68,7 @@ if (empty($error_msg)) {
                 $insert_stmt->bind_param ('i',$ID);
             if (! $insert_stmt->execute()) {
                 //header('Location: ../error.php?err=Registration failure: INSERT');
-                var_dump("wrong"); die;
+                $error = true;
              }
              else{
             //echo '<script>parent.window.location.replace("./index.php");</script>';
@@ -77,11 +79,14 @@ if (empty($error_msg)) {
                 $insert_stmt->bind_param ('i',$ID);
             if (! $insert_stmt->execute()) {
                 //header('Location: ../error.php?err=Registration failure: INSERT');
-                var_dump("wrong"); die;
+                $error = true;
              }
              else{
-            //echo '<script>parent.window.location.replace("./index.php");</script>';
+            //echo '<script>parent.window.location.replace("./allProjects.php");</script>';
         }
+    }
+    if( $error == false){
+        echo '<script>parent.window.location.replace("./index.php");</script>';
     }
         // Insert the new user into the database 
         //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
