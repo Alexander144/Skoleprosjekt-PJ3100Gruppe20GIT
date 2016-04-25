@@ -51,7 +51,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
     }
  
     // check existing username
-    $prep_stmt = "SELECT ID FROM user WHERE username = ? LIMIT 1";
+    $prep_stmt = "SELECT ID FROM user WHERE Username = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
  
     if ($stmt) {
