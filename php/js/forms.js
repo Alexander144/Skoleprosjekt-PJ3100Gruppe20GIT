@@ -94,6 +94,14 @@ function SearchOnProfile(form,searchOnUser) {
     //window.location = './searchStudResalt.php';
 
 }
+function DeleteProject(form,Delete) {
+    
+    form.submit();
+
+    //window.location = './searchStudResalt.php';
+
+}
+
 function SearchOnProject(form,searchOnUser) {
     
     form.submit();

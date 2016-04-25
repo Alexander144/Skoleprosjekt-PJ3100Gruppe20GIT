@@ -1,12 +1,13 @@
 <?php include_once 'header.php';
     $ID = (int)$_GET['ID'];
+
     $projectImage = 'defaultBilde.png';
     $username = htmlentities($_SESSION['username']);
     $LikeUp= false;
     include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
  ?>
     <?php if (login_check($mysqli) == true) : ?>
-        <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="updateProfile_form">
+        <form action="<?php echo esc_url($_SERVER['PHP_SELF']) . "?ID=" . $ID; ?>" method="post" name="updateProfile_form">
 
             <div id="projectPage">
                 <?php
@@ -161,14 +162,16 @@
 
                        <?php  if($OwnProject) { ?>
                         <input id="editProjectBtn" class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
-                        
-                        <input id="deleteProjectBtn" class="buttonDesign" type="button" value="Slett prosjekt" onclick="location.href ='editproject_page.php';" />
+                                      
+                        <input id="Delete" name="Delete" class="buttonDesign" type="submit" value="Slett prosjekt" /> 
+                                    
+                                 
                         <?php } ?>
                         <?php endif; ?>
 
                     </div>
 
-        </form>
+        
         <?php if($OwnProject) : ?>
             <?php $_SESSION["OwnProjectID"] = $ProjectID;
             $OwnProject = false;
