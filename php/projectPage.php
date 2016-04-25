@@ -4,6 +4,7 @@
     $projectImage = 'defaultBilde.png';
     $username = htmlentities($_SESSION['username']);
     $LikeUp= false;
+   
     include_once 'includes/oneProject.inc.php'; /* projectPage.inc.php */
  ?>
     <?php if (login_check($mysqli) == true) : ?>
@@ -163,7 +164,7 @@
                        <?php  if($OwnProject) { ?>
                         <input id="editProjectBtn" class="buttonDesign" type="button" value="Endre prosjekt" onclick="location.href ='editproject_page.php';" />
                                       
-                        <input id="Delete" name="Delete" class="buttonDesign" type="submit" value="Slett prosjekt" /> 
+                        <input id="Delete" name="Delete" class="buttonDesign" type="submit" value="Slett prosjekt""/> 
                                     
                                  
                         <?php } ?>
@@ -184,6 +185,7 @@
                         <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>.
                     </p> 
                     <?php endif; ?>
+                   
 
                         <?php include_once 'footer.php'; ?>
                             <!--</body>

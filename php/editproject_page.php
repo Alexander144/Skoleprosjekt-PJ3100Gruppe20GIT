@@ -51,7 +51,7 @@
 
                       for($j = 0; $j<$countID; $j++){
                         
-                           
+                           echo $projectUserName[$j];
                            echo "            ";
                            if($j != 0){
                    echo "<input type = 'submit' name = 'deleteStudent".$j."' class='smallUploadBtn'  value = 'X'/>";
@@ -97,7 +97,7 @@
                                
                                                                  
                                 //header("Refresh:0");
-                           }echo $projectUserName[$j];
+                           }//echo $projectUserName[$j];
                       }
             
             ?>   
@@ -128,11 +128,11 @@
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
                 $uploadFileTmp = $_FILES['file']['tmp_name'];
-                    
+                    $_SESSION['uploadFile'] = $uploadFile;
                 if ( ! is_dir("project/$ProjectID/")) {
                  mkdir("project/$ProjectID/");
                 }
-                move_uploaded_file($uploadFileTmp, $_SESSION['uploadFile'] ="project/$ProjectID/$uploadFile");
+                move_uploaded_file($uploadFileTmp, $uploadFile ="project/$ProjectID/$uploadFile");
                 if( $uploadFile != null){
                 echo "Filen du har valgt: "; echo $uploadFile;
             }
@@ -161,12 +161,12 @@
                     if(isset($_POST['uploadProjectImage'])){
                         $uploadProjectImage= $_FILES['picture']['name'];
                         $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
-
+                         $_SESSION['uploadProjectImage'] = $uploadProjectImage;
 
                     if ( ! is_dir("project/$ProjectID/")) {
                         mkdir("project/$ProjectID/");
                     }
-                        move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
+                        move_uploaded_file($uploadProjectImageTmp, $uploadProjectImage ="project/$ProjectID/$uploadProjectImage");
                           
                         echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
                         $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];

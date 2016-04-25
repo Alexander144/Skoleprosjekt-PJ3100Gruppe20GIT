@@ -12,9 +12,9 @@ $AddOtherUserID = "";
 
                 $_SESSION['projectSubject'] = $row->Subject;
 
-                
+                if(isset($_SESSION['projectEditInfotext'])){
                 $newprojectEdit = $_SESSION['projectEditInfotext'];
-                
+                }
                 $_SESSION['projectEditInfotext'] = $row->AboutProject;
           
                                   
@@ -28,11 +28,23 @@ $AddOtherUserID = "";
     //$_SESSION['OldprojectEditInfotext'] = $_SESSION['projectEditInfotext'];
  if($result3 = $mysqli->query("SELECT * FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = '$ProjectID'")){
         if($countID = $result3->num_rows){
-            
+            $result4 = $mysqli->query("SELECT * FROM project WHERE ProjectID = '$ProjectID'");
+            $row4 = $result4->fetch_object();
+            $i = 1;
             while ($row3 = $result3->fetch_object()) {
-                $projectUserName[] = $row3->Username;
+                if($row4->Creator != $row3->ID){
+                $projectUserName[$i] = $row3->Username;
+                    $i++;
+                }
+               
+                else{
+                    $admin = $row3->Username;
+                    
+                }
             }
+            $projectUserName[0] = $admin;
             $result3->free();
+            $result4->free();
         }
     }
 
@@ -94,7 +106,7 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
             $updateEmailTxt = $_SESSION['email'];*/
 if (empty($error_msg)) {
        
-        if( $_SESSION['deleteStudentFromProject'] == true){
+        if(isset($_SESSION['deleteStudentFromProject']) == true){
                 //echo  $_SESSION['deleteStudentUsername'];
                 //echo  $_SESSION['deleteStudentProjectID'];
                 //die;
@@ -159,10 +171,11 @@ if (empty($error_msg)) {
        
         
         //Upload file
-        if($_SESSION['uploadFile']!=""){
+        if(isset($uploadFile)){
+        if($uploadFile!=""){
         if ($insert_stmt = $mysqli->prepare("INSERT INTO documents(ProjectID, File) VALUES (?, ?)")){
                $ProjectID = (int)$ProjectID;
-                $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadFile']);
+                $insert_stmt->bind_param('is',$ProjectID, $uploadFile);
              // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 $wasError = True;
@@ -172,7 +185,7 @@ if (empty($error_msg)) {
             }
             }
         }
-
+        }
         //Delete Uploaded projectimage
         if(isset($_SESSION['deleteProjectImage'])!= ""){
             $_SESSION['deleteProjectImage'] = "";
@@ -185,9 +198,9 @@ if (empty($error_msg)) {
         }
     
     //Upload projectimage
-    if(isset($_SESSION['uploadProjectImage'])!=""){
+    if(isset($uploadProjectImage)!=""){
             if ($insert_stmt = $mysqli->prepare("INSERT INTO pictures(ProjectID, Picture) VALUES (?, ?)")){
-                $insert_stmt->bind_param('is',$ProjectID, $_SESSION['uploadProjectImage']);
+                $insert_stmt->bind_param('is',$ProjectID, $uploadProjectImage);
              // Execute the prepared query.
                 if (! $insert_stmt->execute()) {
                     $wasError = True;
