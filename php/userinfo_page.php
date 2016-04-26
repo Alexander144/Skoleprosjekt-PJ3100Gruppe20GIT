@@ -96,7 +96,7 @@
             $("#projects").append($newProject);
 
                $newProject
-                   .html("<h1>" + YourProjectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + YourProjectSubject[i] + "</p>" + "<br>" + "<p>" + YourProjectAbout[i]);
+                   .html("<h1>" + YourProjectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + YourProjectSubject[i] + "</p>" + "<br>");
 
                    $newProject.click(SendData);
                     $newProject.data("ID", YourProjectID[i]);
@@ -114,7 +114,7 @@
                     "font-size": "1em",
                     "font-weight": "700",
                     "display": "inline",
-                    "top": "100px",
+                    "top": "200px",
                     "border-bottom": "1px solid black"
                    }); 
             
