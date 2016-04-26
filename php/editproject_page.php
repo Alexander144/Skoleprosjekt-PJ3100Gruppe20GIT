@@ -21,7 +21,7 @@
                 ?>
 
                 <!-- Dette er brukerens profil-->
-                <h2 id="editProjH2">Redigere prosjekt</h2>
+                <h2>Redigere prosjekt</h2>
                 <br>
 </form> <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
                 <h4>Navn:
@@ -37,7 +37,6 @@
                
                 <h4>Om prosjektet:
                     <textarea id="infotextproject" id ="infotextproject" name="infotextproject"><?php echo $_SESSION['projectEditInfotext']; ?></textarea>
-                    
                 </h4>
                 <?php $_SESSION['i']; ?>
                 <h4>Legg til medstudenter:
@@ -45,7 +44,7 @@
                     <input id="addClassmate" class="updatefield editProjInput" type="text" name="AddPeople" id="AddPeople" />
                     <input type = "submit" name = "addStudent" class="smallUploadBtn"  value = "Legg til">
 
-                      <?php 
+               <?php 
                         
                       $exist = true;
                        $_SESSION['addStudentToProject'] = false; 
@@ -116,10 +115,10 @@
         <!-- Dette er de 2 knappene som ligger på toppen av siden for og laste opp filer
             Det under trenger Stilsetting og fiksing av variabler. Rett og slett en ferdigstilling-->
 
-        <h4 id="editProjectFileH4">Last opp fil:</h4>
+        <h4>Last opp fil:</h4>
         <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
 
-            <input class="smallUploadBtn" type="file" name="file" id="file"/>
+            <input class="smallUploadBtn" type="file" name="file" id="file"/></h4>
 
             <input type = "submit" name = "uploadFile" class="smallUploadBtn" value = "Laste opp fil"/>
             <input type = "submit" name = "deleteFile" class="smallUploadBtn" value = "Slett filer"/>
@@ -129,7 +128,7 @@
                 if(isset($_POST['uploadFile'])){
                 $uploadFile= $_FILES['file']['name'];
                 $uploadFileTmp = $_FILES['file']['tmp_name'];
-                   // $_SESSION['uploadFile'] = $uploadFile;
+                    
                 if ( ! is_dir("project/$ProjectID/")) {
                  mkdir("project/$ProjectID/");
                 }
@@ -145,11 +144,10 @@
             }
             ?> 
         <br>
-        </form>
         <!--end Upload File-->
 
         <!--Start updatePhoto-->
-        <h4 id="editProjectPhotoH4">Bilde:</h4>
+        <h4>Bilde:</h4>
         <div id="updatePhoto">
             <form action = "editproject_page.php" method="post" enctype="multipart/form-data">
                 
@@ -163,7 +161,7 @@
                     if(isset($_POST['uploadProjectImage'])){
                         $uploadProjectImage= $_FILES['picture']['name'];
                         $uploadProjectImageTmp = $_FILES['picture']['tmp_name'];
-                         $_SESSION['uploadProjectImage'] = $uploadProjectImage;
+
 
                     if ( ! is_dir("project/$ProjectID/")) {
                         mkdir("project/$ProjectID/");
@@ -171,41 +169,42 @@
                         move_uploaded_file($uploadProjectImageTmp, $_SESSION['uploadProjectImage'] ="project/$ProjectID/$uploadProjectImage");
                           
                         echo "<img src='project/$ProjectID/$uploadProjectImage'/>";
-                        $_SESSION['projectEditInfotext'] = isset($_POST['infotextproject']);
-                         $_SESSION['projectSubject'] = isset($_POST['subject']);
+                        $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
+                         $_SESSION['projectSubject'] = $_POST['subject'];
                     }
                 if(isset($_POST['deleteProjectImage'])){
                     $_SESSION['deleteProjectImage'] = "1";
                     $_SESSION['projectEditInfotext'] = $_POST['infotextproject'];
                          $_SESSION['projectSubject'] = $_POST['subject'];
                 }
-                ?></form>
-            
+                 include_once 'includes/editProjectFiles.inc.php';
+                ?>
+
+                <input class="col buttonDesign" type="submit" name="confirm" value="Endre prosjekt"/></form>
+            </form>
         </div><!--end updatePhoto-->
         <br><br>
 
+        
         <!--Update btn-->
-        <input class="buttonDesign" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
+        <!--<input class="col buttonDesign" type="button" value="Endre prosjekt" onclick="return ChangeProjectForms(
             this.form,
             this.form.name,
             this.form.subject,
             this.form.infotextproject,
             this.form.picture,
             this.form.link,
-            this.form.AddPeople);" />
+            this.form.AddPeople);" />-->
                 <!--end update btn-->
-            
-            <div id="backToProjDiv">
-                    
-            <a id="tilbakeTilProsjekt" href="projectPage.php?ID=<?php echo $ProjectID ?>" ><input class="buttonDesign" type="button" value="Tilbake til prosjektet"/></a>  
-                
-            </div>
         </div>  <!--end edit project-->
         
 <br/>  
       
 
-<!--<p>Return to <a href="login.php" class="linkerStyle">login page</a></p>-->
+            <a id="tilbakeTilProsjekt" href="projectPage.php?ID=<?php echo $ProjectID ?>">
+                <div class="col buttonDesign"><p>tilbake til prosjekt</p></div></a>    
+
+        <!--<p>Return to <a href="login.php" class="linkerStyle">login page</a></p>-->
         <?php else : ?>
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="login.php" class="linkerStyle">login</a>
