@@ -23,6 +23,8 @@ include_once 'header.php';
                 <div id="mainCreateProject">
 
                     <div id="nameFileCreateProject">
+                        <h2>Legg til ett prosjekt</h2>
+
                         <p id="nameProjectCP" class="col-floatleft">Navn på prosjekt</p>
                         <input id="addNameProjectInput" class="addProjInput col-floatleft updatefield" type="text" name="name" id="name" />
                     </div>
