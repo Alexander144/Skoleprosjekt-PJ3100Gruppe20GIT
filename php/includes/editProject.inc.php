@@ -13,7 +13,7 @@ $AddOtherUserID = "";
                 $_SESSION['projectSubject'] = $row->Subject;
 
                 
-                $newprojectEdit = $_SESSION['projectEditInfotext'];
+                //$newprojectEdit = $_SESSION['projectEditInfotext'];
                 
                 $_SESSION['projectEditInfotext'] = $row->AboutProject;
           
@@ -105,11 +105,11 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
             $updateEmailTxt = $_SESSION['email'];*/
 if (empty($error_msg)) {
        
-        if( $_SESSION['deleteStudentFromProject'] == true){
+        if(isset($_SESSION['deleteStudentFromProject']) == true){
                 //echo  $_SESSION['deleteStudentUsername'];
                 //echo  $_SESSION['deleteStudentProjectID'];
                 //die;
-                var_dump($_SESSION['deleteStudentFromProject']);
+                //var_dump($_SESSION['deleteStudentFromProject']);
             if($insert_stmt = $mysqli->prepare("DELETE userinproject FROM userinproject left join user on userinproject.UserID = user.ID WHERE ProjectID = ? AND Username= ?")){
                 $id = 38; $lol = "lol";
                 $insert_stmt->bind_param ('is', $_SESSION['deleteStudentProjectID'],$_SESSION['deleteStudentUsername']);
