@@ -587,6 +587,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 #ProfileEditImage{
     width: 150px;
     height: 150px;
+    border-radius: 75px;
     position: absolute;
 }
 
