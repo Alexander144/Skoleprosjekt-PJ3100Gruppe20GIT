@@ -414,14 +414,15 @@ body {
 }
 
 #registerBtn {
-    float:right;
     margin-right:5px;
+    width: 215px;
 }
 
 #loginBtn,
 #registerBtn {
     margin-top:40px;
     margin-left: 5px;
+    width: 215px;
 }
 
 
@@ -610,7 +611,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 #createProjectContainer {
     width: 600px;
     height: auto;
-    margin-left: 50%;
+    margin-left: 30px;
     position: relative;
     display: block;
 }
@@ -676,6 +677,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     margin-bottom: 15px;
     background-color: rgb(253, 253, 248);
     border: 1px solid black;
+    margin-left: 15px;
 }
 
 #descProjCP {
@@ -921,6 +923,7 @@ p{
 
 #aboutStudentH3, #studentProjectsH3{
     margin-bottom: 20px;
+    margin: 0;
 }
 
 #aboutStudentP {
@@ -1096,3 +1099,13 @@ p{
 }
 
 
+
+#Delete {
+    margin-top: 10px;
+    width: inherit;
+}
+
+#aboutStudent {
+    margin-top: 0;
+    
+}
