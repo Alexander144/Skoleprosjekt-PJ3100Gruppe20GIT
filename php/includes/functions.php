@@ -23,12 +23,11 @@ function sec_session_start() {
     session_start();            // Start the PHP session 
     session_regenerate_id(true);    // regenerated the session, delete the old one. 
 }
-
 function login($email, $password, $mysqli) {
     // Using prepared statements means that SQL injection is not possible. 
-    if ($stmt = $mysqli->prepare("SELECT ID, Username, Password, Salt, Email 
+    if ($stmt = $mysqli->prepare("SELECT id, username, password, salt 
         FROM user
-       WHERE Email = ?
+       WHERE email = ?
         LIMIT 1")) {
         $stmt->bind_param('s', $email);  // Bind "$email" to parameter.
         $stmt->execute();    // Execute the prepared query.
@@ -63,7 +62,6 @@ function login($email, $password, $mysqli) {
                                                                 "", 
                                                                 $username);
                     $_SESSION['username'] = $username;
-
                     $_SESSION['login_string'] = hash('sha512', 
                               $password . $user_browser);
                     $_SESSION['email'] = $email;
@@ -74,7 +72,7 @@ function login($email, $password, $mysqli) {
                     // Password is not correct
                     // We record this attempt in the database
                     $now = time();
-                    $mysqli->query("INSERT INTO login_attempts(User_id, Time)
+                    $mysqli->query("INSERT INTO login_attempts(user_id, time)
                                     VALUES ('$user_id', '$now')");
                     return false;
                 }
@@ -92,10 +90,10 @@ function checkbrute($user_id, $mysqli) {
     // All login attempts are counted from the past 2 hours. 
     $valid_attempts = $now - (2 * 60 * 60);
  
-    if ($stmt = $mysqli->prepare("SELECT Time 
+    if ($stmt = $mysqli->prepare("SELECT time 
                              FROM login_attempts 
-                             WHERE User_id = ? 
-                            AND Time > '$valid_attempts'")) {
+                             WHERE user_id = ? 
+                            AND time > '$valid_attempts'")) {
         $stmt->bind_param('i', $user_id);
  
         // Execute the prepared query. 
@@ -110,7 +108,6 @@ function checkbrute($user_id, $mysqli) {
         }
     }
 }
-
 function login_check($mysqli) {
     // Check if all session variables are set 
     if (isset($_SESSION['user_id'], 
@@ -124,9 +121,9 @@ function login_check($mysqli) {
         // Get the user-agent string of the user.
         $user_browser = $_SERVER['HTTP_USER_AGENT'];
  
-        if ($stmt = $mysqli->prepare("SELECT Password 
+        if ($stmt = $mysqli->prepare("SELECT password 
                                       FROM user 
-                                      WHERE ID = ? LIMIT 1")) {
+                                      WHERE id = ? LIMIT 1")) {
             // Bind "$user_id" to parameter. 
             $stmt->bind_param('i', $user_id);
             $stmt->execute();   // Execute the prepared query.
@@ -193,14 +190,11 @@ function profile($picture,$infotext,$grades,$cv)
     echo"hey";
     if( isset($_GET['UpdateBTN']) )
     {
-
     //be sure to validate and clean your variables
-
         //$val1 = htmlentities($_GET['picture']);
         //$val2 = htmlentities($_GET['infotext']);
         //$val3 = htmlentities($_GET['grades']);
         //$val4 = htmlentities($_GET['cv']);
-
         //if($val1!=null||$val2!=null||$val3!=null||$val4!=null){
         //}
          
