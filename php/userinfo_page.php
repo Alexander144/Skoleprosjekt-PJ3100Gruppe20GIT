@@ -96,7 +96,7 @@
             $("#projects").append($newProject);
 
                $newProject
-                   .html("<h1>" + YourProjectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + YourProjectSubject[i] + "</p>" + "<br>");
+                   .html("<br>" + "<br>" + "<h1>" + YourProjectName[i]+ "</h1>" + "<br>" + "<p>" + "Emne: " + YourProjectSubject[i] + "</p>" + "<br>");
 
                    $newProject.click(SendData);
                     $newProject.data("ID", YourProjectID[i]);
