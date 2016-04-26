@@ -104,8 +104,8 @@
                     <br>
                 
 
-                <h4>Link: (youtube.com/..)
-                    <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" />
+                <h4>Link: (youtube video ID)
+                    <input id="youtubeLink" class="editProjInput" name="link" type="text" id="link" placeholder=" f.eks. '2TsSsPNisTk'"/>
                     <input type = "submit" name = "uploadVideo" class="smallUploadBtn" value = "Legg til"/>
                     <br><br>
                 </h4>
