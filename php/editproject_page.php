@@ -180,7 +180,11 @@
                  include_once 'includes/editProjectFiles.inc.php';
                 ?>
 
-                <input class="col buttonDesign" type="submit" name="confirm" value="Endre prosjekt"/></form>
+                <input id="editProjBtn" class="col buttonDesign" type="submit" name="confirm" value="Endre prosjekt"/>
+                <a id="tilbakeTilProsjekt" href="projectPage.php?ID=<?php echo $ProjectID ?>">
+                <input class="col buttonDesign" type="button" value="Tilbake til prosjektet"/></a>    
+
+            </form>
             </form>
         </div><!--end updatePhoto-->
         <br><br>
@@ -201,8 +205,6 @@
 <br/>  
       
 
-            <a id="tilbakeTilProsjekt" href="projectPage.php?ID=<?php echo $ProjectID ?>">
-                <div class="col buttonDesign"><p>tilbake til prosjekt</p></div></a>    
 
         <!--<p>Return to <a href="login.php" class="linkerStyle">login page</a></p>-->
         <?php else : ?>
