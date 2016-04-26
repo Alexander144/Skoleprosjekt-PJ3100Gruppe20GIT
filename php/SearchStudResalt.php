@@ -22,7 +22,7 @@
 
                     <h3 id="searchUsernameH3"><?php echo $profileUsername; ?></h3>
 
-                    <img src='./<?php echo $profileImage; ?>'/>  
+                    <img id="profilePicSearch" src='./<?php echo $profileImage; ?>'/>  
                     <img src="">
                     <p>Email: <?php echo $profileEmail; ?> </p>
                     <a href="#"><p>Karakterkort</p></a>

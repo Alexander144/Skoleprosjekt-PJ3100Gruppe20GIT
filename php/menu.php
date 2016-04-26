@@ -20,7 +20,6 @@
         <li class="sort-orderBy sortMenu" <?php $sortBy; ?>><a href="#">Rekkefølge</a>
             <ul>
                 <li><a href="?MostPopular" >Mest Populære</a></li>
-                <li><a href="#" <?php ?>>Nyeste</a></li>
             </ul>
         </li>
         
