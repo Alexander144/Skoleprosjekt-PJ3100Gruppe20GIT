@@ -587,9 +587,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 #ProfileEditImage{
     width: 150px;
     height: 150px;
-    border-radius: 75px;
     position: absolute;
-    border: 6px solid black;
 }
 
 
@@ -1113,3 +1111,5 @@ p{
 #editProjBtn {
     margin-bottom: 10px;
 }
+
+

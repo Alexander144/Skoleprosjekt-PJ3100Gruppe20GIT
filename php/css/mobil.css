@@ -82,7 +82,7 @@
         width: 100%;
         height: 100%;
         float: left;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
 
     }
     
@@ -443,7 +443,8 @@
     }
     
     #projectDocument {
-    margin-top: 0;
+        margin-top: 0;
+        width: auto;
     }
 
     #editProjH2 {
