@@ -120,7 +120,7 @@ if (empty($error_msg)) {
             if(!($_SESSION['uploadCV']=="" || $_SESSION['uploadCV']=="cv_students/$user_id/")){
                 if ($insert_stmt = $mysqli->prepare("UPDATE userprofile LEFT JOIN user on userprofile.UserID = user.ID SET CV = (?) WHERE UserID = '$user_id'")) {
                     $insert_stmt->bind_param('s',  $_SESSION['uploadCV']);
-
+                    
                 if (! $insert_stmt->execute()) {
                     header('Location: ../error.php?err=Registration failure: INSERT');
                 }

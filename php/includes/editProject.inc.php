@@ -105,7 +105,8 @@ if (isset($_POST['name'])||isset($_POST['subject'])||isset($_POST['infotextproje
             $updateEmailTxt = $_SESSION['email'];*/
 if (empty($error_msg)) {
        
-        if(isset($_SESSION['deleteStudentFromProject']) == true){
+        if(isset($_SESSION['deleteStudentFromProject'])){
+            if($_SESSION['deleteStudentFromProject'] == true){
                 //echo  $_SESSION['deleteStudentUsername'];
                 //echo  $_SESSION['deleteStudentProjectID'];
                 //die;
@@ -115,13 +116,13 @@ if (empty($error_msg)) {
                 $insert_stmt->bind_param ('is', $_SESSION['deleteStudentProjectID'],$_SESSION['deleteStudentUsername']);
             if (! $insert_stmt->execute()) {
                 //header('Location: ../error.php?err=Registration failure: INSERT');
-              
+            
              }
               
                  $_SESSION['deleteStudentFromProject'] = false;
                 $_SESSION['deleteStudentUsername'] = null;
                 $_SESSION['deleteStudentProjectID'] = null;
-        // }
+        }
  }
 }
             //Variabel feil, sjekker username opp mot lokal username før den sender inn dataen
